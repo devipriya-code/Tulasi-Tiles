@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceramichub - Premium Tile Solutions</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link TO CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header Section with Logo -->
+    <header id="navbar">
+        <!-- Navbar content will be injected here by JavaScript -->
+    </header>
+
+    <!-- Hero Slider Section -->
+    <div class="slider-container">
+        <div class="slide fade">
+            <img class="slide-image" src="./images/bedroom_img3.jpg" alt="Slide_1">
+            <div class="slide-content">
+                <h3 class="slide-title">Premium Tile Collections</h3>
+                <p class="slide-desc">
+                    Explore our exquisite range of ceramic, porcelain, and vitrified tiles for every space in your home.
+                </p>
+                <a href="#featured" class="slide-btn">
+                    View Collections <ion-icon name="arrow-forward-circle"></ion-icon>
+                </a>
+            </div>
+        </div>
+
+        <div class="slide fade">
+            <img class="slide-image" src="./images/bathroom_wall_tile_img10.jpg" alt="Slide_2">
+            <div class="slide-content">
+                <h3 class="slide-title">Premium Tile Collections</h3>
+                <p class="slide-desc">
+                    Explore our exquisite range of ceramic, porcelain, and vitrified tiles for every space in your home.
+                </p>
+                <a href="#featured" class="slide-btn">
+                    View Collections <ion-icon name="arrow-forward-circle"></ion-icon>
+                </a>
+            </div>
+        </div>
+
+        <div class="slide fade">
+            <img class="slide-image" src="./images/outdoor_wall_img1.jpg" alt="Slide_3">
+            <div class="slide-content">
+                <h3 class="slide-title">Premium Tile Collections</h3>
+                <p class="slide-desc">
+                    Explore our exquisite range of ceramic, porcelain, and vitrified tiles for every space in your home.
+                </p>
+                <a href="#featured" class="slide-btn">
+                    View Collections <ion-icon name="arrow-forward-circle"></ion-icon>
+                </a>
+            </div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <div class="slider-nav">
+            <a class="slider-nav-btn" onclick="plusSlides(-1)">
+                <ion-icon name="caret-back-outline"></ion-icon>
+            </a>
+            <a class="slider-nav-btn" onclick="plusSlides(1)">
+                <ion-icon name="caret-forward-outline"></ion-icon>
+            </a>
+        </div>
+
+        <!-- The dots/circles -->
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+
+    <!-- Featured Products Section -->
+    <section id="featured" class="featured">
+        <div class="section-title">
+            <h2>Featured Products</h2>
+            <p>Explore our handpicked selection of premium tiles that combine beauty with functionality</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="./images/ft_img1.jpeg" alt="Wood Effect Tile">
+                </div>
+                <div class="product-info">
+                    <h3>Wood Look Ceramic Tile</h3>
+                    <p>Warm wood aesthetic with easy maintenance</p>
+                    <div class="product-price">$3.49/sq.ft</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="./images/ft_img2.jpeg" alt="Hexagon Mosaic Tile">
+                </div>
+                <div class="product-info">
+                    <h3>Hexagon Mosaic Tile</h3>
+                    <p>Modern geometric pattern for backsplashes and accents</p>
+                    <div class="product-price">$5.99/sq.ft</div>
+                </div>
+            </div>
+            <!-- 1. Wood Look Tile -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="./images/ft_img3.jpeg" alt="Wood Look Tile">
+                </div>
+                <div class="product-info">
+                    <h3>Modern Gray Wood</h3>
+                    <p>Natural wood aesthetic with easy maintenance</p>
+                    <div class="product-price">$3.99/sq.ft</div>
+                </div>
+            </div>
+
+            <!-- 2. Hexagon Mosaic Tile -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="./images/ft_img4.jpeg" alt="Cherry Wood Tile">
+                </div>
+                <div class="product-info">
+                    <h3>Cherry Wood Tile</h3>
+                    <p>Modern geometric pattern for backsplashes</p>
+                    <div class="product-price">$5.49/sq.ft</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="./images/ft_img6.jpeg" alt="Classic White Subway Tile">
+                </div>
+                <div class="product-info">
+                    <h3>Classic Subway Tile</h3>
+                    <p>Timeless glossy white ceramic for kitchens & bathrooms</p>
+                    <div class="product-price">$4.99/sq.ft</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="./images/ft_img5.jpeg" alt="Natural Slate Tile">
+                </div>
+                <div class="product-info">
+                    <h3>Natural Stone Tile</h3>
+                    <p>Rustic natural stone with a rugged, textured surface</p>
+                    <div class="product-price">$10.50/sq.ft</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Featured Wall Tiles -->
+    <section class="featured">
+        <div class="section-title">
+            <h2>Featured Wall Tiles</h2>
+            <p>Discover our curated collection of premium wall tiles that elevate any space with style and durability
+            </p>
+        </div>
+        <div class="products-grid">
+            <!-- 1. Subway Wall Tile -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="./images/featured_wall_img1.jpeg"
+                        alt="White Subway Wall Tile - Classic ceramic backsplash" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Classic Subway Wall Tile</h3>
+                    <p>Timeless 3x6 inch glossy ceramic for kitchen backsplashes</p>
+                    <div class="product-price">$4.25/sq.ft</div>
+                    <button class="view-more-btn" onclick="window.location.href='outdoor_wall_tiles.html'">
+                        View Collections
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2. Moroccan Pattern Wall Tile -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1579621769016-b21ad5e853b0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fE1vcm9jY2FuJTIwUGF0dGVybiUyMFdhbGwlMjBUaWxlfGVufDB8fDB8fHww"
+                        alt="Moroccan Pattern Wall Tile - Intricate geometric design" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Moroccan Pattern Tile</h3>
+                    <p>Handcrafted zellige-style tiles for accent walls</p>
+                    <div class="product-price">$7.99/sq.ft</div>
+                    <button class="view-more-btn" onclick="window.location.href='kitchen_wall_tiles.html'">
+                        View Collections
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3. Glass Mosaic Wall Tile -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://media.istockphoto.com/id/1167575180/photo/reflection-of-the-setting-sun-in-the-mirror-pieces-of-glass-mosaic-abstract-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=s5N38olp8TaqoQLDA-Wm1_yHORvrO7-nsht57FTRhNo="
+                        alt="Glass Mosaic Wall Tile - Iridescent blue backsplash" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Glass Mosaic Tile</h3>
+                    <p>Luminous 1x1 inch glass tiles for shower walls</p>
+                    <div class="product-price">$9.50/sq.ft</div>
+                    <button class="view-more-btn" onclick="window.location.href='livingroom_wall_tiles.html'">
+                        View Collections
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 4. Brick Look Wall Tile -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1727007429691-0f16c5c636f8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fEJyaWNrJTIwTG9vayUyMFRpbGV8ZW58MHx8MHx8fDA%3D"
+                        alt="Brick Look Wall Tile - Urban industrial style" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Brick Look Tile</h3>
+                    <p>Thin brick veneer for feature walls and fireplaces</p>
+                    <div class="product-price">$6.75/sq.ft</div>
+                    <button class="view-more-btn" onclick="window.location.href='bathroom_wall_tiles.html'">
+                        View Collections
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 5. Herringbone Marble Wall Tile -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1585034386762-49f48dde5d34?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fE1hcmJsZSUyMEhlcnJpbmdib25lJTIwVGlsZXxlbnwwfHwwfHx8MA%3D%3D"
+                        alt="Herringbone Marble Wall Tile - Elegant white and gray pattern" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Marble Herringbone Tile</h3>
+                    <p>Luxury marble arranged in timeless herringbone pattern</p>
+                    <div class="product-price">$12.99/sq.ft</div>
+                    <button class="view-more-btn" onclick="window.location.href='commercial_wall_tiles.html'">
+                        View Collections
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 6. Textured 3D Wall Tile -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1635647331438-94444d1dd7a5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fDNEJTIwVGV4dHVyZWQlMjBUaWxlfGVufDB8fDB8fHww"
+                        alt="3D Textured Wall Tile - Modern dimensional surface" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>3D Textured Tile</h3>
+                    <p>Contemporary dimensional tiles for feature walls</p>
+                    <div class="product-price">$8.95/sq.ft</div>
+                    <button class="view-more-btn" onclick="window.location.href='bathroom_wall_tiles.html'">
+                        View Collections
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Floor Tiles -->
+    <section class="featured">
+        <div class="section-title">
+            <h2>Featured Floor Tiles</h2>
+            <p>Explore our premium collection of durable and stylish floor tiles for every space in your home</p>
+        </div>
+        <div class="products-grid">
+            <!-- 1. Porcelain Wood-Look Floor Tile -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://plus.unsplash.com/premium_photo-1677621360955-3f2ca3d80b1d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8V29vZCUyMExvb2slMjBQb3JjZWxhaW4lMjBmbG9vciUyMFRpbGV8ZW58MHx8MHx8fDA%3D"
+                        alt="Wood-Look Porcelain Floor Tile - Natural oak appearance" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Wood-Look Porcelain Tile</h3>
+                    <p>6x36 inch planks with realistic wood grain texture</p>
+                    <div class="product-price">$5.99/sq.ft</div>
+                    <button class="view-more-btn" onclick="window.location.href='kitchen_floor_tiles.html'">
+                        View Collections
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2. Slate Stone Floor Tile -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1708919268841-27c120c45a92?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8TmF0dXJhbCUyMFNsYXRlJTIwZmxvb3IlMjBUaWxlfGVufDB8fDB8fHww"
+                        alt="Slate Stone Floor Tile - Natural textured surface" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Natural Slate Tile</h3>
+                    <p>12x12 inch honed finish for slip-resistant flooring</p>
+                    <div class="product-price">$9.75/sq.ft</div>
+                    <button class="view-more-btn" onclick="window.location.href='bathroom_floor_tiles.html'">
+                        View Collections
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3. Large Format Porcelain Floor Tile -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1572596116404-98f227c01ac1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fExhcmdlJTIwRm9ybWF0JTIwUG9yY2VsYWluJTIwRmxvb3IlMjBUaWxlc3xlbnwwfHwwfHx8MA%3D%3D"
+                        alt="Large Format Porcelain Floor Tile - Modern gray finish" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Large Format Porcelain</h3>
+                    <p>24x48 inch minimal-grout design for seamless look</p>
+                    <div class="product-price">$7.50/sq.ft</div>
+                    <button class="view-more-btn" onclick="window.location.href='livingroom_floor_tiles.html'">
+                        View Collections
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 4. Terrazzo Floor Tile -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1529267372240-e9a679a81f43?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fFRlcnJhenpvJTIwRmxvb3IlMjBUaWxlfGVufDB8fDB8fHww"
+                        alt="Terrazzo Floor Tile - Speckled composite surface" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Terrazzo Floor Tile</h3>
+                    <p>18x18 inch composite with marble and glass chips</p>
+                    <div class="product-price">$8.25/sq.ft</div>
+                    <button class="view-more-btn" onclick="window.location.href='outdoor_floor_tiles.html'">
+                        View Collections
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 5. Hexagon Cement Floor Tile -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1708919268837-2b4857323447?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8SGV4YWdvbiUyMENlbWVudCUyMEZsb29yJTIwVGlsZXxlbnwwfHwwfHx8MA%3D%3D"
+                        alt="Hexagon Cement Floor Tile - Black and white pattern" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Hexagon Cement Tile</h3>
+                    <p>8 inch durable cement tiles for vintage charm</p>
+                    <div class="product-price">$6.95/sq.ft</div>
+                    <button class="view-more-btn" onclick="window.location.href='commercial_floor_tiles.html'">
+                        View Collections
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 6. Polished Marble Floor Tile -->
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="https://images.unsplash.com/photo-1485382051606-3a8f167507a0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fFBvbGlzaGVkJTIwTWFyYmxlJTIwRmxvb3IlMjBUaWxlfGVufDB8fDB8fHww"
+                        alt="Polished Marble Floor Tile - Luxurious white with gray veins" loading="lazy">
+                </div>
+                <div class="product-info">
+                    <h3>Polished Marble Tile</h3>
+                    <p>12x12 inch premium Carrara marble flooring</p>
+                    <div class="product-price">$14.99/sq.ft</div>
+                    <button class="view-more-btn" onclick="window.location.href='bathroom_floor_tiles.html'">
+                        View Collections
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="section-title">
+            <h2>Tile Categories</h2>
+            <p>Browse our tiles by category to find the perfect solution for your project</p>
+        </div>
+        <div class="categories-grid">
+            <div class="category-card">
+                <img src="./images/bathroom_wall_tile_img6.webp" alt="Bathroom Tiles" class="category-img">
+                <div class="category-overlay">
+                    <h4 class="category-name"><a href="./bathroom_wall_tiles.html">Bathroom</a></h4>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="./images/kitchen_img3.avif" alt="Modern Kitchen Tiles - Stylish and easy-to-clean surfaces"
+                    class="category-img">
+                <div class="category-overlay">
+                    <h4 class="category-name"><a href="./kitchen_wall_tiles.html">Kitchen</a></h4>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="./images/living_room_img1.avif" alt="Living Area Tiles" class="category-img">
+                <div class="category-overlay">
+                    <h4 class="category-name"><a href="./livingroom_wall_tiles.html">Living Room</a></h4>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="./images/bedroom_img1.jpg" alt="Bedroom Tiles - Warm and cozy flooring options"
+                    class="category-img">
+                <div class="category-overlay">
+                    <h4 class="category-name"><a href="./bedroom_wall_tiles.html">Bedroom</a></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <!-- Footer content will be injected here by JavaScript -->
+    </footer>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+        integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Ion Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Link TO JS -->
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
