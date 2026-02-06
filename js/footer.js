@@ -1,7 +1,7 @@
 let footer = document.getElementById('footer').innerHTML = 
 `<div class="footer-container">
             <div class="footer-col">
-                <h3>About Ceramichub</h3>
+                <h3>About TusaliTiles</h3>
                 <p>We are a premier tile supplier offering high-quality products for residential and commercial projects
                     since 2005.</p>
                 <div class="social-links">
@@ -25,10 +25,9 @@ let footer = document.getElementById('footer').innerHTML =
 
             <div class="footer-col">
                 <h3>Contact Us</h3>
-                <p>Tariq Road</p>
-                <p>Karachi, Sindh 75400</p>
+                <p>Coimbatore  Road</p>
                 <p>Phone: 0332 2329680</p>
-                <p>Email: info@ceramichub.com</p>
+                <p>Email: info@TusaliTiles.in</p>
                 <p>Hours: Mon-Fri 9am-6pm</p>
             </div>
                 <div class="footer-col">
@@ -42,5 +41,5 @@ let footer = document.getElementById('footer').innerHTML =
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2025 Ceramichub. All Rights Reserved.</p>
+            <p>&copy; 2025 PaletteProduction. All Rights Reserved.</p>
         </div>`

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             iconAnchor: [16, 32]
         })
     }).addTo(contactMap)
-    .bindPopup('<b>Our Location</b><br>Tariq Road, Karachi')
+    .bindPopup('<b>Our Location</b><br> coimbatore')
     .openPopup();
     
     // Try to get user's current location
