@@ -407,7 +407,15 @@
         </section>
     </div>
     </div>
-
+     <a
+      href="https://wa.me/919843069220"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Chat on WhatsApp"
+    >
+      <img src="./images/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+    <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
     <!-- Footer -->
     <footer id="footer">
 
@@ -421,6 +429,24 @@
     <script src="js/navbar.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/expert.js"></script>
+     <script>
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollTopBtn.style.display = "flex";
+        } else {
+          scrollTopBtn.style.display = "none";
+        }
+      });
+
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
 </body>
 
 </html>

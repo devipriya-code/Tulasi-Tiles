@@ -1,5 +1,5 @@
-let navbar = document.getElementById('navbar').innerHTML =
-    `<div class="header-container">
+let navbar = (document.getElementById("navbar").innerHTML =
+  `<div class="header-container">
         <div class="logo-text">Tulasi <span>Tiles</span></div>
             <div class="hamburger">
                 <span></span>
@@ -47,45 +47,49 @@ let navbar = document.getElementById('navbar').innerHTML =
                         </div>
                     </div>
                 </li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./expert_corner.html">Expert Corner</a></li>
+                 <li><a href="./blog.html">Blog</a></li>
                 <li><a href="./compare.html">Tile Comparison</a></li>
-                <li><a href="./tilesdetail.html">Details</a></li>
+                <li><a href="./tileCalculator.html">Tiles Calculator</a></li>
+                 <li><a href="./contact.html">Contact</a></li>
                 <li><a href="./catalogue.html">E-Catalogue</a></li>
             </ul>
         </nav>
-    </div>`;
+    </div>`);
 
+// <li><a href="./expert_corner.html">Expert Corner</a></li>
 // Mobile menu toggle functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('nav');
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-    
-    // Hamburger menu toggle
-    hamburger.addEventListener('click', function() {
-        this.classList.toggle('active');
-        nav.classList.toggle('active');
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector("nav");
+  const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+
+  // Hamburger menu toggle
+  hamburger.addEventListener("click", function () {
+    this.classList.toggle("active");
+    nav.classList.toggle("active");
+  });
+
+  // Dropdown toggle for mobile
+  dropdownToggles.forEach((toggle) => {
+    toggle.addEventListener("click", function (e) {
+      if (window.innerWidth <= 992) {
+        e.preventDefault();
+        const dropdown = this.parentElement;
+        dropdown.classList.toggle("active");
+      }
     });
-    
-    // Dropdown toggle for mobile
-    dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-            if (window.innerWidth <= 992) {
-                e.preventDefault();
-                const dropdown = this.parentElement;
-                dropdown.classList.toggle('active');
-            }
-        });
+  });
+
+  // Close menu when clicking on a link (for mobile)
+  document.querySelectorAll("nav a").forEach((link) => {
+    link.addEventListener("click", function () {
+      if (
+        window.innerWidth <= 992 &&
+        !this.classList.contains("dropdown-toggle")
+      ) {
+        hamburger.classList.remove("active");
+        nav.classList.remove("active");
+      }
     });
-    
-    // Close menu when clicking on a link (for mobile)
-    document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', function() {
-            if (window.innerWidth <= 992 && !this.classList.contains('dropdown-toggle')) {
-                hamburger.classList.remove('active');
-                nav.classList.remove('active');
-            }
-        });
-    });
+  });
 });

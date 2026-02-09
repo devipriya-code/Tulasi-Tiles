@@ -93,7 +93,7 @@
             <div class="overlay-content">
               <h3>Modern Gray Chevron</h3>
               <p>Porcelain chevron pattern tiles in matte finish</p>
-              
+
               <button
                 class="btn btn-view-more"
                 onclick="window.location.href = 'tilesdetail.html'"
@@ -111,7 +111,7 @@
             <div class="overlay-content">
               <h3>Beige Stone Effect</h3>
               <p>Large format porcelain tiles with natural stone texture</p>
-             
+
               <button
                 class="btn btn-view-more"
                 onclick="window.location.href = 'tilesdetail.html'"
@@ -130,7 +130,7 @@
             <div class="overlay-content">
               <h3>Blue Geometric</h3>
               <p>Hand-painted ceramic tiles with intricate patterns</p>
-              
+
               <button
                 class="btn btn-view-more"
                 onclick="window.location.href = 'tilesdetail.html'"
@@ -149,7 +149,7 @@
             <div class="overlay-content">
               <h3>Black Matte Brick</h3>
               <p>Long rectangular matte black porcelain tiles</p>
-              
+
               <button
                 class="btn btn-view-more"
                 onclick="window.location.href = 'tilesdetail.html'"
@@ -168,7 +168,7 @@
             <div class="overlay-content">
               <h3>Carrara Marble</h3>
               <p>Premium marble herringbone mosaic with gray veins</p>
-              
+
               <button
                 class="btn btn-view-more"
                 onclick="window.location.href = 'tilesdetail.html'"
@@ -187,7 +187,7 @@
             <div class="overlay-content">
               <h3>Sage Green Subway</h3>
               <p>Soft green 3x6 inch ceramic tiles with beveled edges</p>
-              
+
               <button
                 class="btn btn-view-more"
                 onclick="window.location.href = 'tilesdetail.html'"
@@ -206,7 +206,7 @@
             <div class="overlay-content">
               <h3>Modern Terrazzo</h3>
               <p>Porcelain tiles with contemporary terrazzo design</p>
-              
+
               <button
                 class="btn btn-view-more"
                 onclick="window.location.href = 'tilesdetail.html'"
@@ -225,7 +225,7 @@
             <div class="overlay-content">
               <h3>Fish Scale Mosaic</h3>
               <p>Iridescent glass tiles in scalloped pattern</p>
-              
+
               <button
                 class="btn btn-view-more"
                 onclick="window.location.href = 'tilesdetail.html'"
@@ -243,7 +243,7 @@
             <div class="overlay-content">
               <h3>Concrete Effect</h3>
               <p>12x24 inch porcelain tiles with urban concrete finish</p>
-              
+
               <button
                 class="btn btn-view-more"
                 onclick="window.location.href = 'tilesdetail.html'"
@@ -262,7 +262,7 @@
             <div class="overlay-content">
               <h3>Moroccan Zellige</h3>
               <p>Handcrafted glazed terracotta tiles with slight variations</p>
-              
+
               <button
                 class="btn btn-view-more"
                 onclick="window.location.href = 'tilesdetail.html'"
@@ -360,6 +360,16 @@
       <!-- footer content will be injected here by JavaScript -->
     </footer>
 
+    <a
+      href="https://wa.me/919843069220"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Chat on WhatsApp"
+    >
+      <img src="./images/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+    <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
     <!-- Font Awesome Icons -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
@@ -371,5 +381,24 @@
     <script src="js/navbar.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/script.js"></script>
+
+     <script>
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollTopBtn.style.display = "flex";
+        } else {
+          scrollTopBtn.style.display = "none";
+        }
+      });
+
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
   </body>
 </html>

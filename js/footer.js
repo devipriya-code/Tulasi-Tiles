@@ -15,10 +15,12 @@ let footer = (document.getElementById("footer").innerHTML =
                 <ul class="footer-links">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./about.html">About</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./compare.html">Tile Comparison</a></li>
+                    <li><a href="./tileCalculator.html">Tiles Calculator</a></li>
+                  
                     <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="./expert_corner.html">Expert Corner</a></li>
-                    <li><a href="./comparepage.html">Tile Comparison</a></li>
-                    <li><a href="./catalogue.html">E-Catalogue</a></li>
+      
                 </ul>
             </div>
             <div class="footer-col">
@@ -40,7 +42,7 @@ let footer = (document.getElementById("footer").innerHTML =
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; <span id="currentYear"></span><a href="https://paletteproduction.com"> PaletteProduction </a>. All Rights Reserved.</p>
+            <p> Copyright &copy; <span id="currentYear"></span> Tulasi Tiles | Developed By <a href="https://paletteproduction.com"> PaletteProduction </a></p>
         </div> 
 `);
 
