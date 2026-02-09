@@ -140,16 +140,16 @@ function createMaterialCards() {
   });
 
   // Add gradient card
-  const gradientCard = document.createElement("div");
-  gradientCard.className = "gradient-card";
-  gradientCard.innerHTML = `
-      <div>
-        <h3>Need Help Choosing?</h3>
-        <p>Our tile experts can help you select the perfect material for your kitchen project.</p>
-      </div>
-      <a href="./contact.html" class="btn">Contact us</a>
-    `;
-  container.appendChild(gradientCard);
+  // const gradientCard = document.createElement("div");
+  // gradientCard.className = "gradient-card";
+  // gradientCard.innerHTML = `
+  //     <div>
+  //       <h3>Need Help Choosing?</h3>
+  //       <p>Our tile experts can help you select the perfect material for your kitchen project.</p>
+  //     </div>
+  //     <a href="./contact.html" class="btn">Contact us</a>
+  //   `;
+  // container.appendChild(gradientCard);
 }
 
 // Initialize when DOM is loaded

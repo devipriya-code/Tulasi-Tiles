@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tile Comparison | Tulasi Tiles</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/expert.css" />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header id="navbar">
+      <!-- Navbar content will be injected here by JavaScript -->
+    </header>
+
+    <!-- Blogs Section -->
+    <section class="blog-details">
+      <div class="container">
+        <!-- Blog Header -->
+        <div class="blog-header">
+          <h1 class="blog-title">Kitchen Remodeling Ideas on a Budget</h1>
+          <p class="blog-subtitle">
+            Smart, stylish, and affordable ways to transform your kitchen space.
+          </p>
+        </div>
+
+        <!-- Main Image -->
+        <img
+          src="./images/kitchen_img3.avif"
+          alt="Kitchen Remodeling"
+          class="blog-main-image"
+        />
+
+        <!-- Intro -->
+        <div class="blog-content">
+          <p>
+            Remodeling your kitchen doesn’t have to be expensive. With smart
+            planning and creative ideas, you can refresh your kitchen space
+            without overspending. Small changes can make a big visual impact.
+          </p>
+
+          <!-- Section -->
+          <h3 class="blog-section-title">Affordable Remodeling Tips</h3>
+
+          <ul class="blog-list">
+            <li>Repaint cabinets instead of replacing them</li>
+            <li>Upgrade handles and knobs for a modern look</li>
+            <li>Install open shelves to reduce cabinetry costs</li>
+            <li>Use energy-efficient LED lighting</li>
+          </ul>
+
+          <!-- Image Gallery -->
+          <div class="blog-gallery">
+            <img
+              src="./images/kitchen_img9.avif"
+              alt="Modern Kitchen"
+            />
+            <img
+               src="./images/kitchen_img5.avif"
+              alt="Small Kitchen Design"
+            />
+            <img
+                src="./images/kitchen_img7.avif"
+              alt="Budget Kitchen Remodel"
+            />
+          </div>
+
+          <!-- Another Section -->
+          <h3 class="blog-section-title">Best Budget-Friendly Materials</h3>
+
+          <p>
+            Choosing the right materials can significantly reduce renovation
+            costs while still delivering durability and style.
+          </p>
+
+          <div class="blog-info-cards">
+            <div class="info-card">
+              <h4>Laminate Countertops</h4>
+              <p>Affordable, durable, and available in multiple finishes.</p>
+            </div>
+
+            <div class="info-card">
+              <h4>Ceramic Tiles</h4>
+              <p>Easy to maintain and perfect for backsplashes and flooring.</p>
+            </div>
+
+            <div class="info-card">
+              <h4>Modular Cabinets</h4>
+              <p>Cost-effective storage with flexible design options.</p>
+            </div>
+          </div>
+
+          <!-- Conclusion -->
+          <p class="blog-conclusion">
+            With thoughtful choices and creative planning, you can achieve a
+            beautiful kitchen remodel without exceeding your budget.
+          </p>
+
+          <!-- Back Button -->
+          <a href="blog.html" class="back-btn">← Back to Blogs</a>
+        </div>
+      </div>
+    </section>
+     <a
+      href="https://wa.me/919843069220"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Chat on WhatsApp"
+    >
+      <img src="./images/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+    <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+      <!-- Navbar content will be injected here by JavaScript -->
+    </footer>
+  </body>
+  <!-- Font Awesome Icons -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+    integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <!-- Link To JS -->
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+   <script>
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollTopBtn.style.display = "flex";
+        } else {
+          scrollTopBtn.style.display = "none";
+        }
+      });
+
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+</html>

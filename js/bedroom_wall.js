@@ -143,18 +143,18 @@ function createMaterialsCards() {
   });
 
   // Create gradient card
-  const gradientCard = document.createElement("div");
-  gradientCard.className = "gradient-card";
+  // const gradientCard = document.createElement("div");
+  // gradientCard.className = "gradient-card";
 
-  gradientCard.innerHTML = `
-      <div>
-        <h3>Need Help Choosing?</h3>
-        <p>Our tile experts can help you select the perfect material for your bedroom project.</p>
-      </div>
-      <a href="./contact.html" class="btn">Contact us</a>
-    `;
+  // gradientCard.innerHTML = `
+  //     <div>
+  //       <h3>Need Help Choosing?</h3>
+  //       <p>Our tile experts can help you select the perfect material for your bedroom project.</p>
+  //     </div>
+  //     <a href="./contact.html" class="btn">Contact us</a>
+  //   `;
 
-  materialsGrid.appendChild(gradientCard);
+  // materialsGrid.appendChild(gradientCard);
 }
 
 // Function to create CTA section
@@ -163,8 +163,8 @@ function createCTASection() {
 
   ctaContent.innerHTML = `
       <p>Visit our showroom to see our tile collections in person or schedule a free design consultation with our experts.</p>
-      <button class="btn">Book Appointment</button>
-      <button class="btn" style="background: transparent; border: 2px solid white; margin-left: 15px;">Get Free Samples</button>
+      <a href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20sanitaryware"
+      target="_blank" class="btn">Book Appointment</a> 
     `;
 }
 

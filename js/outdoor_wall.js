@@ -132,17 +132,17 @@ function createOutdoorMaterialCards() {
     container.appendChild(card);
   });
 
-  // Add gradient card
-  const gradientCard = document.createElement("div");
-  gradientCard.className = "gradient-card";
-  gradientCard.innerHTML = `
-        <div>
-            <h3>Need Help Choosing?</h3>
-            <p>Our outdoor tile experts can help you select the perfect material for your climate and design needs.</p>
-        </div>
-        <a href="./contact.html" class="btn">Contact us</a>
-    `;
-  container.appendChild(gradientCard);
+//   // Add gradient card
+//   const gradientCard = document.createElement("div");
+//   gradientCard.className = "gradient-card";
+//   gradientCard.innerHTML = `
+//         <div>
+//             <h3>Need Help Choosing?</h3>
+//             <p>Our outdoor tile experts can help you select the perfect material for your climate and design needs.</p>
+//         </div>
+//         <a href="./contact.html" class="btn">Contact us</a>
+//     `;
+//   container.appendChild(gradientCard);
 }
 
 // Initialize when DOM is loaded
