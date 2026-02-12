@@ -1106,39 +1106,6 @@
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-      var swiper = new Swiper(".categories-slider", {
-        slidesPerView: 4,
-        spaceBetween: 20,
-        loop: true,
-
-        autoplay: {
-          delay: 3000, // 3 seconds
-          disableOnInteraction: false, // keeps autoplay after arrow click
-        },
-
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-          },
-          576: {
-            slidesPerView: 2,
-          },
-          768: {
-            slidesPerView: 3,
-          },
-          1024: {
-            slidesPerView: 4,
-          },
-        },
-      });
-    </script>
-
-    <script>
       AOS.init({
         duration: 600,
         easing: "ease-in-out",

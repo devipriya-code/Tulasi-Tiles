@@ -17,6 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <!-- Link To CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/floor_wall_tiles.css" />
@@ -92,21 +96,6 @@
 
           <!-- Card 4 -->
           <div class="card-overlay">
-            <img src="./images/kitchen_img4.avif" alt="Terrazzo Look" />
-            <div class="overlay-content">
-              <h3>Modern Terrazzo</h3>
-              <p>Porcelain tiles with contemporary terrazzo design</p>
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="card-overlay">
             <img src="./images/kitchen_img5.avif" alt="Zellige Moroccan" />
             <div class="overlay-content">
               <h3>Moroccan Zellige</h3>
@@ -120,7 +109,7 @@
             </div>
           </div>
 
-          <!-- Card 6 -->
+          <!-- Card 5 -->
           <div class="card-overlay">
             <img src="./images/kitchen_img6.avif" alt="Black Matte Subway" />
             <div class="overlay-content">
@@ -135,7 +124,7 @@
             </div>
           </div>
 
-          <!-- Card 7 -->
+          <!-- Card 6 -->
           <div class="card-overlay">
             <img src="./images/kitchen_img7.avif" alt="Fish Scale Mosaic" />
             <div class="overlay-content">
@@ -150,7 +139,7 @@
             </div>
           </div>
 
-          <!-- Card 8 -->
+          <!-- Card 7 -->
           <div class="card-overlay">
             <img src="./images/kitchen_img8.jpg" alt="Brick Red Ceramic" />
             <div class="overlay-content">
@@ -165,7 +154,7 @@
             </div>
           </div>
 
-          <!-- Card 9 -->
+          <!-- Card 8 -->
           <div class="card-overlay">
             <img src="./images/kitchen_img9.avif" alt="Geometric Pattern" />
             <div class="overlay-content">
@@ -180,7 +169,7 @@
             </div>
           </div>
 
-          <!-- Card 10 -->
+          <!-- Card 9 -->
           <div class="card-overlay">
             <img src="./images/kitchen_img10.avif" alt="Concrete Effect" />
             <div class="overlay-content">
@@ -253,9 +242,11 @@
         <h2 class="section-title">Tile Materials</h2>
 
         <div class="materials-grid">
-          <!-- Card 8: Icon Card -->
+          <!-- Ceramic -->
           <div class="material-card">
-            <div class="material-icon">🧱</div>
+            <div class="material-icon">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
             <h3>Ceramic</h3>
             <p>
               Affordable, versatile, and available in endless colors and
@@ -263,9 +254,11 @@
             </p>
           </div>
 
-          <!-- Card 9: Icon Card -->
+          <!-- Porcelain -->
           <div class="material-card">
-            <div class="material-icon">✨</div>
+            <div class="material-icon">
+              <i class="fa-solid fa-square"></i>
+            </div>
             <h3>Porcelain</h3>
             <p>
               Denser and more durable than ceramic, excellent for high-moisture
@@ -273,9 +266,11 @@
             </p>
           </div>
 
-          <!-- Card 10: Icon Card -->
+          <!-- Natural Stone -->
           <div class="material-card">
-            <div class="material-icon">💎</div>
+            <div class="material-icon">
+              <i class="fa-solid fa-mountain"></i>
+            </div>
             <h3>Natural Stone</h3>
             <p>
               Luxurious options like marble, travertine, and slate with natural
@@ -283,9 +278,11 @@
             </p>
           </div>
 
-          <!-- Card 11: Icon Card -->
+          <!-- Glass -->
           <div class="material-card">
-            <div class="material-icon">🔮</div>
+            <div class="material-icon">
+              <i class="fa-solid fa-gem"></i>
+            </div>
             <h3>Glass</h3>
             <p>
               Creates a luminous, reflective surface in mosaic or larger
@@ -295,19 +292,10 @@
         </div>
       </div>
     </section>
-    <!-- Card 12: Gradient Background -->
-    <div class="gradient-card">
-      <div>
-        <h3>Need Help Choosing?</h3>
-        <p>
-          Our tile experts can help you select the perfect material for your
-          kitchen project.
-        </p>
-      </div>
-      <a href="./contact.html" class="btn">Contact us</a>
-    </div>
 
-     <a
+
+
+    <a
       href="https://wa.me/919843069220"
       class="whatsapp-float"
       target="_blank"
@@ -331,7 +319,7 @@
     <script src="js/navbar.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/script.js"></script>
-     <script>
+    <script>
       const scrollTopBtn = document.getElementById("scrollTopBtn");
 
       window.addEventListener("scroll", () => {

@@ -77,25 +77,25 @@ const kitchenTileData = [
 // Material data
 const materialData = [
   {
-    icon: "🧱",
+    icon: "fa-solid fa-th-large",
     title: "Ceramic",
     description:
       "Affordable, versatile, and available in endless colors and patterns.",
   },
   {
-    icon: "✨",
+    icon: "fa-solid fa-layer-group",
     title: "Porcelain",
     description:
       "Denser and more durable than ceramic, excellent for high-moisture areas.",
   },
   {
-    icon: "💎",
+    icon: "fa-solid fa-mountain",
     title: "Natural Stone",
     description:
       "Luxurious options like marble, travertine, and slate with natural variations.",
   },
   {
-    icon: "🔮",
+    icon: "fa-regular fa-square",
     title: "Glass",
     description:
       "Creates a luminous, reflective surface in mosaic or larger formats.",
@@ -132,7 +132,9 @@ function createMaterialCards() {
     const card = document.createElement("div");
     card.className = "material-card";
     card.innerHTML = `
-        <div class="material-icon">${material.icon}</div>
+         <div class="material-icon">
+    <i class="${material.icon}"></i>
+  </div>
         <h3>${material.title}</h3>
         <p>${material.description}</p>
       `;
