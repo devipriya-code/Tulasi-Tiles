@@ -77,25 +77,25 @@ const tileData = [
 // Material data array
 const materialData = [
   {
-    icon: "🧱",
+    icon: "fa-solid fa-border-all",
     title: "Ceramic",
     description:
       "Affordable, versatile, and available in endless colors and patterns.",
   },
   {
-    icon: "✨",
+    icon: "fa-solid fa-layer-group",
     title: "Porcelain",
     description:
       "Denser and more durable than ceramic, excellent for high-moisture areas.",
   },
   {
-    icon: "💎",
+    icon: "fa-solid fa-gem",
     title: "Natural Stone",
     description:
       "Luxurious options like marble, travertine, and slate with natural variations.",
   },
   {
-    icon: "🔮",
+    icon: "fa-solid fa-clone",
     title: "Glass",
     description:
       "Creates a luminous, reflective surface in mosaic or larger formats.",
@@ -129,28 +129,28 @@ function createMaterialCards() {
     const card = document.createElement("div");
     card.className = "material-card";
     card.innerHTML = `
-            <div class="material-icon">${material.icon}</div>
+            <div class="material-icon"> <i class="${material.icon}"></i></div>
             <h3>${material.title}</h3>
             <p>${material.description}</p>
         `;
     materialsGrid.appendChild(card);
   });
   // Add the gradient card
-//   const gradientCard = document.createElement("div");
-//   gradientCard.className = "container gradient-card";
-//   gradientCard.innerHTML = `
-//   <div>
-//     <h3>Need Help Choosing?</h3>
-//     <p>
-//       Our tile experts can help you select the perfect material for your
-//       bathroom project.
-//     </p>
-//   </div>
-//   <a href="./contact.html" class="btn">Contact us</a>
-// `;
+  //   const gradientCard = document.createElement("div");
+  //   gradientCard.className = "container gradient-card";
+  //   gradientCard.innerHTML = `
+  //   <div>
+  //     <h3>Need Help Choosing?</h3>
+  //     <p>
+  //       Our tile experts can help you select the perfect material for your
+  //       bathroom project.
+  //     </p>
+  //   </div>
+  //   <a href="./contact.html" class="btn">Contact us</a>
+  // `;
 
-//   materialsGrid.appendChild(gradientCard);
- }
+  //   materialsGrid.appendChild(gradientCard);
+}
 
 // Initialize the page when DOM is loaded
 document.addEventListener("DOMContentLoaded", function () {

@@ -77,22 +77,22 @@ const outdoorTiles = [
 // Material Data
 const outdoorMaterials = [
   {
-    icon: "✨",
+    icon: "fa-solid fa-layer-group",
     title: "Porcelain",
     desc: "Highly durable, frost-resistant, and low-maintenance for all climates.",
   },
   {
-    icon: "💎",
+    icon: "fa-solid fa-mountain",
     title: "Natural Stone",
     desc: "Authentic slate, granite, and limestone with natural slip resistance.",
   },
   {
-    icon: "🏗️",
+    icon: "fa-solid fa-building",
     title: "Concrete",
     desc: "Modern concrete-look tiles with enhanced weather resistance.",
   },
   {
-    icon: "🧩",
+    icon: "fa-solid fa-cubes",
     title: "Composite",
     desc: "Wood-plastic composite tiles that resist fading and moisture.",
   },
@@ -125,24 +125,26 @@ function createOutdoorMaterialCards() {
     const card = document.createElement("div");
     card.className = "material-card";
     card.innerHTML = `
-            <div class="material-icon">${material.icon}</div>
+          <div class="material-icon">
+    <i class="${material.icon}"></i>
+  </div>
             <h3>${material.title}</h3>
             <p>${material.desc}</p>
         `;
     container.appendChild(card);
   });
 
-//   // Add gradient card
-//   const gradientCard = document.createElement("div");
-//   gradientCard.className = "gradient-card";
-//   gradientCard.innerHTML = `
-//         <div>
-//             <h3>Need Help Choosing?</h3>
-//             <p>Our outdoor tile experts can help you select the perfect material for your climate and design needs.</p>
-//         </div>
-//         <a href="./contact.html" class="btn">Contact us</a>
-//     `;
-//   container.appendChild(gradientCard);
+  //   // Add gradient card
+  //   const gradientCard = document.createElement("div");
+  //   gradientCard.className = "gradient-card";
+  //   gradientCard.innerHTML = `
+  //         <div>
+  //             <h3>Need Help Choosing?</h3>
+  //             <p>Our outdoor tile experts can help you select the perfect material for your climate and design needs.</p>
+  //         </div>
+  //         <a href="./contact.html" class="btn">Contact us</a>
+  //     `;
+  //   container.appendChild(gradientCard);
 }
 
 // Initialize when DOM is loaded

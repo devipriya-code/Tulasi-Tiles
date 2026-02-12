@@ -17,6 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <!-- Link TO CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
@@ -299,11 +303,12 @@
     <section class="materials-section">
       <div class="container">
         <h2 class="section-title">Tile Materials</h2>
-
         <div class="materials-grid">
-          <!-- Card 8: Icon Card -->
+          <!-- Ceramic -->
           <div class="material-card">
-            <div class="material-icon">🧱</div>
+            <div class="material-icon">
+              <i class="fa-solid fa-th-large"></i>
+            </div>
             <h3>Ceramic</h3>
             <p>
               Affordable, versatile, and available in endless colors and
@@ -311,9 +316,11 @@
             </p>
           </div>
 
-          <!-- Card 9: Icon Card -->
+          <!-- Porcelain -->
           <div class="material-card">
-            <div class="material-icon">✨</div>
+            <div class="material-icon">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
             <h3>Porcelain</h3>
             <p>
               Denser and more durable than ceramic, excellent for high-moisture
@@ -321,9 +328,11 @@
             </p>
           </div>
 
-          <!-- Card 10: Icon Card -->
+          <!-- Natural Stone -->
           <div class="material-card">
-            <div class="material-icon">💎</div>
+            <div class="material-icon">
+              <i class="fa-solid fa-mountain"></i>
+            </div>
             <h3>Natural Stone</h3>
             <p>
               Luxurious options like marble, travertine, and slate with natural
@@ -331,9 +340,11 @@
             </p>
           </div>
 
-          <!-- Card 11: Icon Card -->
+          <!-- Glass -->
           <div class="material-card">
-            <div class="material-icon">🔮</div>
+            <div class="material-icon">
+              <i class="fa-regular fa-square"></i>
+            </div>
             <h3>Glass</h3>
             <p>
               Creates a luminous, reflective surface in mosaic or larger
@@ -344,16 +355,6 @@
       </div>
     </section>
     <!-- Card 12: Gradient Background -->
-    <div class="container gradient-card">
-      <div>
-        <h3>Need Help Choosing?</h3>
-        <p>
-          Our tile experts can help you select the perfect material for your
-          bathroom project.
-        </p>
-      </div>
-      <a href="./contact.html" class="btn">Contact us</a>
-    </div>
 
     <!-- Footer Section -->
     <footer id="footer">
@@ -382,7 +383,7 @@
     <script src="js/footer.js"></script>
     <script src="js/script.js"></script>
 
-     <script>
+    <script>
       const scrollTopBtn = document.getElementById("scrollTopBtn");
 
       window.addEventListener("scroll", () => {
@@ -392,7 +393,6 @@
           scrollTopBtn.style.display = "none";
         }
       });
-
       scrollTopBtn.addEventListener("click", () => {
         window.scrollTo({
           top: 0,
