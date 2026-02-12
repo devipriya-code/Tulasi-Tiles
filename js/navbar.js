@@ -1,13 +1,15 @@
 let navbar = (document.getElementById("navbar").innerHTML =
   `<div class="header-container">
-        <div class="logo-text">Tulasi <span>Tiles</span></div>
+        <div class="logo-text">
+          <img src="=../../images/logo-1.png" alt="Tulasi Tiles Logo" class="logo-img">
+        </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         <nav>
-        <div class="mobile-logo">Tulasi <span>Tiles</span></div>
+        <div class="mobile-logo"><img src="=../../images/logo-1.png" alt="Tulasi Tiles Logo" class="logo-img"></div>
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>

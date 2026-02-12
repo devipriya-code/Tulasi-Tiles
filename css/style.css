@@ -2279,7 +2279,7 @@ footer {
 
 /* Section Styling */
 .modern-categories {
-  padding: 80px 8%;
+  padding: 0 8% 80px 8%;
   background: #f9f9f9;
 }
 
@@ -2610,4 +2610,14 @@ footer {
   .materials-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 50px;   /* change as needed */
+  width: auto;
 }
