@@ -79,7 +79,7 @@ var tiles = [
     finish: "High Gloss",
     image: "./images/Endless-glossy-compare.png",
   },
-   {
+  {
     id: 7,
     title: "Jemstone Grey Blaze",
     description:
@@ -89,6 +89,117 @@ var tiles = [
     color: "Grey",
     finish: "Granolith",
     image: "./images/Jemstone Grey Blaze-compare.png",
+  },
+  {
+    id: 8,
+    title: "Artek Nero Tile",
+    description:
+      "Deep black tiles with a sleek matt finish. Large formats create a bold, modern look for premium interiors.",
+    size: "119x280cm",
+    thickness: "9mm",
+    color: "Charcoal Gray",
+    finish: "Beyond",
+    image: "./images/Artek Nero Tile2.png",
+  },
+
+  {
+    id: 9,
+    title: "Galaxy Grey",
+    description:
+      "Stone-inspired grey tiles offering a calm and contemporary aesthetic, suitable for residential and commercial walls.",
+    size: "80x240cm",
+    thickness: "9mm",
+    color: "Salt and Pepper",
+    finish: "Polished",
+    image: "./images/Galaxy Grey2.png",
+  },
+  {
+    id: 10,
+    title: "Spring Marfil",
+    description:
+      "Spring Marfil Tile is a marble-inspired tile that brings a sense of luxury and warmth to any space.It creates a calm and elegant look.",
+    size: "60x120cm",
+    thickness: "9mm",
+    color: "Marfil",
+    finish: "Matt",
+    image: "./images/Spring-Marfil.png",
+  },
+  {
+    id: 11,
+    title: "Autumn Wood",
+    description:
+      "Designed to bring a cozy and elegant feel, it adds warmth toliving rooms, bedrooms, and commercial spaces without the maintenance of real wood.",
+    size: "60x120cm",
+    thickness: "9mm",
+    color: "Wood",
+    finish: "Matt",
+    image: "./images/3D Textured Tile2.png",
+  },
+  {
+    id: 12,
+    title: "Emali Beige",
+    description:
+      "Polished vitrified tiles with a luxurious high-gloss finish. Strong, low-porosity, and durable—ideal for premium flooring.",
+    size: "120x180cm",
+    thickness: "9mm",
+    color: "Beige",
+    finish: "Marbletech",
+    image: "./images/Emali Beige Tiles2.png",
+  },
+  {
+    id: 13,
+    title: "Dyna Crema",
+    description:
+      "Polished vitrified tiles with a luxurious high-gloss finish. Strong, low-porosity, and durable—ideal for premium flooring.",
+    size: "80x240cm",
+    thickness: "9mm",
+    color: "Cream",
+    finish: "Polished",
+    image: "images/Dyna Crema2.png",
+  },
+  {
+    id: 14,
+    title: "Calacatta White",
+    description:
+      "Polished vitrified tiles with a luxurious high-gloss finish. Strong, low-porosity, and durable—ideal for premium flooring.",
+    size: "80x240cm",
+    thickness: "9mm",
+    color: "Calacatta White",
+    finish: "Polished",
+    image: "images/Calacatta White Tile2.png",
+  },
+  {
+    id: 15,
+    title: "Crema Pearl",
+    description:
+      "Composite tiles blended with marble and glass chips, adding subtle texture.This surface creates ideal for accent walls and stylish interior.",
+    size: "60x120cm",
+    thickness: "9mm",
+    color: "Pale Beige",
+    finish: "HD Polished",
+    image: "images/Crema Perl2.png",
+  },
+  {
+    id: 16,
+    title: "Girgio Perla Marble",
+    description:
+      "Classic marble-look tiles with timeless appeal, designed for elegant interiors and sophisticated commercial spaces.",
+    size: "60x120cm",
+    thickness: "9mm",
+    color: "White",
+    finish: "HD Polished",
+    image: "./images/Girgio Perla Marble 2.png",
+  },
+  {
+    id: 17,
+    title: "Emperador Rust",
+    description:
+      "Rich brown marble-inspired tiles, designed to create warm and elegant flooring for living areas and bathrooms.",
+    size: "60x120cm",
+    thickness: "9mm",
+    color: "White",
+    finish: "HI-Gloss Polished",
+    image: "./images/Emperador Rust Tile2.png",
   },
 ];
 
