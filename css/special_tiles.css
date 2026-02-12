@@ -58,7 +58,7 @@
         /* Button */
         .btn {
             display: inline-block;
-            background: #e74c3c;
+            background: #f37e21;
             color: white;
             padding: 15px 40px;
             border: none;
@@ -78,12 +78,12 @@
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            background: #c0392b;
+            background: #f4a25e;
         }
 
         .explore-btn {
             display: inline-block;
-            background: #e74c3c;
+            background: #f37e21;
             color: white;
             padding: 15px 40px;
             border: none;
@@ -100,7 +100,7 @@
 
         .explore-btn:hover {
             background: white;
-            color: #c0392b;
+            color: #f37e21;
             transform: translateY(-2px);
         }
 
@@ -129,7 +129,7 @@
             position: absolute;
             width: 50%;
             height: 3px;
-            background-color: #e74c3c;
+            background-color: #f37e21;
             bottom: -10px;
             left: 25%;
         }
@@ -233,7 +233,7 @@
         .special-tile-btn {
             display: inline-block;
             padding: 12px 25px;
-            background-color: #e74c3c;
+            background-color: #f37e21;
             color: white;
             text-decoration: none;
             border-radius: 5px;

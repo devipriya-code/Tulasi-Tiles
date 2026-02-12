@@ -3,11 +3,11 @@
 }
 :root {
     --primary-color: #2c3e50;
-    --secondary-color: #e74c3c;
+    --secondary-color: #f37e21;
     --light-color: #ecf0f1;
     --dark-color: #2c3e50;
     --text-color: #333;
-    --success-color: #e02f1b;
+    --success-color: #ff7809;
 }
 
 .product-detail {
