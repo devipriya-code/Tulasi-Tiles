@@ -563,6 +563,7 @@ nav ul li a:hover {
   margin: 0 auto;
 }
 
+/* three section product style */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -607,27 +608,34 @@ nav ul li a:hover {
 }
 
 /* Dots */
-.dots {
+/* Arrows */
+.arrow {
   position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 6px;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  background: rgba(68, 68, 68, 0.5);
-  border-radius: 50%;
-  transition: background 0.3s ease;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
   cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  z-index: 2;
+  transition: background 0.3s;
 }
 
-.dot.active {
-  background: #f37e21;
+.arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
+
+.arrow.prev {
+  left: 10px;
+}
+
+.arrow.next {
+  right: 10px;
+}
+
 
 .product-img img {
   width: 100%;
