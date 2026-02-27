@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog | Tulasi Tiles</title>
-     <!-- fav -->
-     <link rel="icon" href="./images/fav.png">
-     <link rel="apple-touch-icon" href="./images/fav.png">
-     
+    <!-- fav -->
+    <link rel="icon" href="./images/fav.png" />
+    <link rel="apple-touch-icon" href="./images/fav.png" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -15,6 +15,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/floor_wall_tiles.css" />
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -31,10 +34,24 @@
       <!-- Navbar content will be injected here by JavaScript -->
     </header>
 
+    <section class="hero-commercial">
+      <div class="hero-content">
+        <h1>Our Blog</h1>
+        <p>
+          Stay updated with the latest trends, tips, and insights in the world
+          of tiles and interior design through our expert blog.
+        </p>
+      </div>
+    </section>
+
     <!-- Blogs Section -->
-    <div class="expert-section active" id="expert-blogs" style="margin-bottom: 30px; margin-top: 30px;">
+    <div
+      class="expert-section active"
+      id="expert-blogs"
+      style="margin-bottom: 30px; margin-top: 30px"
+    >
       <div id="blogs" class="expert-blogs">
-        <div class="expert-blog-card col-lg-3 ">
+        <div class="expert-blog-card col-lg-3">
           <div class="expert-blog-image">
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqrhDix0FS9r7Vp9qFmAPmjTVLV19OIcG2wA&s"
@@ -50,7 +67,9 @@
               space into a modern masterpiece.
             </p>
             <div class="expert-blog-meta">
-              <a href="blog-details1.html"><button class="blog-button">Read More</button></a>
+              <a href="blog-details1.html"
+                ><button class="blog-button">Read More</button></a
+              >
             </div>
           </div>
         </div>
@@ -70,7 +89,9 @@
               creative and affordable remodeling solutions.
             </p>
             <div class="expert-blog-meta">
-               <a href="blog-details1.html"><button class="blog-button">Read More</button></a>
+              <a href="blog-details1.html"
+                ><button class="blog-button">Read More</button></a
+              >
             </div>
           </div>
         </div>
@@ -91,7 +112,9 @@
               we live in and interact with our homes.
             </p>
             <div class="expert-blog-meta">
-               <a href="blog-details1.html"><button class="blog-button">Read More</button></a>
+              <a href="blog-details1.html"
+                ><button class="blog-button">Read More</button></a
+              >
             </div>
           </div>
         </div>
@@ -112,7 +135,9 @@
               spacious and stylish.
             </p>
             <div class="expert-blog-meta">
-               <a href="blog-details1.html"><button class="blog-button">Read More</button></a>
+              <a href="blog-details1.html"
+                ><button class="blog-button">Read More</button></a
+              >
             </div>
           </div>
         </div>
@@ -132,7 +157,9 @@
               functionality with stunning aesthetics.
             </p>
             <div class="expert-blog-meta">
-               <a href="blog-details1.html"><button class="blog-button">Read More</button></a>
+              <a href="blog-details1.html"
+                ><button class="blog-button">Read More</button></a
+              >
             </div>
           </div>
         </div>
@@ -153,7 +180,9 @@
               compromise on style or durability.
             </p>
             <div class="expert-blog-meta">
-              <a href="blog-details1.html"><button class="blog-button">Read More</button></a>
+              <a href="blog-details1.html"
+                ><button class="blog-button">Read More</button></a
+              >
             </div>
           </div>
         </div>
@@ -170,7 +199,9 @@
               sustainability with timeless elegance.
             </p>
             <div class="expert-blog-meta">
-               <a href="blog-details1.html"><button class="blog-button">Read More</button></a>
+              <a href="blog-details1.html"
+                ><button class="blog-button">Read More</button></a
+              >
             </div>
           </div>
         </div>
@@ -190,13 +221,15 @@
               materials for a greener home.
             </p>
             <div class="expert-blog-meta">
-               <a href="blog-details1.html"><button class="blog-button">Read More</button></a>
+              <a href="blog-details1.html"
+                ><button class="blog-button">Read More</button></a
+              >
             </div>
           </div>
         </div>
       </div>
     </div>
-     <a
+    <a
       href="https://wa.me/919843069220"
       class="whatsapp-float"
       target="_blank"
@@ -221,22 +254,22 @@
   <!-- Link To JS -->
   <script src="js/navbar.js"></script>
   <script src="js/footer.js"></script>
-   <script>
-      const scrollTopBtn = document.getElementById("scrollTopBtn");
+  <script>
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-          scrollTopBtn.style.display = "flex";
-        } else {
-          scrollTopBtn.style.display = "none";
-        }
-      });
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.style.display = "flex";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    });
 
-      scrollTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
       });
-    </script>
+    });
+  </script>
 </html>
