@@ -53,7 +53,7 @@ let navbar = (document.getElementById("navbar").innerHTML =
                 <li><a href="./compare.html">Tile Comparison</a></li>
                 <li><a href="./tileCalculator.html">Tiles Calculator</a></li>
                  <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./catalogue.html">E-Catalogue</a></li>
+                <li><a href="./catalogue.html"><button class="catalogue-button">E-Catalogue</button></a></li>
             </ul>
         </nav>
     </div>`);
