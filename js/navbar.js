@@ -19,25 +19,15 @@ let navbar = (document.getElementById("navbar").innerHTML =
                         <div class="dropdown-column">
                             <h4>Floor Tiles</h4>
                             <ul>
-                                <li><a href="bathroom_floor_tiles.html"><i class="fas fa-check-circle"></i> Bathroom Floor Tiles</a></li>
-                                <li><a href="kitchen_floor_tiles.html"><i class="fas fa-check-circle"></i> Kitchen Floor Tiles</a></li>
-                                <li><a href="outdoor_floor_tiles.html"><i class="fas fa-check-circle"></i> Outdoor Floor Tiles</a></li>
-                                <li><a href="livingroom_floor_tiles.html"><i class="fas fa-check-circle"></i> Living Room Floor Tiles</a></li>
-                                <li><a href="bedroom_floor_tiles.html"><i class="fas fa-check-circle"></i> Bedroom Floor Tiles</a></li>
-                                <li><a href="commercial_floor_tiles.html"><i class="fas fa-check-circle"></i> Commercial Floor Tiles</a></li>
+                                <li><a href="bathroom_floor_tiles.html"><i class="fas fa-check-circle"></i> Bathroom Tiles</a></li>
+                                <li><a href="kitchen_floor_tiles.html"><i class="fas fa-check-circle"></i> Kitchen Tiles</a></li>
+                                <li><a href="outdoor_floor_tiles.html"><i class="fas fa-check-circle"></i> Outdoor Tiles</a></li>
+                                <li><a href="livingroom_floor_tiles.html"><i class="fas fa-check-circle"></i> Living Room Tiles</a></li>
+                                <li><a href="bedroom_floor_tiles.html"><i class="fas fa-check-circle"></i> Bedroom Tiles</a></li>
+                                <li><a href="commercial_floor_tiles.html"><i class="fas fa-check-circle"></i> Commercial Tiles</a></li>
                             </ul>
                         </div>
-                        <div class="dropdown-column">
-                            <h4>Wall Tiles</h4>
-                            <ul>
-                                <li><a href="bathroom_wall_tiles.html"><i class="fas fa-check-circle"></i> Bathroom Wall Tiles</a></li>
-                                <li><a href="kitchen_wall_tiles.html"><i class="fas fa-check-circle"></i> Kitchen Wall Tiles</a></li>
-                                <li><a href="outdoor_wall_tiles.html"><i class="fas fa-check-circle"></i> Outdoor Wall Tiles</a></li> 
-                                <li><a href="livingroom_wall_tiles.html"><i class="fas fa-check-circle"></i> Living Room Wall Tiles</a></li>
-                                <li><a href="bedroom_wall_tiles.html"><i class="fas fa-check-circle"></i> Bedroom Wall Tiles</a></li>
-                                <li><a href="commercial_wall_tiles.html"><i class="fas fa-check-circle"></i> Commercial Wall Tiles</a></li>
-                            </ul>
-                        </div>
+                        
                         <div class="dropdown-column">
                             <h4>Special Tiles</h4>
                             <ul>
@@ -60,38 +50,89 @@ let navbar = (document.getElementById("navbar").innerHTML =
 
 // <li><a href="./expert_corner.html">Expert Corner</a></li>
 // Mobile menu toggle functionality
+// Mobile menu toggle functionality
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
   const nav = document.querySelector("nav");
   const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
 
   // Hamburger menu toggle
-  hamburger.addEventListener("click", function () {
-    this.classList.toggle("active");
-    nav.classList.toggle("active");
-  });
+  if (hamburger) {
+    hamburger.addEventListener("click", function () {
+      this.classList.toggle("active");
+      nav.classList.toggle("active");
+      document.body.style.overflow = nav.classList.contains("active") ? "hidden" : "";
+    });
+  }
 
   // Dropdown toggle for mobile
   dropdownToggles.forEach((toggle) => {
     toggle.addEventListener("click", function (e) {
+      // Only prevent default and toggle on mobile
       if (window.innerWidth <= 992) {
         e.preventDefault();
+        e.stopPropagation();
+        
         const dropdown = this.parentElement;
+        
+        // Close other dropdowns
+        document.querySelectorAll('.dropdown').forEach(d => {
+          if (d !== dropdown) {
+            d.classList.remove('active');
+          }
+        });
+        
+        // Toggle current dropdown
         dropdown.classList.toggle("active");
+        
+        console.log("Dropdown clicked, active:", dropdown.classList.contains('active'));
       }
     });
   });
 
-  // Close menu when clicking on a link (for mobile)
-  document.querySelectorAll("nav a").forEach((link) => {
+  // Close menu when clicking on a dropdown link (not the toggle)
+  document.querySelectorAll(".dropdown-column a").forEach((link) => {
     link.addEventListener("click", function () {
-      if (
-        window.innerWidth <= 992 &&
-        !this.classList.contains("dropdown-toggle")
-      ) {
+      if (window.innerWidth <= 992) {
         hamburger.classList.remove("active");
         nav.classList.remove("active");
+        document.body.style.overflow = "";
+        
+        // Close all dropdowns
+        document.querySelectorAll('.dropdown').forEach(d => {
+          d.classList.remove('active');
+        });
       }
     });
+  });
+
+  // Close menu when clicking overlay
+  if (nav) {
+    nav.addEventListener("click", function(e) {
+      if (e.target === this && window.innerWidth <= 992) {
+        hamburger.classList.remove("active");
+        nav.classList.remove("active");
+        document.body.style.overflow = "";
+        
+        // Close all dropdowns
+        document.querySelectorAll('.dropdown').forEach(d => {
+          d.classList.remove('active');
+        });
+      }
+    });
+  }
+
+  // Close menu on window resize
+  window.addEventListener("resize", function() {
+    if (window.innerWidth > 992) {
+      hamburger.classList.remove("active");
+      nav.classList.remove("active");
+      document.body.style.overflow = "";
+      
+      // Close all dropdowns
+      document.querySelectorAll('.dropdown').forEach(d => {
+        d.classList.remove('active');
+      });
+    }
   });
 });
