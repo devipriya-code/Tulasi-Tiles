@@ -20,7 +20,7 @@ let footer = (document.getElementById("footer").innerHTML =
                     <li><a href="./tileCalculator.html">Tiles Calculator</a></li>
                   
                     <li><a href="./contact.html">Contact</a></li>
-      
+                   
                 </ul>
             </div>
             <div class="footer-col">

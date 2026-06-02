@@ -4,300 +4,2141 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luxury Kitchen Floor Tiles Collection</title>
-      <!-- fav -->
-     <link rel="icon" href="./images/fav.png">
-     <link rel="apple-touch-icon" href="./images/fav.png">
-     
-    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <!-- Link To CSS -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/floor_wall_tiles.css" />
-  </head>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --accent: #f37e21;
+        --accent-dark: #d96a14;
+        --accent-light: #fff4ec;
+        --text: #1a1814;
+        --text-muted: #6b6460;
+        --text-light: #9b948e;
+        --bg: #fafaf8;
+        --surface: #ffffff;
+        --border: #e8e4de;
+        --border-dark: #c9c3ba;
+        --ff-display: "Playfair Display", Georgia, serif;
+        --ff-body: "DM Sans", sans-serif;
+        --sidebar-w: 270px;
+      }
+      body {
+        font-family: var(--ff-body);
+        background: var(--bg);
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.6;
+      }
 
+      /* HERO */
+      .hero {
+        position: relative;
+        height: 70vh;
+        min-height: 420px;
+        overflow: hidden;
+        background: #111;
+      }
+      .hero-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.55;
+      }
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.72) 0%,
+          rgba(0, 0, 0, 0.18) 65%,
+          transparent 100%
+        );
+      }
+      .hero-inner {
+        position: relative;
+        z-index: 2;
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 3.5rem;
+      }
+      .hero-eyebrow {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .hero-eyebrow::before {
+        content: "";
+        width: 28px;
+        height: 1.5px;
+        background: var(--accent);
+        display: block;
+      }
+      .hero h1 {
+        font-family: var(--ff-display);
+        font-size: clamp(2.4rem, 5vw, 4rem);
+        font-weight: 400;
+        color: #fff;
+        line-height: 1.12;
+        max-width: 580px;
+        margin-bottom: 1.1rem;
+      }
+      .hero p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 460px;
+        margin-bottom: 2rem;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        padding: 12px 26px;
+        border: none;
+        cursor: pointer;
+        transition: background 0.2s;
+        font-family: var(--ff-body);
+      }
+      .btn-primary:hover {
+        background: var(--accent-dark);
+      }
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        padding: 12px 26px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .btn-outline:hover {
+        border-color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      /* BREADCRUMB */
+      .breadcrumb-bar {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+      }
+      .breadcrumb-inner {
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 0.7rem 2rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12.5px;
+        color: var(--text-muted);
+      }
+      .breadcrumb-inner a {
+        color: var(--text-muted);
+        text-decoration: none;
+      }
+      .breadcrumb-inner a:hover {
+        color: var(--accent);
+      }
+      .breadcrumb-inner .sep {
+        color: var(--border-dark);
+      }
+      .breadcrumb-inner .current {
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      /* LAYOUT */
+      .page-body {
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 2rem 2rem 5rem;
+        display: grid;
+        grid-template-columns: var(--sidebar-w) 1fr;
+        gap: 2.5rem;
+        align-items: start;
+      }
+
+      /* SIDEBAR */
+      .sidebar {
+        position: sticky;
+        top: 20px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+      }
+      .sidebar-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.1rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .sidebar-header h3 {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text);
+      }
+      .sidebar-clear {
+        font-size: 11.5px;
+        color: var(--accent);
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: var(--ff-body);
+        padding: 0;
+      }
+      .sidebar-clear:hover {
+        text-decoration: underline;
+      }
+      .filter-group {
+        border-bottom: 1px solid var(--border);
+      }
+      .filter-group:last-of-type {
+        border-bottom: none;
+      }
+      .filter-group-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.85rem 1.1rem;
+        background: none;
+        border: none;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        cursor: pointer;
+        text-align: left;
+      }
+      .filter-group-header i {
+        font-size: 11px;
+        color: var(--text-light);
+        transition: transform 0.22s;
+      }
+      .filter-group.open .filter-group-header i {
+        transform: rotate(180deg);
+      }
+      .filter-group-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      .filter-group.open .filter-group-body {
+        max-height: 500px;
+      }
+      .filter-group-inner {
+        padding: 0.4rem 1.1rem 1rem;
+      }
+      .color-swatches {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .swatch-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+      }
+      .swatch-circle {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        transition: border-color 0.15s;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+      }
+      .swatch-item:hover .swatch-circle,
+      .swatch-item.active .swatch-circle {
+        border-color: var(--accent);
+      }
+      .swatch-label {
+        font-size: 9.5px;
+        color: var(--text-muted);
+        text-align: center;
+        max-width: 38px;
+        line-height: 1.2;
+      }
+      .texture-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+      }
+      .texture-thumb {
+        position: relative;
+        aspect-ratio: 1;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: border-color 0.15s;
+      }
+      .texture-thumb:hover,
+      .texture-thumb.active {
+        border-color: var(--accent);
+      }
+      .texture-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s;
+      }
+      .texture-thumb:hover img {
+        transform: scale(1.06);
+      }
+      .texture-name {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        font-size: 8.5px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        padding: 4px 5px;
+        text-transform: uppercase;
+        line-height: 1.2;
+      }
+      .finish-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .finish-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        font-size: 13px;
+        color: var(--text-muted);
+        padding: 3px 0;
+      }
+      .finish-item input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+        accent-color: var(--accent);
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+      .finish-item:hover {
+        color: var(--text);
+      }
+      .size-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .size-tag {
+        padding: 5px 10px;
+        border: 1px solid var(--border);
+        font-size: 11.5px;
+        color: var(--text-muted);
+        cursor: pointer;
+        transition: all 0.15s;
+        background: var(--surface);
+      }
+      .size-tag:hover,
+      .size-tag.active {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-light);
+      }
+
+      /* APPLY FILTERS BUTTON */
+      .apply-filters-wrap {
+        padding: 1rem 1.1rem;
+        border-top: 1px solid var(--border);
+        background: var(--surface);
+      }
+      .btn-apply {
+        width: 100%;
+        padding: 11px 0;
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .btn-apply:hover {
+        background: var(--accent-dark);
+      }
+
+      .sidebar-cta {
+        margin: 0;
+        padding: 1.1rem;
+        background: var(--text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        width: 100%;
+        font-family: var(--ff-body);
+        transition: background 0.2s;
+      }
+      .sidebar-cta:hover {
+        background: #3a3530;
+      }
+
+      /* CONTENT AREA */
+      .toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .toolbar-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .item-count {
+        font-size: 13.5px;
+        color: var(--text-muted);
+      }
+      .item-count strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+      .view-toggle {
+        display: flex;
+        gap: 4px;
+      }
+      .view-btn {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        cursor: pointer;
+        color: var(--text-muted);
+        font-size: 14px;
+        transition: all 0.15s;
+      }
+      .view-btn.active,
+      .view-btn:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-light);
+      }
+      .sort-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+      .sort-group select {
+        border: 1px solid var(--border);
+        padding: 6px 10px;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        color: var(--text);
+        background: var(--surface);
+        cursor: pointer;
+        outline: none;
+      }
+      .sort-group select:focus {
+        border-color: var(--accent);
+      }
+
+      /* ACTIVE FILTER CHIPS */
+      #active-filter-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 1rem;
+      }
+      .filter-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 4px 10px;
+        background: var(--accent-light);
+        border: 1px solid var(--accent);
+        color: var(--accent-dark);
+        font-size: 12px;
+        cursor: pointer;
+        font-family: var(--ff-body);
+      }
+      .filter-chip:hover {
+        background: #fde8d4;
+      }
+
+      /* PRODUCT GRID */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5px;
+        background: var(--border);
+        border: 1.5px solid var(--border);
+      }
+      .products-grid.two-col {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .prod-card {
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .prod-img-wrap {
+        position: relative;
+        aspect-ratio: 4/3;
+        overflow: hidden;
+        background: #f0ece6;
+      }
+      .prod-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .prod-card:hover .prod-img-wrap img {
+        transform: scale(1.05);
+      }
+      .prod-badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: #1a1814;
+        color: #fff;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        padding: 3px 8px;
+      }
+      .prod-wish {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.92);
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+      .prod-card:hover .prod-wish {
+        opacity: 1;
+      }
+      .prod-wish i {
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+      .prod-wish:hover i {
+        color: #c0392b;
+      }
+      .prod-body {
+        padding: 0.9rem 1rem 0;
+        flex: 1;
+      }
+      .prod-tag {
+        font-size: 9.5px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 3px;
+      }
+      .prod-name {
+        font-family: var(--ff-display);
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text);
+        line-height: 1.3;
+      }
+      .prod-desc {
+        font-size: 12px;
+        color: var(--text-muted);
+        margin-top: 4px;
+        line-height: 1.6;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .prod-meta {
+        display: flex;
+        gap: 10px;
+        margin-top: 8px;
+      }
+      .prod-meta span {
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+      .prod-meta strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+      .prod-actions {
+        display: flex;
+        border-top: 1px solid var(--border);
+        margin-top: 0.8rem;
+      }
+      .prod-btn {
+        flex: 1;
+        padding: 9px 0;
+        border: none;
+        background: none;
+        font-family: var(--ff-body);
+        font-size: 11.5px;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        transition:
+          background 0.15s,
+          color 0.15s;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        color: var(--text);
+      }
+      .prod-btn-view {
+        border-right: 1px solid var(--border);
+      }
+      .prod-btn-view:hover {
+        background: #f5f5f3;
+      }
+      .prod-btn-enquire {
+        color: var(--accent-dark);
+      }
+      .prod-btn-enquire:hover {
+        background: var(--accent-light);
+      }
+      .prod-btn i {
+        font-size: 11px;
+      }
+
+      /* NO RESULTS */
+      .no-results {
+        grid-column: 1/-1;
+        padding: 3rem 1.5rem;
+        text-align: center;
+        color: var(--text-muted);
+      }
+      .no-results i {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        display: block;
+        color: var(--border-dark);
+      }
+
+      /* DESCRIPTION */
+      .desc-block {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);
+      }
+      .desc-block h2 {
+        font-family: var(--ff-display);
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+      }
+      .desc-block p {
+        font-size: 13.5px;
+        color: var(--text-muted);
+        line-height: 1.85;
+        margin-bottom: 0.75rem;
+      }
+
+      /* FULL WIDTH */
+      .full-width-section {
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 0 2rem 4rem;
+      }
+      .cta-banner {
+        background: var(--text);
+        padding: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+      }
+      .cta-banner-text h3 {
+        font-family: var(--ff-display);
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #f5f0ea;
+        margin-bottom: 0.4rem;
+      }
+      .cta-banner-text p {
+        font-size: 13px;
+        color: #7a7470;
+        max-width: 500px;
+      }
+      .section-title-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.85rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .section-title-row h2 {
+        font-family: var(--ff-display);
+        font-size: 1.35rem;
+        font-weight: 400;
+      }
+      .section-title-row a {
+        font-size: 12.5px;
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .section-title-row a:hover {
+        text-decoration: underline;
+      }
+      .featured-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .feat-card {
+        background: var(--surface);
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .feat-img {
+        aspect-ratio: 3/2;
+        overflow: hidden;
+      }
+      .feat-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s;
+      }
+      .feat-card:hover .feat-img img {
+        transform: scale(1.05);
+      }
+      .feat-body {
+        padding: 0.75rem 0.85rem;
+      }
+      .feat-tag {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 3px;
+      }
+      .feat-name {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        margin-bottom: 4px;
+      }
+      .feat-desc {
+        font-size: 11.5px;
+        color: var(--text-muted);
+        line-height: 1.55;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .feat-meta {
+        display: flex;
+        gap: 8px;
+        margin-top: 6px;
+      }
+      .feat-meta span {
+        font-size: 10.5px;
+        color: var(--text-muted);
+      }
+      .feat-meta strong {
+        color: var(--text);
+      }
+      .feat-viewmore {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 11px;
+        color: var(--accent);
+        margin-top: 6px;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .feat-viewmore:hover {
+        text-decoration: underline;
+      }
+
+      /* WHATSAPP / SCROLL */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        width: 52px;
+        height: 52px;
+        z-index: 200;
+        background: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+        transition: transform 0.2s;
+        text-decoration: none;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.08);
+      }
+      .whatsapp-float i {
+        font-size: 26px;
+        color: #fff;
+      }
+      #scrollTopBtn {
+        position: fixed;
+        bottom: 84px;
+        right: 24px;
+        width: 40px;
+        height: 40px;
+        background: var(--text);
+        color: #fff;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 200;
+        transition: background 0.15s;
+      }
+      #scrollTopBtn:hover {
+        background: #3a3530;
+      }
+
+      /* MOBILE */
+      .mobile-filter-toggle {
+        display: none;
+        align-items: center;
+        gap: 8px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 10px 16px;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        cursor: pointer;
+        margin-bottom: 1rem;
+      }
+
+      .detail-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+        z-index: 1000;
+        display: none;
+        overflow-y: auto;
+      }
+      .detail-overlay.open {
+        display: block;
+      }
+      .detail-modal {
+        background: var(--bg);
+        max-width: 1200px;
+        margin: 0 auto;
+        min-height: 100vh;
+        position: relative;
+      }
+      .detail-close {
+        position: fixed;
+        top: 18px;
+        right: 18px;
+        width: 40px;
+        height: 40px;
+        background: #1a1814;
+        color: #fff;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        z-index: 1010;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+      .detail-close:hover {
+        background: #3a3530;
+      }
+      .detail-breadcrumb {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 0.7rem 2rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12.5px;
+        color: var(--text-muted);
+      }
+      .detail-breadcrumb span.sep {
+        color: var(--border-dark);
+      }
+      .detail-breadcrumb span.cur {
+        color: var(--text);
+        font-weight: 500;
+      }
+      .detail-main {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 0;
+        background: var(--border);
+      }
+      .detail-gallery {
+        background: var(--surface);
+        padding: 0;
+      }
+      .detail-gallery-main {
+        aspect-ratio: 4/3;
+        overflow: hidden;
+        background: #f0ece6;
+      }
+      .detail-gallery-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .detail-thumbs {
+        display: flex;
+        gap: 2px;
+        padding: 2px;
+        background: var(--border);
+      }
+      .detail-thumb {
+        width: 80px;
+        height: 60px;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid transparent;
+        flex-shrink: 0;
+        transition: border-color 0.15s;
+      }
+      .detail-thumb.active,
+      .detail-thumb:hover {
+        border-color: var(--accent);
+      }
+      .detail-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .detail-info {
+        background: var(--surface);
+        padding: 2rem 1.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .detail-info-tag {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      .detail-info-name {
+        font-family: var(--ff-display);
+        font-size: 1.75rem;
+        font-weight: 400;
+        color: var(--text);
+        line-height: 1.2;
+      }
+      .detail-info-desc {
+        font-size: 13.5px;
+        color: var(--text-muted);
+        line-height: 1.8;
+      }
+      .detail-divider {
+        border: none;
+        border-top: 1px solid var(--border);
+      }
+      .spec-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .spec-table tr {
+        border-bottom: 1px solid var(--border);
+      }
+      .spec-table tr:last-child {
+        border-bottom: none;
+      }
+      .spec-table td {
+        padding: 0.6rem 0;
+        font-size: 13px;
+      }
+      .spec-table td:first-child {
+        color: var(--text-muted);
+        width: 50%;
+      }
+      .spec-table td:last-child {
+        color: var(--text);
+        font-weight: 500;
+      }
+      .detail-color-row {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+      }
+      .detail-swatch {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 2px solid var(--border);
+        cursor: pointer;
+        transition: border-color 0.15s;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+      }
+      .detail-swatch:hover,
+      .detail-swatch.active {
+        border-color: var(--accent);
+      }
+      .detail-finish-row {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+      }
+      .detail-finish-tag {
+        padding: 5px 12px;
+        border: 1px solid var(--border);
+        font-size: 12px;
+        color: var(--text-muted);
+        background: var(--surface);
+      }
+      .detail-finish-tag.active {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-light);
+      }
+      .detail-size-row {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+      }
+      .detail-size-btn {
+        padding: 7px 14px;
+        border: 1px solid var(--border);
+        font-size: 12px;
+        color: var(--text-muted);
+        background: var(--surface);
+        cursor: pointer;
+        font-family: var(--ff-body);
+        transition: all 0.15s;
+      }
+      .detail-size-btn:hover,
+      .detail-size-btn.active {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-light);
+      }
+      .detail-ctas {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 0.5rem;
+      }
+      .detail-btn-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        padding: 13px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+      .detail-btn-main:hover {
+        background: var(--accent-dark);
+      }
+      .detail-btn-secondary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: transparent;
+        color: var(--text);
+        border: 1px solid var(--border);
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 500;
+        padding: 12px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      .detail-btn-secondary:hover {
+        border-color: var(--text);
+        background: #f5f5f3;
+      }
+      .detail-tabs-section {
+        background: var(--surface);
+        margin-top: 2px;
+        border-top: 2px solid var(--border);
+      }
+      .detail-tabs-header {
+        display: flex;
+        border-bottom: 1px solid var(--border);
+      }
+      .detail-tab-btn {
+        padding: 1rem 1.5rem;
+        background: none;
+        border: none;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text-muted);
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        margin-bottom: -1px;
+        transition: all 0.2s;
+      }
+      .detail-tab-btn.active {
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+      }
+      .detail-tab-btn:hover {
+        color: var(--text);
+      }
+      .detail-tab-panel {
+        display: none;
+        padding: 1.75rem 2rem;
+      }
+      .detail-tab-panel.active {
+        display: block;
+      }
+      .detail-features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
+      .feature-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+      .feature-item i {
+        font-size: 22px;
+        color: var(--accent);
+      }
+      .feature-item h5 {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text);
+      }
+      .feature-item p {
+        font-size: 12px;
+        color: var(--text-muted);
+        line-height: 1.6;
+      }
+      .tech-spec-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .tech-spec-cell {
+        background: var(--surface);
+        padding: 0.85rem 1rem;
+      }
+      .tech-spec-cell dt {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 0.3rem;
+      }
+      .tech-spec-cell dd {
+        font-size: 13px;
+        color: var(--text);
+        font-weight: 500;
+      }
+      .install-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .install-step {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+      .install-step-num {
+        width: 28px;
+        height: 28px;
+        background: var(--accent);
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .install-step-text h5 {
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        color: var(--text);
+      }
+      .install-step-text p {
+        font-size: 12.5px;
+        color: var(--text-muted);
+        line-height: 1.65;
+      }
+      .detail-related {
+        padding: 2rem;
+        background: var(--surface);
+        margin-top: 2px;
+      }
+      .detail-related h3 {
+        font-family: var(--ff-display);
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .related-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .related-card {
+        background: var(--surface);
+        cursor: pointer;
+        overflow: hidden;
+      }
+      .related-card-img {
+        aspect-ratio: 1;
+        overflow: hidden;
+      }
+      .related-card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s;
+      }
+      .related-card:hover .related-card-img img {
+        transform: scale(1.06);
+      }
+      .related-card-body {
+        padding: 0.6rem 0.75rem 0.75rem;
+      }
+      .related-card-tag {
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 2px;
+      }
+      .related-card-name {
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--text);
+        line-height: 1.3;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 1024px) {
+        .featured-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .detail-features-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .related-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 860px) {
+        :root {
+          --sidebar-w: 0px;
+        }
+        .page-body {
+          grid-template-columns: 1fr;
+        }
+        .sidebar {
+          position: static;
+          display: none;
+        }
+        .sidebar.mobile-open {
+          display: block;
+        }
+        .mobile-filter-toggle {
+          display: flex;
+        }
+        .products-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .detail-main {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 640px) {
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .detail-features-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .tech-spec-grid {
+          grid-template-columns: 1fr;
+        }
+        .related-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 520px) {
+        .page-body {
+          padding: 1.25rem 1rem 3rem;
+        }
+        .full-width-section {
+          padding: 0 1rem 3rem;
+        }
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .featured-grid {
+          grid-template-columns: 1fr;
+        }
+        .cta-banner {
+          flex-direction: column;
+        }
+        .detail-features-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 380px) {
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* FOOTER */
+      #footer {
+        background: #1a1814;
+        color: #ccc;
+        padding: 3rem 2rem 0;
+        font-family: var(--ff-body);
+      }
+      .footer-container {
+        max-width: 1340px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        padding-bottom: 2.5rem;
+      }
+      .footer-col h3 {
+        font-family: var(--ff-display);
+        font-size: 1rem;
+        font-weight: 500;
+        color: #f5f0ea;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #3a3530;
+      }
+      .footer-col p {
+        font-size: 13px;
+        line-height: 1.8;
+        color: #9b948e;
+        margin-bottom: 0.5rem;
+      }
+      .social-links {
+        display: flex;
+        gap: 12px;
+        margin-top: 1rem;
+      }
+      .social-links a {
+        width: 34px;
+        height: 34px;
+        background: #2e2925;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #9b948e;
+        font-size: 14px;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      .social-links a:hover {
+        background: var(--accent);
+        color: #fff;
+      }
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .footer-links li a {
+        font-size: 13px;
+        color: #9b948e;
+        text-decoration: none;
+        transition: color 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .footer-links li a::before {
+        content: "–";
+        color: #3a3530;
+        font-size: 11px;
+      }
+      .footer-links li a:hover {
+        color: var(--accent);
+      }
+      .copyright {
+        border-top: 1px solid #2e2925;
+        padding: 1.2rem 2rem;
+        text-align: center;
+        max-width: 100%;
+      }
+      .copyright p {
+        font-size: 12px;
+        color: #5f5e5a;
+        margin: 0;
+      }
+      .copyright a {
+        color: #9b948e;
+        text-decoration: none;
+      }
+      .copyright a:hover {
+        color: var(--accent);
+      }
+      @media (max-width: 860px) {
+        .footer-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 480px) {
+        .footer-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
   <body>
-    <!-- Header Section with Logo -->
     <header id="navbar">
-      <!-- Navbar content will be injected here by JavaScript -->
+      <div class="header-container">
+        <div class="logo-text">
+          <img
+            src="./images/logo-1.png"
+            alt="Tulasi Tiles Logo"
+            class="logo-img"
+          />
+        </div>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+        <nav>
+          <div class="mobile-logo">
+            <img
+              src="./images/logo-1.png"
+              alt="Tulasi Tiles Logo"
+              class="logo-img"
+            />
+          </div>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle"
+                >Tiles <i class="dropdown-arrow">▼</i></a
+              >
+              <div class="dropdown-content">
+                <div class="dropdown-column">
+                  <h4>Floor Tiles</h4>
+                  <ul>
+                    <li>
+                      <a href="bathroom_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Bathroom Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="kitchen_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Kitchen Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="outdoor_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Outdoor Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="livingroom_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Living Room
+                        Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="bedroom_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Bedroom Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="commercial_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Commercial Tiles</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown-column">
+                  <h4>Special Tiles</h4>
+                  <ul>
+                    <li>
+                      <a href="special_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Germ Free Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#tactile"
+                        ><i class="fas fa-check-circle"></i> Tactile Floor
+                        Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#anti-static"
+                        ><i class="fas fa-check-circle"></i> Anti Static
+                        Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#cool-roof"
+                        ><i class="fas fa-check-circle"></i> Cool Roof Tiles</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./compare.html">Tile Comparison</a></li>
+            <li><a href="./tileCalculator.html">Tiles Calculator</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li>
+              <a href="./catalogue.html"
+                ><button class="catalogue-button">E-Catalogue</button></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <!-- Modern Hero Section -->
-    <section class="hero-kitchen-floor">
-      <div class="hero-content">
-        <h1>Luxury Kitchen floor Tiles</h1>
+    <!-- HERO -->
+    <section class="hero">
+      <img
+        class="hero-img"
+        src="./images/cararamarble-1.jpg"
+        alt="Kitchen Floor Tiles"
+      />
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Premium Collection</p>
+        <h1>Luxury Kitchen Floor Tiles</h1>
         <p>
-          Transform your kitchen with our premium collection of designer wall
-          tiles
+          Handpicked designs that transform your kitchen into a statement of
+          refined taste and lasting quality.
         </p>
-        <a href="#collections" class="explore-btn">Explore Collections</a>
-      </div>
-    </section>
-
-    <!-- Featured Collections Section (6 cards) -->
-    <section id="collections" class="collections">
-      <div class="container">
-        <h2 class="section-title">Featured Collections</h2>
-
-        <div class="cards-grid">
-          <!-- Card 1 -->
-          <div class="card-overlay">
-            <img src="./images/kitchen_img1.avif" alt="Carrara Marble Subway" />
-            <div class="overlay-content">
-              <h3>Carrara Marble</h3>
-              <p>Classic 3x6 inch marble subway tiles with gray veining</p>
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <div class="card-overlay">
-            <img src="./images/kitchen_img2.avif" alt="Hexagonal Cement" />
-            <div class="overlay-content">
-              <h3>Hexagonal Cement</h3>
-              <p>1-inch hex cement tiles in matte gray finish</p>
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="card-overlay">
-            <img src="./images/kitchen_img3.avif" alt="Herringbone Ceramic" />
-            <div class="overlay-content">
-              <h3>Herringbone Ceramic</h3>
-              <p>White ceramic tiles in timeless herringbone pattern</p>
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="card-overlay">
-            <img src="./images/kitchen_img5.avif" alt="Zellige Moroccan" />
-            <div class="overlay-content">
-              <h3>Moroccan Zellige</h3>
-              <p>Handcrafted glazed tiles with slight color variations</p>
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div class="card-overlay">
-            <img src="./images/kitchen_img6.avif" alt="Black Matte Subway" />
-            <div class="overlay-content">
-              <h3>Black Matte Subway</h3>
-              <p>3x6 inch matte black tiles for modern kitchens</p>
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 6 -->
-          <div class="card-overlay">
-            <img src="./images/kitchen_img7.avif" alt="Fish Scale Mosaic" />
-            <div class="overlay-content">
-              <h3>Fish Scale Mosaic</h3>
-              <p>Iridescent glass tiles in scalloped pattern</p>
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 7 -->
-          <div class="card-overlay">
-            <img src="./images/kitchen_img8.jpg" alt="Brick Red Ceramic" />
-            <div class="overlay-content">
-              <h3>Brick Red Ceramic</h3>
-              <p>Traditional red clay tiles with rustic appeal</p>
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 8 -->
-          <div class="card-overlay">
-            <img src="./images/kitchen_img9.avif" alt="Geometric Pattern" />
-            <div class="overlay-content">
-              <h3>Geometric Pattern</h3>
-              <p>Colorful encaustic cement tiles in arabesque design</p>
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 9 -->
-          <div class="card-overlay">
-            <img src="./images/kitchen_img10.avif" alt="Concrete Effect" />
-            <div class="overlay-content">
-              <h3>Concrete Effect</h3>
-              <p>Large format porcelain with urban concrete finish</p>
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 11 -->
-          <div class="card-overlay">
-            <img src="./images/kitchen_img11.avif" alt="Arabesque White" />
-            <div class="overlay-content">
-              <h3>Arabesque White</h3>
-              <p>White ceramic tiles in elegant arabesque shape</p>
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 12 -->
-          <div class="card-overlay">
-            <img src="./images/kitchen_img12.avif" alt="Penny Round Mosaic" />
-            <div class="overlay-content">
-              <h3>Penny Round Mosaic</h3>
-              <p>Small circular glass tiles on mesh backing</p>
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="container">
-        <h2 class="section-title">Ready to Transform Your Kitchen?</h2>
-        <div class="cta-content">
-          <p>
-            Visit our showroom to see our tile collections in person or schedule
-            a free design consultation with our experts.
-          </p>
+        <div class="hero-actions">
+          <a href="#collections" class="btn-primary"
+            >Explore Collection
+            <i class="fa-solid fa-arrow-right" style="font-size: 11px"></i
+          ></a>
           <a
-            href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20sanitaryware"
+            href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20enquire%20about%20kitchen%20tiles"
             target="_blank"
-            class="btn"
+            class="btn-outline"
           >
-            Book on WhatsApp
+            <i class="fa-brands fa-whatsapp" style="font-size: 14px"></i>
+            Enquire Now
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Materials Section -->
-    <section class="materials-section">
-      <div class="container">
-        <h2 class="section-title">Tile Materials</h2>
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb-bar">
+      <div class="breadcrumb-inner">
+        <a href="index.html">Home</a><span class="sep">/</span>
+        <!-- <a href="tiles.html">Tiles</a><span class="sep">/</span> -->
+        <span class="current">Kitchen Floor Tiles</span>
+      </div>
+    </nav>
 
-        <div class="materials-grid">
-          <!-- Ceramic -->
-          <div class="material-card">
-            <div class="material-icon">
-              <i class="fa-solid fa-layer-group"></i>
-            </div>
-            <h3>Ceramic</h3>
-            <p>
-              Affordable, versatile, and available in endless colors and
-              patterns.
-            </p>
-          </div>
+    <!-- PAGE BODY -->
+    <div class="page-body" id="collections">
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <h3>
+            <i
+              class="fa-solid fa-sliders"
+              style="font-size: 11px; margin-right: 6px"
+            ></i
+            >Filters
+          </h3>
+          <button class="sidebar-clear" id="clearAllBtn">Clear All</button>
+        </div>
 
-          <!-- Porcelain -->
-          <div class="material-card">
-            <div class="material-icon">
-              <i class="fa-solid fa-square"></i>
+        <!-- Colors -->
+        <div class="filter-group open">
+          <button class="filter-group-header">
+            Colors <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="color-swatches">
+                <div class="swatch-item" data-color="Pearl">
+                  <div class="swatch-circle" style="background: #f5f0ea"></div>
+                  <span class="swatch-label">Pearl</span>
+                </div>
+                <div class="swatch-item" data-color="Peach">
+                  <div class="swatch-circle" style="background: #e8c4a0"></div>
+                  <span class="swatch-label">Peach</span>
+                </div>
+                <div class="swatch-item" data-color="Graphite">
+                  <div class="swatch-circle" style="background: #4a4540"></div>
+                  <span class="swatch-label">Graphite</span>
+                </div>
+                <div class="swatch-item" data-color="Hazel">
+                  <div class="swatch-circle" style="background: #8b6f47"></div>
+                  <span class="swatch-label">Hazel</span>
+                </div>
+                <div class="swatch-item" data-color="Leaf">
+                  <div class="swatch-circle" style="background: #6b8f5e"></div>
+                  <span class="swatch-label">Leaf</span>
+                </div>
+                <div class="swatch-item" data-color="Shell">
+                  <div class="swatch-circle" style="background: #d4c8b8"></div>
+                  <span class="swatch-label">Shell</span>
+                </div>
+                <div class="swatch-item" data-color="Brick">
+                  <div class="swatch-circle" style="background: #c0392b"></div>
+                  <span class="swatch-label">Brick</span>
+                </div>
+                <div class="swatch-item" data-color="Black">
+                  <div class="swatch-circle" style="background: #1a1814"></div>
+                  <span class="swatch-label">Black</span>
+                </div>
+              </div>
             </div>
-            <h3>Porcelain</h3>
-            <p>
-              Denser and more durable than ceramic, excellent for high-moisture
-              areas.
-            </p>
-          </div>
-
-          <!-- Natural Stone -->
-          <div class="material-card">
-            <div class="material-icon">
-              <i class="fa-solid fa-mountain"></i>
-            </div>
-            <h3>Natural Stone</h3>
-            <p>
-              Luxurious options like marble, travertine, and slate with natural
-              variations.
-            </p>
-          </div>
-
-          <!-- Glass -->
-          <div class="material-card">
-            <div class="material-icon">
-              <i class="fa-solid fa-gem"></i>
-            </div>
-            <h3>Glass</h3>
-            <p>
-              Creates a luminous, reflective surface in mosaic or larger
-              formats.
-            </p>
           </div>
         </div>
+
+        <!-- Textures -->
+        <div class="filter-group open">
+          <button class="filter-group-header">
+            Textures <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="texture-grid">
+                <div class="texture-thumb" data-texture="Marble">
+                  <img src="./images/cararamarble-1.jpg" alt="Marble" /><span
+                    class="texture-name"
+                    >Marble</span
+                  >
+                </div>
+                <div class="texture-thumb" data-texture="Cement">
+                  <img src="./images/kitchen_img2.avif" alt="Cement" /><span
+                    class="texture-name"
+                    >Cement</span
+                  >
+                </div>
+                <div class="texture-thumb" data-texture="Ceramic">
+                  <img src="./images/kitchen_img3.avif" alt="Ceramic" /><span
+                    class="texture-name"
+                    >Ceramic</span
+                  >
+                </div>
+                <div class="texture-thumb" data-texture="Zellige">
+                  <img src="./images/kitchen_img5.avif" alt="Zellige" /><span
+                    class="texture-name"
+                    >Zellige</span
+                  >
+                </div>
+                <div class="texture-thumb" data-texture="Concrete">
+                  <img src="./images/kitchen_img10.avif" alt="Concrete" /><span
+                    class="texture-name"
+                    >Concrete</span
+                  >
+                </div>
+                <div class="texture-thumb" data-texture="Mosaic">
+                  <img src="./images/kitchen_img7.avif" alt="Mosaic" /><span
+                    class="texture-name"
+                    >Mosaic</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Finish -->
+        <div class="filter-group open">
+          <button class="filter-group-header">
+            Finish <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="finish-list">
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Matt" /> Matt</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Polished" />
+                  Polished</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Glazed" /> Glazed</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Rustic" /> Rustic</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Satin" /> Satin</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Size -->
+        <div class="filter-group">
+          <button class="filter-group-header">
+            Size <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="size-tags">
+                <span class="size-tag" data-size="600×600">600×600</span>
+                <span class="size-tag" data-size="600×1200">600×1200</span>
+                <span class="size-tag" data-size="800×800">800×800</span>
+                <span class="size-tag" data-size="300×600">300×600</span>
+                <span class="size-tag" data-size="200×400">200×400</span>
+                <span class="size-tag" data-size="1200×1200">1200×1200</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Surface -->
+        <div class="filter-group">
+          <button class="filter-group-header">
+            Surface <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="finish-list">
+                <label class="finish-item"
+                  ><input type="checkbox" data-surface="Anti-Skid" />
+                  Anti-Skid</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-surface="POSH+" /> POSH+</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-surface="Antibacterial" />
+                  Antibacterial</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-surface="Stain Resistant" />
+                  Stain Resistant</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- APPLY FILTERS -->
+        <div class="apply-filters-wrap">
+          <button class="btn-apply" id="applyFiltersBtn">
+            <i class="fa-solid fa-check"></i> Apply Filters
+          </button>
+        </div>
+
+        <a
+          href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20kitchen%20tiles"
+          target="_blank"
+          class="sidebar-cta"
+        >
+          <i class="fa-brands fa-whatsapp"></i> Book on WhatsApp
+        </a>
+      </aside>
+
+      <!-- CONTENT -->
+      <div class="content-area">
+        <button class="mobile-filter-toggle" id="mobileFilterToggle">
+          <i class="fa-solid fa-sliders"></i> Filters
+        </button>
+
+        <div class="toolbar">
+          <div class="toolbar-left">
+            <p class="item-count"><strong id="countNum">11</strong> Items</p>
+            <div class="view-toggle">
+              <button
+                class="view-btn active"
+                id="btn3col"
+                aria-label="3 column grid"
+              >
+                <i class="fa-solid fa-grip"></i>
+              </button>
+              <button class="view-btn" id="btn2col" aria-label="2 column grid">
+                <i class="fa-solid fa-table-columns"></i>
+              </button>
+            </div>
+          </div>
+          <div class="sort-group">
+            <label for="sort-sel">Order by</label>
+            <select id="sort-sel">
+              <option>Latest</option>
+              <option>Name A–Z</option>
+              <option>Name Z–A</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="active-filter-chips"></div>
+        <div class="products-grid" id="productsGrid"></div>
+
+        <div class="desc-block">
+          <h2>Kitchen Floor Tiles for Modern Living</h2>
+          <p>
+            Your kitchen floor sets the tone for the entire space. The right
+            tile balances practicality — slip resistance, easy cleaning,
+            long-term durability — with the design statement you want to make.
+            Our collection spans classic marble and handcrafted zellige to bold
+            geometric encaustic and urban concrete-effect porcelain.
+          </p>
+          <p>
+            Choose large-format tiles for a seamless, expansive feel in
+            open-plan kitchens, or opt for mosaic and patterned formats to add
+            character and texture to compact spaces. Every tile in this
+            collection is selected for quality, longevity, and visual impact.
+          </p>
+        </div>
       </div>
-    </section>
+    </div>
 
+    <!-- FULL WIDTH SECTIONS -->
+    <div class="full-width-section">
+      <div class="cta-banner">
+        <div class="cta-banner-text">
+          <h3>Ready to Transform Your Kitchen?</h3>
+          <p>
+            Visit our showroom or schedule a free design consultation. Our
+            experts help you find the perfect tile for every space and budget.
+          </p>
+        </div>
+        <a
+          href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20kitchen%20tiles"
+          target="_blank"
+          class="btn-primary"
+        >
+          <i class="fa-brands fa-whatsapp" style="font-size: 15px"></i> Book on
+          WhatsApp
+        </a>
+      </div>
 
+      <div style="margin-bottom: 3rem">
+        <div class="section-title-row">
+          <h2>Featured Collections</h2>
+          <a href="tiles.html"
+            >View All
+            <i class="fa-solid fa-arrow-right" style="font-size: 11px"></i
+          ></a>
+        </div>
+        <div class="featured-grid" id="featuredGrid"></div>
+      </div>
+    </div>
+
+    <!-- TILE DETAIL OVERLAY -->
+    <div class="detail-overlay" id="detailOverlay">
+      <div class="detail-modal" id="detailModal">
+        <button class="detail-close" id="detailClose">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="detail-breadcrumb">
+          <span>Home</span><span class="sep">/</span> <span>Tiles</span
+          ><span class="sep">/</span> <span>Kitchen Floor Tiles</span
+          ><span class="sep">/</span>
+          <span class="cur" id="detailBreadcrumbName"></span>
+        </div>
+        <div class="detail-main">
+          <div class="detail-gallery">
+            <div class="detail-gallery-main">
+              <img id="detailMainImg" src="" alt="" />
+            </div>
+            <div class="detail-thumbs" id="detailThumbs"></div>
+          </div>
+          <div class="detail-info">
+            <div>
+              <p class="detail-info-tag" id="detailTag"></p>
+              <h1 class="detail-info-name" id="detailName"></h1>
+            </div>
+            <p class="detail-info-desc" id="detailDesc"></p>
+            <hr class="detail-divider" />
+            <table class="spec-table" id="detailSpecTable"></table>
+            <hr class="detail-divider" />
+            <div>
+              <p
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  color: var(--text-muted);
+                  margin-bottom: 0.4rem;
+                "
+              >
+                Colour
+              </p>
+              <div class="detail-color-row" id="detailColors"></div>
+            </div>
+            <div>
+              <p
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  color: var(--text-muted);
+                  margin-bottom: 0.4rem;
+                "
+              >
+                Finish
+              </p>
+              <div class="detail-finish-row" id="detailFinishes"></div>
+            </div>
+            <div>
+              <p
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  color: var(--text-muted);
+                  margin-bottom: 0.4rem;
+                "
+              >
+                Size
+              </p>
+              <div class="detail-size-row" id="detailSizes"></div>
+            </div>
+            <hr class="detail-divider" />
+            <div class="detail-ctas">
+              <a
+                id="detailEnquireWA"
+                href="#"
+                target="_blank"
+                class="detail-btn-main"
+              >
+                <i class="fa-brands fa-whatsapp" style="font-size: 15px"></i>
+                Enquire on WhatsApp
+              </a>
+              <button class="detail-btn-secondary">
+                <i class="fa-regular fa-calendar"></i> Book Showroom Visit
+              </button>
+              <button class="detail-btn-secondary">
+                <i class="fa-solid fa-file-arrow-down"></i> Download Catalogue
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TABS -->
+        <div class="detail-tabs-section">
+          <div class="detail-tabs-header">
+            <button class="detail-tab-btn active" data-tab="features">
+              Features
+            </button>
+            <button class="detail-tab-btn" data-tab="technical">
+              Technical Specs
+            </button>
+            <button class="detail-tab-btn" data-tab="installation">
+              Installation
+            </button>
+          </div>
+          <div class="detail-tab-panel active" id="tab-features">
+            <div class="detail-features-grid" id="detailFeaturesGrid"></div>
+          </div>
+          <div class="detail-tab-panel" id="tab-technical">
+            <div class="tech-spec-grid" id="detailTechGrid"></div>
+          </div>
+          <div class="detail-tab-panel" id="tab-installation">
+            <div class="install-steps">
+              <div class="install-step">
+                <div class="install-step-num">1</div>
+                <div class="install-step-text">
+                  <h5>Surface Preparation</h5>
+                  <p>
+                    Ensure the subfloor is clean, dry, and level. Remove any old
+                    adhesive or debris. A smooth base guarantees lasting
+                    adhesion.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">2</div>
+                <div class="install-step-text">
+                  <h5>Dry Layout</h5>
+                  <p>
+                    Dry-fit tiles from the centre of the room outward before
+                    applying adhesive. This ensures balanced cuts at the edges
+                    and symmetrical patterns.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">3</div>
+                <div class="install-step-text">
+                  <h5>Apply Adhesive</h5>
+                  <p>
+                    Use a notched trowel to apply high-quality tile adhesive.
+                    Work in small sections (1–2 sq m) to prevent the adhesive
+                    from drying before placement.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">4</div>
+                <div class="install-step-text">
+                  <h5>Set Tiles & Grout</h5>
+                  <p>
+                    Press tiles firmly with a slight twist. Use spacers for
+                    consistent joint width. Allow adhesive to cure for 24 hours
+                    before grouting.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">5</div>
+                <div class="install-step-text">
+                  <h5>Seal & Finish</h5>
+                  <p>
+                    Apply appropriate sealant if specified for the finish type.
+                    Buff clean and allow full cure before foot traffic
+                    (typically 48–72 hours).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RELATED -->
+        <div class="detail-related">
+          <h3>You May Also Like</h3>
+          <div class="related-grid" id="relatedGrid"></div>
+        </div>
+      </div>
+    </div>
 
     <a
       href="https://wa.me/919843069220"
@@ -305,41 +2146,1367 @@
       target="_blank"
       aria-label="Chat on WhatsApp"
     >
-      <img src="./images/WhatsApp.svg" alt="WhatsApp" />
+      <i class="fa-brands fa-whatsapp"></i>
     </a>
-    <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
-    <!-- Footer Section -->
+    <button id="scrollTopBtn" aria-label="Scroll to top">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script>
+      const TILES = [
+        {
+          id: 0,
+          title: "Carrara Marble",
+          tag: "CARRARA MARBLE",
+          description:
+            "Classic 3×6 inch marble subway tiles with elegant gray veining. Sourced from the finest Italian quarries, these tiles bring timeless luxury to kitchen floors.",
+          colours: 3,
+          finishes: 2,
+          image: "./images/cararamarble-1.jpg",
+          badge: "Carrara",
+          colors: ["Pearl", "Shell", "Graphite"],
+          colorsHex: {
+            Pearl: "#f5f0ea",
+            Shell: "#d4c8b8",
+            Graphite: "#4a4540",
+          },
+          colorImages: {
+            Pearl: "./images/cararamarble-2.jpg",
+            Shell: "./images/cararamarble-3.jpg",
+            Graphite: "./images/cararamarble-4.jpg",
+          },
+          finishImages: {
+            Polished: "./images/cararamarble-1.jpg",
+            Satin: "./images/cararamarble-5.jpg",
+          },
+          sizeImages: {
+            "600×600": "./images/cararamarble-2.jpg",
+            "300×600": "./images/cararamarble-3.jpg",
+          },
+          texture: "Marble",
+          finish: ["Polished", "Satin"],
+          sizes: ["600×600", "300×600"],
+          surface: ["POSH+", "Stain Resistant"],
+          features: [
+            {
+              icon: "fa-solid fa-gem",
+              title: "Natural Marble",
+              desc: "Genuine Italian Carrara marble with unique natural veining patterns.",
+            },
+            {
+              icon: "fa-solid fa-shield-halved",
+              title: "Stain Resistant",
+              desc: "Factory-sealed surface repels oils, sauces and liquid spills.",
+            },
+            {
+              icon: "fa-solid fa-temperature-half",
+              title: "Thermal Stable",
+              desc: "Maintains structural integrity across temperature extremes.",
+            },
+          ],
+          tech: {
+            Material: "Natural Marble",
+            Origin: "Italy (Carrara)",
+            MOHs: "4–5",
+            WaterAbsorption: "<0.5%",
+            SurfaceFinish: "Polished / Satin",
+            Thickness: "10 mm",
+            Rectified: "Yes",
+          },
+        },
+        {
+          id: 1,
+          title: "Hexagonal Cement",
+          tag: "HEXAGONAL CEMENT",
+          description:
+            "1-inch hex cement tiles in matte gray finish for modern kitchens. A contemporary geometric pattern that pairs beautifully with stainless steel and dark cabinetry.",
+          colours: 2,
+          finishes: 1,
+          image: "./images/kitchen_img2.avif",
+          badge: "Hexagonal",
+          colors: ["Graphite", "Shell"],
+          colorsHex: { Graphite: "#4a4540", Shell: "#d4c8b8" },
+          colorImages: {
+            Graphite: "./images/kitchen_img2.avif",
+            Shell: "./images/kitchen_img11.avif",
+          },
+          finishImages: { Matt: "./images/kitchen_img2.avif" },
+          sizeImages: {
+            "200×400": "./images/kitchen_img2.avif",
+            "300×600": "./images/kitchen_img3.avif",
+          },
+          texture: "Cement",
+          finish: ["Matt"],
+          sizes: ["200×400", "300×600"],
+          surface: ["Anti-Skid"],
+          features: [
+            {
+              icon: "fa-solid fa-shapes",
+              title: "Hex Pattern",
+              desc: "Geometric hexagonal layout adds visual interest to any floor.",
+            },
+            {
+              icon: "fa-solid fa-ban",
+              title: "Anti-Skid",
+              desc: "Matte textured surface provides excellent grip when wet.",
+            },
+            {
+              icon: "fa-solid fa-leaf",
+              title: "Eco Cement",
+              desc: "Made with recycled Portland cement and mineral pigments.",
+            },
+          ],
+          tech: {
+            Material: "Cement / Porcelain",
+            Origin: "India",
+            MOHs: "6",
+            WaterAbsorption: "<3%",
+            SurfaceFinish: "Matt",
+            Thickness: "12 mm",
+            Rectified: "No",
+          },
+        },
+        {
+          id: 2,
+          title: "Herringbone Ceramic",
+          tag: "HERRINGBONE CERAMIC",
+          description:
+            "White ceramic tiles in a timeless herringbone pattern. The classic zigzag layout creates a sense of movement and elegance in any kitchen.",
+          colours: 1,
+          finishes: 2,
+          image: "./images/kitchen_img3.avif",
+          badge: "Herringbone",
+          colors: ["Pearl"],
+          colorsHex: { Pearl: "#f5f0ea" },
+          colorImages: { Pearl: "./images/kitchen_img3.avif" },
+          finishImages: {
+            Matt: "./images/kitchen_img3.avif",
+            Glazed: "./images/kitchen_img11.avif",
+          },
+          sizeImages: {
+            "200×400": "./images/kitchen_img3.avif",
+            "300×600": "./images/kitchen_img3.avif",
+          },
+          texture: "Ceramic",
+          finish: ["Matt", "Glazed"],
+          sizes: ["200×400", "300×600"],
+          surface: ["Antibacterial"],
+          features: [
+            {
+              icon: "fa-solid fa-arrow-right-arrow-left",
+              title: "Herringbone Layout",
+              desc: "Classic diagonal pattern adds architectural depth.",
+            },
+            {
+              icon: "fa-solid fa-bacteria",
+              title: "Antibacterial",
+              desc: "Silver-ion technology inhibits bacterial growth on the surface.",
+            },
+            {
+              icon: "fa-solid fa-circle-check",
+              title: "Easy Clean",
+              desc: "Smooth glazed surface wipes clean with minimal effort.",
+            },
+          ],
+          tech: {
+            Material: "Ceramic",
+            Origin: "Spain",
+            MOHs: "5",
+            WaterAbsorption: "<6%",
+            SurfaceFinish: "Matt / Glazed",
+            Thickness: "8 mm",
+            Rectified: "Yes",
+          },
+        },
+        {
+          id: 3,
+          title: "Moroccan Zellige",
+          tag: "MOROCCAN ZELLIGE",
+          description:
+            "Handcrafted glazed tiles with subtle colour variations — no two tiles are identical. Each piece is shaped and fired individually by Moroccan artisans.",
+          colours: 6,
+          finishes: 1,
+          image: "./images/kitchen_img5.avif",
+          badge: "Zellige",
+          colors: ["Peach", "Leaf", "Brick", "Hazel", "Pearl", "Shell"],
+          colorsHex: {
+            Peach: "#e8c4a0",
+            Leaf: "#6b8f5e",
+            Brick: "#c0392b",
+            Hazel: "#8b6f47",
+            Pearl: "#f5f0ea",
+            Shell: "#d4c8b8",
+          },
+          colorImages: {
+            Peach: "./images/kitchen_img5.avif",
+            Leaf: "./images/kitchen_img9.avif",
+            Brick: "./images/kitchen_img8.jpg",
+            Hazel: "./images/kitchen_img8.jpg",
+            Pearl: "./images/kitchen_img11.avif",
+            Shell: "./images/kitchen_img11.avif",
+          },
+          finishImages: { Glazed: "./images/kitchen_img5.avif" },
+          sizeImages: { "200×400": "./images/kitchen_img5.avif" },
+          texture: "Zellige",
+          finish: ["Glazed"],
+          sizes: ["200×400"],
+          surface: ["POSH+"],
+          features: [
+            {
+              icon: "fa-solid fa-hands",
+              title: "Handcrafted",
+              desc: "Each tile individually shaped and glazed by Moroccan artisans.",
+            },
+            {
+              icon: "fa-solid fa-palette",
+              title: "Natural Variation",
+              desc: "Subtle colour and texture variation gives an authentic artisanal look.",
+            },
+            {
+              icon: "fa-solid fa-fire",
+              title: "High-Fire Glaze",
+              desc: "Kiln-fired glaze locks in colour for a lifetime of vibrancy.",
+            },
+          ],
+          tech: {
+            Material: "Terracotta / Ceramic",
+            Origin: "Morocco",
+            MOHs: "4",
+            WaterAbsorption: "<4%",
+            SurfaceFinish: "Glazed",
+            Thickness: "14 mm",
+            Rectified: "No",
+          },
+        },
+        {
+          id: 4,
+          title: "Black Matte Subway",
+          tag: "BLACK MATTE SUBWAY",
+          description:
+            "3×6 inch matte black tiles for bold contemporary kitchens. A strong design statement that pairs perfectly with raw concrete, brass fixtures and open shelving.",
+          colours: 1,
+          finishes: 1,
+          image: "./images/kitchen_img6.avif",
+          badge: "Matte Black",
+          colors: ["Black"],
+          colorsHex: { Black: "#1a1814" },
+          colorImages: { Black: "./images/kitchen_img6.avif" },
+          finishImages: { Matt: "./images/kitchen_img6.avif" },
+          sizeImages: { "300×600": "./images/kitchen_img6.avif" },
+          texture: "Ceramic",
+          finish: ["Matt"],
+          sizes: ["300×600"],
+          surface: ["Stain Resistant"],
+          features: [
+            {
+              icon: "fa-solid fa-moon",
+              title: "Deep Matte",
+              desc: "Ultra-matte surface absorbs light for a dramatic contemporary look.",
+            },
+            {
+              icon: "fa-solid fa-shield-halved",
+              title: "Stain Resistant",
+              desc: "Nano-coating prevents oil and colour staining.",
+            },
+            {
+              icon: "fa-solid fa-ruler-combined",
+              title: "Rectified Edge",
+              desc: "Precision-cut edges allow tight 1 mm grout joints.",
+            },
+          ],
+          tech: {
+            Material: "Ceramic",
+            Origin: "Portugal",
+            MOHs: "5",
+            WaterAbsorption: "<5%",
+            SurfaceFinish: "Matt",
+            Thickness: "9 mm",
+            Rectified: "Yes",
+          },
+        },
+        {
+          id: 5,
+          title: "Fish Scale Mosaic",
+          tag: "FISH SCALE MOSAIC",
+          description:
+            "Iridescent glass tiles in a captivating scalloped pattern. The curved edges catch light at every angle, creating a dynamic shimmering surface.",
+          colours: 4,
+          finishes: 1,
+          image: "./images/kitchen_img7.avif",
+          badge: "Fish Scale",
+          colors: ["Pearl", "Leaf", "Peach", "Shell"],
+          colorsHex: {
+            Pearl: "#f5f0ea",
+            Leaf: "#6b8f5e",
+            Peach: "#e8c4a0",
+            Shell: "#d4c8b8",
+          },
+          colorImages: {
+            Pearl: "./images/kitchen_img7.avif",
+            Leaf: "./images/kitchen_img9.avif",
+            Peach: "./images/kitchen_img5.avif",
+            Shell: "./images/kitchen_img11.avif",
+          },
+          finishImages: { Polished: "./images/kitchen_img7.avif" },
+          sizeImages: { "200×400": "./images/kitchen_img7.avif" },
+          texture: "Mosaic",
+          finish: ["Polished"],
+          sizes: ["200×400"],
+          surface: ["POSH+"],
+          features: [
+            {
+              icon: "fa-solid fa-water",
+              title: "Scallop Pattern",
+              desc: "Fish-scale shape inspired by traditional Japanese Uroko motif.",
+            },
+            {
+              icon: "fa-regular fa-sun",
+              title: "Iridescent Glass",
+              desc: "Metallic glass finish reflects light for a shimmering effect.",
+            },
+            {
+              icon: "fa-solid fa-grid-2",
+              title: "Mesh Backed",
+              desc: "Pre-mounted on fibreglass mesh for easy, precise installation.",
+            },
+          ],
+          tech: {
+            Material: "Glass",
+            Origin: "China",
+            MOHs: "6",
+            WaterAbsorption: "0%",
+            SurfaceFinish: "Polished",
+            Thickness: "6 mm",
+            Rectified: "N/A",
+          },
+        },
+        {
+          id: 6,
+          title: "Brick Red Ceramic",
+          tag: "BRICK RED CERAMIC",
+          description:
+            "Traditional red clay tiles with rustic farmhouse appeal. The warm terracotta tones evoke the charm of a traditional country kitchen.",
+          colours: 2,
+          finishes: 2,
+          image: "./images/kitchen_img8.jpg",
+          badge: "Brick Red",
+          colors: ["Brick", "Hazel"],
+          colorsHex: { Brick: "#c0392b", Hazel: "#8b6f47" },
+          colorImages: {
+            Brick: "./images/kitchen_img8.jpg",
+            Hazel: "./images/kitchen_img9.avif",
+          },
+          finishImages: {
+            Rustic: "./images/kitchen_img8.jpg",
+            Matt: "./images/kitchen_img2.avif",
+          },
+          sizeImages: {
+            "600×600": "./images/kitchen_img8.jpg",
+            "300×600": "./images/kitchen_img8.jpg",
+          },
+          texture: "Ceramic",
+          finish: ["Rustic", "Matt"],
+          sizes: ["600×600", "300×600"],
+          surface: ["Anti-Skid"],
+          features: [
+            {
+              icon: "fa-solid fa-fire-flame-simple",
+              title: "Kiln Fired",
+              desc: "High-temperature kiln firing creates the characteristic terracotta tone.",
+            },
+            {
+              icon: "fa-solid fa-ban",
+              title: "Anti-Skid",
+              desc: "Natural roughness provides excellent slip resistance.",
+            },
+            {
+              icon: "fa-solid fa-house",
+              title: "Farmhouse Style",
+              desc: "Classic brick red perfectly suits rustic and traditional interiors.",
+            },
+          ],
+          tech: {
+            Material: "Red Ceramic",
+            Origin: "India",
+            MOHs: "4",
+            WaterAbsorption: "<8%",
+            SurfaceFinish: "Rustic / Matt",
+            Thickness: "10 mm",
+            Rectified: "No",
+          },
+        },
+        {
+          id: 7,
+          title: "Geometric Pattern",
+          tag: "GEOMETRIC PATTERN",
+          description:
+            "Colourful encaustic cement tiles in arabesque design. Bold, graphic patterns add personality and a focal point to open-plan kitchen floors.",
+          colours: 8,
+          finishes: 1,
+          image: "./images/kitchen_img9.avif",
+          badge: "Geometric",
+          colors: [
+            "Peach",
+            "Leaf",
+            "Brick",
+            "Hazel",
+            "Pearl",
+            "Shell",
+            "Graphite",
+            "Black",
+          ],
+          colorsHex: {
+            Peach: "#e8c4a0",
+            Leaf: "#6b8f5e",
+            Brick: "#c0392b",
+            Hazel: "#8b6f47",
+            Pearl: "#f5f0ea",
+            Shell: "#d4c8b8",
+            Graphite: "#4a4540",
+            Black: "#1a1814",
+          },
+          colorImages: {
+            Peach: "./images/kitchen_img9.avif",
+            Leaf: "./images/kitchen_img9.avif",
+            Brick: "./images/kitchen_img8.jpg",
+            Hazel: "./images/kitchen_img8.jpg",
+            Pearl: "./images/kitchen_img11.avif",
+            Shell: "./images/kitchen_img11.avif",
+            Graphite: "./images/kitchen_img10.avif",
+            Black: "./images/kitchen_img6.avif",
+          },
+          finishImages: { Matt: "./images/kitchen_img9.avif" },
+          sizeImages: {
+            "600×600": "./images/kitchen_img9.avif",
+            "800×800": "./images/kitchen_img9.avif",
+          },
+          texture: "Cement",
+          finish: ["Matt"],
+          sizes: ["600×600", "800×800"],
+          surface: ["Antibacterial", "Stain Resistant"],
+          features: [
+            {
+              icon: "fa-solid fa-compass-drafting",
+              title: "Arabesque Design",
+              desc: "Intricate geometric pattern draws on Moorish architectural tradition.",
+            },
+            {
+              icon: "fa-solid fa-palette",
+              title: "8 Colourways",
+              desc: "Choose from 8 rich colour combinations to match your scheme.",
+            },
+            {
+              icon: "fa-solid fa-bacteria",
+              title: "Antibacterial",
+              desc: "Surface treatment inhibits bacteria for a hygienic kitchen environment.",
+            },
+          ],
+          tech: {
+            Material: "Encaustic Cement",
+            Origin: "Mexico",
+            MOHs: "5",
+            WaterAbsorption: "<4%",
+            SurfaceFinish: "Matt",
+            Thickness: "12 mm",
+            Rectified: "No",
+          },
+        },
+        {
+          id: 8,
+          title: "Concrete Effect",
+          tag: "CONCRETE EFFECT",
+          description:
+            "Large-format porcelain with urban concrete finish. Ideal for open-plan kitchens where seamless, expansive flooring is the goal.",
+          colours: 3,
+          finishes: 2,
+          image: "./images/kitchen_img10.avif",
+          badge: "Concrete",
+          colors: ["Graphite", "Shell", "Pearl"],
+          colorsHex: {
+            Graphite: "#4a4540",
+            Shell: "#d4c8b8",
+            Pearl: "#f5f0ea",
+          },
+          colorImages: {
+            Graphite: "./images/kitchen_img10.avif",
+            Shell: "./images/kitchen_img11.avif",
+            Pearl: "./images/cararamarble-1.jpg",
+          },
+          finishImages: {
+            Matt: "./images/kitchen_img10.avif",
+            Satin: "./images/cararamarble-1.jpg",
+          },
+          sizeImages: {
+            "600×1200": "./images/kitchen_img10.avif",
+            "1200×1200": "./images/kitchen_img10.avif",
+            "800×800": "./images/kitchen_img2.avif",
+          },
+          texture: "Concrete",
+          finish: ["Matt", "Satin"],
+          sizes: ["600×1200", "1200×1200", "800×800"],
+          surface: ["Anti-Skid", "POSH+"],
+          features: [
+            {
+              icon: "fa-solid fa-city",
+              title: "Industrial Aesthetic",
+              desc: "Authentic concrete look without the maintenance of real concrete.",
+            },
+            {
+              icon: "fa-solid fa-maximize",
+              title: "Large Format",
+              desc: "Big slabs minimise grout lines for a seamless, spacious feel.",
+            },
+            {
+              icon: "fa-solid fa-ban",
+              title: "Anti-Skid POSH+",
+              desc: "Dual surface treatment for safety and premium tactile finish.",
+            },
+          ],
+          tech: {
+            Material: "Porcelain",
+            Origin: "Italy",
+            MOHs: "7",
+            WaterAbsorption: "<0.1%",
+            SurfaceFinish: "Matt / Satin",
+            Thickness: "9 mm",
+            Rectified: "Yes",
+          },
+        },
+        {
+          id: 9,
+          title: "Arabesque White",
+          tag: "ARABESQUE WHITE",
+          description:
+            "White ceramic tiles in an elegant arabesque shape. The interlocking curves create a flowing, sculptural floor with a distinctly Mediterranean character.",
+          colours: 2,
+          finishes: 1,
+          image: "./images/kitchen_img11.avif",
+          badge: "Arabesque",
+          colors: ["Pearl", "Shell"],
+          colorsHex: { Pearl: "#f5f0ea", Shell: "#d4c8b8" },
+          colorImages: {
+            Pearl: "./images/kitchen_img11.avif",
+            Shell: "./images/kitchen_img3.avif",
+          },
+          finishImages: { Glazed: "./images/kitchen_img11.avif" },
+          sizeImages: {
+            "200×400": "./images/kitchen_img11.avif",
+            "300×600": "./images/kitchen_img3.avif",
+          },
+          texture: "Ceramic",
+          finish: ["Glazed"],
+          sizes: ["200×400", "300×600"],
+          surface: ["Antibacterial"],
+          features: [
+            {
+              icon: "fa-solid fa-infinity",
+              title: "Arabesque Shape",
+              desc: "Interlocking curves inspired by classic Moroccan tile art.",
+            },
+            {
+              icon: "fa-solid fa-sun",
+              title: "Light Reflective",
+              desc: "Glazed white finish brightens kitchens and maximises natural light.",
+            },
+            {
+              icon: "fa-solid fa-bacteria",
+              title: "Antibacterial Glaze",
+              desc: "Silver-ion glaze actively inhibits bacterial growth.",
+            },
+          ],
+          tech: {
+            Material: "Ceramic",
+            Origin: "Spain",
+            MOHs: "5",
+            WaterAbsorption: "<6%",
+            SurfaceFinish: "Glazed",
+            Thickness: "8 mm",
+            Rectified: "Yes",
+          },
+        },
+        {
+          id: 10,
+          title: "Penny Round Mosaic",
+          tag: "PENNY ROUND MOSAIC",
+          description:
+            "Small circular glass tiles on mesh backing — playful and light-catching. Perfect for adding a retro-modern accent to kitchen floors or feature walls.",
+          colours: 5,
+          finishes: 2,
+          image: "./images/kitchen_img12.avif",
+          badge: "Penny Round",
+          colors: ["Pearl", "Peach", "Leaf", "Shell", "Black"],
+          colorsHex: {
+            Pearl: "#f5f0ea",
+            Peach: "#e8c4a0",
+            Leaf: "#6b8f5e",
+            Shell: "#d4c8b8",
+            Black: "#1a1814",
+          },
+          colorImages: {
+            Pearl: "./images/kitchen_img12.avif",
+            Peach: "./images/kitchen_img5.avif",
+            Leaf: "./images/kitchen_img9.avif",
+            Shell: "./images/kitchen_img11.avif",
+            Black: "./images/kitchen_img6.avif",
+          },
+          finishImages: {
+            Polished: "./images/kitchen_img12.avif",
+            Glazed: "./images/kitchen_img7.avif",
+          },
+          sizeImages: { "200×400": "./images/kitchen_img12.avif" },
+          texture: "Mosaic",
+          finish: ["Polished", "Glazed"],
+          sizes: ["200×400"],
+          surface: ["POSH+", "Stain Resistant"],
+          features: [
+            {
+              icon: "fa-regular fa-circle",
+              title: "Penny Round",
+              desc: "Classic 1-inch circular format for retro and contemporary aesthetics.",
+            },
+            {
+              icon: "fa-solid fa-layer-group",
+              title: "Mesh Backed",
+              desc: "Fibreglass mesh backing simplifies cutting and laying on curved areas.",
+            },
+            {
+              icon: "fa-solid fa-star",
+              title: "Light-Catching",
+              desc: "Polished glass surface catches and refracts natural and artificial light.",
+            },
+          ],
+          tech: {
+            Material: "Glass",
+            Origin: "Turkey",
+            MOHs: "6",
+            WaterAbsorption: "0%",
+            SurfaceFinish: "Polished / Glazed",
+            Thickness: "6 mm",
+            Rectified: "N/A",
+          },
+        },
+      ];
+
+      const FEATURED_IDS = [1, 3, 7, 8];
+
+      // ─── FILTER STATE ─────────────────────────────────────────────────────────────
+      const pending = {
+        colors: new Set(),
+        textures: new Set(),
+        finishes: new Set(),
+        sizes: new Set(),
+        surfaces: new Set(),
+      };
+      const applied = {
+        colors: new Set(),
+        textures: new Set(),
+        finishes: new Set(),
+        sizes: new Set(),
+        surfaces: new Set(),
+      };
+
+      function copyState(src, dst) {
+        Object.keys(dst).forEach((k) => {
+          dst[k].clear();
+          src[k].forEach((v) => dst[k].add(v));
+        });
+      }
+
+      // ─── FILTER LOGIC ─────────────────────────────────────────────────────────────
+      function getFiltered(state) {
+        const totalActive =
+          state.colors.size +
+          state.textures.size +
+          state.finishes.size +
+          state.sizes.size +
+          state.surfaces.size;
+        if (totalActive === 0) return TILES;
+        return TILES.filter((t) => {
+          if (
+            state.colors.size > 0 &&
+            t.colors.some((c) => state.colors.has(c))
+          )
+            return true;
+          if (state.textures.size > 0 && state.textures.has(t.texture))
+            return true;
+          if (
+            state.finishes.size > 0 &&
+            t.finish.some((f) => state.finishes.has(f))
+          )
+            return true;
+          if (state.sizes.size > 0 && t.sizes.some((s) => state.sizes.has(s)))
+            return true;
+          if (
+            state.surfaces.size > 0 &&
+            t.surface.some((s) => state.surfaces.has(s))
+          )
+            return true;
+          return false;
+        });
+      }
+
+      function getSorted(tiles) {
+        const v = document.getElementById("sort-sel").value;
+        const arr = [...tiles];
+        if (v === "Name A–Z")
+          arr.sort((a, b) => a.title.localeCompare(b.title));
+        else if (v === "Name Z–A")
+          arr.sort((a, b) => b.title.localeCompare(a.title));
+        return arr;
+      }
+
+      // ─── RENDER GRID ──────────────────────────────────────────────────────────────
+      function renderGrid() {
+        const container = document.getElementById("productsGrid");
+        const tiles = getSorted(getFiltered(applied));
+        document.getElementById("countNum").textContent = tiles.length;
+        container.style.opacity = "0";
+        setTimeout(() => {
+          if (tiles.length === 0) {
+            container.innerHTML = `<div class="no-results"><i class="fa-solid fa-filter-circle-xmark"></i><p>No tiles match your current filters.</p><button class="btn-primary" style="margin-top:1rem" onclick="clearAll()">Clear Filters</button></div>`;
+          } else {
+            container.innerHTML = "";
+            tiles.forEach((tile) => {
+              const card = document.createElement("div");
+              card.className = "prod-card";
+              card.innerHTML = `
+                <div class="prod-img-wrap">
+                  <img src="${tile.image}" alt="${tile.title}" loading="lazy"/>
+                  <span class="prod-badge">${tile.badge}</span>
+                  <button class="prod-wish" aria-label="Save to wishlist"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="prod-body">
+                  <p class="prod-tag">${tile.tag}</p>
+                  <h3 class="prod-name">${tile.title}</h3>
+                  <p class="prod-desc">${tile.description}</p>
+                  <div class="prod-meta">
+                    <span><strong>${tile.colours}</strong> Colour</span>
+                    <span><strong>${tile.finishes}</strong> Finish</span>
+                  </div>
+                </div>
+                <div class="prod-actions">
+                  <button class="prod-btn prod-btn-view" data-id="${tile.id}">View More <i class="fa-solid fa-plus"></i></button>
+                  <a href="https://wa.me/919843069220?text=Enquiry:%20${encodeURIComponent(tile.title)}" target="_blank" class="prod-btn prod-btn-enquire">Enquire Now</a>
+                </div>`;
+              container.appendChild(card);
+            });
+          }
+          container.style.transition = "opacity .2s";
+          container.style.opacity = "1";
+        }, 180);
+      }
+
+      // ─── RENDER CHIPS ─────────────────────────────────────────────────────────────
+      function renderChips() {
+        const bar = document.getElementById("active-filter-chips");
+        bar.innerHTML = "";
+        const all = [
+          ...[...applied.colors].map((v) => ({ v, g: "colors" })),
+          ...[...applied.textures].map((v) => ({ v, g: "textures" })),
+          ...[...applied.finishes].map((v) => ({ v, g: "finishes" })),
+          ...[...applied.sizes].map((v) => ({ v, g: "sizes" })),
+          ...[...applied.surfaces].map((v) => ({ v, g: "surfaces" })),
+        ];
+        all.forEach(({ v, g }) => {
+          const chip = document.createElement("span");
+          chip.className = "filter-chip";
+          chip.innerHTML = `${v} <i class="fa-solid fa-xmark" style="font-size:9px"></i>`;
+          chip.addEventListener("click", () => {
+            applied[g].delete(v);
+            pending[g].delete(v);
+            syncUIFromPending();
+            renderGrid();
+            renderChips();
+            updateApplyBtn();
+          });
+          bar.appendChild(chip);
+        });
+      }
+
+      // ─── APPLY BUTTON STATE ───────────────────────────────────────────────────────
+      function updateApplyBtn() {
+        const btn = document.getElementById("applyFiltersBtn");
+        const preview = getFiltered(pending).length;
+        const totalPending =
+          pending.colors.size +
+          pending.textures.size +
+          pending.finishes.size +
+          pending.sizes.size +
+          pending.surfaces.size;
+        btn.innerHTML =
+          totalPending > 0
+            ? `<i class="fa-solid fa-check"></i> Apply Filters (${preview})`
+            : `<i class="fa-solid fa-check"></i> Apply Filters`;
+      }
+
+      // ─── SYNC UI ──────────────────────────────────────────────────────────────────
+      function syncUIFromPending() {
+        document
+          .querySelectorAll(".swatch-item")
+          .forEach((el) =>
+            el.classList.toggle("active", pending.colors.has(el.dataset.color)),
+          );
+        document
+          .querySelectorAll(".texture-thumb")
+          .forEach((el) =>
+            el.classList.toggle(
+              "active",
+              pending.textures.has(el.dataset.texture),
+            ),
+          );
+        document
+          .querySelectorAll("[data-finish]")
+          .forEach(
+            (cb) => (cb.checked = pending.finishes.has(cb.dataset.finish)),
+          );
+        document
+          .querySelectorAll(".size-tag")
+          .forEach((el) =>
+            el.classList.toggle("active", pending.sizes.has(el.dataset.size)),
+          );
+        document
+          .querySelectorAll("[data-surface]")
+          .forEach(
+            (cb) => (cb.checked = pending.surfaces.has(cb.dataset.surface)),
+          );
+      }
+
+      // ─── CLEAR ALL ────────────────────────────────────────────────────────────────
+      function clearAll() {
+        Object.values(pending).forEach((s) => s.clear());
+        Object.values(applied).forEach((s) => s.clear());
+        syncUIFromPending();
+        renderGrid();
+        renderChips();
+        updateApplyBtn();
+      }
+
+      // ─── DETAIL MODAL ─────────────────────────────────────────────────────────────
+      function openDetail(id) {
+        const tile = TILES[id];
+        if (!tile) return;
+
+        document.getElementById("detailBreadcrumbName").textContent =
+          tile.title;
+        document.getElementById("detailTag").textContent = tile.tag;
+        document.getElementById("detailName").textContent = tile.title;
+        document.getElementById("detailDesc").textContent = tile.description;
+        document.getElementById("detailMainImg").src = tile.image;
+        document.getElementById("detailMainImg").alt = tile.title;
+        document.getElementById("detailEnquireWA").href =
+          `https://wa.me/919843069220?text=Enquiry:%20${encodeURIComponent(tile.title)}`;
+
+        // ── Thumbnails: use dedicated cararamarble images for id=0, otherwise fallback ──
+        const thumbImgs =
+          tile.id === 0
+            ? [
+                "./images/cararamarble-1.jpg",
+                "./images/cararamarble-2.jpg",
+                "./images/cararamarble-3.jpg",
+                "./images/cararamarble-4.jpg",
+              ]
+            : [
+                tile.image,
+                ...TILES.filter((t) => t.id !== tile.id)
+                  .slice(0, 3)
+                  .map((t) => t.image),
+              ];
+
+        const thumbsEl = document.getElementById("detailThumbs");
+        thumbsEl.innerHTML = "";
+        thumbImgs.forEach((src, i) => {
+          const d = document.createElement("div");
+          d.className = "detail-thumb" + (i === 0 ? " active" : "");
+          d.innerHTML = `<img src="${src}" alt="view ${i + 1}"/>`;
+          d.addEventListener("click", () => {
+            document.getElementById("detailMainImg").src = src;
+            thumbsEl
+              .querySelectorAll(".detail-thumb")
+              .forEach((t) => t.classList.remove("active"));
+            d.classList.add("active");
+          });
+          thumbsEl.appendChild(d);
+        });
+
+        // Spec table
+        const specRows = [
+          ["Texture", tile.texture],
+          ["Colours Available", tile.colours],
+          ["Finishes", tile.finish.join(", ")],
+          ["Sizes", tile.sizes.join(", ")],
+          ["Surface", tile.surface.join(", ")],
+        ];
+        document.getElementById("detailSpecTable").innerHTML = specRows
+          .map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`)
+          .join("");
+
+        // ── Helper: update main image with smooth fade ──
+        function updateMainImage(newSrc) {
+          const mainImg = document.getElementById("detailMainImg");
+          mainImg.style.transition = "opacity 0.2s";
+          mainImg.style.opacity = "0";
+          setTimeout(() => {
+            mainImg.src = newSrc;
+            mainImg.style.opacity = "1";
+            // Also highlight the matching thumb if it exists
+            document.querySelectorAll(".detail-thumb").forEach((th) => {
+              th.classList.toggle(
+                "active",
+                th.querySelector("img").src.includes(newSrc.replace("./", "")),
+              );
+            });
+          }, 200);
+        }
+
+        // Colors — clicking a color swatch updates the main image
+        document.getElementById("detailColors").innerHTML = tile.colors
+          .map(
+            (c, i) =>
+              `<span class="detail-swatch${i === 0 ? " active" : ""}" title="${c}" style="background:${tile.colorsHex[c]}" data-color="${c}"></span>`,
+          )
+          .join("");
+        document.querySelectorAll(".detail-swatch").forEach((sw) => {
+          sw.addEventListener("click", () => {
+            document
+              .querySelectorAll(".detail-swatch")
+              .forEach((s) => s.classList.remove("active"));
+            sw.classList.add("active");
+            const colorName = sw.dataset.color;
+            const imgSrc = tile.colorImages[colorName] || tile.image;
+            updateMainImage(imgSrc);
+          });
+        });
+
+        // Finishes — clicking a finish tag updates the main image
+        document.getElementById("detailFinishes").innerHTML = tile.finish
+          .map(
+            (f, i) =>
+              `<span class="detail-finish-tag${i === 0 ? " active" : ""}">${f}</span>`,
+          )
+          .join("");
+        document.querySelectorAll(".detail-finish-tag").forEach((ft) => {
+          ft.addEventListener("click", () => {
+            document
+              .querySelectorAll(".detail-finish-tag")
+              .forEach((s) => s.classList.remove("active"));
+            ft.classList.add("active");
+            const finishName = ft.textContent.trim();
+            const imgSrc = tile.finishImages[finishName] || tile.image;
+            updateMainImage(imgSrc);
+          });
+        });
+
+        // Sizes — clicking a size button updates the main image
+        document.getElementById("detailSizes").innerHTML = tile.sizes
+          .map(
+            (s, i) =>
+              `<button class="detail-size-btn${i === 0 ? " active" : ""}">${s}</button>`,
+          )
+          .join("");
+        document.querySelectorAll(".detail-size-btn").forEach((sb) => {
+          sb.addEventListener("click", () => {
+            document
+              .querySelectorAll(".detail-size-btn")
+              .forEach((s) => s.classList.remove("active"));
+            sb.classList.add("active");
+            const sizeName = sb.textContent.trim();
+            const imgSrc = tile.sizeImages[sizeName] || tile.image;
+            updateMainImage(imgSrc);
+          });
+        });
+
+        // Features
+        document.getElementById("detailFeaturesGrid").innerHTML = tile.features
+          .map(
+            (f) =>
+              `<div class="feature-item"><i class="${f.icon}" aria-hidden="true"></i><h5>${f.title}</h5><p>${f.desc}</p></div>`,
+          )
+          .join("");
+
+        // Tech specs
+        document.getElementById("detailTechGrid").innerHTML = Object.entries(
+          tile.tech,
+        )
+          .map(
+            ([k, v]) =>
+              `<div class="tech-spec-cell"><dt>${k}</dt><dd>${v}</dd></div>`,
+          )
+          .join("");
+
+        // Related tiles
+        const related = TILES.filter(
+          (t) =>
+            t.id !== tile.id &&
+            (t.texture === tile.texture ||
+              t.colors.some((c) => tile.colors.includes(c))),
+        ).slice(0, 4);
+        document.getElementById("relatedGrid").innerHTML = related
+          .map(
+            (t) =>
+              `<div class="related-card" data-id="${t.id}">
+            <div class="related-card-img"><img src="${t.image}" alt="${t.title}" loading="lazy"/></div>
+            <div class="related-card-body">
+              <p class="related-card-tag">${t.tag}</p>
+              <p class="related-card-name">${t.title}</p>
+            </div>
+          </div>`,
+          )
+          .join("");
+        document.querySelectorAll(".related-card").forEach((rc) => {
+          rc.addEventListener("click", () =>
+            openDetail(parseInt(rc.dataset.id)),
+          );
+        });
+
+        // Reset tabs
+        document
+          .querySelectorAll(".detail-tab-btn")
+          .forEach((b) => b.classList.remove("active"));
+        document
+          .querySelectorAll(".detail-tab-panel")
+          .forEach((p) => p.classList.remove("active"));
+        document
+          .querySelector('.detail-tab-btn[data-tab="features"]')
+          .classList.add("active");
+        document.getElementById("tab-features").classList.add("active");
+
+        document.getElementById("detailOverlay").classList.add("open");
+        document.getElementById("detailModal").scrollTop = 0;
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeDetail() {
+        document.getElementById("detailOverlay").classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      // ─── FEATURED GRID ────────────────────────────────────────────────────────────
+      function renderFeatured() {
+        document.getElementById("featuredGrid").innerHTML = FEATURED_IDS.map(
+          (id) => {
+            const t = TILES[id];
+            return `<div class="feat-card" data-id="${id}">
+            <div class="feat-img"><img src="${t.image}" alt="${t.title}" loading="lazy"/></div>
+            <div class="feat-body">
+              <p class="feat-tag">${t.tag}</p>
+              <h4 class="feat-name">${t.title}</h4>
+              <p class="feat-desc">${t.description}</p>
+              <div class="feat-meta"><span><strong>${t.colours}</strong> Color</span><span><strong>${t.finishes}</strong> Finish</span></div>
+              <a class="feat-viewmore" href="#">View More <i class="fa-solid fa-plus" style="font-size:10px"></i></a>
+            </div>
+          </div>`;
+          },
+        ).join("");
+        document.querySelectorAll(".feat-card").forEach((fc) => {
+          fc.addEventListener("click", () =>
+            openDetail(parseInt(fc.dataset.id)),
+          );
+        });
+      }
+
+      // ─── BOOTSTRAP ────────────────────────────────────────────────────────────────
+      document.addEventListener("DOMContentLoaded", () => {
+        renderGrid();
+        renderFeatured();
+
+        // Filter Accordions
+        document.querySelectorAll(".filter-group-header").forEach((btn) => {
+          btn.addEventListener("click", () =>
+            btn.closest(".filter-group").classList.toggle("open"),
+          );
+        });
+
+        // Color swatches
+        document.querySelectorAll(".swatch-item").forEach((el) => {
+          el.addEventListener("click", () => {
+            el.classList.toggle("active");
+            const c = el.dataset.color;
+            if (el.classList.contains("active")) pending.colors.add(c);
+            else pending.colors.delete(c);
+            updateApplyBtn();
+          });
+        });
+
+        // Texture thumbs
+        document.querySelectorAll(".texture-thumb").forEach((el) => {
+          el.addEventListener("click", () => {
+            el.classList.toggle("active");
+            const x = el.dataset.texture;
+            if (el.classList.contains("active")) pending.textures.add(x);
+            else pending.textures.delete(x);
+            updateApplyBtn();
+          });
+        });
+
+        // Finish checkboxes
+        document.querySelectorAll("[data-finish]").forEach((cb) => {
+          cb.addEventListener("change", () => {
+            const f = cb.dataset.finish;
+            if (cb.checked) pending.finishes.add(f);
+            else pending.finishes.delete(f);
+            updateApplyBtn();
+          });
+        });
+
+        // Size tags
+        document.querySelectorAll(".size-tag").forEach((el) => {
+          el.addEventListener("click", () => {
+            el.classList.toggle("active");
+            const s = el.dataset.size;
+            if (el.classList.contains("active")) pending.sizes.add(s);
+            else pending.sizes.delete(s);
+            updateApplyBtn();
+          });
+        });
+
+        // Surface checkboxes
+        document.querySelectorAll("[data-surface]").forEach((cb) => {
+          cb.addEventListener("change", () => {
+            const s = cb.dataset.surface;
+            if (cb.checked) pending.surfaces.add(s);
+            else pending.surfaces.delete(s);
+            updateApplyBtn();
+          });
+        });
+
+        // Apply Filters
+        document
+          .getElementById("applyFiltersBtn")
+          .addEventListener("click", () => {
+            copyState(pending, applied);
+            renderGrid();
+            renderChips();
+            updateApplyBtn();
+            const sb = document.getElementById("sidebar");
+            if (sb.classList.contains("mobile-open")) {
+              sb.classList.remove("mobile-open");
+              document.getElementById("mobileFilterToggle").innerHTML =
+                '<i class="fa-solid fa-sliders"></i> Filters';
+            }
+          });
+
+        // Clear All
+        document
+          .getElementById("clearAllBtn")
+          .addEventListener("click", clearAll);
+
+        // Sort
+        document
+          .getElementById("sort-sel")
+          .addEventListener("change", renderGrid);
+
+        // View Toggle
+        const grid = document.getElementById("productsGrid");
+        document
+          .getElementById("btn3col")
+          .addEventListener("click", function () {
+            grid.classList.remove("two-col");
+            this.classList.add("active");
+            document.getElementById("btn2col").classList.remove("active");
+          });
+        document
+          .getElementById("btn2col")
+          .addEventListener("click", function () {
+            grid.classList.add("two-col");
+            this.classList.add("active");
+            document.getElementById("btn3col").classList.remove("active");
+          });
+
+        // Product Grid → View More
+        document
+          .getElementById("productsGrid")
+          .addEventListener("click", (e) => {
+            const btn = e.target.closest(".prod-btn-view");
+            if (btn) openDetail(parseInt(btn.dataset.id));
+          });
+
+        // Detail modal close
+        document
+          .getElementById("detailClose")
+          .addEventListener("click", closeDetail);
+        document
+          .getElementById("detailOverlay")
+          .addEventListener("click", (e) => {
+            if (e.target === document.getElementById("detailOverlay"))
+              closeDetail();
+          });
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeDetail();
+        });
+
+        // Detail Tabs
+        document.querySelectorAll(".detail-tab-btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            document
+              .querySelectorAll(".detail-tab-btn")
+              .forEach((b) => b.classList.remove("active"));
+            document
+              .querySelectorAll(".detail-tab-panel")
+              .forEach((p) => p.classList.remove("active"));
+            btn.classList.add("active");
+            document
+              .getElementById("tab-" + btn.dataset.tab)
+              .classList.add("active");
+          });
+        });
+
+        // Mobile Filter Toggle
+        document
+          .getElementById("mobileFilterToggle")
+          .addEventListener("click", function () {
+            const sb = document.getElementById("sidebar");
+            sb.classList.toggle("mobile-open");
+            this.innerHTML = sb.classList.contains("mobile-open")
+              ? '<i class="fa-solid fa-xmark"></i> Close Filters'
+              : '<i class="fa-solid fa-sliders"></i> Filters';
+          });
+
+        // Scroll to Top
+        const stb = document.getElementById("scrollTopBtn");
+        window.addEventListener("scroll", () => {
+          stb.style.display = window.scrollY > 300 ? "flex" : "none";
+        });
+        stb.addEventListener("click", () =>
+          window.scrollTo({ top: 0, behavior: "smooth" }),
+        );
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach((a) => {
+          a.addEventListener("click", function (e) {
+            const t = document.querySelector(this.getAttribute("href"));
+            if (t) {
+              e.preventDefault();
+              t.scrollIntoView({ behavior: "smooth" });
+            }
+          });
+        });
+      });
+    </script>
+
     <footer id="footer">
-      <!-- Footer content will be injected here by JavaScript -->
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>About Tulasi Tiles</h3>
+          <p>
+            We are a premier tile supplier delivering high-quality solutions for
+            both residential and commercial spaces.
+          </p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/tulasitiles"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://www.youtube.com/@TulasiTiles"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="https://www.instagram.com/tulasitiles"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://wa.me/919843069220"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./compare.html">Tile Comparison</a></li>
+            <li><a href="./tileCalculator.html">Tiles Calculator</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <p>
+            74/1, Coimbatore By Pass Road, Velayuthampalayam, Avinashi,<br />Tamil
+            Nadu 641654.
+          </p>
+          <p>Phone: 98430 69220</p>
+          <p>Email: tulasitiles@gmail.com</p>
+        </div>
+        <div class="footer-col">
+          <h3>Follow Us</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.facebook.com/tulasitiles">Facebook</a></li>
+            <li><a href="https://wa.me/919843069220">Whatsapp</a></li>
+            <li>
+              <a href="https://www.instagram.com/tulasitiles">Instagram</a>
+            </li>
+            <li><a href="https://www.youtube.com/@TulasiTiles">Youtube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          Copyright &copy; <span id="currentYear"></span> Tulasi Tiles |
+          Developed By
+          <a href="https://paletteproduction.com">PaletteProduction</a>
+        </p>
+      </div>
     </footer>
 
-    <!-- Font Awesome Icons -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
-      integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/footer.js"></script>
-    <script src="js/script.js"></script>
     <script>
-      const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-          scrollTopBtn.style.display = "flex";
-        } else {
-          scrollTopBtn.style.display = "none";
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const nav = document.querySelector("nav");
+        const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+        if (hamburger) {
+          hamburger.addEventListener("click", function () {
+            this.classList.toggle("active");
+            nav.classList.toggle("active");
+            document.body.style.overflow = nav.classList.contains("active")
+              ? "hidden"
+              : "";
+          });
         }
-      });
-
-      scrollTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
+        dropdownToggles.forEach((toggle) => {
+          toggle.addEventListener("click", function (e) {
+            if (window.innerWidth <= 992) {
+              e.preventDefault();
+              e.stopPropagation();
+              const dropdown = this.parentElement;
+              document.querySelectorAll(".dropdown").forEach((d) => {
+                if (d !== dropdown) d.classList.remove("active");
+              });
+              dropdown.classList.toggle("active");
+            }
+          });
+        });
+        document.querySelectorAll(".dropdown-column a").forEach((link) => {
+          link.addEventListener("click", function () {
+            if (window.innerWidth <= 992) {
+              hamburger.classList.remove("active");
+              nav.classList.remove("active");
+              document.body.style.overflow = "";
+              document
+                .querySelectorAll(".dropdown")
+                .forEach((d) => d.classList.remove("active"));
+            }
+          });
+        });
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 992) {
+            hamburger.classList.remove("active");
+            nav.classList.remove("active");
+            document.body.style.overflow = "";
+            document
+              .querySelectorAll(".dropdown")
+              .forEach((d) => d.classList.remove("active"));
+          }
         });
       });
+    </script>
+    <script src="js/script.js"></script>
+    <script>
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
     </script>
   </body>
 </html>
