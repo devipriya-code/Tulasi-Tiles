@@ -3,91 +3,1895 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luxury living Room Wall Tiles Collection</title>
-      <!-- fav -->
-     <link rel="icon" href="./images/fav.png">
-     <link rel="apple-touch-icon" href="./images/fav.png">
-     
-    <!-- Font Awesome Icons -->
+    <title>Luxury Living Room Floor Tiles Collection</title>
+    <link rel="icon" href="./images/fav.png" />
+    <link rel="apple-touch-icon" href="./images/fav.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <!-- Link To CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/floor_wall_tiles.css" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --accent: #f37e21;
+        --accent-dark: #d96a14;
+        --accent-light: #fff4ec;
+        --text: #1a1814;
+        --text-muted: #6b6460;
+        --text-light: #9b948e;
+        --bg: #fafaf8;
+        --surface: #ffffff;
+        --border: #e8e4de;
+        --border-dark: #c9c3ba;
+        --ff-display: "Playfair Display", Georgia, serif;
+        --ff-body: "DM Sans", sans-serif;
+        --sidebar-w: 270px;
+      }
+      body {
+        font-family: var(--ff-body);
+        background: var(--bg);
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      /* HERO */
+      .hero {
+        position: relative;
+        height: 70vh;
+        min-height: 420px;
+        overflow: hidden;
+        background: #111;
+      }
+      .hero-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.55;
+      }
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.72) 0%,
+          rgba(0, 0, 0, 0.18) 65%,
+          transparent 100%
+        );
+      }
+      .hero-inner {
+        position: relative;
+        z-index: 2;
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 0 2rem 3.5rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      .hero-eyebrow {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .hero-eyebrow::before {
+        content: "";
+        width: 28px;
+        height: 1.5px;
+        background: var(--accent);
+        display: block;
+      }
+      .hero h1 {
+        font-family: var(--ff-display);
+        font-size: clamp(2.4rem, 5vw, 4rem);
+        font-weight: 400;
+        color: #fff;
+        line-height: 1.12;
+        max-width: 580px;
+        margin-bottom: 1.1rem;
+      }
+      .hero p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 460px;
+        margin-bottom: 2rem;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        padding: 12px 26px;
+        border: none;
+        cursor: pointer;
+        transition: background 0.2s;
+        font-family: var(--ff-body);
+      }
+      .btn-primary:hover {
+        background: var(--accent-dark);
+      }
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        padding: 12px 26px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .btn-outline:hover {
+        border-color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .top-area {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* BREADCRUMB */
+      .breadcrumb-bar {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+      }
+      .breadcrumb-inner {
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 0.7rem 2rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12.5px;
+        color: var(--text-muted);
+      }
+      .breadcrumb-inner a {
+        color: var(--text-muted);
+        text-decoration: none;
+      }
+      .breadcrumb-inner a:hover {
+        color: var(--accent);
+      }
+      .breadcrumb-inner .sep {
+        color: var(--border-dark);
+      }
+      .breadcrumb-inner .current {
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      /* LAYOUT */
+      .page-body {
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 2rem 2rem 5rem;
+        display: grid;
+        grid-template-columns: var(--sidebar-w) 1fr;
+        gap: 2.5rem;
+        align-items: start;
+      }
+
+      /* SIDEBAR */
+      .sidebar {
+        position: sticky;
+        top: 20px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+      }
+      .sidebar-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.1rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .sidebar-header h3 {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text);
+      }
+      .sidebar-clear {
+        font-size: 11.5px;
+        color: var(--accent);
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: var(--ff-body);
+        padding: 0;
+      }
+      .sidebar-clear:hover {
+        text-decoration: underline;
+      }
+      .filter-group {
+        border-bottom: 1px solid var(--border);
+      }
+      .filter-group:last-of-type {
+        border-bottom: none;
+      }
+      .filter-group-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.85rem 1.1rem;
+        background: none;
+        border: none;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        cursor: pointer;
+        text-align: left;
+      }
+      .filter-group-header i {
+        font-size: 11px;
+        color: var(--text-light);
+        transition: transform 0.22s;
+      }
+      .filter-group.open .filter-group-header i {
+        transform: rotate(180deg);
+      }
+      .filter-group-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      .filter-group.open .filter-group-body {
+        max-height: 500px;
+      }
+      .filter-group-inner {
+        padding: 0.4rem 1.1rem 1rem;
+      }
+      .color-swatches {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .swatch-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+      }
+      .swatch-circle {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        transition: border-color 0.15s;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+      }
+      .swatch-item:hover .swatch-circle,
+      .swatch-item.active .swatch-circle {
+        border-color: var(--accent);
+      }
+      .swatch-label {
+        font-size: 9.5px;
+        color: var(--text-muted);
+        text-align: center;
+        max-width: 38px;
+        line-height: 1.2;
+      }
+      .texture-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+      }
+      .texture-thumb {
+        position: relative;
+        aspect-ratio: 1;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: border-color 0.15s;
+      }
+      .texture-thumb:hover,
+      .texture-thumb.active {
+        border-color: var(--accent);
+      }
+      .texture-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s;
+      }
+      .texture-thumb:hover img {
+        transform: scale(1.06);
+      }
+      .texture-name {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        font-size: 8.5px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        padding: 4px 5px;
+        text-transform: uppercase;
+        line-height: 1.2;
+      }
+      .finish-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .finish-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        font-size: 13px;
+        color: var(--text-muted);
+        padding: 3px 0;
+      }
+      .finish-item input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+        accent-color: var(--accent);
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+      .finish-item:hover {
+        color: var(--text);
+      }
+      .size-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .size-tag {
+        padding: 5px 10px;
+        border: 1px solid var(--border);
+        font-size: 11.5px;
+        color: var(--text-muted);
+        cursor: pointer;
+        transition: all 0.15s;
+        background: var(--surface);
+      }
+      .size-tag:hover,
+      .size-tag.active {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-light);
+      }
+
+      /* APPLY FILTERS */
+      .apply-filters-wrap {
+        padding: 1rem 1.1rem;
+        border-top: 1px solid var(--border);
+        background: var(--surface);
+      }
+      .btn-apply {
+        width: 100%;
+        padding: 11px 0;
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .btn-apply:hover {
+        background: var(--accent-dark);
+      }
+      .sidebar-cta {
+        margin: 0;
+        padding: 1.1rem;
+        background: var(--text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        width: 100%;
+        font-family: var(--ff-body);
+        transition: background 0.2s;
+      }
+      .sidebar-cta:hover {
+        background: #3a3530;
+      }
+
+      /* TOOLBAR */
+      .toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .toolbar-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .item-count {
+        font-size: 13.5px;
+        color: var(--text-muted);
+      }
+      .item-count strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+      .view-toggle {
+        display: flex;
+        gap: 4px;
+      }
+      .view-btn {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        cursor: pointer;
+        color: var(--text-muted);
+        font-size: 14px;
+        transition: all 0.15s;
+      }
+      .view-btn.active,
+      .view-btn:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-light);
+      }
+      .sort-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+      .sort-group select {
+        border: 1px solid var(--border);
+        padding: 6px 10px;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        color: var(--text);
+        background: var(--surface);
+        cursor: pointer;
+        outline: none;
+      }
+      .sort-group select:focus {
+        border-color: var(--accent);
+      }
+
+      /* ACTIVE CHIPS */
+      #active-filter-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 1rem;
+      }
+      .filter-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 4px 10px;
+        background: var(--accent-light);
+        border: 1px solid var(--accent);
+        color: var(--accent-dark);
+        font-size: 12px;
+        cursor: pointer;
+        font-family: var(--ff-body);
+      }
+      .filter-chip:hover {
+        background: #fde8d4;
+      }
+
+      /* PRODUCT GRID */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5px;
+        background: var(--border);
+        border: 1.5px solid var(--border);
+      }
+      .products-grid.two-col {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .prod-card {
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .prod-img-wrap {
+        position: relative;
+        aspect-ratio: 4/3;
+        overflow: hidden;
+        background: #f0ece6;
+      }
+      .prod-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .prod-card:hover .prod-img-wrap img {
+        transform: scale(1.05);
+      }
+      .prod-badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: #1a1814;
+        color: #fff;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        padding: 3px 8px;
+      }
+      .prod-wish {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.92);
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+      .prod-card:hover .prod-wish {
+        opacity: 1;
+      }
+      .prod-wish i {
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+      .prod-wish:hover i {
+        color: #c0392b;
+      }
+      .prod-body {
+        padding: 0.9rem 1rem 0;
+        flex: 1;
+      }
+      .prod-tag {
+        font-size: 9.5px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 3px;
+      }
+      .prod-name {
+        font-family: var(--ff-display);
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text);
+        line-height: 1.3;
+      }
+      .prod-desc {
+        font-size: 12px;
+        color: var(--text-muted);
+        margin-top: 4px;
+        line-height: 1.6;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .prod-meta {
+        display: flex;
+        gap: 10px;
+        margin-top: 8px;
+      }
+      .prod-meta span {
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+      .prod-meta strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+      .prod-actions {
+        display: flex;
+        border-top: 1px solid var(--border);
+        margin-top: 0.8rem;
+      }
+      .prod-btn {
+        flex: 1;
+        padding: 9px 0;
+        border: none;
+        background: none;
+        font-family: var(--ff-body);
+        font-size: 11.5px;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        transition:
+          background 0.15s,
+          color 0.15s;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        color: var(--text);
+      }
+      .prod-btn-view {
+        border-right: 1px solid var(--border);
+      }
+      .prod-btn-view:hover {
+        background: #f5f5f3;
+      }
+      .prod-btn-enquire {
+        color: var(--accent-dark);
+      }
+      .prod-btn-enquire:hover {
+        background: var(--accent-light);
+      }
+      .prod-btn i {
+        font-size: 11px;
+      }
+      .no-results {
+        grid-column: 1/-1;
+        padding: 3rem 1.5rem;
+        text-align: center;
+        color: var(--text-muted);
+      }
+      .no-results i {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        display: block;
+        color: var(--border-dark);
+      }
+
+      /* DESC */
+      .desc-block {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);
+      }
+      .desc-block h2 {
+        font-family: var(--ff-display);
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+      }
+      .desc-block p {
+        font-size: 13.5px;
+        color: var(--text-muted);
+        line-height: 1.85;
+        margin-bottom: 0.75rem;
+      }
+
+      /* FULL WIDTH */
+      .full-width-section {
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 0 2rem 4rem;
+      }
+      .cta-banner {
+        background: var(--text);
+        padding: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+      }
+      .cta-banner-text h3 {
+        font-family: var(--ff-display);
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #f5f0ea;
+        margin-bottom: 0.4rem;
+      }
+      .cta-banner-text p {
+        font-size: 13px;
+        color: #7a7470;
+        max-width: 500px;
+      }
+      .section-title-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.85rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .section-title-row h2 {
+        font-family: var(--ff-display);
+        font-size: 1.35rem;
+        font-weight: 400;
+      }
+      .section-title-row a {
+        font-size: 12.5px;
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .section-title-row a:hover {
+        text-decoration: underline;
+      }
+      .featured-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .feat-card {
+        background: var(--surface);
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .feat-img {
+        aspect-ratio: 3/2;
+        overflow: hidden;
+      }
+      .feat-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s;
+      }
+      .feat-card:hover .feat-img img {
+        transform: scale(1.05);
+      }
+      .feat-body {
+        padding: 0.75rem 0.85rem;
+      }
+      .feat-tag {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 3px;
+      }
+      .feat-name {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        margin-bottom: 4px;
+      }
+      .feat-desc {
+        font-size: 11.5px;
+        color: var(--text-muted);
+        line-height: 1.55;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .feat-meta {
+        display: flex;
+        gap: 8px;
+        margin-top: 6px;
+      }
+      .feat-meta span {
+        font-size: 10.5px;
+        color: var(--text-muted);
+      }
+      .feat-meta strong {
+        color: var(--text);
+      }
+
+      /* DETAIL OVERLAY */
+      .detail-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+        z-index: 1000;
+        display: none;
+        overflow-y: auto;
+      }
+      .detail-overlay.open {
+        display: block;
+      }
+      .detail-modal {
+        background: var(--bg);
+        max-width: 1200px;
+        margin: 0 auto;
+        min-height: 100vh;
+        position: relative;
+      }
+      .detail-close {
+        position: fixed;
+        top: 18px;
+        right: 18px;
+        width: 40px;
+        height: 40px;
+        background: #1a1814;
+        color: #fff;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        z-index: 1010;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+      .detail-close:hover {
+        background: #3a3530;
+      }
+      .detail-breadcrumb {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 0.7rem 2rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12.5px;
+        color: var(--text-muted);
+      }
+      .detail-breadcrumb span.sep {
+        color: var(--border-dark);
+      }
+      .detail-breadcrumb span.cur {
+        color: var(--text);
+        font-weight: 500;
+      }
+      .detail-main {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 0;
+        background: var(--border);
+      }
+      .detail-gallery {
+        background: var(--surface);
+        padding: 0;
+      }
+      .detail-gallery-main {
+        aspect-ratio: 4/3;
+        overflow: hidden;
+        background: #f0ece6;
+      }
+      .detail-gallery-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .detail-thumbs {
+        display: flex;
+        gap: 2px;
+        padding: 2px;
+        background: var(--border);
+      }
+      .detail-thumb {
+        width: 80px;
+        height: 60px;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid transparent;
+        flex-shrink: 0;
+        transition: border-color 0.15s;
+      }
+      .detail-thumb.active,
+      .detail-thumb:hover {
+        border-color: var(--accent);
+      }
+      .detail-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .detail-info {
+        background: var(--surface);
+        padding: 2rem 1.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .detail-info-tag {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      .detail-info-name {
+        font-family: var(--ff-display);
+        font-size: 1.75rem;
+        font-weight: 400;
+        color: var(--text);
+        line-height: 1.2;
+      }
+      .detail-info-desc {
+        font-size: 13.5px;
+        color: var(--text-muted);
+        line-height: 1.8;
+      }
+      .detail-divider {
+        border: none;
+        border-top: 1px solid var(--border);
+      }
+      .spec-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .spec-table tr {
+        border-bottom: 1px solid var(--border);
+      }
+      .spec-table tr:last-child {
+        border-bottom: none;
+      }
+      .spec-table td {
+        padding: 0.6rem 0;
+        font-size: 13px;
+      }
+      .spec-table td:first-child {
+        color: var(--text-muted);
+        width: 50%;
+      }
+      .spec-table td:last-child {
+        color: var(--text);
+        font-weight: 500;
+      }
+      .detail-color-row {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+      }
+      .detail-swatch {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 2px solid var(--border);
+        cursor: pointer;
+        transition: border-color 0.15s;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+      }
+      .detail-swatch:hover,
+      .detail-swatch.active {
+        border-color: var(--accent);
+      }
+      .detail-finish-row {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+      }
+      .detail-finish-tag {
+        padding: 5px 12px;
+        border: 1px solid var(--border);
+        font-size: 12px;
+        color: var(--text-muted);
+        background: var(--surface);
+      }
+      .detail-finish-tag.active {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-light);
+      }
+      .detail-size-row {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+      }
+      .detail-size-btn {
+        padding: 7px 14px;
+        border: 1px solid var(--border);
+        font-size: 12px;
+        color: var(--text-muted);
+        background: var(--surface);
+        cursor: pointer;
+        font-family: var(--ff-body);
+        transition: all 0.15s;
+      }
+      .detail-size-btn:hover,
+      .detail-size-btn.active {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-light);
+      }
+      .detail-ctas {
+    
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 0.5rem;
+      }
+      .detail-btn-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        padding: 13px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+      .detail-btn-main:hover {
+        background: var(--accent-dark);
+      }
+      .detail-btn-secondary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: transparent;
+        color: var(--text);
+        border: 1px solid var(--border);
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 500;
+        padding: 12px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      .detail-btn-secondary:hover {
+        border-color: var(--text);
+        background: #f5f5f3;
+      }
+      .detail-tabs-section {
+        background: var(--surface);
+        margin-top: 2px;
+        border-top: 2px solid var(--border);
+      }
+      .detail-tabs-header {
+        display: flex;
+        border-bottom: 1px solid var(--border);
+      }
+      .detail-tab-btn {
+        padding: 1rem 1.5rem;
+        background: none;
+        border: none;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text-muted);
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        margin-bottom: -1px;
+        transition: all 0.2s;
+      }
+      .detail-tab-btn.active {
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+      }
+      .detail-tab-btn:hover {
+        color: var(--text);
+      }
+      .detail-tab-panel {
+        display: none;
+        padding: 1.75rem 2rem;
+      }
+      .detail-tab-panel.active {
+        display: block;
+      }
+      .detail-features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
+      .feature-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+      .feature-item i {
+        font-size: 22px;
+        color: var(--accent);
+      }
+      .feature-item h5 {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text);
+      }
+      .feature-item p {
+        font-size: 12px;
+        color: var(--text-muted);
+        line-height: 1.6;
+      }
+      .tech-spec-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .tech-spec-cell {
+        background: var(--surface);
+        padding: 0.85rem 1rem;
+      }
+      .tech-spec-cell dt {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 0.3rem;
+      }
+      .tech-spec-cell dd {
+        font-size: 13px;
+        color: var(--text);
+        font-weight: 500;
+      }
+      .install-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .install-step {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+      .install-step-num {
+        width: 28px;
+        height: 28px;
+        background: var(--accent);
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .install-step-text h5 {
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        color: var(--text);
+      }
+      .install-step-text p {
+        font-size: 12.5px;
+        color: var(--text-muted);
+        line-height: 1.65;
+      }
+      .detail-related {
+        padding: 2rem;
+        background: var(--surface);
+        margin-top: 2px;
+      }
+      .detail-related h3 {
+        font-family: var(--ff-display);
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .related-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .related-card {
+        background: var(--surface);
+        cursor: pointer;
+        overflow: hidden;
+      }
+      .related-card-img {
+        aspect-ratio: 1;
+        overflow: hidden;
+      }
+      .related-card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s;
+      }
+      .related-card:hover .related-card-img img {
+        transform: scale(1.06);
+      }
+      .related-card-body {
+        padding: 0.6rem 0.75rem 0.75rem;
+      }
+      .related-card-tag {
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 2px;
+      }
+      .related-card-name {
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--text);
+        line-height: 1.3;
+      }
+
+      /* MOBILE TOGGLE */
+      .mobile-filter-toggle {
+        display: none;
+        align-items: center;
+        gap: 8px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 10px 16px;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        cursor: pointer;
+        margin-bottom: 1rem;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 1024px) {
+        .featured-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .detail-features-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .related-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+       
+      }
+      @media (max-width: 860px) {
+        :root {
+          --sidebar-w: 0px;
+        }
+        
+        .top-area {
+          flex-direction: column;
+        }
+        .page-body {
+          grid-template-columns: 1fr;
+        }
+        .sidebar {
+          position: static;
+          display: none;
+        }
+        .sidebar.mobile-open {
+          display: block;
+        }
+        .mobile-filter-toggle {
+          display: flex;
+        }
+        .products-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .detail-main {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 640px) {
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .detail-features-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .tech-spec-grid {
+          grid-template-columns: 1fr;
+        }
+        .related-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 520px) {
+        .page-body {
+          padding: 1.25rem 1rem 3rem;
+        }
+        .full-width-section {
+          padding: 0 1rem 3rem;
+        }
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .featured-grid {
+          grid-template-columns: 1fr;
+        }
+        .cta-banner {
+          flex-direction: column;
+        }
+        .detail-features-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 380px) {
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
-
   <body>
-    <!-- Header Section with Logo -->
-    <header id="navbar">
-      <!-- Navbar content will be injected here by JavaScript -->
-    </header>
+    <!-- HEADER — injected by navbar.js -->
+    <header id="navbar"></header>
 
-    <!-- Modern Hero Section -->
-    <section class="hero-livingroom">
-      <div class="hero-content">
-        <h1>Luxury Living Room Wall Tiles</h1>
+    <!-- HERO -->
+    <section class="hero">
+      <img
+        class="hero-img"
+        src="./images/living_room_img6.avif"
+        alt="Living Room Floor Tiles"
+      />
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Premium Collection</p>
+        <h1>Luxury Living Room Floor Tiles</h1>
         <p>
-          Transform your living room with our premium collection of designer
-          wall tiles
+          Handpicked designs that transform your living room into a statement of
+          refined taste and lasting quality.
         </p>
-        <a href="#collections" class="explore-btn">Explore Collections</a>
-      </div>
-    </section>
-
-    <!-- Featured Collections Section -->
-    <section id="collections" class="collections">
-      <div class="container">
-        <h2 class="section-title">Featured Collections</h2>
-        <div class="cards-grid" id="tiles-container">
-          <!-- Cards will be inserted here by JavaScript -->
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="container">
-        <h2 class="section-title">Ready to Transform Your Living Room?</h2>
-        <div class="cta-content">
-          <p>
-            Visit our showroom to see our tile collections in person or schedule
-            a free design consultation with our experts.
-          </p>
+        <div class="hero-actions">
+          <a href="#collections" class="btn-primary">
+            Explore Collection
+            <i class="fa-solid fa-arrow-right" style="font-size: 11px"></i>
+          </a>
           <a
-            href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20sanitaryware"
+            href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20enquire%20about%20living%20room%20tiles"
             target="_blank"
-            class="btn"
+            class="btn-outline"
           >
-            Book on WhatsApp
+            <i class="fa-brands fa-whatsapp" style="font-size: 14px"></i>
+            Enquire Now
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Materials Section -->
-    <section class="materials-section">
-      <div class="container">
-        <h2 class="section-title">Tile Materials</h2>
-        <div class="materials-grid" id="materials-container">
-          <!-- Material cards will be inserted here by JavaScript -->
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb-bar">
+      <div class="breadcrumb-inner">
+        <a href="index.html">Home</a><span class="sep">/</span>
+        <span class="current">Living Room Floor Tiles</span>
+      </div>
+    </nav>
+
+    <!-- PAGE BODY -->
+    <div class="page-body" id="collections">
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <h3>
+            <i
+              class="fa-solid fa-sliders"
+              style="font-size: 11px; margin-right: 6px"
+            ></i
+            >Filters
+          </h3>
+          <button class="sidebar-clear" id="clearAllBtn">Clear All</button>
+        </div>
+
+        <!-- Colors -->
+        <div class="filter-group open">
+          <button class="filter-group-header">
+            Colors <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="color-swatches">
+                <div class="swatch-item" data-color="Ivory">
+                  <div class="swatch-circle" style="background: #f5f0e8"></div>
+                  <span class="swatch-label">Ivory</span>
+                </div>
+                <div class="swatch-item" data-color="Cream">
+                  <div class="swatch-circle" style="background: #e8dcc8"></div>
+                  <span class="swatch-label">Cream</span>
+                </div>
+                <div class="swatch-item" data-color="White">
+                  <div
+                    class="swatch-circle"
+                    style="
+                      background: #f8f8f8;
+                      box-shadow: inset 0 0 0 1px #ddd;
+                    "
+                  ></div>
+                  <span class="swatch-label">White</span>
+                </div>
+                <div class="swatch-item" data-color="Gold">
+                  <div class="swatch-circle" style="background: #c9a84c"></div>
+                  <span class="swatch-label">Gold</span>
+                </div>
+                <div class="swatch-item" data-color="Grey">
+                  <div class="swatch-circle" style="background: #a0a0a0"></div>
+                  <span class="swatch-label">Grey</span>
+                </div>
+                <div class="swatch-item" data-color="Beige">
+                  <div class="swatch-circle" style="background: #c8a87a"></div>
+                  <span class="swatch-label">Beige</span>
+                </div>
+                <div class="swatch-item" data-color="Blue">
+                  <div class="swatch-circle" style="background: #5a7d9a"></div>
+                  <span class="swatch-label">Blue</span>
+                </div>
+                <div class="swatch-item" data-color="Brown">
+                  <div class="swatch-circle" style="background: #7a5c3c"></div>
+                  <span class="swatch-label">Brown</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Textures -->
+        <div class="filter-group open">
+          <button class="filter-group-header">
+            Textures <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="texture-grid">
+                <div class="texture-thumb" data-texture="Marble">
+                  <img src="./images/living_room_img1.avif" alt="Marble" /><span
+                    class="texture-name"
+                    >Marble</span
+                  >
+                </div>
+                <div class="texture-thumb" data-texture="Wood">
+                  <img src="./images/living_room_img3.jpg" alt="Wood" /><span
+                    class="texture-name"
+                    >Wood</span
+                  >
+                </div>
+                <div class="texture-thumb" data-texture="Stone">
+                  <img src="./images/living_room_img4.avif" alt="Stone" /><span
+                    class="texture-name"
+                    >Stone</span
+                  >
+                </div>
+                <div class="texture-thumb" data-texture="Geometric">
+                  <img
+                    src="./images/living_room_img5.jpg"
+                    alt="Geometric"
+                  /><span class="texture-name">Geometric</span>
+                </div>
+                <div class="texture-thumb" data-texture="Onyx">
+                  <img src="./images/living_room_img9.jpg" alt="Onyx" /><span
+                    class="texture-name"
+                    >Onyx</span
+                  >
+                </div>
+                <div class="texture-thumb" data-texture="Mosaic">
+                  <img src="./images/living_room_img11.jpg" alt="Mosaic" /><span
+                    class="texture-name"
+                    >Mosaic</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Finish -->
+        <div class="filter-group open">
+          <button class="filter-group-header">
+            Finish <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="finish-list">
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Polished" />
+                  Polished</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Matt" /> Matt</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Satin" /> Satin</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Glazed" /> Glazed</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Rustic" /> Rustic</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Size -->
+        <div class="filter-group">
+          <button class="filter-group-header">
+            Size <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="size-tags">
+                <span class="size-tag" data-size="600×600">600×600</span>
+                <span class="size-tag" data-size="800×800">800×800</span>
+                <span class="size-tag" data-size="600×1200">600×1200</span>
+                <span class="size-tag" data-size="1200×1200">1200×1200</span>
+                <span class="size-tag" data-size="800×1600">800×1600</span>
+                <span class="size-tag" data-size="200×1200">200×1200</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Surface -->
+        <div class="filter-group">
+          <button class="filter-group-header">
+            Surface <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="finish-list">
+                <label class="finish-item"
+                  ><input type="checkbox" data-surface="POSH+" /> POSH+</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-surface="Anti-Skid" />
+                  Anti-Skid</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-surface="Stain Resistant" />
+                  Stain Resistant</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-surface="Scratch Resistant" />
+                  Scratch Resistant</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="apply-filters-wrap">
+          <button class="btn-apply" id="applyFiltersBtn">
+            <i class="fa-solid fa-check"></i> Apply Filters
+          </button>
+        </div>
+        <a
+          href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20living%20room%20tiles"
+          target="_blank"
+          class="sidebar-cta"
+        >
+          <i class="fa-brands fa-whatsapp"></i> Book on WhatsApp
+        </a>
+      </aside>
+
+      <!-- CONTENT -->
+      <div class="content-area">
+        <button class="mobile-filter-toggle" id="mobileFilterToggle">
+          <i class="fa-solid fa-sliders"></i> Filters
+        </button>
+        <div class="toolbar">
+          <div class="toolbar-left">
+            <p class="item-count"><strong id="countNum">12</strong> Items</p>
+            <div class="view-toggle">
+              <button
+                class="view-btn active"
+                id="btn3col"
+                aria-label="3 column grid"
+              >
+                <i class="fa-solid fa-grip"></i>
+              </button>
+              <button class="view-btn" id="btn2col" aria-label="2 column grid">
+                <i class="fa-solid fa-table-columns"></i>
+              </button>
+            </div>
+          </div>
+          <div class="sort-group">
+            <label for="sort-sel">Order by</label>
+            <select id="sort-sel">
+              <option>Latest</option>
+              <option>Name A–Z</option>
+              <option>Name Z–A</option>
+            </select>
+          </div>
+        </div>
+        <div id="active-filter-chips"></div>
+        <div class="products-grid" id="productsGrid"></div>
+
+        <div class="desc-block">
+          <h2>Living Room Floor Tiles for Modern Living</h2>
+          <p>
+            Your living room floor is the canvas of your home. The right tile
+            brings together beauty and durability — from the luminous sheen of
+            marble-effect porcelain to the warmth of wood-look planks and the
+            drama of large-format onyx slabs.
+          </p>
+          <p>
+            Choose from our curated collection of luxury tiles designed to suit
+            every style — grand classical interiors, sleek contemporary spaces,
+            or eclectic artistic expressions. Every tile is selected for lasting
+            quality, visual impact, and ease of maintenance.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
 
+    <!-- FULL WIDTH SECTIONS -->
+    <div class="full-width-section">
+      <div class="cta-banner">
+        <div class="cta-banner-text">
+          <h3>Ready to Transform Your Living Room?</h3>
+          <p>
+            Visit our showroom or schedule a free design consultation. Our
+            experts help you find the perfect tile for every space and budget.
+          </p>
+        </div>
+        <a
+          href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20living%20room%20tiles"
+          target="_blank"
+          class="btn-primary"
+        >
+          <i class="fa-brands fa-whatsapp" style="font-size: 15px"></i> Book on
+          WhatsApp
+        </a>
+      </div>
+      <div style="margin-bottom: 3rem">
+        <div class="section-title-row">
+          <h2>Featured Collections</h2>
+          <a href="tiles.html"
+            >View All
+            <i class="fa-solid fa-arrow-right" style="font-size: 11px"></i
+          ></a>
+        </div>
+        <div class="featured-grid" id="featuredGrid"></div>
+      </div>
+    </div>
+
+    <!-- DETAIL OVERLAY -->
+    <div class="detail-overlay" id="detailOverlay">
+      <div class="detail-modal" id="detailModal">
+        <button class="detail-close" id="detailClose">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <!-- <div class="top-area"> -->
+          <div class="detail-breadcrumb">
+            <span>Home</span><span class="sep">/</span><span>Tiles</span
+            ><span class="sep">/</span><span>Living Room Floor Tiles</span
+            ><span class="sep">/</span>
+            <span class="cur" id="detailBreadcrumbName"></span>
+          </div>
+          <!-- <div>
+            <a
+              id="detailEnquireWA"
+              href="#"
+              target="_blank"
+              class="detail-btn-main"
+              ><i class="fa-brands fa-whatsapp" style="font-size: 15px"></i>
+              Enquire on WhatsApp</a
+            >
+          </div> -->
+        <!-- </div> -->
+
+        <div class="detail-main">
+          <div class="detail-gallery">
+            <div class="detail-gallery-main">
+              <img id="detailMainImg" src="" alt="" />
+            </div>
+            <div class="detail-thumbs" id="detailThumbs"></div>
+          </div>
+          <div class="detail-info">
+            <div>
+              <p class="detail-info-tag" id="detailTag"></p>
+              <h1 class="detail-info-name" id="detailName"></h1>
+            </div>
+            <p class="detail-info-desc" id="detailDesc"></p>
+            <hr class="detail-divider" />
+            <table class="spec-table" id="detailSpecTable"></table>
+            <hr class="detail-divider" />
+            <div>
+              <p
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  color: var(--text-muted);
+                  margin-bottom: 0.4rem;
+                "
+              >
+                Colour
+              </p>
+              <div class="detail-color-row" id="detailColors"></div>
+            </div>
+            <div>
+              <p
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  color: var(--text-muted);
+                  margin-bottom: 0.4rem;
+                "
+              >
+                Finish
+              </p>
+              <div class="detail-finish-row" id="detailFinishes"></div>
+            </div>
+            <div>
+              <p
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  color: var(--text-muted);
+                  margin-bottom: 0.4rem;
+                "
+              >
+                Size
+              </p>
+              <div class="detail-size-row" id="detailSizes"></div>
+            </div>
+            <!-- <hr class="detail-divider" /> -->
+             <div class="detail-ctas">
+              <a
+                id="detailEnquireWA"
+                href="#"
+                target="_blank"
+                class="detail-btn-main"
+                ><i class="fa-brands fa-whatsapp" style="font-size: 15px"></i>
+                Enquire on WhatsApp</a
+              >
+              <!-- <button class="detail-btn-secondary">
+                <i class="fa-regular fa-calendar"></i> Book Showroom Visit
+              </button>
+              <button class="detail-btn-secondary">
+                <i class="fa-solid fa-file-arrow-down"></i> Download Catalogue
+              </button> -->
+            </div>
+          </div>
+        </div>
+        <div class="detail-tabs-section">
+          <div class="detail-tabs-header">
+            <button class="detail-tab-btn active" data-tab="features">
+              Features
+            </button>
+            <button class="detail-tab-btn" data-tab="technical">
+              Technical Specs
+            </button>
+            <button class="detail-tab-btn" data-tab="installation">
+              Installation
+            </button>
+          </div>
+          <div class="detail-tab-panel active" id="tab-features">
+            <div class="detail-features-grid" id="detailFeaturesGrid"></div>
+          </div>
+          <div class="detail-tab-panel" id="tab-technical">
+            <div class="tech-spec-grid" id="detailTechGrid"></div>
+          </div>
+          <div class="detail-tab-panel" id="tab-installation">
+            <div class="install-steps">
+              <div class="install-step">
+                <div class="install-step-num">1</div>
+                <div class="install-step-text">
+                  <h5>Surface Preparation</h5>
+                  <p>
+                    Ensure the subfloor is clean, dry, and level. Remove any old
+                    adhesive or debris. A smooth base guarantees lasting
+                    adhesion.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">2</div>
+                <div class="install-step-text">
+                  <h5>Dry Layout</h5>
+                  <p>
+                    Dry-fit tiles from the centre of the room outward before
+                    applying adhesive. This ensures balanced cuts at the edges
+                    and symmetrical patterns.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">3</div>
+                <div class="install-step-text">
+                  <h5>Apply Adhesive</h5>
+                  <p>
+                    Use a notched trowel to apply high-quality tile adhesive.
+                    Work in small sections (1–2 sq m) to prevent the adhesive
+                    from drying before placement.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">4</div>
+                <div class="install-step-text">
+                  <h5>Set Tiles & Grout</h5>
+                  <p>
+                    Press tiles firmly with a slight twist. Use spacers for
+                    consistent joint width. Allow adhesive to cure for 24 hours
+                    before grouting.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">5</div>
+                <div class="install-step-text">
+                  <h5>Seal & Finish</h5>
+                  <p>
+                    Apply appropriate sealant for the finish type. Buff clean
+                    and allow full cure before foot traffic (typically 48–72
+                    hours).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="detail-related">
+          <h3>You May Also Like</h3>
+          <div class="related-grid" id="relatedGrid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHATSAPP FLOAT -->
     <a
       href="https://wa.me/919843069220"
       class="whatsapp-float"
@@ -96,40 +1900,21 @@
     >
       <img src="./images/WhatsApp.svg" alt="WhatsApp" />
     </a>
-    <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
-    <!-- Footer Section -->
-    <footer id="footer">
-      <!-- Footer content will be injected here by JavaScript -->
-    </footer>
 
-    <!-- Font Awesome Icons -->
+    <!-- SCROLL TO TOP -->
+    <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+
+    <!-- FOOTER — injected by footer.js -->
+    <footer id="footer"></footer>
+
+    <!-- SCRIPTS -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
-      integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     ></script>
     <script src="js/navbar.js"></script>
     <script src="js/footer.js"></script>
-    <script src="js/living_wall.js"></script>
     <script src="js/script.js"></script>
-    <script>
-      const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-          scrollTopBtn.style.display = "flex";
-        } else {
-          scrollTopBtn.style.display = "none";
-        }
-      });
-
-      scrollTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      });
-    </script>
+    <script src="js/living_wall.js"></script>
   </body>
 </html>
