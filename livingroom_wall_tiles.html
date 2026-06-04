@@ -76,14 +76,15 @@
       }
       .hero-inner {
         position: relative;
-        z-index: 2;
         max-width: 1340px;
         margin: 0 auto;
-        padding: 0 2rem 3.5rem;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        padding-top: 300px;
+        padding-left: 30px;
+        padding-bottom: 0px;
       }
       .hero-eyebrow {
         font-size: 11px;
@@ -236,6 +237,41 @@
         cursor: pointer;
         font-family: var(--ff-body);
         padding: 0;
+      }
+
+      /* Desktop CTA */
+      .detail-ctas {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 485px;
+        overflow: hidden;
+        padding-top: 1px;
+      }
+
+      /* Mobile CTA hidden by default */
+      .detail-ctas-2 {
+        display: none;
+      }
+
+      /* When mobile CTA starts showing */
+      @media (max-width: 962px) {
+        .detail-ctas {
+          display: none !important;
+        }
+
+        .detail-ctas-2 {
+          display: flex !important;
+          justify-content: center;
+          width: 100%;
+          padding: 15px;
+          margin: 0;
+        }
+
+        .detail-btn-main {
+          width: 100%;
+          max-width: 320px;
+        }
       }
       .sidebar-clear:hover {
         text-decoration: underline;
@@ -1049,13 +1085,7 @@
         color: var(--accent);
         background: var(--accent-light);
       }
-      .detail-ctas {
-    
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 0.5rem;
-      }
+
       .detail-btn-main {
         display: flex;
         align-items: center;
@@ -1299,13 +1329,12 @@
         .related-grid {
           grid-template-columns: repeat(3, 1fr);
         }
-       
       }
       @media (max-width: 860px) {
         :root {
           --sidebar-w: 0px;
         }
-        
+
         .top-area {
           flex-direction: column;
         }
@@ -1343,6 +1372,7 @@
           grid-template-columns: repeat(2, 1fr);
         }
       }
+
       @media (max-width: 520px) {
         .page-body {
           padding: 1.25rem 1rem 3rem;
@@ -1383,7 +1413,7 @@
       />
       <div class="hero-overlay"></div>
       <div class="hero-inner">
-        <p class="hero-eyebrow">Premium Collection</p>
+        <p class="hero-eyebrow" style="padding-top: 20px">Premium Collection</p>
         <h1>Luxury Living Room Floor Tiles</h1>
         <p>
           Handpicked designs that transform your living room into a statement of
@@ -1708,13 +1738,13 @@
           <i class="fa-solid fa-xmark"></i>
         </button>
         <!-- <div class="top-area"> -->
-          <div class="detail-breadcrumb">
-            <span>Home</span><span class="sep">/</span><span>Tiles</span
-            ><span class="sep">/</span><span>Living Room Floor Tiles</span
-            ><span class="sep">/</span>
-            <span class="cur" id="detailBreadcrumbName"></span>
-          </div>
-          <!-- <div>
+        <div class="detail-breadcrumb">
+          <span>Home</span><span class="sep">/</span><span>Tiles</span
+          ><span class="sep">/</span><span>Living Room Floor Tiles</span
+          ><span class="sep">/</span>
+          <span class="cur" id="detailBreadcrumbName"></span>
+        </div>
+        <!-- <div>
             <a
               id="detailEnquireWA"
               href="#"
@@ -1787,14 +1817,16 @@
               </p>
               <div class="detail-size-row" id="detailSizes"></div>
             </div>
-            <!-- <hr class="detail-divider" /> -->
-             <div class="detail-ctas">
+            <div class="detail-ctas-2">
               <a
                 id="detailEnquireWA"
                 href="#"
                 target="_blank"
                 class="detail-btn-main"
-                ><i class="fa-brands fa-whatsapp" style="font-size: 15px"></i>
+                ><i
+                  class="fa-brands fa-whatsapp"
+                  style="font-size: 15px; padding-right: 3px"
+                ></i>
                 Enquire on WhatsApp</a
               >
               <!-- <button class="detail-btn-secondary">
@@ -1804,6 +1836,7 @@
                 <i class="fa-solid fa-file-arrow-down"></i> Download Catalogue
               </button> -->
             </div>
+            <!-- <hr class="detail-divider" /> -->
           </div>
         </div>
         <div class="detail-tabs-section">
@@ -1817,6 +1850,25 @@
             <button class="detail-tab-btn" data-tab="installation">
               Installation
             </button>
+            <div class="detail-ctas">
+              <a
+                id="detailEnquireWA"
+                href="#"
+                target="_blank"
+                class="detail-btn-main"
+                ><i
+                  class="fa-brands fa-whatsapp"
+                  style="font-size: 15px; padding-right: 3px"
+                ></i>
+                Enquire on WhatsApp</a
+              >
+              <!-- <button class="detail-btn-secondary">
+                <i class="fa-regular fa-calendar"></i> Book Showroom Visit
+              </button>
+              <button class="detail-btn-secondary">
+                <i class="fa-solid fa-file-arrow-down"></i> Download Catalogue
+              </button> -->
+            </div>
           </div>
           <div class="detail-tab-panel active" id="tab-features">
             <div class="detail-features-grid" id="detailFeaturesGrid"></div>
