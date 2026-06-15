@@ -23,7 +23,7 @@ let navbar = (document.getElementById("navbar").innerHTML =
                                 <li><a href="kitchen_floor_tiles.html"><i class="fas fa-check-circle"></i> Kitchen Tiles</a></li>
                                 <li><a href="outdoor_floor_tiles.html"><i class="fas fa-check-circle"></i> Outdoor Tiles</a></li>
                                 <li><a href="livingroom_floor_tiles.html"><i class="fas fa-check-circle"></i> Living Room Tiles</a></li>
-                                <li><a href="bedroom_floor_tiles.html"><i class="fas fa-check-circle"></i> Bedroom Tiles</a></li>
+                            <li><a href="bedroom_wall_tiles.html"><i class="fas fa-check-circle"></i> Bedroom Tiles</a></li>
                                 <li><a href="commercial_floor_tiles.html"><i class="fas fa-check-circle"></i> Commercial Tiles</a></li>
                             </ul>
                         </div>
@@ -33,7 +33,7 @@ let navbar = (document.getElementById("navbar").innerHTML =
                             <ul>
                                 <li><a href="special_tiles.html"><i class="fas fa-check-circle"></i> Germ Free Tiles</a></li>
                                 <li><a href="#tactile"><i class="fas fa-check-circle"></i> Tactile Floor Tiles</a></li>
-                                <li><a href="#anti-static"><i class="fas fa-check-circle"></i> Anti Static Tiles</a></li>
+                            <li><a href="anti_static.html"><i class="fas fa-check-circle"></i> Anti Static Tiles</a></li>
                                 <li><a href="#cool-roof"><i class="fas fa-check-circle"></i> Cool Roof Tiles</a></li>
                             </ul>
                         </div>
@@ -61,7 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
     hamburger.addEventListener("click", function () {
       this.classList.toggle("active");
       nav.classList.toggle("active");
-      document.body.style.overflow = nav.classList.contains("active") ? "hidden" : "";
+      document.body.style.overflow = nav.classList.contains("active")
+        ? "hidden"
+        : "";
     });
   }
 
@@ -72,20 +74,23 @@ document.addEventListener("DOMContentLoaded", function () {
       if (window.innerWidth <= 992) {
         e.preventDefault();
         e.stopPropagation();
-        
+
         const dropdown = this.parentElement;
-        
+
         // Close other dropdowns
-        document.querySelectorAll('.dropdown').forEach(d => {
+        document.querySelectorAll(".dropdown").forEach((d) => {
           if (d !== dropdown) {
-            d.classList.remove('active');
+            d.classList.remove("active");
           }
         });
-        
+
         // Toggle current dropdown
         dropdown.classList.toggle("active");
-        
-        console.log("Dropdown clicked, active:", dropdown.classList.contains('active'));
+
+        console.log(
+          "Dropdown clicked, active:",
+          dropdown.classList.contains("active"),
+        );
       }
     });
   });
@@ -97,10 +102,10 @@ document.addEventListener("DOMContentLoaded", function () {
         hamburger.classList.remove("active");
         nav.classList.remove("active");
         document.body.style.overflow = "";
-        
+
         // Close all dropdowns
-        document.querySelectorAll('.dropdown').forEach(d => {
-          d.classList.remove('active');
+        document.querySelectorAll(".dropdown").forEach((d) => {
+          d.classList.remove("active");
         });
       }
     });
@@ -108,30 +113,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Close menu when clicking overlay
   if (nav) {
-    nav.addEventListener("click", function(e) {
+    nav.addEventListener("click", function (e) {
       if (e.target === this && window.innerWidth <= 992) {
         hamburger.classList.remove("active");
         nav.classList.remove("active");
         document.body.style.overflow = "";
-        
+
         // Close all dropdowns
-        document.querySelectorAll('.dropdown').forEach(d => {
-          d.classList.remove('active');
+        document.querySelectorAll(".dropdown").forEach((d) => {
+          d.classList.remove("active");
         });
       }
     });
   }
 
   // Close menu on window resize
-  window.addEventListener("resize", function() {
+  window.addEventListener("resize", function () {
     if (window.innerWidth > 992) {
       hamburger.classList.remove("active");
       nav.classList.remove("active");
       document.body.style.overflow = "";
-      
+
       // Close all dropdowns
-      document.querySelectorAll('.dropdown').forEach(d => {
-        d.classList.remove('active');
+      document.querySelectorAll(".dropdown").forEach((d) => {
+        d.classList.remove("active");
       });
     }
   });
