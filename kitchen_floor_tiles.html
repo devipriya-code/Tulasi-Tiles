@@ -390,8 +390,6 @@
         color: var(--accent);
         background: var(--accent-light);
       }
-
-      /* APPLY FILTERS BUTTON */
       .apply-filters-wrap {
         padding: 1rem 1.1rem;
         border-top: 1px solid var(--border);
@@ -418,7 +416,6 @@
       .btn-apply:hover {
         background: var(--accent-dark);
       }
-
       .sidebar-cta {
         margin: 0;
         padding: 1.1rem;
@@ -442,7 +439,7 @@
         background: #3a3530;
       }
 
-      /* CONTENT AREA */
+      /* CONTENT */
       .toolbar {
         display: flex;
         align-items: center;
@@ -508,7 +505,7 @@
         border-color: var(--accent);
       }
 
-      /* ACTIVE FILTER CHIPS */
+      /* FILTER CHIPS */
       #active-filter-chips {
         display: flex;
         flex-wrap: wrap;
@@ -575,32 +572,6 @@
         letter-spacing: 0.13em;
         text-transform: uppercase;
         padding: 3px 8px;
-      }
-      .prod-wish {
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        width: 30px;
-        height: 30px;
-        background: rgba(255, 255, 255, 0.92);
-        border: none;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        opacity: 0;
-        transition: opacity 0.2s;
-      }
-      .prod-card:hover .prod-wish {
-        opacity: 1;
-      }
-      .prod-wish i {
-        font-size: 13px;
-        color: var(--text-muted);
-      }
-      .prod-wish:hover i {
-        color: #c0392b;
       }
       .prod-body {
         padding: 0.9rem 1rem 0;
@@ -684,8 +655,6 @@
       .prod-btn i {
         font-size: 11px;
       }
-
-      /* NO RESULTS */
       .no-results {
         grid-column: 1/-1;
         padding: 3rem 1.5rem;
@@ -699,7 +668,7 @@
         color: var(--border-dark);
       }
 
-      /* DESCRIPTION */
+      /* DESC BLOCK */
       .desc-block {
         margin-top: 3rem;
         padding-top: 2rem;
@@ -832,21 +801,8 @@
       .feat-meta strong {
         color: var(--text);
       }
-      .feat-viewmore {
-        display: inline-flex;
-        align-items: center;
-        gap: 4px;
-        font-size: 11px;
-        color: var(--accent);
-        margin-top: 6px;
-        font-weight: 500;
-        text-decoration: none;
-      }
-      .feat-viewmore:hover {
-        text-decoration: underline;
-      }
 
-      /* WHATSAPP / SCROLL */
+      /* FLOATING BUTTONS */
       .whatsapp-float {
         position: fixed;
         bottom: 24px;
@@ -866,9 +822,9 @@
       .whatsapp-float:hover {
         transform: scale(1.08);
       }
-      .whatsapp-float i {
-        font-size: 26px;
-        color: #fff;
+      .whatsapp-float img {
+        width: 28px;
+        height: 28px;
       }
       #scrollTopBtn {
         position: fixed;
@@ -891,7 +847,7 @@
         background: #3a3530;
       }
 
-      /* MOBILE */
+      /* MOBILE FILTER TOGGLE */
       .mobile-filter-toggle {
         display: none;
         align-items: center;
@@ -907,6 +863,7 @@
         margin-bottom: 1rem;
       }
 
+      /* DETAIL OVERLAY */
       .detail-overlay {
         position: fixed;
         inset: 0;
@@ -982,12 +939,14 @@
         height: 100%;
         object-fit: cover;
         display: block;
+        transition: opacity 0.2s;
       }
       .detail-thumbs {
         display: flex;
         gap: 2px;
         padding: 2px;
         background: var(--border);
+        overflow-x: auto;
       }
       .detail-thumb {
         width: 80px;
@@ -1091,6 +1050,8 @@
         font-size: 12px;
         color: var(--text-muted);
         background: var(--surface);
+        cursor: pointer;
+        transition: all 0.15s;
       }
       .detail-finish-tag.active {
         border-color: var(--accent);
@@ -1119,17 +1080,40 @@
         color: var(--accent);
         background: var(--accent-light);
       }
+
+      /* WhatsApp CTA: Desktop in tab bar, Mobile below size selectors */
       .detail-ctas {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        margin-top: 0.5rem;
+        padding-left: 485px;
+        overflow: hidden;
+        padding-top: 1px;
+      }
+      .detail-ctas-2 {
+        display: none;
+      }
+      @media (max-width: 962px) {
+        .detail-ctas {
+          display: none !important;
+        }
+        .detail-ctas-2 {
+          display: flex !important;
+          justify-content: center;
+          width: 100%;
+          padding: 15px;
+          margin: 0;
+        }
+        .detail-btn-main {
+          width: 100%;
+          max-width: 320px;
+        }
       }
       .detail-btn-main {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
+        gap: 10px;
         background: var(--accent);
         color: #fff;
         border: none;
@@ -1137,13 +1121,20 @@
         font-size: 13px;
         font-weight: 600;
         letter-spacing: 0.04em;
-        padding: 13px;
+        padding: 13px 20px;
         cursor: pointer;
         text-decoration: none;
         transition: background 0.2s;
+        text-align: center;
       }
       .detail-btn-main:hover {
         background: var(--accent-dark);
+      }
+      .detail-btn-main i {
+        font-size: 18px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
       }
       .detail-btn-secondary {
         display: flex;
@@ -1165,6 +1156,8 @@
         border-color: var(--text);
         background: #f5f5f3;
       }
+
+      /* TABS */
       .detail-tabs-section {
         background: var(--surface);
         margin-top: 2px;
@@ -1416,112 +1409,6 @@
           grid-template-columns: 1fr;
         }
       }
-
-      /* FOOTER */
-      #footer {
-        background: #1a1814;
-        color: #ccc;
-        padding: 3rem 2rem 0;
-        font-family: var(--ff-body);
-      }
-      .footer-container {
-        max-width: 1340px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
-        padding-bottom: 2.5rem;
-      }
-      .footer-col h3 {
-        font-family: var(--ff-display);
-        font-size: 1rem;
-        font-weight: 500;
-        color: #f5f0ea;
-        margin-bottom: 1rem;
-        padding-bottom: 0.5rem;
-        border-bottom: 1px solid #3a3530;
-      }
-      .footer-col p {
-        font-size: 13px;
-        line-height: 1.8;
-        color: #9b948e;
-        margin-bottom: 0.5rem;
-      }
-      .social-links {
-        display: flex;
-        gap: 12px;
-        margin-top: 1rem;
-      }
-      .social-links a {
-        width: 34px;
-        height: 34px;
-        background: #2e2925;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #9b948e;
-        font-size: 14px;
-        text-decoration: none;
-        transition: all 0.2s;
-      }
-      .social-links a:hover {
-        background: var(--accent);
-        color: #fff;
-      }
-      .footer-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-      .footer-links li a {
-        font-size: 13px;
-        color: #9b948e;
-        text-decoration: none;
-        transition: color 0.2s;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-      }
-      .footer-links li a::before {
-        content: "–";
-        color: #3a3530;
-        font-size: 11px;
-      }
-      .footer-links li a:hover {
-        color: var(--accent);
-      }
-      .copyright {
-        border-top: 1px solid #2e2925;
-        padding: 1.2rem 2rem;
-        text-align: center;
-        max-width: 100%;
-      }
-      .copyright p {
-        font-size: 12px;
-        color: #5f5e5a;
-        margin: 0;
-      }
-      .copyright a {
-        color: #9b948e;
-        text-decoration: none;
-      }
-      .copyright a:hover {
-        color: var(--accent);
-      }
-      @media (max-width: 860px) {
-        .footer-container {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-      @media (max-width: 480px) {
-        .footer-container {
-          grid-template-columns: 1fr;
-        }
-      }
     </style>
   </head>
   <body>
@@ -1548,7 +1435,7 @@
             <li><a href="./about.html">About</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle"
-                >Tiles <i class="dropdown-arrow">▼</i></a
+                >Tiles <i class="dropdown-arrow">&#9660;</i></a
               >
               <div class="dropdown-content">
                 <div class="dropdown-column">
@@ -1666,7 +1553,6 @@
     <nav class="breadcrumb-bar">
       <div class="breadcrumb-inner">
         <a href="index.html">Home</a><span class="sep">/</span>
-        <!-- <a href="tiles.html">Tiles</a><span class="sep">/</span> -->
         <span class="current">Kitchen Floor Tiles</span>
       </div>
     </nav>
@@ -1686,7 +1572,6 @@
           <button class="sidebar-clear" id="clearAllBtn">Clear All</button>
         </div>
 
-        <!-- Colors -->
         <div class="filter-group open">
           <button class="filter-group-header">
             Colors <i class="fa-solid fa-chevron-down"></i>
@@ -1731,7 +1616,6 @@
           </div>
         </div>
 
-        <!-- Textures -->
         <div class="filter-group open">
           <button class="filter-group-header">
             Textures <i class="fa-solid fa-chevron-down"></i>
@@ -1780,7 +1664,6 @@
           </div>
         </div>
 
-        <!-- Finish -->
         <div class="filter-group open">
           <button class="filter-group-header">
             Finish <i class="fa-solid fa-chevron-down"></i>
@@ -1809,7 +1692,6 @@
           </div>
         </div>
 
-        <!-- Size -->
         <div class="filter-group">
           <button class="filter-group-header">
             Size <i class="fa-solid fa-chevron-down"></i>
@@ -1828,7 +1710,6 @@
           </div>
         </div>
 
-        <!-- Surface -->
         <div class="filter-group">
           <button class="filter-group-header">
             Surface <i class="fa-solid fa-chevron-down"></i>
@@ -1856,13 +1737,11 @@
           </div>
         </div>
 
-        <!-- APPLY FILTERS -->
         <div class="apply-filters-wrap">
           <button class="btn-apply" id="applyFiltersBtn">
             <i class="fa-solid fa-check"></i> Apply Filters
           </button>
         </div>
-
         <a
           href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20kitchen%20tiles"
           target="_blank"
@@ -1877,7 +1756,6 @@
         <button class="mobile-filter-toggle" id="mobileFilterToggle">
           <i class="fa-solid fa-sliders"></i> Filters
         </button>
-
         <div class="toolbar">
           <div class="toolbar-left">
             <p class="item-count"><strong id="countNum">11</strong> Items</p>
@@ -1898,15 +1776,13 @@
             <label for="sort-sel">Order by</label>
             <select id="sort-sel">
               <option>Latest</option>
-              <option>Name A–Z</option>
-              <option>Name Z–A</option>
+              <option>Name A&#8211;Z</option>
+              <option>Name Z&#8211;A</option>
             </select>
           </div>
         </div>
-
         <div id="active-filter-chips"></div>
         <div class="products-grid" id="productsGrid"></div>
-
         <div class="desc-block">
           <h2>Kitchen Floor Tiles for Modern Living</h2>
           <p>
@@ -1945,7 +1821,6 @@
           WhatsApp
         </a>
       </div>
-
       <div style="margin-bottom: 3rem">
         <div class="section-title-row">
           <h2>Featured Collections</h2>
@@ -1958,7 +1833,7 @@
       </div>
     </div>
 
-    <!-- TILE DETAIL OVERLAY -->
+    <!-- DETAIL OVERLAY -->
     <div class="detail-overlay" id="detailOverlay">
       <div class="detail-modal" id="detailModal">
         <button class="detail-close" id="detailClose">
@@ -2031,23 +1906,19 @@
               </p>
               <div class="detail-size-row" id="detailSizes"></div>
             </div>
-            <hr class="detail-divider" />
-            <div class="detail-ctas">
+            <!-- Mobile WhatsApp CTA -->
+            <div class="detail-ctas-2">
               <a
-                id="detailEnquireWA"
+                class="detail-enquire-wa detail-btn-main"
                 href="#"
                 target="_blank"
-                class="detail-btn-main"
               >
-                <i class="fa-brands fa-whatsapp" style="font-size: 15px"></i>
+                <i
+                  class="fa-brands fa-whatsapp"
+                  style="font-size: 15px; padding-right: 3px"
+                ></i>
                 Enquire on WhatsApp
               </a>
-              <button class="detail-btn-secondary">
-                <i class="fa-regular fa-calendar"></i> Book Showroom Visit
-              </button>
-              <button class="detail-btn-secondary">
-                <i class="fa-solid fa-file-arrow-down"></i> Download Catalogue
-              </button>
             </div>
           </div>
         </div>
@@ -2064,6 +1935,20 @@
             <button class="detail-tab-btn" data-tab="installation">
               Installation
             </button>
+            <!-- Desktop WhatsApp CTA -->
+            <div class="detail-ctas">
+              <a
+                class="detail-enquire-wa detail-btn-main"
+                href="#"
+                target="_blank"
+              >
+                <i
+                  class="fa-brands fa-whatsapp"
+                  style="font-size: 15px; padding-right: 3px"
+                ></i>
+                Enquire on WhatsApp
+              </a>
+            </div>
           </div>
           <div class="detail-tab-panel active" id="tab-features">
             <div class="detail-features-grid" id="detailFeaturesGrid"></div>
@@ -2109,7 +1994,7 @@
               <div class="install-step">
                 <div class="install-step-num">4</div>
                 <div class="install-step-text">
-                  <h5>Set Tiles & Grout</h5>
+                  <h5>Set Tiles &amp; Grout</h5>
                   <p>
                     Press tiles firmly with a slight twist. Use spacers for
                     consistent joint width. Allow adhesive to cure for 24 hours
@@ -2120,7 +2005,7 @@
               <div class="install-step">
                 <div class="install-step-num">5</div>
                 <div class="install-step-text">
-                  <h5>Seal & Finish</h5>
+                  <h5>Seal &amp; Finish</h5>
                   <p>
                     Apply appropriate sealant if specified for the finish type.
                     Buff clean and allow full cure before foot traffic
@@ -2140,19 +2025,19 @@
       </div>
     </div>
 
+    <!-- WhatsApp float -->
     <a
       href="https://wa.me/919843069220"
       class="whatsapp-float"
       target="_blank"
       aria-label="Chat on WhatsApp"
     >
-      <i class="fa-brands fa-whatsapp"></i>
+      <img src="./images/WhatsApp.svg" alt="WhatsApp" />
     </a>
-    <button id="scrollTopBtn" aria-label="Scroll to top">
-      <i class="fa-solid fa-chevron-up"></i>
-    </button>
+    <button id="scrollTopBtn" aria-label="Scroll to top">&#8593;</button>
 
     <script>
+      // ─── Tile Data ────────────────────────────────────────────────────────────
       const TILES = [
         {
           id: 0,
@@ -2160,24 +2045,32 @@
           tag: "CARRARA MARBLE",
           description:
             "Classic 3×6 inch marble subway tiles with elegant gray veining. Sourced from the finest Italian quarries, these tiles bring timeless luxury to kitchen floors.",
-          colours: 3,
+          colours: 4,
           finishes: 2,
-          image: "./images/cararamarble-1.jpg",
+          image: "./images/kitchen_img1.avif",
           badge: "Carrara",
-          colors: ["Pearl", "Shell", "Graphite"],
+          thumbImages: [
+            "./images/cararamarble-1.jpg",
+            "./images/cararamarble-2.jpg",
+            "./images/cararamarble-3.jpg",
+            "./images/cararamarble-4.jpg",
+          ],
+          colors: ["Pearl", "Shell", "Graphite", "Warm Ivory"],
           colorsHex: {
             Pearl: "#f5f0ea",
             Shell: "#d4c8b8",
-            Graphite: "#4a4540",
+            Graphite: "#0F0F10",
+            "Warm Ivory": "#1B3A32",
           },
           colorImages: {
-            Pearl: "./images/cararamarble-2.jpg",
-            Shell: "./images/cararamarble-3.jpg",
-            Graphite: "./images/cararamarble-4.jpg",
+            Pearl: "./images/cararamarble-1.jpg",
+            Shell: "./images/cararamarble-2.jpg",
+            Graphite: "./images/cararamarble-3.jpg",
+            "Warm Ivory": "./images/cararamarble-4.jpg",
           },
           finishImages: {
             Polished: "./images/cararamarble-1.jpg",
-            Satin: "./images/cararamarble-5.jpg",
+            Satin: "./images/cararamarble-2.jpg",
           },
           sizeImages: {
             "600×600": "./images/cararamarble-2.jpg",
@@ -2220,20 +2113,38 @@
           tag: "HEXAGONAL CEMENT",
           description:
             "1-inch hex cement tiles in matte gray finish for modern kitchens. A contemporary geometric pattern that pairs beautifully with stainless steel and dark cabinetry.",
-          colours: 2,
-          finishes: 1,
+          colours: 4,
+          finishes: 4,
           image: "./images/kitchen_img2.avif",
           badge: "Hexagonal",
-          colors: ["Graphite", "Shell"],
-          colorsHex: { Graphite: "#4a4540", Shell: "#d4c8b8" },
-          colorImages: {
-            Graphite: "./images/kitchen_img2.avif",
-            Shell: "./images/kitchen_img11.avif",
+          thumbImages: [
+            "./images/hexcementtiles-1.jpg",
+            "./images/hexcementtiles-2.jpg",
+            "./images/hexcementtiles-3.png",
+            "./images/hexcementtiles-4.png",
+          ],
+          colors: [
+            "Light Cement Grey",
+            "Marble White",
+            "Charcol Grey",
+            "Warm Beige",
+          ],
+          colorsHex: {
+            "Light Cement Grey": "#A8A297",
+            "Marble White": "#DDD8D3",
+            "Charcol Grey": "#5E5A59",
+            "Warm Beige": "#B7AEA2",
           },
-          finishImages: { Matt: "./images/kitchen_img2.avif" },
+          colorImages: {
+            "Light Cement Grey": "./images/hexcementtiles-1.jpg",
+            "Marble White": "./images/hexcementtiles-2.jpg",
+            "Charcol Grey": "./images/hexcementtiles-3.png",
+            "Warm Beige": "./images/hexcementtiles-4.png",
+          },
+          finishImages: { Matt: "./images/hexcementtiles-1.jpg" },
           sizeImages: {
-            "200×400": "./images/kitchen_img2.avif",
-            "300×600": "./images/kitchen_img3.avif",
+            "200×400": "./images/hexcementtiles-3.png",
+            "300×600": "./images/hexcementtiles-4.png",
           },
           texture: "Cement",
           finish: ["Matt"],
@@ -2272,20 +2183,38 @@
           tag: "HERRINGBONE CERAMIC",
           description:
             "White ceramic tiles in a timeless herringbone pattern. The classic zigzag layout creates a sense of movement and elegance in any kitchen.",
-          colours: 1,
-          finishes: 2,
+          colours: 4,
+          finishes: 4,
           image: "./images/kitchen_img3.avif",
           badge: "Herringbone",
-          colors: ["Pearl"],
-          colorsHex: { Pearl: "#f5f0ea" },
-          colorImages: { Pearl: "./images/kitchen_img3.avif" },
+          thumbImages: [
+            "./images/herringbonetile-1.jpeg",
+            "./images/herringbonetile-2.jpeg",
+            "./images/herringbonetile-3.jpeg",
+            "./images/herringbonetile-4.jpeg",
+          ],
+          colors: ["Off-White", "marble white", "warm griege", "Slate Blue"],
+          colorsHex: {
+            "Off-White": "#E7E4E0",
+            "marble white": "#9D9DA0",
+            "warm griege": "#B8B0A6",
+            "Slate Blue": "#3D4F6B",
+          },
+          colorImages: {
+            "Off-White": "./images/herringbonetile-1.jpeg",
+            "marble white": "./images/herringbonetile-2.jpeg",
+            "warm griege": "./images/herringbonetile-3.jpeg",
+            "Slate Blue": "./images/herringbonetile-4.jpeg",
+          },
           finishImages: {
-            Matt: "./images/kitchen_img3.avif",
-            Glazed: "./images/kitchen_img11.avif",
+            "Off-White": "./images/herringbonetile-1.jpeg",
+            "marble white": "./images/herringbonetile-2.jpeg",
+            "warm griege": "./images/herringbonetile-3.jpeg",
+            "Slate Blue": "./images/herringbonetile-4.jpeg",
           },
           sizeImages: {
-            "200×400": "./images/kitchen_img3.avif",
-            "300×600": "./images/kitchen_img3.avif",
+            "200×400": "./images/herringbonetile-1.jpeg",
+            "300×600": "./images/herringbonetile-2.jpeg",
           },
           texture: "Ceramic",
           finish: ["Matt", "Glazed"],
@@ -2328,25 +2257,27 @@
           finishes: 1,
           image: "./images/kitchen_img5.avif",
           badge: "Zellige",
-          colors: ["Peach", "Leaf", "Brick", "Hazel", "Pearl", "Shell"],
+          thumbImages: [
+            "./images/moroccanzellige-1.jpg",
+            "./images/moroccanzellige-2.jpg",
+            "./images/moroccanzellige-3.jpg",
+            "./images/moroccanzellige-4.jpg",
+          ],
+          colors: ["Terracotta", "Emerald", "Cream", "Beige"],
           colorsHex: {
-            Peach: "#e8c4a0",
-            Leaf: "#6b8f5e",
-            Brick: "#c0392b",
-            Hazel: "#8b6f47",
-            Pearl: "#f5f0ea",
-            Shell: "#d4c8b8",
+            Terracotta: "#AF6236",
+            Emerald: "#11443C",
+            Cream: "#CABA9C",
+            Beige: "#CC9D72",
           },
           colorImages: {
-            Peach: "./images/kitchen_img5.avif",
-            Leaf: "./images/kitchen_img9.avif",
-            Brick: "./images/kitchen_img8.jpg",
-            Hazel: "./images/kitchen_img8.jpg",
-            Pearl: "./images/kitchen_img11.avif",
-            Shell: "./images/kitchen_img11.avif",
+            Beige: "./images/moroccanzellige-1.jpg",
+            Cream: "./images/moroccanzellige-3.jpg",
+            Emerald: "./images/moroccanzellige-2.jpg",
+            Terracotta: "./images/moroccanzellige-4.jpg",
           },
-          finishImages: { Glazed: "./images/kitchen_img5.avif" },
-          sizeImages: { "200×400": "./images/kitchen_img5.avif" },
+          finishImages: { Glazed: "./images/moroccanzellige-1.jpg" },
+          sizeImages: { "200×400": "./images/moroccanzellige-3.jpg" },
           texture: "Zellige",
           finish: ["Glazed"],
           sizes: ["200×400"],
@@ -2388,11 +2319,27 @@
           finishes: 1,
           image: "./images/kitchen_img6.avif",
           badge: "Matte Black",
-          colors: ["Black"],
-          colorsHex: { Black: "#1a1814" },
-          colorImages: { Black: "./images/kitchen_img6.avif" },
-          finishImages: { Matt: "./images/kitchen_img6.avif" },
-          sizeImages: { "300×600": "./images/kitchen_img6.avif" },
+          thumbImages: [
+            "./images/blackmattesub-1.jpg",
+            "./images/blackmattesub-2.jpg",
+            "./images/blackmattesub-3.jpg",
+            "./images/blackmattesub-4.jpg",
+          ],
+          colors: ["Gloss-Subway", "HerringBone", "Linear-Slate", "Diamond-3d"],
+          colorsHex: {
+            "Gloss-Subway": "#0B0B0C",
+            HerringBone: "#252627",
+            "Linear-Slate": "#444446",
+            "Diamond-3d": "#09090A",
+          },
+          colorImages: {
+            "Gloss-Subway": "./images/blackmattesub-1.jpg",
+            HerringBone: "./images/blackmattesub-2.jpg",
+            "Linear-Slate": "./images/blackmattesub-3.jpg",
+            "Diamond-3d": "./images/blackmattesub-4.jpg",
+          },
+          finishImages: { Matt: "./images/blackmattesub-2.jpg" },
+          sizeImages: { "300×600": "./images/blackmattesub-3.jpg" },
           texture: "Ceramic",
           finish: ["Matt"],
           sizes: ["300×600"],
@@ -2434,21 +2381,27 @@
           finishes: 1,
           image: "./images/kitchen_img7.avif",
           badge: "Fish Scale",
-          colors: ["Pearl", "Leaf", "Peach", "Shell"],
+          thumbImages: [
+            "./images/fishscalemmosaic-1.jpg",
+            "./images/fishscalemosaic-2.jpg",
+            "./images/fishscalemosaic-3.jpg",
+            "./images/fishscalemosaic-4.jpg",
+          ],
+          colors: ["Celedon", "Slate-Blue", "Ocean-Mix", "Iridescent"],
           colorsHex: {
-            Pearl: "#f5f0ea",
-            Leaf: "#6b8f5e",
-            Peach: "#e8c4a0",
-            Shell: "#d4c8b8",
+            Celedon: "#9AB3B2",
+            Iridescent: "#E3DDD3",
+            "Ocean-Mix": "#1A5E7A",
+            "Slate-Blue": "#8C9CA7",
           },
           colorImages: {
-            Pearl: "./images/kitchen_img7.avif",
-            Leaf: "./images/kitchen_img9.avif",
-            Peach: "./images/kitchen_img5.avif",
-            Shell: "./images/kitchen_img11.avif",
+            Celedon: "./images/fishscalemmosaic-1.jpg",
+            Iridescent: "./images/fishscalemosaic-4.jpg",
+            "Ocean-Mix": "./images/fishscalemosaic-3.jpg",
+            "Slate-Blue": "./images/fishscalemosaic-2.jpg",
           },
-          finishImages: { Polished: "./images/kitchen_img7.avif" },
-          sizeImages: { "200×400": "./images/kitchen_img7.avif" },
+          finishImages: { Polished: "./images/fishscalemmosaic-1.jpg" },
+          sizeImages: { "200×400": "./images/fishscalemosaic-2.jpg" },
           texture: "Mosaic",
           finish: ["Polished"],
           sizes: ["200×400"],
@@ -2486,23 +2439,36 @@
           tag: "BRICK RED CERAMIC",
           description:
             "Traditional red clay tiles with rustic farmhouse appeal. The warm terracotta tones evoke the charm of a traditional country kitchen.",
-          colours: 2,
+          colours: 4,
           finishes: 2,
           image: "./images/kitchen_img8.jpg",
           badge: "Brick Red",
-          colors: ["Brick", "Hazel"],
-          colorsHex: { Brick: "#c0392b", Hazel: "#8b6f47" },
+          thumbImages: [
+            "./images/brikredceramic-2.jpg",
+            "./images/brikredceramic-1.jpg",
+            "./images/brikredceramic-3.jpg",
+            "./images/brikceramic-4.jpg",
+          ],
+          colors: ["Burgundy", "Cherry-Red", "Terracotta", "True-Red"],
+          colorsHex: {
+            Burgundy: "#5A221E",
+            "Cherry-Red": "#B5131E",
+            Terracotta: "#A5432E",
+            "True-Red": "#8E2320",
+          },
           colorImages: {
-            Brick: "./images/kitchen_img8.jpg",
-            Hazel: "./images/kitchen_img9.avif",
+            Burgundy: "./images/brikredceramic-1.jpg",
+            "Cherry-Red": "./images/brikredceramic-2.jpg",
+            Terracotta: "./images/brikredceramic-3.jpg",
+            "True-Red": "./images/brikceramic-4.jpg",
           },
           finishImages: {
-            Rustic: "./images/kitchen_img8.jpg",
-            Matt: "./images/kitchen_img2.avif",
+            Terracotta: "./images/brikredceramic-3.jpg",
+            "True-Red": "./images/brikceramic-4.jpg",
           },
           sizeImages: {
-            "600×600": "./images/kitchen_img8.jpg",
-            "300×600": "./images/kitchen_img8.jpg",
+            "600×600": "./images/brikredceramic-1.jpg",
+            "300×600": "./images/brikredceramic-2.jpg",
           },
           texture: "Ceramic",
           finish: ["Rustic", "Matt"],
@@ -2541,44 +2507,33 @@
           tag: "GEOMETRIC PATTERN",
           description:
             "Colourful encaustic cement tiles in arabesque design. Bold, graphic patterns add personality and a focal point to open-plan kitchen floors.",
-          colours: 8,
+          colours: 4,
           finishes: 1,
           image: "./images/kitchen_img9.avif",
           badge: "Geometric",
-          colors: [
-            "Peach",
-            "Leaf",
-            "Brick",
-            "Hazel",
-            "Pearl",
-            "Shell",
-            "Graphite",
-            "Black",
+          thumbImages: [
+            "./images/geometricpattern-2.jpg",
+            "./images/geometricpattern-1.jpg",
+            "./images/geometricpattern-3.jpg",
+            "./images/geometricpattern-4.jpg",
           ],
+          colors: ["Lattice-Mix", "Retro-Mix", "Damask-Mix", "Petal-Mix"],
           colorsHex: {
-            Peach: "#e8c4a0",
-            Leaf: "#6b8f5e",
-            Brick: "#c0392b",
-            Hazel: "#8b6f47",
-            Pearl: "#f5f0ea",
-            Shell: "#d4c8b8",
-            Graphite: "#4a4540",
-            Black: "#1a1814",
+            "Lattice-Mix": "#332B1E",
+            "Retro-Mix": "#2B5953",
+            "Damask-Mix": "#1A1A1A",
+            "Petal-Mix": "#8B6F47",
           },
           colorImages: {
-            Peach: "./images/kitchen_img9.avif",
-            Leaf: "./images/kitchen_img9.avif",
-            Brick: "./images/kitchen_img8.jpg",
-            Hazel: "./images/kitchen_img8.jpg",
-            Pearl: "./images/kitchen_img11.avif",
-            Shell: "./images/kitchen_img11.avif",
-            Graphite: "./images/kitchen_img10.avif",
-            Black: "./images/kitchen_img6.avif",
+            "Lattice-Mix": "./images/geometricpattern-2.jpg",
+            "Retro-Mix": "./images/geometricpattern-1.jpg",
+            "Damask-Mix": "./images/geometricpattern-3.jpg",
+            "Petal-Mix": "./images/geometricpattern-4.jpg",
           },
-          finishImages: { Matt: "./images/kitchen_img9.avif" },
+          finishImages: { Matt: "./images/geometricpattern-1.jpg" },
           sizeImages: {
-            "600×600": "./images/kitchen_img9.avif",
-            "800×800": "./images/kitchen_img9.avif",
+            "600×600": "./images/geometricpattern-2.jpg",
+            "800×800": "./images/geometricpattern-3.jpg",
           },
           texture: "Cement",
           finish: ["Matt"],
@@ -2621,25 +2576,38 @@
           finishes: 2,
           image: "./images/kitchen_img10.avif",
           badge: "Concrete",
-          colors: ["Graphite", "Shell", "Pearl"],
+          thumbImages: [
+            "./images/concreteeffect-1.jpg",
+            "./images/concreteeffect-2.jpg",
+            "./images/concreteeffect-3.jpg",
+            "./images/concreteeffect-4.jpg",
+          ],
+          colors: [
+            "Slate-Stone",
+            "Raw-Concrete",
+            "Speckled-Clay",
+            "Minimal-Gray",
+          ],
           colorsHex: {
-            Graphite: "#4a4540",
-            Shell: "#d4c8b8",
-            Pearl: "#f5f0ea",
+            "Slate-Stone": "#545E60",
+            "Raw-Concrete": "#878787",
+            "Speckled-Clay": "#706F71",
+            "Minimal-Gray": "#7C7A7B",
           },
           colorImages: {
-            Graphite: "./images/kitchen_img10.avif",
-            Shell: "./images/kitchen_img11.avif",
-            Pearl: "./images/cararamarble-1.jpg",
+            "Slate-Stone": "./images/concreteeffect-1.jpg",
+            "Raw-Concrete": "./images/concreteeffect-2.jpg",
+            "Speckled-Clay": "./images/concreteeffect-3.jpg",
+            "Minimal-Gray": "./images/concreteeffect-4.jpg",
           },
           finishImages: {
-            Matt: "./images/kitchen_img10.avif",
-            Satin: "./images/cararamarble-1.jpg",
+            Matt: "./images/concreteeffect-1.jpg",
+            Satin: "./images/concreteeffect-4.jpg",
           },
           sizeImages: {
-            "600×1200": "./images/kitchen_img10.avif",
-            "1200×1200": "./images/kitchen_img10.avif",
-            "800×800": "./images/kitchen_img2.avif",
+            "600×1200": "./images/concreteeffect-2.jpg",
+            "1200×1200": "./images/concreteeffect-3.jpg",
+            "800×800": "./images/concreteeffect-4.jpg",
           },
           texture: "Concrete",
           finish: ["Matt", "Satin"],
@@ -2682,16 +2650,29 @@
           finishes: 1,
           image: "./images/kitchen_img11.avif",
           badge: "Arabesque",
-          colors: ["Pearl", "Shell"],
-          colorsHex: { Pearl: "#f5f0ea", Shell: "#d4c8b8" },
-          colorImages: {
-            Pearl: "./images/kitchen_img11.avif",
-            Shell: "./images/kitchen_img3.avif",
+          thumbImages: [
+            "./images/arabesquewhite-1.jpg",
+            "./images/arabesquewhite-3.jpg",
+            "./images/arabesquewhite-4.jpg",
+            "./images/arabesquewhite-2.jpg",
+          ],
+          colors: ["Base", "HighLight", "ShadowMid", "ShadowDeep"],
+          colorsHex: {
+            Base: "#f3f2f0",
+            ShadowDeep: "#afaaa3",
+            ShadowMid: "#d5d1cb",
+            HighLight: "#ffffff",
           },
-          finishImages: { Glazed: "./images/kitchen_img11.avif" },
+          colorImages: {
+            Base: "./images/arabesquewhite-1.jpg",
+            HighLight: "./images/arabesquewhite-3.jpg",
+            ShadowMid: "./images/arabesquewhite-4.jpg",
+            ShadowDeep: "./images/arabesquewhite-2.jpg",
+          },
+          finishImages: { Glazed: "./images/arabesquewhite-3.jpg" },
           sizeImages: {
-            "200×400": "./images/kitchen_img11.avif",
-            "300×600": "./images/kitchen_img3.avif",
+            "200×400": "./images/arabesquewhite-4.jpg",
+            "300×600": "./images/arabesquewhite-1.jpg",
           },
           texture: "Ceramic",
           finish: ["Glazed"],
@@ -2734,26 +2715,30 @@
           finishes: 2,
           image: "./images/kitchen_img12.avif",
           badge: "Penny Round",
-          colors: ["Pearl", "Peach", "Leaf", "Shell", "Black"],
+          thumbImages: [
+            "./images/pennyroundmosasic-1.jpeg",
+            "./images/pennyroundmosaic-2.jpeg",
+            "./images/pennyroundmosaic-3.jpeg",
+            "./images/pennyroundmosaic-4.jpeg",
+          ],
+          colors: ["White", "Cream", "Taupe", "Slate"],
           colorsHex: {
-            Pearl: "#f5f0ea",
-            Peach: "#e8c4a0",
-            Leaf: "#6b8f5e",
-            Shell: "#d4c8b8",
-            Black: "#1a1814",
+            White: "#f3f2f0",
+            Cream: "#e6ded4",
+            Taupe: "#adaba4",
+            Slate: "#929591",
           },
           colorImages: {
-            Pearl: "./images/kitchen_img12.avif",
-            Peach: "./images/kitchen_img5.avif",
-            Leaf: "./images/kitchen_img9.avif",
-            Shell: "./images/kitchen_img11.avif",
-            Black: "./images/kitchen_img6.avif",
+            White: "./images/pennyroundmosasic-1.jpeg",
+            Cream: "./images/pennyroundmosaic-2.jpeg",
+            Taupe: "./images/pennyroundmosaic-3.jpeg",
+            Slate: "./images/pennyroundmosaic-4.jpeg",
           },
           finishImages: {
-            Polished: "./images/kitchen_img12.avif",
-            Glazed: "./images/kitchen_img7.avif",
+            Polished: "./images/pennyroundmosaic-2.jpeg",
+            Glazed: "./images/pennyroundmosaic-3.jpeg",
           },
-          sizeImages: { "200×400": "./images/kitchen_img12.avif" },
+          sizeImages: { "200×400": "./images/pennyroundmosaic-4.jpeg" },
           texture: "Mosaic",
           finish: ["Polished", "Glazed"],
           sizes: ["200×400"],
@@ -2789,7 +2774,7 @@
 
       const FEATURED_IDS = [1, 3, 7, 8];
 
-      // ─── FILTER STATE ─────────────────────────────────────────────────────────────
+      // ─── Filter State ─────────────────────────────────────────────────────────
       const pending = {
         colors: new Set(),
         textures: new Set(),
@@ -2811,16 +2796,14 @@
           src[k].forEach((v) => dst[k].add(v));
         });
       }
-
-      // ─── FILTER LOGIC ─────────────────────────────────────────────────────────────
       function getFiltered(state) {
-        const totalActive =
+        const total =
           state.colors.size +
           state.textures.size +
           state.finishes.size +
           state.sizes.size +
           state.surfaces.size;
-        if (totalActive === 0) return TILES;
+        if (total === 0) return TILES;
         return TILES.filter((t) => {
           if (
             state.colors.size > 0 &&
@@ -2844,18 +2827,17 @@
           return false;
         });
       }
-
       function getSorted(tiles) {
         const v = document.getElementById("sort-sel").value;
         const arr = [...tiles];
-        if (v === "Name A–Z")
+        if (v === "Name A\u2013Z")
           arr.sort((a, b) => a.title.localeCompare(b.title));
-        else if (v === "Name Z–A")
+        else if (v === "Name Z\u2013A")
           arr.sort((a, b) => b.title.localeCompare(a.title));
         return arr;
       }
 
-      // ─── RENDER GRID ──────────────────────────────────────────────────────────────
+      // ─── Render product grid — NO heart icon ─────────────────────────────────
       function renderGrid() {
         const container = document.getElementById("productsGrid");
         const tiles = getSorted(getFiltered(applied));
@@ -2873,7 +2855,6 @@
                 <div class="prod-img-wrap">
                   <img src="${tile.image}" alt="${tile.title}" loading="lazy"/>
                   <span class="prod-badge">${tile.badge}</span>
-                  <button class="prod-wish" aria-label="Save to wishlist"><i class="fa-regular fa-heart"></i></button>
                 </div>
                 <div class="prod-body">
                   <p class="prod-tag">${tile.tag}</p>
@@ -2896,7 +2877,6 @@
         }, 180);
       }
 
-      // ─── RENDER CHIPS ─────────────────────────────────────────────────────────────
       function renderChips() {
         const bar = document.getElementById("active-filter-chips");
         bar.innerHTML = "";
@@ -2923,23 +2903,21 @@
         });
       }
 
-      // ─── APPLY BUTTON STATE ───────────────────────────────────────────────────────
       function updateApplyBtn() {
         const btn = document.getElementById("applyFiltersBtn");
         const preview = getFiltered(pending).length;
-        const totalPending =
+        const total =
           pending.colors.size +
           pending.textures.size +
           pending.finishes.size +
           pending.sizes.size +
           pending.surfaces.size;
         btn.innerHTML =
-          totalPending > 0
+          total > 0
             ? `<i class="fa-solid fa-check"></i> Apply Filters (${preview})`
             : `<i class="fa-solid fa-check"></i> Apply Filters`;
       }
 
-      // ─── SYNC UI ──────────────────────────────────────────────────────────────────
       function syncUIFromPending() {
         document
           .querySelectorAll(".swatch-item")
@@ -2971,7 +2949,6 @@
           );
       }
 
-      // ─── CLEAR ALL ────────────────────────────────────────────────────────────────
       function clearAll() {
         Object.values(pending).forEach((s) => s.clear());
         Object.values(applied).forEach((s) => s.clear());
@@ -2981,7 +2958,7 @@
         updateApplyBtn();
       }
 
-      // ─── DETAIL MODAL ─────────────────────────────────────────────────────────────
+      // ─── openDetail — colorsHex used for swatch backgrounds ──────────────────
       function openDetail(id) {
         const tile = TILES[id];
         if (!tile) return;
@@ -2991,44 +2968,48 @@
         document.getElementById("detailTag").textContent = tile.tag;
         document.getElementById("detailName").textContent = tile.title;
         document.getElementById("detailDesc").textContent = tile.description;
-        document.getElementById("detailMainImg").src = tile.image;
-        document.getElementById("detailMainImg").alt = tile.title;
-        document.getElementById("detailEnquireWA").href =
-          `https://wa.me/919843069220?text=Enquiry:%20${encodeURIComponent(tile.title)}`;
 
-        // ── Thumbnails: use dedicated cararamarble images for id=0, otherwise fallback ──
+        const waHref = `https://wa.me/919843069220?text=Enquiry:%20${encodeURIComponent(tile.title)}`;
+        document.querySelectorAll(".detail-enquire-wa").forEach((el) => {
+          el.href = waHref;
+        });
+
         const thumbImgs =
-          tile.id === 0
-            ? [
-                "./images/cararamarble-1.jpg",
-                "./images/cararamarble-2.jpg",
-                "./images/cararamarble-3.jpg",
-                "./images/cararamarble-4.jpg",
-              ]
-            : [
-                tile.image,
-                ...TILES.filter((t) => t.id !== tile.id)
-                  .slice(0, 3)
-                  .map((t) => t.image),
-              ];
+          tile.thumbImages && tile.thumbImages.length > 0
+            ? tile.thumbImages
+            : [tile.image];
+        document.getElementById("detailMainImg").src = thumbImgs[0];
+        document.getElementById("detailMainImg").alt = tile.title;
 
         const thumbsEl = document.getElementById("detailThumbs");
         thumbsEl.innerHTML = "";
         thumbImgs.forEach((src, i) => {
           const d = document.createElement("div");
           d.className = "detail-thumb" + (i === 0 ? " active" : "");
+          d.dataset.src = src;
           d.innerHTML = `<img src="${src}" alt="view ${i + 1}"/>`;
-          d.addEventListener("click", () => {
-            document.getElementById("detailMainImg").src = src;
-            thumbsEl
-              .querySelectorAll(".detail-thumb")
-              .forEach((t) => t.classList.remove("active"));
-            d.classList.add("active");
-          });
           thumbsEl.appendChild(d);
         });
 
-        // Spec table
+        function setMainImage(newSrc) {
+          const mainImg = document.getElementById("detailMainImg");
+          mainImg.style.transition = "opacity 0.2s";
+          mainImg.style.opacity = "0";
+          setTimeout(() => {
+            mainImg.src = newSrc;
+            mainImg.style.opacity = "1";
+          }, 200);
+          const newFile = newSrc.split("/").pop().split("?")[0];
+          thumbsEl.querySelectorAll(".detail-thumb").forEach((t) => {
+            const tFile = (t.dataset.src || "").split("/").pop().split("?")[0];
+            t.classList.toggle("active", tFile === newFile);
+          });
+        }
+
+        thumbsEl.querySelectorAll(".detail-thumb").forEach((d) => {
+          d.addEventListener("click", () => setMainImage(d.dataset.src));
+        });
+
         const specRows = [
           ["Texture", tile.texture],
           ["Colours Available", tile.colours],
@@ -3040,82 +3021,62 @@
           .map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`)
           .join("");
 
-        // ── Helper: update main image with smooth fade ──
-        function updateMainImage(newSrc) {
-          const mainImg = document.getElementById("detailMainImg");
-          mainImg.style.transition = "opacity 0.2s";
-          mainImg.style.opacity = "0";
-          setTimeout(() => {
-            mainImg.src = newSrc;
-            mainImg.style.opacity = "1";
-            // Also highlight the matching thumb if it exists
-            document.querySelectorAll(".detail-thumb").forEach((th) => {
-              th.classList.toggle(
-                "active",
-                th.querySelector("img").src.includes(newSrc.replace("./", "")),
-              );
-            });
-          }, 200);
-        }
-
-        // Colors — clicking a color swatch updates the main image
-        document.getElementById("detailColors").innerHTML = tile.colors
+        // ── Color swatches — background set from colorsHex ──
+        const colorRow = document.getElementById("detailColors");
+        colorRow.innerHTML = tile.colors
           .map(
             (c, i) =>
-              `<span class="detail-swatch${i === 0 ? " active" : ""}" title="${c}" style="background:${tile.colorsHex[c]}" data-color="${c}"></span>`,
+              `<span class="detail-swatch${i === 0 ? " active" : ""}" title="${c}" style="background:${tile.colorsHex[c] || "#cccccc"}" data-color="${c}"></span>`,
           )
           .join("");
-        document.querySelectorAll(".detail-swatch").forEach((sw) => {
+        colorRow.querySelectorAll(".detail-swatch").forEach((sw) => {
           sw.addEventListener("click", () => {
-            document
+            colorRow
               .querySelectorAll(".detail-swatch")
               .forEach((s) => s.classList.remove("active"));
             sw.classList.add("active");
-            const colorName = sw.dataset.color;
-            const imgSrc = tile.colorImages[colorName] || tile.image;
-            updateMainImage(imgSrc);
+            setMainImage(tile.colorImages[sw.dataset.color] || thumbImgs[0]);
           });
         });
 
-        // Finishes — clicking a finish tag updates the main image
-        document.getElementById("detailFinishes").innerHTML = tile.finish
+        const finishRow = document.getElementById("detailFinishes");
+        finishRow.innerHTML = tile.finish
           .map(
             (f, i) =>
               `<span class="detail-finish-tag${i === 0 ? " active" : ""}">${f}</span>`,
           )
           .join("");
-        document.querySelectorAll(".detail-finish-tag").forEach((ft) => {
+        finishRow.querySelectorAll(".detail-finish-tag").forEach((ft) => {
           ft.addEventListener("click", () => {
-            document
+            finishRow
               .querySelectorAll(".detail-finish-tag")
               .forEach((s) => s.classList.remove("active"));
             ft.classList.add("active");
-            const finishName = ft.textContent.trim();
-            const imgSrc = tile.finishImages[finishName] || tile.image;
-            updateMainImage(imgSrc);
+            setMainImage(
+              tile.finishImages[ft.textContent.trim()] || thumbImgs[0],
+            );
           });
         });
 
-        // Sizes — clicking a size button updates the main image
-        document.getElementById("detailSizes").innerHTML = tile.sizes
+        const sizeRow = document.getElementById("detailSizes");
+        sizeRow.innerHTML = tile.sizes
           .map(
             (s, i) =>
               `<button class="detail-size-btn${i === 0 ? " active" : ""}">${s}</button>`,
           )
           .join("");
-        document.querySelectorAll(".detail-size-btn").forEach((sb) => {
+        sizeRow.querySelectorAll(".detail-size-btn").forEach((sb) => {
           sb.addEventListener("click", () => {
-            document
+            sizeRow
               .querySelectorAll(".detail-size-btn")
               .forEach((s) => s.classList.remove("active"));
             sb.classList.add("active");
-            const sizeName = sb.textContent.trim();
-            const imgSrc = tile.sizeImages[sizeName] || tile.image;
-            updateMainImage(imgSrc);
+            setMainImage(
+              tile.sizeImages[sb.textContent.trim()] || thumbImgs[0],
+            );
           });
         });
 
-        // Features
         document.getElementById("detailFeaturesGrid").innerHTML = tile.features
           .map(
             (f) =>
@@ -3123,7 +3084,6 @@
           )
           .join("");
 
-        // Tech specs
         document.getElementById("detailTechGrid").innerHTML = Object.entries(
           tile.tech,
         )
@@ -3133,7 +3093,6 @@
           )
           .join("");
 
-        // Related tiles
         const related = TILES.filter(
           (t) =>
             t.id !== tile.id &&
@@ -3145,20 +3104,18 @@
             (t) =>
               `<div class="related-card" data-id="${t.id}">
             <div class="related-card-img"><img src="${t.image}" alt="${t.title}" loading="lazy"/></div>
-            <div class="related-card-body">
-              <p class="related-card-tag">${t.tag}</p>
-              <p class="related-card-name">${t.title}</p>
-            </div>
+            <div class="related-card-body"><p class="related-card-tag">${t.tag}</p><p class="related-card-name">${t.title}</p></div>
           </div>`,
           )
           .join("");
-        document.querySelectorAll(".related-card").forEach((rc) => {
-          rc.addEventListener("click", () =>
-            openDetail(parseInt(rc.dataset.id)),
+        document
+          .querySelectorAll(".related-card")
+          .forEach((rc) =>
+            rc.addEventListener("click", () =>
+              openDetail(parseInt(rc.dataset.id)),
+            ),
           );
-        });
 
-        // Reset tabs
         document
           .querySelectorAll(".detail-tab-btn")
           .forEach((b) => b.classList.remove("active"));
@@ -3180,7 +3137,6 @@
         document.body.style.overflow = "";
       }
 
-      // ─── FEATURED GRID ────────────────────────────────────────────────────────────
       function renderFeatured() {
         document.getElementById("featuredGrid").innerHTML = FEATURED_IDS.map(
           (id) => {
@@ -3192,84 +3148,80 @@
               <h4 class="feat-name">${t.title}</h4>
               <p class="feat-desc">${t.description}</p>
               <div class="feat-meta"><span><strong>${t.colours}</strong> Color</span><span><strong>${t.finishes}</strong> Finish</span></div>
-              <a class="feat-viewmore" href="#">View More <i class="fa-solid fa-plus" style="font-size:10px"></i></a>
             </div>
           </div>`;
           },
         ).join("");
-        document.querySelectorAll(".feat-card").forEach((fc) => {
-          fc.addEventListener("click", () =>
-            openDetail(parseInt(fc.dataset.id)),
+        document
+          .querySelectorAll(".feat-card")
+          .forEach((fc) =>
+            fc.addEventListener("click", () =>
+              openDetail(parseInt(fc.dataset.id)),
+            ),
           );
-        });
       }
 
-      // ─── BOOTSTRAP ────────────────────────────────────────────────────────────────
+      // ─── Bootstrap ────────────────────────────────────────────────────────────
       document.addEventListener("DOMContentLoaded", () => {
         renderGrid();
         renderFeatured();
 
-        // Filter Accordions
-        document.querySelectorAll(".filter-group-header").forEach((btn) => {
-          btn.addEventListener("click", () =>
-            btn.closest(".filter-group").classList.toggle("open"),
+        document
+          .querySelectorAll(".filter-group-header")
+          .forEach((btn) =>
+            btn.addEventListener("click", () =>
+              btn.closest(".filter-group").classList.toggle("open"),
+            ),
           );
-        });
 
-        // Color swatches
-        document.querySelectorAll(".swatch-item").forEach((el) => {
+        document.querySelectorAll(".swatch-item").forEach((el) =>
           el.addEventListener("click", () => {
             el.classList.toggle("active");
             const c = el.dataset.color;
             if (el.classList.contains("active")) pending.colors.add(c);
             else pending.colors.delete(c);
             updateApplyBtn();
-          });
-        });
+          }),
+        );
 
-        // Texture thumbs
-        document.querySelectorAll(".texture-thumb").forEach((el) => {
+        document.querySelectorAll(".texture-thumb").forEach((el) =>
           el.addEventListener("click", () => {
             el.classList.toggle("active");
             const x = el.dataset.texture;
             if (el.classList.contains("active")) pending.textures.add(x);
             else pending.textures.delete(x);
             updateApplyBtn();
-          });
-        });
+          }),
+        );
 
-        // Finish checkboxes
-        document.querySelectorAll("[data-finish]").forEach((cb) => {
+        document.querySelectorAll("[data-finish]").forEach((cb) =>
           cb.addEventListener("change", () => {
             const f = cb.dataset.finish;
             if (cb.checked) pending.finishes.add(f);
             else pending.finishes.delete(f);
             updateApplyBtn();
-          });
-        });
+          }),
+        );
 
-        // Size tags
-        document.querySelectorAll(".size-tag").forEach((el) => {
+        document.querySelectorAll(".size-tag").forEach((el) =>
           el.addEventListener("click", () => {
             el.classList.toggle("active");
             const s = el.dataset.size;
             if (el.classList.contains("active")) pending.sizes.add(s);
             else pending.sizes.delete(s);
             updateApplyBtn();
-          });
-        });
+          }),
+        );
 
-        // Surface checkboxes
-        document.querySelectorAll("[data-surface]").forEach((cb) => {
+        document.querySelectorAll("[data-surface]").forEach((cb) =>
           cb.addEventListener("change", () => {
             const s = cb.dataset.surface;
             if (cb.checked) pending.surfaces.add(s);
             else pending.surfaces.delete(s);
             updateApplyBtn();
-          });
-        });
+          }),
+        );
 
-        // Apply Filters
         document
           .getElementById("applyFiltersBtn")
           .addEventListener("click", () => {
@@ -3285,17 +3237,13 @@
             }
           });
 
-        // Clear All
         document
           .getElementById("clearAllBtn")
           .addEventListener("click", clearAll);
-
-        // Sort
         document
           .getElementById("sort-sel")
           .addEventListener("change", renderGrid);
 
-        // View Toggle
         const grid = document.getElementById("productsGrid");
         document
           .getElementById("btn3col")
@@ -3312,7 +3260,6 @@
             document.getElementById("btn3col").classList.remove("active");
           });
 
-        // Product Grid → View More
         document
           .getElementById("productsGrid")
           .addEventListener("click", (e) => {
@@ -3320,7 +3267,6 @@
             if (btn) openDetail(parseInt(btn.dataset.id));
           });
 
-        // Detail modal close
         document
           .getElementById("detailClose")
           .addEventListener("click", closeDetail);
@@ -3334,8 +3280,7 @@
           if (e.key === "Escape") closeDetail();
         });
 
-        // Detail Tabs
-        document.querySelectorAll(".detail-tab-btn").forEach((btn) => {
+        document.querySelectorAll(".detail-tab-btn").forEach((btn) =>
           btn.addEventListener("click", () => {
             document
               .querySelectorAll(".detail-tab-btn")
@@ -3347,10 +3292,9 @@
             document
               .getElementById("tab-" + btn.dataset.tab)
               .classList.add("active");
-          });
-        });
+          }),
+        );
 
-        // Mobile Filter Toggle
         document
           .getElementById("mobileFilterToggle")
           .addEventListener("click", function () {
@@ -3361,97 +3305,46 @@
               : '<i class="fa-solid fa-sliders"></i> Filters';
           });
 
-        // Scroll to Top
         const stb = document.getElementById("scrollTopBtn");
-        window.addEventListener("scroll", () => {
-          stb.style.display = window.scrollY > 300 ? "flex" : "none";
-        });
-        stb.addEventListener("click", () =>
-          window.scrollTo({ top: 0, behavior: "smooth" }),
-        );
+        if (stb) {
+          window.addEventListener("scroll", () => {
+            stb.style.display = window.scrollY > 300 ? "flex" : "none";
+          });
+          stb.addEventListener("click", () =>
+            window.scrollTo({ top: 0, behavior: "smooth" }),
+          );
+        }
 
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        document.querySelectorAll('a[href^="#"]').forEach((a) =>
           a.addEventListener("click", function (e) {
             const t = document.querySelector(this.getAttribute("href"));
             if (t) {
               e.preventDefault();
               t.scrollIntoView({ behavior: "smooth" });
             }
-          });
-        });
+          }),
+        );
       });
     </script>
 
-    <footer id="footer">
-      <div class="footer-container">
-        <div class="footer-col">
-          <h3>About Tulasi Tiles</h3>
-          <p>
-            We are a premier tile supplier delivering high-quality solutions for
-            both residential and commercial spaces.
-          </p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/tulasitiles"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a href="https://www.youtube.com/@TulasiTiles"
-              ><i class="fab fa-youtube"></i
-            ></a>
-            <a href="https://www.instagram.com/tulasitiles"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="https://wa.me/919843069220"
-              ><i class="fab fa-whatsapp"></i
-            ></a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h3>Quick Links</h3>
-          <ul class="footer-links">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./compare.html">Tile Comparison</a></li>
-            <li><a href="./tileCalculator.html">Tiles Calculator</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h3>Contact Us</h3>
-          <p>
-            74/1, Coimbatore By Pass Road, Velayuthampalayam, Avinashi,<br />Tamil
-            Nadu 641654.
-          </p>
-          <p>Phone: 98430 69220</p>
-          <p>Email: tulasitiles@gmail.com</p>
-        </div>
-        <div class="footer-col">
-          <h3>Follow Us</h3>
-          <ul class="footer-links">
-            <li><a href="https://www.facebook.com/tulasitiles">Facebook</a></li>
-            <li><a href="https://wa.me/919843069220">Whatsapp</a></li>
-            <li>
-              <a href="https://www.instagram.com/tulasitiles">Instagram</a>
-            </li>
-            <li><a href="https://www.youtube.com/@TulasiTiles">Youtube</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>
-          Copyright &copy; <span id="currentYear"></span> Tulasi Tiles |
-          Developed By
-          <a href="https://paletteproduction.com">PaletteProduction</a>
-        </p>
-      </div>
-    </footer>
+    <footer id="footer"></footer>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/script.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const hamburger = document.querySelector(".hamburger");
@@ -3502,11 +3395,6 @@
           }
         });
       });
-    </script>
-    <script src="js/script.js"></script>
-    <script>
-      document.getElementById("currentYear").textContent =
-        new Date().getFullYear();
     </script>
   </body>
 </html>

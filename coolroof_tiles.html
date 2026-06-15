@@ -1,0 +1,1977 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cool Roof Tiles Collection — Tulasi Tiles</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --accent: #f37e21;
+        --accent-dark: #d96a14;
+        --accent-light: #fff4ec;
+        --text: #1a1814;
+        --text-muted: #6b6460;
+        --text-light: #9b948e;
+        --bg: #fafaf8;
+        --surface: #ffffff;
+        --border: #e8e4de;
+        --border-dark: #c9c3ba;
+        --ff-display: "Playfair Display", Georgia, serif;
+        --ff-body: "DM Sans", sans-serif;
+        --sidebar-w: 270px;
+      }
+      body {
+        font-family: var(--ff-body);
+        background: var(--bg);
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      /* HERO */
+      .hero {
+        position: relative;
+        height: 70vh;
+        min-height: 420px;
+        overflow: hidden;
+        background: #111;
+      }
+      .hero-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.55;
+      }
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.72) 0%,
+          rgba(0, 0, 0, 0.18) 65%,
+          transparent 100%
+        );
+      }
+      .hero-inner {
+        position: relative;
+        z-index: 2;
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 3.5rem;
+      }
+      .hero-eyebrow {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .hero-eyebrow::before {
+        content: "";
+        width: 28px;
+        height: 1.5px;
+        background: var(--accent);
+        display: block;
+      }
+      .hero h1 {
+        font-family: var(--ff-display);
+        font-size: clamp(2.4rem, 5vw, 4rem);
+        font-weight: 400;
+        color: #fff;
+        line-height: 1.12;
+        max-width: 580px;
+        margin-bottom: 1.1rem;
+      }
+      .hero p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 460px;
+        margin-bottom: 2rem;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        padding: 12px 26px;
+        border: none;
+        cursor: pointer;
+        transition: background 0.2s;
+        font-family: var(--ff-body);
+      }
+      .btn-primary:hover {
+        background: var(--accent-dark);
+      }
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        padding: 12px 26px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .btn-outline:hover {
+        border-color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      /* BREADCRUMB */
+      .breadcrumb-bar {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+      }
+      .breadcrumb-inner {
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 0.7rem 2rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12.5px;
+        color: var(--text-muted);
+      }
+      .breadcrumb-inner a {
+        color: var(--text-muted);
+        text-decoration: none;
+      }
+      .breadcrumb-inner a:hover {
+        color: var(--accent);
+      }
+      .breadcrumb-inner .sep {
+        color: var(--border-dark);
+      }
+      .breadcrumb-inner .current {
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      /* LAYOUT */
+      .page-body {
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 2rem 2rem 5rem;
+        display: grid;
+        grid-template-columns: var(--sidebar-w) 1fr;
+        gap: 2.5rem;
+        align-items: start;
+      }
+
+      /* SIDEBAR */
+      .sidebar {
+        position: sticky;
+        top: 20px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+      }
+      .sidebar-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.1rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .sidebar-header h3 {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text);
+      }
+      .sidebar-clear {
+        font-size: 11.5px;
+        color: var(--accent);
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: var(--ff-body);
+        padding: 0;
+      }
+      .sidebar-clear:hover {
+        text-decoration: underline;
+      }
+      .filter-group {
+        border-bottom: 1px solid var(--border);
+      }
+      .filter-group:last-of-type {
+        border-bottom: none;
+      }
+      .filter-group-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.85rem 1.1rem;
+        background: none;
+        border: none;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        cursor: pointer;
+        text-align: left;
+      }
+      .filter-group-header i {
+        font-size: 11px;
+        color: var(--text-light);
+        transition: transform 0.22s;
+      }
+      .filter-group.open .filter-group-header i {
+        transform: rotate(180deg);
+      }
+      .filter-group-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      .filter-group.open .filter-group-body {
+        max-height: 500px;
+      }
+      .filter-group-inner {
+        padding: 0.4rem 1.1rem 1rem;
+      }
+      .color-swatches {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .swatch-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+      }
+      .swatch-circle {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        transition: border-color 0.15s;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+      }
+      .swatch-item:hover .swatch-circle,
+      .swatch-item.active .swatch-circle {
+        border-color: var(--accent);
+      }
+      .swatch-label {
+        font-size: 9.5px;
+        color: var(--text-muted);
+        text-align: center;
+        max-width: 38px;
+        line-height: 1.2;
+      }
+      .texture-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+      }
+      .texture-thumb {
+        position: relative;
+        aspect-ratio: 1;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: border-color 0.15s;
+        background: #f0ece6;
+      }
+      .texture-thumb:hover,
+      .texture-thumb.active {
+        border-color: var(--accent);
+      }
+      .texture-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s;
+      }
+      .texture-thumb:hover img {
+        transform: scale(1.06);
+      }
+      .texture-name {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        font-size: 8.5px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        padding: 4px 5px;
+        text-transform: uppercase;
+        line-height: 1.2;
+      }
+      .finish-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .finish-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        font-size: 13px;
+        color: var(--text-muted);
+        padding: 3px 0;
+      }
+      .finish-item input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+        accent-color: var(--accent);
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+      .finish-item:hover {
+        color: var(--text);
+      }
+      .size-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .size-tag {
+        padding: 5px 10px;
+        border: 1px solid var(--border);
+        font-size: 11.5px;
+        color: var(--text-muted);
+        cursor: pointer;
+        transition: all 0.15s;
+        background: var(--surface);
+      }
+      .size-tag:hover,
+      .size-tag.active {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-light);
+      }
+      .apply-filters-wrap {
+        padding: 1rem 1.1rem;
+        border-top: 1px solid var(--border);
+        background: var(--surface);
+      }
+      .btn-apply {
+        width: 100%;
+        padding: 11px 0;
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .btn-apply:hover {
+        background: var(--accent-dark);
+      }
+      .sidebar-cta {
+        margin: 0;
+        padding: 1.1rem;
+        background: var(--text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        width: 100%;
+        font-family: var(--ff-body);
+        transition: background 0.2s;
+      }
+      .sidebar-cta:hover {
+        background: #3a3530;
+      }
+
+      /* CONTENT */
+      .toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .toolbar-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .item-count {
+        font-size: 13.5px;
+        color: var(--text-muted);
+      }
+      .item-count strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+      .view-toggle {
+        display: flex;
+        gap: 4px;
+      }
+      .view-btn {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        cursor: pointer;
+        color: var(--text-muted);
+        font-size: 14px;
+        transition: all 0.15s;
+      }
+      .view-btn.active,
+      .view-btn:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-light);
+      }
+      .sort-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+      .sort-group select {
+        border: 1px solid var(--border);
+        padding: 6px 10px;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        color: var(--text);
+        background: var(--surface);
+        cursor: pointer;
+        outline: none;
+      }
+      .sort-group select:focus {
+        border-color: var(--accent);
+      }
+
+      /* FILTER CHIPS */
+      #active-filter-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 1rem;
+      }
+      .filter-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 4px 10px;
+        background: var(--accent-light);
+        border: 1px solid var(--accent);
+        color: var(--accent-dark);
+        font-size: 12px;
+        cursor: pointer;
+        font-family: var(--ff-body);
+      }
+      .filter-chip:hover {
+        background: #fde8d4;
+      }
+
+      /* PRODUCT GRID */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5px;
+        background: var(--border);
+        border: 1.5px solid var(--border);
+      }
+      .products-grid.two-col {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .prod-card {
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .prod-img-wrap {
+        position: relative;
+        aspect-ratio: 4/3;
+        overflow: hidden;
+        background: #f0ece6;
+      }
+      .prod-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .prod-card:hover .prod-img-wrap img {
+        transform: scale(1.05);
+      }
+      .prod-badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: #1a1814;
+        color: #fff;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        padding: 3px 8px;
+      }
+      .prod-body {
+        padding: 0.9rem 1rem 0;
+        flex: 1;
+      }
+      .prod-tag {
+        font-size: 9.5px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 3px;
+      }
+      .prod-name {
+        font-family: var(--ff-display);
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text);
+        line-height: 1.3;
+      }
+      .prod-desc {
+        font-size: 12px;
+        color: var(--text-muted);
+        margin-top: 4px;
+        line-height: 1.6;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .prod-meta {
+        display: flex;
+        gap: 10px;
+        margin-top: 8px;
+      }
+      .prod-meta span {
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+      .prod-meta strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+      .prod-actions {
+        display: flex;
+        border-top: 1px solid var(--border);
+        margin-top: 0.8rem;
+      }
+      .prod-btn {
+        flex: 1;
+        padding: 9px 0;
+        border: none;
+        background: none;
+        font-family: var(--ff-body);
+        font-size: 11.5px;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        transition:
+          background 0.15s,
+          color 0.15s;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        color: var(--text);
+      }
+      .prod-btn-view {
+        border-right: 1px solid var(--border);
+      }
+      .prod-btn-view:hover {
+        background: #f5f5f3;
+      }
+      .prod-btn-enquire {
+        color: var(--accent-dark);
+      }
+      .prod-btn-enquire:hover {
+        background: var(--accent-light);
+      }
+      .prod-btn i {
+        font-size: 11px;
+      }
+      .no-results {
+        grid-column: 1/-1;
+        padding: 3rem 1.5rem;
+        text-align: center;
+        color: var(--text-muted);
+      }
+      .no-results i {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        display: block;
+        color: var(--border-dark);
+      }
+
+      /* DESC BLOCK */
+      .desc-block {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);
+      }
+      .desc-block h2 {
+        font-family: var(--ff-display);
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+      }
+      .desc-block p {
+        font-size: 13.5px;
+        color: var(--text-muted);
+        line-height: 1.85;
+        margin-bottom: 0.75rem;
+      }
+
+      /* FULL WIDTH */
+      .full-width-section {
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 0 2rem 4rem;
+      }
+      .cta-banner {
+        background: var(--text);
+        padding: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+      }
+      .cta-banner-text h3 {
+        font-family: var(--ff-display);
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #f5f0ea;
+        margin-bottom: 0.4rem;
+      }
+      .cta-banner-text p {
+        font-size: 13px;
+        color: #7a7470;
+        max-width: 500px;
+      }
+      .section-title-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.85rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .section-title-row h2 {
+        font-family: var(--ff-display);
+        font-size: 1.35rem;
+        font-weight: 400;
+      }
+      .section-title-row a {
+        font-size: 12.5px;
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .section-title-row a:hover {
+        text-decoration: underline;
+      }
+      .featured-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .feat-card {
+        background: var(--surface);
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .feat-img {
+        aspect-ratio: 3/2;
+        overflow: hidden;
+      }
+      .feat-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s;
+      }
+      .feat-card:hover .feat-img img {
+        transform: scale(1.05);
+      }
+      .feat-body {
+        padding: 0.75rem 0.85rem;
+      }
+      .feat-tag {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 3px;
+      }
+      .feat-name {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        margin-bottom: 4px;
+      }
+      .feat-desc {
+        font-size: 11.5px;
+        color: var(--text-muted);
+        line-height: 1.55;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .feat-meta {
+        display: flex;
+        gap: 8px;
+        margin-top: 6px;
+      }
+      .feat-meta span {
+        font-size: 10.5px;
+        color: var(--text-muted);
+      }
+      .feat-meta strong {
+        color: var(--text);
+      }
+
+      /* FLOATING BUTTONS */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        width: 52px;
+        height: 52px;
+        z-index: 200;
+        background: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+        transition: transform 0.2s;
+        text-decoration: none;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.08);
+      }
+      .whatsapp-float img {
+        width: 28px;
+        height: 28px;
+      }
+      #scrollTopBtn {
+        position: fixed;
+        bottom: 84px;
+        right: 24px;
+        width: 40px;
+        height: 40px;
+        background: var(--text);
+        color: #fff;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 200;
+        transition: background 0.15s;
+      }
+      #scrollTopBtn:hover {
+        background: #3a3530;
+      }
+
+      /* MOBILE FILTER TOGGLE */
+      .mobile-filter-toggle {
+        display: none;
+        align-items: center;
+        gap: 8px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 10px 16px;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        cursor: pointer;
+        margin-bottom: 1rem;
+      }
+
+      /* DETAIL OVERLAY */
+      .detail-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+        z-index: 1000;
+        display: none;
+        overflow-y: auto;
+      }
+      .detail-overlay.open {
+        display: block;
+      }
+      .detail-modal {
+        background: var(--bg);
+        max-width: 1200px;
+        margin: 0 auto;
+        min-height: 100vh;
+        position: relative;
+      }
+      .detail-close {
+        position: fixed;
+        top: 18px;
+        right: 18px;
+        width: 40px;
+        height: 40px;
+        background: #1a1814;
+        color: #fff;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        z-index: 1010;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+      .detail-close:hover {
+        background: #3a3530;
+      }
+      .detail-breadcrumb {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 0.7rem 2rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12.5px;
+        color: var(--text-muted);
+      }
+      .detail-breadcrumb span.sep {
+        color: var(--border-dark);
+      }
+      .detail-breadcrumb span.cur {
+        color: var(--text);
+        font-weight: 500;
+      }
+      .detail-main {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 0;
+        background: var(--border);
+      }
+      .detail-gallery {
+        background: var(--surface);
+        padding: 0;
+      }
+      .detail-gallery-main {
+        aspect-ratio: 4/3;
+        overflow: hidden;
+        background: #f0ece6;
+      }
+      .detail-gallery-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: opacity 0.2s;
+      }
+      .detail-thumbs {
+        display: flex;
+        gap: 2px;
+        padding: 2px;
+        background: var(--border);
+        overflow-x: auto;
+      }
+      .detail-thumb {
+        width: 80px;
+        height: 60px;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid transparent;
+        flex-shrink: 0;
+        transition: border-color 0.15s;
+      }
+      .detail-thumb.active,
+      .detail-thumb:hover {
+        border-color: var(--accent);
+      }
+      .detail-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .detail-info {
+        background: var(--surface);
+        padding: 2rem 1.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .detail-info-tag {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      .detail-info-name {
+        font-family: var(--ff-display);
+        font-size: 1.75rem;
+        font-weight: 400;
+        color: var(--text);
+        line-height: 1.2;
+      }
+      .detail-info-desc {
+        font-size: 13.5px;
+        color: var(--text-muted);
+        line-height: 1.8;
+      }
+      .detail-divider {
+        border: none;
+        border-top: 1px solid var(--border);
+      }
+      .spec-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .spec-table tr {
+        border-bottom: 1px solid var(--border);
+      }
+      .spec-table tr:last-child {
+        border-bottom: none;
+      }
+      .spec-table td {
+        padding: 0.6rem 0;
+        font-size: 13px;
+      }
+      .spec-table td:first-child {
+        color: var(--text-muted);
+        width: 50%;
+      }
+      .spec-table td:last-child {
+        color: var(--text);
+        font-weight: 500;
+      }
+      .detail-color-row {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+      }
+      .detail-swatch {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 2px solid var(--border);
+        cursor: pointer;
+        transition: border-color 0.15s;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+      }
+      .detail-swatch:hover,
+      .detail-swatch.active {
+        border-color: var(--accent);
+      }
+      .detail-finish-row {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+      }
+      .detail-finish-tag {
+        padding: 5px 12px;
+        border: 1px solid var(--border);
+        font-size: 12px;
+        color: var(--text-muted);
+        background: var(--surface);
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      .detail-finish-tag.active {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-light);
+      }
+      .detail-size-row {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+      }
+      .detail-size-btn {
+        padding: 7px 14px;
+        border: 1px solid var(--border);
+        font-size: 12px;
+        color: var(--text-muted);
+        background: var(--surface);
+        cursor: pointer;
+        font-family: var(--ff-body);
+        transition: all 0.15s;
+      }
+      .detail-size-btn:hover,
+      .detail-size-btn.active {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-light);
+      }
+
+      /* WhatsApp CTA */
+      .detail-ctas {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 485px;
+        overflow: hidden;
+        padding-top: 1px;
+      }
+      .detail-ctas-2 {
+        display: none;
+      }
+      @media (max-width: 962px) {
+        .detail-ctas {
+          display: none !important;
+        }
+        .detail-ctas-2 {
+          display: flex !important;
+          justify-content: center;
+          width: 100%;
+          padding: 15px;
+          margin: 0;
+        }
+        .detail-btn-main {
+          width: 100%;
+          max-width: 320px;
+        }
+      }
+      .detail-btn-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        padding: 13px 20px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.2s;
+        text-align: center;
+      }
+      .detail-btn-main:hover {
+        background: var(--accent-dark);
+      }
+      .detail-btn-main i {
+        font-size: 18px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      /* TABS */
+      .detail-tabs-section {
+        background: var(--surface);
+        margin-top: 2px;
+        border-top: 2px solid var(--border);
+      }
+      .detail-tabs-header {
+        display: flex;
+        border-bottom: 1px solid var(--border);
+      }
+      .detail-tab-btn {
+        padding: 1rem 1.5rem;
+        background: none;
+        border: none;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text-muted);
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        margin-bottom: -1px;
+        transition: all 0.2s;
+      }
+      .detail-tab-btn.active {
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+      }
+      .detail-tab-btn:hover {
+        color: var(--text);
+      }
+      .detail-tab-panel {
+        display: none;
+        padding: 1.75rem 2rem;
+      }
+      .detail-tab-panel.active {
+        display: block;
+      }
+      .detail-features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
+      .feature-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+      .feature-item i {
+        font-size: 22px;
+        color: var(--accent);
+      }
+      .feature-item h5 {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text);
+      }
+      .feature-item p {
+        font-size: 12px;
+        color: var(--text-muted);
+        line-height: 1.6;
+      }
+      .tech-spec-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .tech-spec-cell {
+        background: var(--surface);
+        padding: 0.85rem 1rem;
+      }
+      .tech-spec-cell dt {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 0.3rem;
+      }
+      .tech-spec-cell dd {
+        font-size: 13px;
+        color: var(--text);
+        font-weight: 500;
+      }
+      .install-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .install-step {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+      .install-step-num {
+        width: 28px;
+        height: 28px;
+        background: var(--accent);
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .install-step-text h5 {
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        color: var(--text);
+      }
+      .install-step-text p {
+        font-size: 12.5px;
+        color: var(--text-muted);
+        line-height: 1.65;
+      }
+      .detail-related {
+        padding: 2rem;
+        background: var(--surface);
+        margin-top: 2px;
+      }
+      .detail-related h3 {
+        font-family: var(--ff-display);
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .related-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .related-card {
+        background: var(--surface);
+        cursor: pointer;
+        overflow: hidden;
+      }
+      .related-card-img {
+        aspect-ratio: 1;
+        overflow: hidden;
+      }
+      .related-card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s;
+      }
+      .related-card:hover .related-card-img img {
+        transform: scale(1.06);
+      }
+      .related-card-body {
+        padding: 0.6rem 0.75rem 0.75rem;
+      }
+      .related-card-tag {
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 2px;
+      }
+      .related-card-name {
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--text);
+        line-height: 1.3;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 1024px) {
+        .featured-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .detail-features-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .related-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 860px) {
+        :root {
+          --sidebar-w: 0px;
+        }
+        .page-body {
+          grid-template-columns: 1fr;
+        }
+        .sidebar {
+          position: static;
+          display: none;
+        }
+        .sidebar.mobile-open {
+          display: block;
+        }
+        .mobile-filter-toggle {
+          display: flex;
+        }
+        .products-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .detail-main {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 640px) {
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .detail-features-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .tech-spec-grid {
+          grid-template-columns: 1fr;
+        }
+        .related-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 520px) {
+        .page-body {
+          padding: 1.25rem 1rem 3rem;
+        }
+        .full-width-section {
+          padding: 0 1rem 3rem;
+        }
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .featured-grid {
+          grid-template-columns: 1fr;
+        }
+        .cta-banner {
+          flex-direction: column;
+        }
+        .detail-features-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 380px) {
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="navbar">
+      <div class="header-container">
+        <div class="logo-text">
+          <img
+            src="./images/logo-1.png"
+            alt="Tulasi Tiles Logo"
+            class="logo-img"
+          />
+        </div>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+        <nav>
+          <div class="mobile-logo">
+            <img
+              src="./images/logo-1.png"
+              alt="Tulasi Tiles Logo"
+              class="logo-img"
+            />
+          </div>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle"
+                >Tiles <i class="dropdown-arrow">&#9660;</i></a
+              >
+              <div class="dropdown-content">
+                <div class="dropdown-column">
+                  <h4>Floor Tiles</h4>
+                  <ul>
+                    <li>
+                      <a href="bathroom_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Bathroom Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="kitchen_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Kitchen Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="outdoor_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Outdoor Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="livingroom_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Living Room
+                        Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="bedroom_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Bedroom Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="commercial_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Commercial Tiles</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown-column">
+                  <h4>Special Tiles</h4>
+                  <ul>
+                    <li>
+                      <a href="special_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Germ Free Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="special_tiles.html#tactile"
+                        ><i class="fas fa-check-circle"></i> Tactile Floor
+                        Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="special_tiles.html#anti-static"
+                        ><i class="fas fa-check-circle"></i> Anti Static
+                        Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="coolroof_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Cool Roof Tiles</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./compare.html">Tile Comparison</a></li>
+            <li><a href="./tileCalculator.html">Tiles Calculator</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li>
+              <a href="./catalogue.html"
+                ><button class="catalogue-button">E-Catalogue</button></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <img
+        class="hero-img"
+        src="./images/coolroofbanner.png"
+        alt="Cool Roof Tiles"
+      />
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Special Collection</p>
+        <h1>Cool Roof Tiles</h1>
+        <p>
+          Engineered to reflect solar energy and reduce indoor temperatures —
+          combining high-performance coatings with enduring aesthetic quality.
+        </p>
+        <div class="hero-actions">
+          <a href="#collections" class="btn-primary">
+            Explore Collection
+            <i class="fa-solid fa-arrow-right" style="font-size: 11px"></i>
+          </a>
+          <a
+            href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20enquire%20about%20cool%20roof%20tiles"
+            target="_blank"
+            class="btn-outline"
+          >
+            <i class="fa-brands fa-whatsapp" style="font-size: 14px"></i>
+            Enquire Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb-bar">
+      <div class="breadcrumb-inner">
+        <a href="index.html">Home</a><span class="sep">/</span>
+        <a href="special_tiles.html">Special Tiles</a><span class="sep">/</span>
+        <span class="current">Cool Roof Tiles</span>
+      </div>
+    </nav>
+
+    <!-- PAGE BODY -->
+    <div class="page-body" id="collections">
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <h3>
+            <i
+              class="fa-solid fa-sliders"
+              style="font-size: 11px; margin-right: 6px"
+            ></i
+            >Filters
+          </h3>
+          <button class="sidebar-clear" id="clearAllBtn">Clear All</button>
+        </div>
+
+        <div class="filter-group open">
+          <button class="filter-group-header">
+            Colors <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="color-swatches" id="sidebarColors">
+                <!-- populated dynamically from TILES colorsHex -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-group open">
+          <button class="filter-group-header">
+            Textures <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="texture-grid" id="sidebarTextures">
+                <!-- populated dynamically from TILES -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-group open">
+          <button class="filter-group-header">
+            Finish <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="finish-list">
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Matt" /> Matt</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Satin" /> Satin</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Polished" />
+                  Polished</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Glazed" /> Glazed</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Rustic" /> Rustic</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <button class="filter-group-header">
+            Size <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="size-tags">
+                <span class="size-tag" data-size="300×600">300×600</span>
+                <span class="size-tag" data-size="600×600">600×600</span>
+                <span class="size-tag" data-size="600×1200">600×1200</span>
+                <span class="size-tag" data-size="800×800">800×800</span>
+                <span class="size-tag" data-size="1200×1200">1200×1200</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <button class="filter-group-header">
+            Surface <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="finish-list">
+                <label class="finish-item"
+                  ><input type="checkbox" data-surface="Anti-Skid" />
+                  Anti-Skid</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-surface="POSH+" /> POSH+</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-surface="Antibacterial" />
+                  Antibacterial</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-surface="Stain Resistant" />
+                  Stain Resistant</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="apply-filters-wrap">
+          <button class="btn-apply" id="applyFiltersBtn">
+            <i class="fa-solid fa-check"></i> Apply Filters
+          </button>
+        </div>
+        <a
+          href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20cool%20roof%20tiles"
+          target="_blank"
+          class="sidebar-cta"
+        >
+          <i class="fa-brands fa-whatsapp"></i> Book on WhatsApp
+        </a>
+      </aside>
+
+      <!-- CONTENT -->
+      <div class="content-area">
+        <button class="mobile-filter-toggle" id="mobileFilterToggle">
+          <i class="fa-solid fa-sliders"></i> Filters
+        </button>
+        <div class="toolbar">
+          <div class="toolbar-left">
+            <p class="item-count"><strong id="countNum">9</strong> Items</p>
+            <div class="view-toggle">
+              <button
+                class="view-btn active"
+                id="btn3col"
+                aria-label="3 column grid"
+              >
+                <i class="fa-solid fa-grip"></i>
+              </button>
+              <button class="view-btn" id="btn2col" aria-label="2 column grid">
+                <i class="fa-solid fa-table-columns"></i>
+              </button>
+            </div>
+          </div>
+          <div class="sort-group">
+            <label for="sort-sel">Order by</label>
+            <select id="sort-sel">
+              <option>Latest</option>
+              <option>Name A&#8211;Z</option>
+              <option>Name Z&#8211;A</option>
+            </select>
+          </div>
+        </div>
+        <div id="active-filter-chips"></div>
+        <div class="products-grid" id="productsGrid"></div>
+        <div class="desc-block">
+          <h2>Cool Roof Tiles for a Smarter, Cooler Home</h2>
+          <p>
+            Cool roof tiles are engineered to solve one of India's most pressing
+            building challenges: heat gain through the roof. By reflecting solar
+            radiation and emitting absorbed heat rapidly, these tiles can reduce
+            roof surface temperatures by up to 40°C and cut air conditioning
+            energy consumption significantly.
+          </p>
+          <p>
+            Our collection spans high-SRI white porcelain for maximum
+            performance, terracotta classics with modern nano-coatings, and
+            large-format concrete-look slabs ideal for accessible rooftops.
+            Every product is rated for Solar Reflectance Index and Thermal
+            Emittance — the two metrics that matter most for certified cool-roof
+            compliance under LEED, GRIHA, and BEE standards.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FULL WIDTH SECTIONS -->
+    <div class="full-width-section">
+      <div class="cta-banner">
+        <div class="cta-banner-text">
+          <h3>Cut Your Cooling Costs This Summer</h3>
+          <p>
+            Speak to our technical experts about the right cool-roof tile for
+            your project — residential, commercial, or industrial.
+          </p>
+        </div>
+        <a
+          href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20cool%20roof%20tiles"
+          target="_blank"
+          class="btn-primary"
+        >
+          <i class="fa-brands fa-whatsapp" style="font-size: 15px"></i> Book on
+          WhatsApp
+        </a>
+      </div>
+      <div style="margin-bottom: 3rem">
+        <div class="section-title-row">
+          <h2>Featured Collections</h2>
+          <a href="tiles.html"
+            >View All
+            <i class="fa-solid fa-arrow-right" style="font-size: 11px"></i
+          ></a>
+        </div>
+        <div class="featured-grid" id="featuredGrid"></div>
+      </div>
+    </div>
+
+    <!-- DETAIL OVERLAY -->
+    <div class="detail-overlay" id="detailOverlay">
+      <div class="detail-modal" id="detailModal">
+        <button class="detail-close" id="detailClose">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="detail-breadcrumb">
+          <span>Home</span><span class="sep">/</span> <span>Special Tiles</span
+          ><span class="sep">/</span> <span>Cool Roof Tiles</span
+          ><span class="sep">/</span>
+          <span class="cur" id="detailBreadcrumbName"></span>
+        </div>
+        <div class="detail-main">
+          <div class="detail-gallery">
+            <div class="detail-gallery-main">
+              <img id="detailMainImg" src="" alt="" />
+            </div>
+            <div class="detail-thumbs" id="detailThumbs"></div>
+          </div>
+          <div class="detail-info">
+            <div>
+              <p class="detail-info-tag" id="detailTag"></p>
+              <h1 class="detail-info-name" id="detailName"></h1>
+            </div>
+            <p class="detail-info-desc" id="detailDesc"></p>
+            <hr class="detail-divider" />
+            <table class="spec-table" id="detailSpecTable"></table>
+            <hr class="detail-divider" />
+            <div>
+              <p
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  color: var(--text-muted);
+                  margin-bottom: 0.4rem;
+                "
+              >
+                Colour
+              </p>
+              <div class="detail-color-row" id="detailColors"></div>
+            </div>
+            <div>
+              <p
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  color: var(--text-muted);
+                  margin-bottom: 0.4rem;
+                "
+              >
+                Finish
+              </p>
+              <div class="detail-finish-row" id="detailFinishes"></div>
+            </div>
+            <div>
+              <p
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  color: var(--text-muted);
+                  margin-bottom: 0.4rem;
+                "
+              >
+                Size
+              </p>
+              <div class="detail-size-row" id="detailSizes"></div>
+            </div>
+            <!-- Mobile WhatsApp CTA -->
+            <div class="detail-ctas-2">
+              <a
+                class="detail-enquire-wa detail-btn-main"
+                href="#"
+                target="_blank"
+              >
+                <i
+                  class="fa-brands fa-whatsapp"
+                  style="font-size: 15px; padding-right: 3px"
+                ></i>
+                Enquire on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TABS -->
+        <div class="detail-tabs-section">
+          <div class="detail-tabs-header">
+            <button class="detail-tab-btn active" data-tab="features">
+              Features
+            </button>
+            <button class="detail-tab-btn" data-tab="technical">
+              Technical Specs
+            </button>
+            <button class="detail-tab-btn" data-tab="installation">
+              Installation
+            </button>
+            <!-- Desktop WhatsApp CTA -->
+            <div class="detail-ctas">
+              <a
+                class="detail-enquire-wa detail-btn-main"
+                href="#"
+                target="_blank"
+              >
+                <i
+                  class="fa-brands fa-whatsapp"
+                  style="font-size: 15px; padding-right: 3px"
+                ></i>
+                Enquire on WhatsApp
+              </a>
+            </div>
+          </div>
+          <div class="detail-tab-panel active" id="tab-features">
+            <div class="detail-features-grid" id="detailFeaturesGrid"></div>
+          </div>
+          <div class="detail-tab-panel" id="tab-technical">
+            <div class="tech-spec-grid" id="detailTechGrid"></div>
+          </div>
+          <div class="detail-tab-panel" id="tab-installation">
+            <div class="install-steps">
+              <div class="install-step">
+                <div class="install-step-num">1</div>
+                <div class="install-step-text">
+                  <h5>Roof Deck Preparation</h5>
+                  <p>
+                    Ensure the roof deck is clean, dry, and structurally sound.
+                    Repair any cracks or damaged sections and allow concrete to
+                    cure fully before tiling.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">2</div>
+                <div class="install-step-text">
+                  <h5>Waterproofing Layer</h5>
+                  <p>
+                    Apply an approved waterproof membrane across the full roof
+                    surface, with upturns at parapets and penetrations. Allow
+                    full cure before proceeding.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">3</div>
+                <div class="install-step-text">
+                  <h5>Dry Layout &amp; Slope Check</h5>
+                  <p>
+                    Dry-lay tiles to verify drainage falls (minimum 1:80 slope
+                    recommended). Mark reference lines from the centre outward
+                    for symmetrical placement.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">4</div>
+                <div class="install-step-text">
+                  <h5>Adhesive &amp; Setting</h5>
+                  <p>
+                    Use a flexible, weather-resistant tile adhesive rated for
+                    external use. Apply with a notched trowel and back-butter
+                    large-format tiles. Press firmly to eliminate voids.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">5</div>
+                <div class="install-step-text">
+                  <h5>Grouting &amp; Expansion Joints</h5>
+                  <p>
+                    Use a UV-stable, weatherproof grout. Provide expansion
+                    joints at 3–4 m intervals and at perimeter edges to
+                    accommodate thermal movement. Seal joints with a flexible
+                    sealant.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RELATED -->
+        <div class="detail-related">
+          <h3>You May Also Like</h3>
+          <div class="related-grid" id="relatedGrid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WhatsApp float -->
+    <a
+      href="https://wa.me/919843069220"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Chat on WhatsApp"
+    >
+      <img src="./images/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+    <button id="scrollTopBtn" aria-label="Scroll to top">&#8593;</button>
+
+    <footer id="footer"></footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/coolrooftiles.js"></script>
+  </body>
+</html>

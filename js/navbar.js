@@ -1,7 +1,7 @@
 let navbar = (document.getElementById("navbar").innerHTML =
   `<div class="header-container">
         <div class="logo-text">
-          <img src="=../../images/logo-1.png" alt="Tulasi Tiles Logo" class="logo-img">
+          <img src="./images/logo-1.png" alt="Tulasi Tiles Logo" class="logo-img">
         </div>
             <div class="hamburger">
                 <span></span>
@@ -9,7 +9,7 @@ let navbar = (document.getElementById("navbar").innerHTML =
                 <span></span>
             </div>
         <nav>
-        <div class="mobile-logo"><img src="=../../images/logo-1.png" alt="Tulasi Tiles Logo" class="logo-img"></div>
+        <div class="mobile-logo"><img src="./images/logo-1.png" alt="Tulasi Tiles Logo" class="logo-img"></div>
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
@@ -48,15 +48,12 @@ let navbar = (document.getElementById("navbar").innerHTML =
         </nav>
     </div>`);
 
-// <li><a href="./expert_corner.html">Expert Corner</a></li>
-// Mobile menu toggle functionality
 // Mobile menu toggle functionality
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
   const nav = document.querySelector("nav");
   const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
 
-  // Hamburger menu toggle
   if (hamburger) {
     hamburger.addEventListener("click", function () {
       this.classList.toggle("active");
@@ -67,10 +64,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Dropdown toggle for mobile
   dropdownToggles.forEach((toggle) => {
     toggle.addEventListener("click", function (e) {
-      // Only prevent default and toggle on mobile
       if (window.innerWidth <= 992) {
         e.preventDefault();
         e.stopPropagation();
@@ -86,16 +81,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Toggle current dropdown
         dropdown.classList.toggle("active");
-
-        console.log(
-          "Dropdown clicked, active:",
-          dropdown.classList.contains("active"),
-        );
       }
     });
   });
 
-  // Close menu when clicking on a dropdown link (not the toggle)
   document.querySelectorAll(".dropdown-column a").forEach((link) => {
     link.addEventListener("click", function () {
       if (window.innerWidth <= 992) {
@@ -111,15 +100,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Close menu when clicking overlay
   if (nav) {
     nav.addEventListener("click", function (e) {
       if (e.target === this && window.innerWidth <= 992) {
         hamburger.classList.remove("active");
         nav.classList.remove("active");
         document.body.style.overflow = "";
-
-        // Close all dropdowns
         document.querySelectorAll(".dropdown").forEach((d) => {
           d.classList.remove("active");
         });
@@ -127,14 +113,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Close menu on window resize
   window.addEventListener("resize", function () {
     if (window.innerWidth > 992) {
       hamburger.classList.remove("active");
       nav.classList.remove("active");
       document.body.style.overflow = "";
-
-      // Close all dropdowns
       document.querySelectorAll(".dropdown").forEach((d) => {
         d.classList.remove("active");
       });
