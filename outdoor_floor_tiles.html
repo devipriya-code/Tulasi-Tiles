@@ -3,342 +3,2084 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luxury Outdoor Floor Tiles Collection</title>
-      <!-- fav -->
-     <link rel="icon" href="./images/fav.png">
-     <link rel="apple-touch-icon" href="./images/fav.png">
-     
-    <!-- Font Awesome Icons -->
+    <title>Luxury Commercial Floor Tiles Collection</title>
+    <link rel="icon" href="./images/fav.png" />
+    <link rel="apple-touch-icon" href="./images/fav.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
-    <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <!-- Link to CSS -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/floor_wall_tiles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </head>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --accent: #f37e21;
+        --accent-dark: #d96a14;
+        --accent-light: #fff4ec;
+        --text: #1a1814;
+        --text-muted: #6b6460;
+        --text-light: #9b948e;
+        --bg: #fafaf8;
+        --surface: #ffffff;
+        --border: #e8e4de;
+        --border-dark: #c9c3ba;
+        --ff-display: "Playfair Display", Georgia, serif;
+        --ff-body: "DM Sans", sans-serif;
+        --sidebar-w: 270px;
+      }
+      body {
+        font-family: var(--ff-body);
+        background: var(--bg);
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.6;
+      }
 
+      /* HERO */
+      .hero {
+        position: relative;
+        height: 70vh;
+        min-height: 420px;
+        overflow: hidden;
+        background: #111;
+      }
+      .hero-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.55;
+      }
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.72) 0%,
+          rgba(0, 0, 0, 0.18) 65%,
+          transparent 100%
+        );
+      }
+      .hero-inner {
+        position: relative;
+        z-index: 2;
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 3.5rem;
+      }
+      .hero-eyebrow {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .hero-eyebrow::before {
+        content: "";
+        width: 28px;
+        height: 1.5px;
+        background: var(--accent);
+        display: block;
+      }
+      .hero h1 {
+        font-family: var(--ff-display);
+        font-size: clamp(2.4rem, 5vw, 4rem);
+        font-weight: 400;
+        color: #fff;
+        line-height: 1.12;
+        max-width: 580px;
+        margin-bottom: 1.1rem;
+      }
+      .hero p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 460px;
+        margin-bottom: 2rem;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        padding: 12px 26px;
+        border: none;
+        cursor: pointer;
+        transition: background 0.2s;
+        font-family: var(--ff-body);
+      }
+      .btn-primary:hover {
+        background: var(--accent-dark);
+      }
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        padding: 12px 26px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .btn-outline:hover {
+        border-color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      /* BREADCRUMB */
+      .breadcrumb-bar {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+      }
+      .breadcrumb-inner {
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 0.7rem 2rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12.5px;
+        color: var(--text-muted);
+      }
+      .breadcrumb-inner a {
+        color: var(--text-muted);
+        text-decoration: none;
+      }
+      .breadcrumb-inner a:hover {
+        color: var(--accent);
+      }
+      .breadcrumb-inner .sep {
+        color: var(--border-dark);
+      }
+      .breadcrumb-inner .current {
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      /* LAYOUT */
+      .page-body {
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 2rem 2rem 5rem;
+        display: grid;
+        grid-template-columns: var(--sidebar-w) 1fr;
+        gap: 2.5rem;
+        align-items: start;
+      }
+
+      /* SIDEBAR */
+      .sidebar {
+        position: sticky;
+        top: 20px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+      }
+      .sidebar-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 1.1rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .sidebar-header h3 {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text);
+      }
+      .sidebar-clear {
+        font-size: 11.5px;
+        color: var(--accent);
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: var(--ff-body);
+        padding: 0;
+      }
+      .sidebar-clear:hover {
+        text-decoration: underline;
+      }
+      .filter-group {
+        border-bottom: 1px solid var(--border);
+      }
+      .filter-group:last-of-type {
+        border-bottom: none;
+      }
+      .filter-group-header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.85rem 1.1rem;
+        background: none;
+        border: none;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        cursor: pointer;
+        text-align: left;
+      }
+      .filter-group-header i {
+        font-size: 11px;
+        color: var(--text-light);
+        transition: transform 0.22s;
+      }
+      .filter-group.open .filter-group-header i {
+        transform: rotate(180deg);
+      }
+      .filter-group-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      .filter-group.open .filter-group-body {
+        max-height: 500px;
+      }
+      .filter-group-inner {
+        padding: 0.4rem 1.1rem 1rem;
+      }
+
+      .color-swatches {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .swatch-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+      }
+      .swatch-circle {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        transition: border-color 0.15s;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+      }
+      .swatch-item:hover .swatch-circle,
+      .swatch-item.active .swatch-circle {
+        border-color: var(--accent);
+      }
+      .swatch-label {
+        font-size: 9.5px;
+        color: var(--text-muted);
+        text-align: center;
+        max-width: 38px;
+        line-height: 1.2;
+      }
+
+      .texture-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+      }
+      .texture-thumb {
+        position: relative;
+        aspect-ratio: 1;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: border-color 0.15s;
+      }
+      .texture-thumb:hover,
+      .texture-thumb.active {
+        border-color: var(--accent);
+      }
+      .texture-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s;
+      }
+      .texture-thumb:hover img {
+        transform: scale(1.06);
+      }
+      .texture-name {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        font-size: 8.5px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        padding: 4px 5px;
+        text-transform: uppercase;
+        line-height: 1.2;
+      }
+
+      .finish-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .finish-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        font-size: 13px;
+        color: var(--text-muted);
+        padding: 3px 0;
+      }
+      .finish-item input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+        accent-color: var(--accent);
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+      .finish-item:hover {
+        color: var(--text);
+      }
+
+      .size-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .size-tag {
+        padding: 5px 10px;
+        border: 1px solid var(--border);
+        font-size: 11.5px;
+        color: var(--text-muted);
+        cursor: pointer;
+        transition: all 0.15s;
+        background: var(--surface);
+      }
+      .size-tag:hover,
+      .size-tag.active {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-light);
+      }
+
+      .apply-filters-wrap {
+        padding: 1rem 1.1rem;
+        border-top: 1px solid var(--border);
+        background: var(--surface);
+      }
+      .btn-apply {
+        width: 100%;
+        padding: 11px 0;
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .btn-apply:hover {
+        background: var(--accent-dark);
+      }
+
+      .sidebar-cta {
+        margin: 0;
+        padding: 1.1rem;
+        background: var(--text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        width: 100%;
+        font-family: var(--ff-body);
+        transition: background 0.2s;
+      }
+      .sidebar-cta:hover {
+        background: #3a3530;
+      }
+
+      /* CONTENT AREA */
+      .toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .toolbar-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .item-count {
+        font-size: 13.5px;
+        color: var(--text-muted);
+      }
+      .item-count strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+      .view-toggle {
+        display: flex;
+        gap: 4px;
+      }
+      .view-btn {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        cursor: pointer;
+        color: var(--text-muted);
+        font-size: 14px;
+        transition: all 0.15s;
+      }
+      .view-btn.active,
+      .view-btn:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-light);
+      }
+      .sort-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+      .sort-group select {
+        border: 1px solid var(--border);
+        padding: 6px 10px;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        color: var(--text);
+        background: var(--surface);
+        cursor: pointer;
+        outline: none;
+      }
+      .sort-group select:focus {
+        border-color: var(--accent);
+      }
+
+      #active-filter-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 1rem;
+      }
+      .filter-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 4px 10px;
+        background: var(--accent-light);
+        border: 1px solid var(--accent);
+        color: var(--accent-dark);
+        font-size: 12px;
+        cursor: pointer;
+        font-family: var(--ff-body);
+      }
+      .filter-chip:hover {
+        background: #fde8d4;
+      }
+
+      /* PRODUCT GRID */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5px;
+        background: var(--border);
+        border: 1.5px solid var(--border);
+      }
+      .products-grid.two-col {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .prod-card {
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .prod-img-wrap {
+        position: relative;
+        aspect-ratio: 4/3;
+        overflow: hidden;
+        background: #f0ece6;
+      }
+      .prod-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .prod-card:hover .prod-img-wrap img {
+        transform: scale(1.05);
+      }
+      .prod-badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: #1a1814;
+        color: #fff;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        padding: 3px 8px;
+      }
+      .prod-wish {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 30px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.92);
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+      .prod-card:hover .prod-wish {
+        opacity: 1;
+      }
+      .prod-wish i {
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+      .prod-wish:hover i {
+        color: #c0392b;
+      }
+      .prod-body {
+        padding: 0.9rem 1rem 0;
+        flex: 1;
+      }
+      .prod-tag {
+        font-size: 9.5px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 3px;
+      }
+      .prod-name {
+        font-family: var(--ff-display);
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--text);
+        line-height: 1.3;
+      }
+      .prod-desc {
+        font-size: 12px;
+        color: var(--text-muted);
+        margin-top: 4px;
+        line-height: 1.6;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .prod-meta {
+        display: flex;
+        gap: 10px;
+        margin-top: 8px;
+      }
+      .prod-meta span {
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+      .prod-meta strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+      .prod-actions {
+        display: flex;
+        border-top: 1px solid var(--border);
+        margin-top: 0.8rem;
+      }
+      .prod-btn {
+        flex: 1;
+        padding: 9px 0;
+        border: none;
+        background: none;
+        font-family: var(--ff-body);
+        font-size: 11.5px;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        transition:
+          background 0.15s,
+          color 0.15s;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        color: var(--text);
+      }
+      .prod-btn-view {
+        border-right: 1px solid var(--border);
+      }
+      .prod-btn-view:hover {
+        background: #f5f5f3;
+      }
+      .prod-btn-enquire {
+        color: var(--accent-dark);
+      }
+      .prod-btn-enquire:hover {
+        background: var(--accent-light);
+      }
+      .prod-btn i {
+        font-size: 11px;
+      }
+
+      /* NO RESULTS */
+      .no-results {
+        grid-column: 1/-1;
+        padding: 3rem 1.5rem;
+        text-align: center;
+        color: var(--text-muted);
+      }
+      .no-results i {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        display: block;
+        color: var(--border-dark);
+      }
+
+      /* DESCRIPTION */
+      .desc-block {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);
+      }
+      .desc-block h2 {
+        font-family: var(--ff-display);
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+      }
+      .desc-block p {
+        font-size: 13.5px;
+        color: var(--text-muted);
+        line-height: 1.85;
+        margin-bottom: 0.75rem;
+      }
+
+      /* FULL WIDTH */
+      .full-width-section {
+        max-width: 1340px;
+        margin: 0 auto;
+        padding: 0 2rem 4rem;
+      }
+      .cta-banner {
+        background: var(--text);
+        padding: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+      }
+      .cta-banner-text h3 {
+        font-family: var(--ff-display);
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #f5f0ea;
+        margin-bottom: 0.4rem;
+      }
+      .cta-banner-text p {
+        font-size: 13px;
+        color: #7a7470;
+        max-width: 500px;
+      }
+
+      .section-title-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.85rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .section-title-row h2 {
+        font-family: var(--ff-display);
+        font-size: 1.35rem;
+        font-weight: 400;
+      }
+      .section-title-row a {
+        font-size: 12.5px;
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .section-title-row a:hover {
+        text-decoration: underline;
+      }
+
+      .featured-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .feat-card {
+        background: var(--surface);
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .feat-img {
+        aspect-ratio: 3/2;
+        overflow: hidden;
+      }
+      .feat-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s;
+      }
+      .feat-card:hover .feat-img img {
+        transform: scale(1.05);
+      }
+      .feat-body {
+        padding: 0.75rem 0.85rem;
+      }
+      .feat-tag {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 3px;
+      }
+      .feat-name {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        margin-bottom: 4px;
+      }
+      .feat-desc {
+        font-size: 11.5px;
+        color: var(--text-muted);
+        line-height: 1.55;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .feat-meta {
+        display: flex;
+        gap: 8px;
+        margin-top: 6px;
+      }
+      .feat-meta span {
+        font-size: 10.5px;
+        color: var(--text-muted);
+      }
+      .feat-meta strong {
+        color: var(--text);
+      }
+      .feat-viewmore {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 11px;
+        color: var(--accent);
+        margin-top: 6px;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .feat-viewmore:hover {
+        text-decoration: underline;
+      }
+
+      /* WHATSAPP / SCROLL */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        width: 52px;
+        height: 52px;
+        z-index: 200;
+        background: #25d366;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+        transition: transform 0.2s;
+        text-decoration: none;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.08);
+      }
+      .whatsapp-float img {
+        width: 28px;
+        height: 28px;
+      }
+      #scrollTopBtn {
+        position: fixed;
+        bottom: 84px;
+        right: 24px;
+        width: 40px;
+        height: 40px;
+        background: var(--text);
+        color: #fff;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 200;
+        transition: background 0.15s;
+      }
+      #scrollTopBtn:hover {
+        background: #3a3530;
+      }
+
+      /* MOBILE FILTER TOGGLE */
+      .mobile-filter-toggle {
+        display: none;
+        align-items: center;
+        gap: 8px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 10px 16px;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        cursor: pointer;
+        margin-bottom: 1rem;
+      }
+
+      /* DETAIL OVERLAY */
+      .detail-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+        z-index: 1000;
+        display: none;
+        overflow-y: auto;
+      }
+      .detail-overlay.open {
+        display: block;
+      }
+      .detail-modal {
+        background: var(--bg);
+        max-width: 1200px;
+        margin: 0 auto;
+        min-height: 100vh;
+        position: relative;
+      }
+      .detail-close {
+        position: fixed;
+        top: 18px;
+        right: 18px;
+        width: 40px;
+        height: 40px;
+        background: #1a1814;
+        color: #fff;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        z-index: 1010;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s;
+      }
+      .detail-close:hover {
+        background: #3a3530;
+      }
+      .detail-breadcrumb {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 0.7rem 2rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12.5px;
+        color: var(--text-muted);
+      }
+      .detail-breadcrumb span.sep {
+        color: var(--border-dark);
+      }
+      .detail-breadcrumb span.cur {
+        color: var(--text);
+        font-weight: 500;
+      }
+      .detail-main {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 0;
+        background: var(--border);
+      }
+      .detail-gallery {
+        background: var(--surface);
+      }
+      .detail-gallery-main {
+        aspect-ratio: 4/3;
+        overflow: hidden;
+        background: #f0ece6;
+      }
+      .detail-gallery-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .detail-thumbs {
+        display: flex;
+        gap: 2px;
+        padding: 2px;
+        background: var(--border);
+      }
+      .detail-thumb {
+        width: 80px;
+        height: 60px;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid transparent;
+        flex-shrink: 0;
+        transition: border-color 0.15s;
+      }
+      .detail-thumb.active,
+      .detail-thumb:hover {
+        border-color: var(--accent);
+      }
+      .detail-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .detail-info {
+        background: var(--surface);
+        padding: 2rem 1.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .detail-info-tag {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      .detail-info-name {
+        font-family: var(--ff-display);
+        font-size: 1.75rem;
+        font-weight: 400;
+        color: var(--text);
+        line-height: 1.2;
+      }
+      .detail-info-desc {
+        font-size: 13.5px;
+        color: var(--text-muted);
+        line-height: 1.8;
+      }
+      .detail-divider {
+        border: none;
+        border-top: 1px solid var(--border);
+      }
+      .spec-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .spec-table tr {
+        border-bottom: 1px solid var(--border);
+      }
+      .spec-table tr:last-child {
+        border-bottom: none;
+      }
+      .spec-table td {
+        padding: 0.6rem 0;
+        font-size: 13px;
+      }
+      .spec-table td:first-child {
+        color: var(--text-muted);
+        width: 50%;
+      }
+      .spec-table td:last-child {
+        color: var(--text);
+        font-weight: 500;
+      }
+      .detail-color-row {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+      }
+      .detail-swatch {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 2px solid var(--border);
+        cursor: pointer;
+        transition: border-color 0.15s;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+      }
+      .detail-swatch:hover,
+      .detail-swatch.active {
+        border-color: var(--accent);
+      }
+      .detail-finish-row {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+      }
+      .detail-finish-tag {
+        padding: 5px 12px;
+        border: 1px solid var(--border);
+        font-size: 12px;
+        color: var(--text-muted);
+        background: var(--surface);
+        cursor: pointer;
+      }
+      .detail-finish-tag.active {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-light);
+      }
+      .detail-size-row {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+      }
+      .detail-size-btn {
+        padding: 7px 14px;
+        border: 1px solid var(--border);
+        font-size: 12px;
+        color: var(--text-muted);
+        background: var(--surface);
+        cursor: pointer;
+        font-family: var(--ff-body);
+        transition: all 0.15s;
+      }
+      .detail-size-btn:hover,
+      .detail-size-btn.active {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-light);
+      }
+
+      /* CTA BUTTONS */
+      .detail-ctas {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 485px;
+        overflow: hidden;
+        padding-top: 1px;
+      }
+      .detail-ctas-2 {
+        display: none;
+      }
+      .detail-btn-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        padding: 13px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background 0.2s;
+      }
+      .detail-btn-main:hover {
+        background: var(--accent-dark);
+      }
+      .detail-btn-secondary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: transparent;
+        color: var(--text);
+        border: 1px solid var(--border);
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 500;
+        padding: 12px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      .detail-btn-secondary:hover {
+        border-color: var(--text);
+        background: #f5f5f3;
+      }
+
+      .detail-tabs-section {
+        background: var(--surface);
+        margin-top: 2px;
+        border-top: 2px solid var(--border);
+      }
+      .detail-tabs-header {
+        display: flex;
+        border-bottom: 1px solid var(--border);
+        align-items: center;
+      }
+      .detail-tab-btn {
+        padding: 1rem 1.5rem;
+        background: none;
+        border: none;
+        font-family: var(--ff-body);
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text-muted);
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        margin-bottom: -1px;
+        transition: all 0.2s;
+      }
+      .detail-tab-btn.active {
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+      }
+      .detail-tab-btn:hover {
+        color: var(--text);
+      }
+      .detail-tab-panel {
+        display: none;
+        padding: 1.75rem 2rem;
+      }
+      .detail-tab-panel.active {
+        display: block;
+      }
+      .detail-features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
+      .feature-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+      .feature-item i {
+        font-size: 22px;
+        color: var(--accent);
+      }
+      .feature-item h5 {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--text);
+      }
+      .feature-item p {
+        font-size: 12px;
+        color: var(--text-muted);
+        line-height: 1.6;
+      }
+      .tech-spec-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .tech-spec-cell {
+        background: var(--surface);
+        padding: 0.85rem 1rem;
+      }
+      .tech-spec-cell dt {
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 0.3rem;
+      }
+      .tech-spec-cell dd {
+        font-size: 13px;
+        color: var(--text);
+        font-weight: 500;
+      }
+      .install-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .install-step {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+      .install-step-num {
+        width: 28px;
+        height: 28px;
+        background: var(--accent);
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .install-step-text h5 {
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        color: var(--text);
+      }
+      .install-step-text p {
+        font-size: 12.5px;
+        color: var(--text-muted);
+        line-height: 1.65;
+      }
+      .detail-related {
+        padding: 2rem;
+        background: var(--surface);
+        margin-top: 2px;
+      }
+      .detail-related h3 {
+        font-family: var(--ff-display);
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .related-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+      }
+      .related-card {
+        background: var(--surface);
+        cursor: pointer;
+        overflow: hidden;
+      }
+      .related-card-img {
+        aspect-ratio: 1;
+        overflow: hidden;
+      }
+      .related-card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s;
+      }
+      .related-card:hover .related-card-img img {
+        transform: scale(1.06);
+      }
+      .related-card-body {
+        padding: 0.6rem 0.75rem 0.75rem;
+      }
+      .related-card-tag {
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 2px;
+      }
+      .related-card-name {
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--text);
+        line-height: 1.3;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 1024px) {
+        .featured-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .detail-features-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .related-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 962px) {
+        .detail-ctas {
+          display: none !important;
+        }
+        .detail-ctas-2 {
+          display: flex !important;
+          justify-content: center;
+          width: 100%;
+          padding: 15px;
+          margin: 0;
+        }
+        .detail-ctas-2 .detail-btn-main {
+          width: 100%;
+          max-width: 320px;
+        }
+      }
+      @media (max-width: 860px) {
+        :root {
+          --sidebar-w: 0px;
+        }
+        .page-body {
+          grid-template-columns: 1fr;
+        }
+        .sidebar {
+          position: static;
+          display: none;
+        }
+        .sidebar.mobile-open {
+          display: block;
+        }
+        .mobile-filter-toggle {
+          display: flex;
+        }
+        .products-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .detail-main {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 640px) {
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .detail-features-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .tech-spec-grid {
+          grid-template-columns: 1fr;
+        }
+        .related-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 520px) {
+        .page-body {
+          padding: 1.25rem 1rem 3rem;
+        }
+        .full-width-section {
+          padding: 0 1rem 3rem;
+        }
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .featured-grid {
+          grid-template-columns: 1fr;
+        }
+        .cta-banner {
+          flex-direction: column;
+        }
+        .detail-features-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 380px) {
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
   <body>
-    <!-- Header Section with Logo -->
+    <!-- HEADER -->
     <header id="navbar">
-      <!-- Navbar content will be injected here by JavaScript -->
+      <div class="header-container">
+        <div class="logo-text">
+          <img
+            src="./images/logo-1.png"
+            alt="Tulasi Tiles Logo"
+            class="logo-img"
+          />
+        </div>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+        <nav>
+          <div class="mobile-logo">
+            <img
+              src="./images/logo-1.png"
+              alt="Tulasi Tiles Logo"
+              class="logo-img"
+            />
+          </div>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle"
+                >Tiles <i class="dropdown-arrow">▼</i></a
+              >
+              <div class="dropdown-content">
+                <div class="dropdown-column">
+                  <h4>Floor Tiles</h4>
+                  <ul>
+                    <li>
+                      <a href="bathroom_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Bathroom Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="kitchen_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Kitchen Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="outdoor_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Outdoor Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="livingroom_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Living Room
+                        Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="bedroom_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Bedroom Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="commercial_floor_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Commercial Tiles</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="dropdown-column">
+                  <h4>Special Tiles</h4>
+                  <ul>
+                    <li>
+                      <a href="special_tiles.html"
+                        ><i class="fas fa-check-circle"></i> Germ Free Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#tactile"
+                        ><i class="fas fa-check-circle"></i> Tactile Floor
+                        Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#anti-static"
+                        ><i class="fas fa-check-circle"></i> Anti Static
+                        Tiles</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#cool-roof"
+                        ><i class="fas fa-check-circle"></i> Cool Roof Tiles</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./compare.html">Tile Comparison</a></li>
+            <li><a href="./tileCalculator.html">Tiles Calculator</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li>
+              <a href="./catalogue.html"
+                ><button class="catalogue-button">E-Catalogue</button></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <!-- Modern Hero Section -->
-    <section class="hero-outdoor-floor">
-      <div class="hero-content">
-        <h1>Luxury Outdoor Floor Tiles</h1>
+    <!-- HERO -->
+    <section class="hero">
+      <img
+        class="hero-img"
+        src="./images/commercial_img1.jpg"
+        alt="Commercial Floor Tiles"
+      />
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Premium Collection</p>
+        <h1>Luxury Commercial Floor Tiles</h1>
         <p>
-          Transform your outdoor spaces with our premium collection of
-          weather-resistant designer floor tiles
+          Transform your commercial space with our premium collection of
+          designer floor tiles — built for durability, refined for elegance.
         </p>
-        <a href="#collections" class="explore-btn">Explore Collections</a>
-      </div>
-    </section>
-
-    <!-- Featured Collections Section (6 cards) -->
-    <section id="collections" class="collections">
-      <div class="container">
-        <h2 class="section-title">Featured Collections</h2>
-
-        <div class="cards-grid">
-          <!-- Card 1 - Stone Texture -->
-          <div class="card-overlay">
-            <img
-              src="./images/outdoor_wall_img1.jpg"
-              alt="Natural Slate Texture Tile"
-            />
-            <div class="overlay-content">
-              <h3>SlateStone</h3>
-              <p>
-                Natural slate texture porcelain tiles with anti-slip surface
-              </p>
-
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 2 - Wooden Deck -->
-          <div class="card-overlay">
-            <img
-              src="./images/outdoor_img2.jpg"
-              alt="Wooden Deck Outdoor Tile"
-            />
-            <div class="overlay-content">
-              <h3>TimberDeck</h3>
-              <p>
-                Wood-look porcelain tiles with enhanced durability for patios
-              </p>
-
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 3 - Cobblestone -->
-          <div class="card-overlay">
-            <img
-              src="./images/outdoor_img3.jpg"
-              alt="Cobblestone Pattern Tile"
-            />
-            <div class="overlay-content">
-              <h3>UrbanCobble</h3>
-              <p>Modern cobblestone pattern tiles for rustic outdoor appeal</p>
-
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 4 - Large Format Stone -->
-          <div class="card-overlay">
-            <img
-              src="./images/outdoor_img4.jpg"
-              alt="Large Format Stone Tile"
-            />
-            <div class="overlay-content">
-              <h3>MegaStone</h3>
-              <p>
-                Extra-large format stone tiles for seamless outdoor flooring
-              </p>
-
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 5 - Travertine Look -->
-          <div class="card-overlay">
-            <img src="./images/outdoor_img5.jpg" alt="Travertine Look Tile" />
-            <div class="overlay-content">
-              <h3>Travella</h3>
-              <p>Travertine-look porcelain with natural color variations</p>
-
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 6 - Geometric Pattern -->
-          <div class="card-overlay">
-            <img src="./images/outdoor_img6.jpg" alt="Geometric Pattern Tile" />
-            <div class="overlay-content">
-              <h3>GeoForm</h3>
-              <p>Contemporary geometric patterned outdoor tiles</p>
-
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 7 - Weathered Wood -->
-          <div class="card-overlay">
-            <img src="./images/outdoor_img7.jpg" alt="Weathered Wood Tile" />
-            <div class="overlay-content">
-              <h3>Driftwood</h3>
-              <p>Weathered wood-look tiles with authentic texture</p>
-
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 8 - Slate Gray -->
-          <div class="card-overlay">
-            <img src="./images/outdoor_img8.jpg" alt="Slate Gray Tile" />
-            <div class="overlay-content">
-              <h3>SlateGray</h3>
-              <p>Premium gray slate tiles with natural cleft surface</p>
-
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 9 - Sandstone -->
-          <div class="card-overlay">
-            <img src="./images/outdoor_img9.jpg" alt="Sandstone Tile" />
-            <div class="overlay-content">
-              <h3>SunsetSand</h3>
-              <p>Warm sandstone-effect tiles with natural color blend</p>
-
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 10 - Modern Concrete -->
-          <div class="card-overlay">
-            <img src="./images/outdoor_img10.jpg" alt="Modern Concrete Tile" />
-            <div class="overlay-content">
-              <h3>UrbanConcrete</h3>
-              <p>Sleek concrete-look tiles for contemporary outdoor spaces</p>
-
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 11 - Terracotta -->
-          <div class="card-overlay">
-            <img src="./images/outdoor_img11.jpg" alt="Terracotta Tile" />
-            <div class="overlay-content">
-              <h3>TerraClassic</h3>
-              <p>Traditional terracotta tiles with modern durability</p>
-
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-
-          <!-- Card 12 - Mosaic -->
-          <div class="card-overlay">
-            <img src="./images/outdoor_img12.jpg" alt="Mosaic Pattern Tile" />
-            <div class="overlay-content">
-              <h3>MosaicArt</h3>
-              <p>Decorative mosaic tiles for artistic outdoor accents</p>
-
-              <button
-                class="btn btn-view-more"
-                onclick="window.location.href = 'tilesdetail.html'"
-              >
-                View More
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="container">
-        <h2 class="section-title">Ready to Transform Your Outdoor Space?</h2>
-        <div class="cta-content">
-          <p>
-            Visit our showroom to see our outdoor tile collections in person or
-            schedule a free design consultation with our experts.
-          </p>
+        <div class="hero-actions">
+          <a href="#collections" class="btn-primary">
+            Explore Collection
+            <i class="fa-solid fa-arrow-right" style="font-size: 11px"></i>
+          </a>
           <a
-            href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20sanitaryware"
+            href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20enquire%20about%20commercial%20tiles"
             target="_blank"
-            class="btn"
+            class="btn-outline"
           >
-            Book on WhatsApp
+            <i class="fa-brands fa-whatsapp" style="font-size: 14px"></i>
+            Enquire Now
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Materials Section -->
-    <section class="materials-section">
-      <div class="container">
-        <h2 class="section-title">Outdoor Tile Materials</h2>
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb-bar">
+      <div class="breadcrumb-inner">
+        <a href="index.html">Home</a><span class="sep">/</span>
+        <span class="current">Commercial Floor Tiles</span>
+      </div>
+    </nav>
 
-        <div class="materials-grid">
-          <!-- Porcelain -->
-          <div class="material-card">
-            <div class="material-icon">
-              <i class="fa-solid fa-square"></i>
-            </div>
-            <h3>Porcelain</h3>
-            <p>
-              Highly durable, frost-resistant, and low-maintenance for all
-              climates.
-            </p>
-          </div>
+    <!-- PAGE BODY -->
+    <div class="page-body" id="collections">
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <h3>
+            <i
+              class="fa-solid fa-sliders"
+              style="font-size: 11px; margin-right: 6px"
+            ></i
+            >Filters
+          </h3>
+          <button class="sidebar-clear" id="clearAllBtn">Clear All</button>
+        </div>
 
-          <!-- Natural Stone -->
-          <div class="material-card">
-            <div class="material-icon">
-              <i class="fa-solid fa-mountain"></i>
+        <!-- Colors -->
+        <div class="filter-group open">
+          <button class="filter-group-header">
+            Colors <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="color-swatches">
+                <div class="swatch-item" data-color="Ivory">
+                  <div class="swatch-circle" style="background: #f5f0e8"></div>
+                  <span class="swatch-label">Ivory</span>
+                </div>
+                <div class="swatch-item" data-color="Sand">
+                  <div class="swatch-circle" style="background: #d4c4a8"></div>
+                  <span class="swatch-label">Sand</span>
+                </div>
+                <div class="swatch-item" data-color="Graphite">
+                  <div class="swatch-circle" style="background: #4a4540"></div>
+                  <span class="swatch-label">Graphite</span>
+                </div>
+                <div class="swatch-item" data-color="Walnut">
+                  <div class="swatch-circle" style="background: #6b4a2a"></div>
+                  <span class="swatch-label">Walnut</span>
+                </div>
+                <div class="swatch-item" data-color="Oak">
+                  <div class="swatch-circle" style="background: #b8945a"></div>
+                  <span class="swatch-label">Oak</span>
+                </div>
+                <div class="swatch-item" data-color="Ash">
+                  <div class="swatch-circle" style="background: #c8bfb0"></div>
+                  <span class="swatch-label">Ash</span>
+                </div>
+                <div class="swatch-item" data-color="Charcoal">
+                  <div class="swatch-circle" style="background: #2e2a26"></div>
+                  <span class="swatch-label">Charcoal</span>
+                </div>
+                <div class="swatch-item" data-color="Cream">
+                  <div class="swatch-circle" style="background: #f0ebe0"></div>
+                  <span class="swatch-label">Cream</span>
+                </div>
+              </div>
             </div>
-            <h3>Natural Stone</h3>
-            <p>
-              Authentic slate, granite, and limestone with natural slip
-              resistance.
-            </p>
-          </div>
-
-          <!-- Concrete -->
-          <div class="material-card">
-            <div class="material-icon">
-              <i class="fa-solid fa-city"></i>
-            </div>
-            <h3>Concrete</h3>
-            <p>Modern concrete-look tiles with enhanced weather resistance.</p>
-          </div>
-
-          <!-- Composite -->
-          <div class="material-card">
-            <div class="material-icon">
-              <i class="fa-solid fa-layer-group"></i>
-            </div>
-            <h3>Composite</h3>
-            <p>Wood-plastic composite tiles that resist fading and moisture.</p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Card 5: Gradient Background -->
+        <!-- Textures -->
+        <div class="filter-group open">
+          <button class="filter-group-header">
+            Textures <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="texture-grid">
+                <div class="texture-thumb" data-texture="Wood">
+                  <img src="./images/commercial_img2.jpg" alt="Wood" /><span
+                    class="texture-name"
+                    >Wood</span
+                  >
+                </div>
+                <div class="texture-thumb" data-texture="Plank">
+                  <img src="./images/commercial_img3.jpg" alt="Plank" /><span
+                    class="texture-name"
+                    >Plank</span
+                  >
+                </div>
+                <div class="texture-thumb" data-texture="Rustic">
+                  <img src="./images/commercial_img4.jpg" alt="Rustic" /><span
+                    class="texture-name"
+                    >Rustic</span
+                  >
+                </div>
+                <div class="texture-thumb" data-texture="Stone">
+                  <img src="./images/commercial_img5.jpg" alt="Stone" /><span
+                    class="texture-name"
+                    >Stone</span
+                  >
+                </div>
+                <div class="texture-thumb" data-texture="Grain">
+                  <img src="./images/commercial_img8.jpg" alt="Grain" /><span
+                    class="texture-name"
+                    >Grain</span
+                  >
+                </div>
+                <div class="texture-thumb" data-texture="Concrete">
+                  <img
+                    src="./images/commercial_img10.jpg"
+                    alt="Concrete"
+                  /><span class="texture-name">Concrete</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Finish -->
+        <div class="filter-group open">
+          <button class="filter-group-header">
+            Finish <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="finish-list">
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Matt" /> Matt</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Satin" /> Satin</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Polished" />
+                  Polished</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Rustic" /> Rustic</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-finish="Glazed" /> Glazed</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Size -->
+        <div class="filter-group">
+          <button class="filter-group-header">
+            Size <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="size-tags">
+                <span class="size-tag" data-size="600×600">600×600</span>
+                <span class="size-tag" data-size="600×1200">600×1200</span>
+                <span class="size-tag" data-size="800×800">800×800</span>
+                <span class="size-tag" data-size="300×600">300×600</span>
+                <span class="size-tag" data-size="200×1200">200×1200</span>
+                <span class="size-tag" data-size="1200×1200">1200×1200</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Surface -->
+        <div class="filter-group">
+          <button class="filter-group-header">
+            Surface <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="finish-list">
+                <label class="finish-item"
+                  ><input type="checkbox" data-surface="Anti-Skid" />
+                  Anti-Skid</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-surface="Heavy Duty" /> Heavy
+                  Duty</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-surface="Water Resistant" />
+                  Water Resistant</label
+                >
+                <label class="finish-item"
+                  ><input type="checkbox" data-surface="Stain Resistant" />
+                  Stain Resistant</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="apply-filters-wrap">
+          <button class="btn-apply" id="applyFiltersBtn">
+            <i class="fa-solid fa-check"></i> Apply Filters
+          </button>
+        </div>
+        <a
+          href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20commercial%20tiles"
+          target="_blank"
+          class="sidebar-cta"
+        >
+          <i class="fa-brands fa-whatsapp"></i> Book on WhatsApp
+        </a>
+      </aside>
+
+      <!-- CONTENT -->
+      <div class="content-area">
+        <button class="mobile-filter-toggle" id="mobileFilterToggle">
+          <i class="fa-solid fa-sliders"></i> Filters
+        </button>
+
+        <div class="toolbar">
+          <div class="toolbar-left">
+            <p class="item-count"><strong id="countNum">12</strong> Items</p>
+            <div class="view-toggle">
+              <button
+                class="view-btn active"
+                id="btn3col"
+                aria-label="3 column grid"
+              >
+                <i class="fa-solid fa-grip"></i>
+              </button>
+              <button class="view-btn" id="btn2col" aria-label="2 column grid">
+                <i class="fa-solid fa-table-columns"></i>
+              </button>
+            </div>
+          </div>
+          <div class="sort-group">
+            <label for="sort-sel">Order by</label>
+            <select id="sort-sel">
+              <option>Latest</option>
+              <option>Name A–Z</option>
+              <option>Name Z–A</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="active-filter-chips"></div>
+        <div class="products-grid" id="productsGrid"></div>
+
+        <div class="desc-block">
+          <h2>Commercial Floor Tiles for Every Professional Space</h2>
+          <p>
+            Commercial floors demand more — higher foot traffic, greater
+            durability, and a design that reflects your brand. Our commercial
+            tile collection combines the strength of industrial-grade porcelain
+            with the timeless elegance of marble, granite, and stone finishes.
+          </p>
+          <p>
+            From imperial marble grandeur to urban slate sophistication and
+            golden onyx luxury, every tile in this range is engineered for
+            longevity without compromising on style. Perfect for offices, retail
+            spaces, hotels, and hospitality environments.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FULL WIDTH SECTIONS -->
+    <div class="full-width-section">
+      <div class="cta-banner">
+        <div class="cta-banner-text">
+          <h3>Ready to Transform Your Commercial Space?</h3>
+          <p>
+            Visit our showroom or schedule a free design consultation. Our
+            experts help you find the perfect tile for every commercial
+            application and budget.
+          </p>
+        </div>
+        <a
+          href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20commercial%20tiles"
+          target="_blank"
+          class="btn-primary"
+        >
+          <i class="fa-brands fa-whatsapp" style="font-size: 15px"></i> Book on
+          WhatsApp
+        </a>
+      </div>
+
+      <div style="margin-bottom: 3rem">
+        <div class="section-title-row">
+          <h2>Featured Collections</h2>
+          <a href="tiles.html"
+            >View All
+            <i class="fa-solid fa-arrow-right" style="font-size: 11px"></i
+          ></a>
+        </div>
+        <div class="featured-grid" id="featuredGrid"></div>
+      </div>
+    </div>
+
+    <!-- DETAIL OVERLAY -->
+    <div class="detail-overlay" id="detailOverlay">
+      <div class="detail-modal" id="detailModal">
+        <button class="detail-close" id="detailClose">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="detail-breadcrumb">
+          <span>Home</span><span class="sep">/</span> <span>Tiles</span
+          ><span class="sep">/</span> <span>Commercial Floor Tiles</span
+          ><span class="sep">/</span>
+          <span class="cur" id="detailBreadcrumbName"></span>
+        </div>
+
+        <div class="detail-main">
+          <div class="detail-gallery">
+            <div class="detail-gallery-main">
+              <img id="detailMainImg" src="" alt="" />
+            </div>
+            <div class="detail-thumbs" id="detailThumbs"></div>
+          </div>
+          <div class="detail-info">
+            <div>
+              <p class="detail-info-tag" id="detailTag"></p>
+              <h1 class="detail-info-name" id="detailName"></h1>
+            </div>
+            <p class="detail-info-desc" id="detailDesc"></p>
+            <hr class="detail-divider" />
+            <table class="spec-table" id="detailSpecTable"></table>
+            <hr class="detail-divider" />
+            <div>
+              <p
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  color: var(--text-muted);
+                  margin-bottom: 0.4rem;
+                "
+              >
+                Colour
+              </p>
+              <div class="detail-color-row" id="detailColors"></div>
+            </div>
+            <div>
+              <p
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  color: var(--text-muted);
+                  margin-bottom: 0.4rem;
+                "
+              >
+                Finish
+              </p>
+              <div class="detail-finish-row" id="detailFinishes"></div>
+            </div>
+            <div>
+              <p
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  color: var(--text-muted);
+                  margin-bottom: 0.4rem;
+                "
+              >
+                Size
+              </p>
+              <div class="detail-size-row" id="detailSizes"></div>
+            </div>
+            <!-- Mobile CTA -->
+            <div class="detail-ctas-2">
+              <a
+                id="detailEnquireWA2"
+                href="#"
+                target="_blank"
+                class="detail-btn-main"
+              >
+                <i
+                  class="fa-brands fa-whatsapp"
+                  style="font-size: 15px; padding-right: 3px"
+                ></i>
+                Enquire on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TABS -->
+        <div class="detail-tabs-section">
+          <div class="detail-tabs-header">
+            <button class="detail-tab-btn active" data-tab="features">
+              Features
+            </button>
+            <button class="detail-tab-btn" data-tab="technical">
+              Technical Specs
+            </button>
+            <button class="detail-tab-btn" data-tab="installation">
+              Installation
+            </button>
+            <!-- Desktop CTA -->
+            <div class="detail-ctas">
+              <a
+                id="detailEnquireWA"
+                href="#"
+                target="_blank"
+                class="detail-btn-main"
+              >
+                <i
+                  class="fa-brands fa-whatsapp"
+                  style="font-size: 15px; padding-right: 3px"
+                ></i>
+                Enquire on WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="detail-tab-panel active" id="tab-features">
+            <div class="detail-features-grid" id="detailFeaturesGrid"></div>
+          </div>
+          <div class="detail-tab-panel" id="tab-technical">
+            <div class="tech-spec-grid" id="detailTechGrid"></div>
+          </div>
+          <div class="detail-tab-panel" id="tab-installation">
+            <div class="install-steps">
+              <div class="install-step">
+                <div class="install-step-num">1</div>
+                <div class="install-step-text">
+                  <h5>Surface Preparation</h5>
+                  <p>
+                    Ensure the subfloor is clean, dry, and level. Remove any old
+                    adhesive or debris. A smooth base guarantees lasting
+                    adhesion in high-traffic commercial areas.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">2</div>
+                <div class="install-step-text">
+                  <h5>Dry Layout</h5>
+                  <p>
+                    Dry-fit tiles from the centre of the room outward before
+                    applying adhesive. This ensures balanced cuts at edges and
+                    symmetrical patterns.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">3</div>
+                <div class="install-step-text">
+                  <h5>Apply Adhesive</h5>
+                  <p>
+                    Use a notched trowel to apply high-quality tile adhesive.
+                    Work in small sections (1–2 sq m) to prevent the adhesive
+                    from drying before tile placement.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">4</div>
+                <div class="install-step-text">
+                  <h5>Set Tiles &amp; Grout</h5>
+                  <p>
+                    Press tiles firmly with a slight twist. Use spacers for
+                    consistent joint width. Allow adhesive to cure for 24 hours
+                    before grouting.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">5</div>
+                <div class="install-step-text">
+                  <h5>Seal &amp; Finish</h5>
+                  <p>
+                    Apply appropriate sealant for the finish type. Buff clean
+                    and allow full cure before heavy commercial foot traffic
+                    (typically 48–72 hours).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RELATED -->
+        <div class="detail-related">
+          <h3>You May Also Like</h3>
+          <div class="related-grid" id="relatedGrid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHATSAPP FLOAT -->
     <a
       href="https://wa.me/919843069220"
       class="whatsapp-float"
@@ -347,40 +2089,676 @@
     >
       <img src="./images/WhatsApp.svg" alt="WhatsApp" />
     </a>
-    <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
+    <button id="scrollTopBtn" aria-label="Scroll to top">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
-    <!-- Footer Section -->
+    <!-- FOOTER -->
     <footer id="footer">
-      <!-- Footer content will be injected here by JavaScript -->
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>About Tulasi Tiles</h3>
+          <p>
+            We are a premier tile supplier delivering high-quality solutions for
+            both residential and commercial spaces.
+          </p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/tulasitiles"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://www.youtube.com/@TulasiTiles"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="https://www.instagram.com/tulasitiles"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://wa.me/919843069220"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./compare.html">Tile Comparison</a></li>
+            <li><a href="./tileCalculator.html">Tiles Calculator</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <p>
+            74/1, Coimbatore By Pass Road, Velayuthampalayam, Avinashi,<br />Tamil
+            Nadu 641654.
+          </p>
+          <p>Phone: 98430 69220</p>
+          <p>Email: tulasitiles@gmail.com</p>
+        </div>
+        <div class="footer-col">
+          <h3>Follow Us</h3>
+          <ul class="footer-links">
+            <li><a href="https://www.facebook.com/tulasitiles">Facebook</a></li>
+            <li><a href="https://wa.me/919843069220">Whatsapp</a></li>
+            <li>
+              <a href="https://www.instagram.com/tulasitiles">Instagram</a>
+            </li>
+            <li><a href="https://www.youtube.com/@TulasiTiles">Youtube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          Copyright &copy; <span id="currentYear"></span> Tulasi Tiles |
+          Developed By
+          <a href="https://paletteproduction.com">PaletteProduction</a>
+        </p>
+      </div>
     </footer>
 
-    <!-- Font Awesome Icons -->
+    <!-- SCRIPTS -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
-      integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     ></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/footer.js"></script>
-    <script src="js/script.js"></script>
+
+    <script src="./js/outdoor_floor.js"></script>
+
     <script>
-      const scrollTopBtn = document.getElementById("scrollTopBtn");
+      const pending = {
+        colors: new Set(),
+        textures: new Set(),
+        finishes: new Set(),
+        sizes: new Set(),
+        surfaces: new Set(),
+      };
+      const applied = {
+        colors: new Set(),
+        textures: new Set(),
+        finishes: new Set(),
+        sizes: new Set(),
+        surfaces: new Set(),
+      };
 
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-          scrollTopBtn.style.display = "flex";
-        } else {
-          scrollTopBtn.style.display = "none";
+      function copyState(src, dst) {
+        Object.keys(dst).forEach((k) => {
+          dst[k].clear();
+          src[k].forEach((v) => dst[k].add(v));
+        });
+      }
+
+      function getFiltered(state) {
+        const total =
+          state.colors.size +
+          state.textures.size +
+          state.finishes.size +
+          state.sizes.size +
+          state.surfaces.size;
+        if (total === 0) return TILES;
+        return TILES.filter((t) => {
+          if (
+            state.colors.size > 0 &&
+            t.colors.some((c) => state.colors.has(c))
+          )
+            return true;
+          if (state.textures.size > 0 && state.textures.has(t.texture))
+            return true;
+          if (
+            state.finishes.size > 0 &&
+            t.finish.some((f) => state.finishes.has(f))
+          )
+            return true;
+          if (state.sizes.size > 0 && t.sizes.some((s) => state.sizes.has(s)))
+            return true;
+          if (
+            state.surfaces.size > 0 &&
+            t.surface.some((s) => state.surfaces.has(s))
+          )
+            return true;
+          return false;
+        });
+      }
+
+      function getSorted(tiles) {
+        const v = document.getElementById("sort-sel").value;
+        const arr = [...tiles];
+        if (v === "Name A–Z")
+          arr.sort((a, b) => a.title.localeCompare(b.title));
+        else if (v === "Name Z–A")
+          arr.sort((a, b) => b.title.localeCompare(a.title));
+        return arr;
+      }
+
+      function renderGrid() {
+        const container = document.getElementById("productsGrid");
+        const tiles = getSorted(getFiltered(applied));
+        document.getElementById("countNum").textContent = tiles.length;
+        container.style.opacity = "0";
+        setTimeout(() => {
+          if (tiles.length === 0) {
+            container.innerHTML = `<div class="no-results"><i class="fa-solid fa-filter-circle-xmark"></i><p>No tiles match your current filters.</p><button class="btn-primary" style="margin-top:1rem" onclick="clearAll()">Clear Filters</button></div>`;
+          } else {
+            container.innerHTML = "";
+            tiles.forEach((tile) => {
+              const card = document.createElement("div");
+              card.className = "prod-card";
+              card.innerHTML = `
+                <div class="prod-img-wrap">
+                  <img src="${tile.image}" alt="${tile.title}" loading="lazy"/>
+                  <span class="prod-badge">${tile.badge}</span>
+                  <button class="prod-wish" aria-label="Save"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="prod-body">
+                  <p class="prod-tag">${tile.tag}</p>
+                  <h3 class="prod-name">${tile.title}</h3>
+                  <p class="prod-desc">${tile.description}</p>
+                  <div class="prod-meta">
+                    <span><strong>${tile.colours}</strong> Colour</span>
+                    <span><strong>${tile.finishes}</strong> Finish</span>
+                  </div>
+                </div>
+                <div class="prod-actions">
+                  <button class="prod-btn prod-btn-view" data-id="${tile.id}">View More <i class="fa-solid fa-plus"></i></button>
+                  <a href="https://wa.me/919843069220?text=Enquiry:%20${encodeURIComponent(tile.title)}" target="_blank" class="prod-btn prod-btn-enquire">Enquire Now</a>
+                </div>`;
+              container.appendChild(card);
+            });
+          }
+          container.style.transition = "opacity .2s";
+          container.style.opacity = "1";
+        }, 180);
+      }
+
+      function renderChips() {
+        const bar = document.getElementById("active-filter-chips");
+        bar.innerHTML = "";
+        const all = [
+          ...[...applied.colors].map((v) => ({ v, g: "colors" })),
+          ...[...applied.textures].map((v) => ({ v, g: "textures" })),
+          ...[...applied.finishes].map((v) => ({ v, g: "finishes" })),
+          ...[...applied.sizes].map((v) => ({ v, g: "sizes" })),
+          ...[...applied.surfaces].map((v) => ({ v, g: "surfaces" })),
+        ];
+        all.forEach(({ v, g }) => {
+          const chip = document.createElement("span");
+          chip.className = "filter-chip";
+          chip.innerHTML = `${v} <i class="fa-solid fa-xmark" style="font-size:9px"></i>`;
+          chip.addEventListener("click", () => {
+            applied[g].delete(v);
+            pending[g].delete(v);
+            syncUIFromPending();
+            renderGrid();
+            renderChips();
+            updateApplyBtn();
+          });
+          bar.appendChild(chip);
+        });
+      }
+
+      function updateApplyBtn() {
+        const btn = document.getElementById("applyFiltersBtn");
+        const preview = getFiltered(pending).length;
+        const total =
+          pending.colors.size +
+          pending.textures.size +
+          pending.finishes.size +
+          pending.sizes.size +
+          pending.surfaces.size;
+        btn.innerHTML =
+          total > 0
+            ? `<i class="fa-solid fa-check"></i> Apply Filters (${preview})`
+            : `<i class="fa-solid fa-check"></i> Apply Filters`;
+      }
+
+      function syncUIFromPending() {
+        document
+          .querySelectorAll(".swatch-item")
+          .forEach((el) =>
+            el.classList.toggle("active", pending.colors.has(el.dataset.color)),
+          );
+        document
+          .querySelectorAll(".texture-thumb")
+          .forEach((el) =>
+            el.classList.toggle(
+              "active",
+              pending.textures.has(el.dataset.texture),
+            ),
+          );
+        document
+          .querySelectorAll("[data-finish]")
+          .forEach(
+            (cb) => (cb.checked = pending.finishes.has(cb.dataset.finish)),
+          );
+        document
+          .querySelectorAll(".size-tag")
+          .forEach((el) =>
+            el.classList.toggle("active", pending.sizes.has(el.dataset.size)),
+          );
+        document
+          .querySelectorAll("[data-surface]")
+          .forEach(
+            (cb) => (cb.checked = pending.surfaces.has(cb.dataset.surface)),
+          );
+      }
+
+      function clearAll() {
+        Object.values(pending).forEach((s) => s.clear());
+        Object.values(applied).forEach((s) => s.clear());
+        syncUIFromPending();
+        renderGrid();
+        renderChips();
+        updateApplyBtn();
+      }
+
+      function updateMainImage(newSrc) {
+        const mainImg = document.getElementById("detailMainImg");
+        mainImg.style.transition = "opacity 0.2s";
+        mainImg.style.opacity = "0";
+        setTimeout(() => {
+          mainImg.src = newSrc;
+          mainImg.style.opacity = "1";
+        }, 200);
+      }
+
+      function setEnquireLinks(tile) {
+        const wa = `https://wa.me/919843069220?text=Enquiry:%20${encodeURIComponent(tile.title)}`;
+        const d = document.getElementById("detailEnquireWA");
+        const d2 = document.getElementById("detailEnquireWA2");
+        if (d) d.href = wa;
+        if (d2) d2.href = wa;
+      }
+
+      function openDetail(id) {
+        const tile = TILES[id];
+        if (!tile) return;
+
+        document.getElementById("detailBreadcrumbName").textContent =
+          tile.title;
+        document.getElementById("detailTag").textContent = tile.tag;
+        document.getElementById("detailName").textContent = tile.title;
+        document.getElementById("detailDesc").textContent = tile.description;
+        document.getElementById("detailMainImg").src = tile.image;
+        document.getElementById("detailMainImg").alt = tile.title;
+        setEnquireLinks(tile);
+
+        const thumbImgs = [tile.image, ...(tile.gallery || [])];
+        const thumbsEl = document.getElementById("detailThumbs");
+        thumbsEl.innerHTML = "";
+        thumbImgs.forEach((src, i) => {
+          const d = document.createElement("div");
+          d.className = "detail-thumb" + (i === 0 ? " active" : "");
+          d.innerHTML = `<img src="${src}" alt="view ${i + 1}">`;
+          d.addEventListener("click", () => {
+            document.getElementById("detailMainImg").src = src;
+            thumbsEl
+              .querySelectorAll(".detail-thumb")
+              .forEach((t) => t.classList.remove("active"));
+            d.classList.add("active");
+          });
+          thumbsEl.appendChild(d);
+        });
+
+        const specRows = [
+          ["Texture", tile.texture],
+          ["Colours Available", tile.colours],
+          ["Finishes", tile.finish.join(", ")],
+          ["Sizes", tile.sizes.join(", ")],
+          ["Surface", tile.surface.join(", ")],
+        ];
+        document.getElementById("detailSpecTable").innerHTML = specRows
+          .map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`)
+          .join("");
+
+        document.getElementById("detailColors").innerHTML = tile.colors
+          .map(
+            (c, i) =>
+              `<span class="detail-swatch${i === 0 ? " active" : ""}" title="${c}" style="background:${tile.colorsHex[c]}" data-color="${c}"></span>`,
+          )
+          .join("");
+        document.querySelectorAll(".detail-swatch").forEach((sw) => {
+          sw.addEventListener("click", () => {
+            document
+              .querySelectorAll(".detail-swatch")
+              .forEach((s) => s.classList.remove("active"));
+            sw.classList.add("active");
+            updateMainImage(tile.colorImages[sw.dataset.color] || tile.image);
+          });
+        });
+
+        document.getElementById("detailFinishes").innerHTML = tile.finish
+          .map(
+            (f, i) =>
+              `<span class="detail-finish-tag${i === 0 ? " active" : ""}" data-finish="${f}">${f}</span>`,
+          )
+          .join("");
+        document.querySelectorAll(".detail-finish-tag").forEach((ft) => {
+          ft.addEventListener("click", () => {
+            document
+              .querySelectorAll(".detail-finish-tag")
+              .forEach((s) => s.classList.remove("active"));
+            ft.classList.add("active");
+            updateMainImage(tile.finishImages[ft.dataset.finish] || tile.image);
+          });
+        });
+
+        document.getElementById("detailSizes").innerHTML = tile.sizes
+          .map(
+            (s, i) =>
+              `<button class="detail-size-btn${i === 0 ? " active" : ""}" data-size="${s}">${s}</button>`,
+          )
+          .join("");
+        document.querySelectorAll(".detail-size-btn").forEach((sb) => {
+          sb.addEventListener("click", () => {
+            document
+              .querySelectorAll(".detail-size-btn")
+              .forEach((s) => s.classList.remove("active"));
+            sb.classList.add("active");
+            updateMainImage(tile.sizeImages[sb.dataset.size] || tile.image);
+          });
+        });
+
+        document.getElementById("detailFeaturesGrid").innerHTML = tile.features
+          .map(
+            (f) =>
+              `<div class="feature-item"><i class="${f.icon}"></i><h5>${f.title}</h5><p>${f.desc}</p></div>`,
+          )
+          .join("");
+
+        document.getElementById("detailTechGrid").innerHTML = Object.entries(
+          tile.tech,
+        )
+          .map(
+            ([k, v]) =>
+              `<div class="tech-spec-cell"><dt>${k}</dt><dd>${v}</dd></div>`,
+          )
+          .join("");
+
+        const related = TILES.filter(
+          (t) =>
+            t.id !== tile.id &&
+            (t.texture === tile.texture ||
+              t.colors.some((c) => tile.colors.includes(c))),
+        ).slice(0, 4);
+        document.getElementById("relatedGrid").innerHTML = related
+          .map(
+            (t) => `
+          <div class="related-card" data-id="${t.id}">
+            <div class="related-card-img"><img src="${t.image}" alt="${t.title}" loading="lazy"/></div>
+            <div class="related-card-body"><p class="related-card-tag">${t.tag}</p><p class="related-card-name">${t.title}</p></div>
+          </div>`,
+          )
+          .join("");
+        document
+          .querySelectorAll(".related-card")
+          .forEach((rc) =>
+            rc.addEventListener("click", () =>
+              openDetail(parseInt(rc.dataset.id)),
+            ),
+          );
+
+        document
+          .querySelectorAll(".detail-tab-btn")
+          .forEach((b) => b.classList.remove("active"));
+        document
+          .querySelectorAll(".detail-tab-panel")
+          .forEach((p) => p.classList.remove("active"));
+        document
+          .querySelector('.detail-tab-btn[data-tab="features"]')
+          .classList.add("active");
+        document.getElementById("tab-features").classList.add("active");
+
+        document.getElementById("detailOverlay").classList.add("open");
+        document.getElementById("detailModal").scrollTop = 0;
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeDetail() {
+        document.getElementById("detailOverlay").classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      function renderFeatured() {
+        document.getElementById("featuredGrid").innerHTML = FEATURED_IDS.map(
+          (id) => {
+            const t = TILES[id];
+            return `<div class="feat-card" data-id="${id}">
+            <div class="feat-img"><img src="${t.image}" alt="${t.title}" loading="lazy"/></div>
+            <div class="feat-body">
+              <p class="feat-tag">${t.tag}</p>
+              <h4 class="feat-name">${t.title}</h4>
+              <p class="feat-desc">${t.description}</p>
+              <div class="feat-meta"><span><strong>${t.colours}</strong> Color</span><span><strong>${t.finishes}</strong> Finish</span></div>
+              <a class="feat-viewmore" href="#">View More <i class="fa-solid fa-plus" style="font-size:10px"></i></a>
+            </div></div>`;
+          },
+        ).join("");
+        document
+          .querySelectorAll(".feat-card")
+          .forEach((fc) =>
+            fc.addEventListener("click", () =>
+              openDetail(parseInt(fc.dataset.id)),
+            ),
+          );
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        renderGrid();
+        renderFeatured();
+
+        document
+          .querySelectorAll(".filter-group-header")
+          .forEach((btn) =>
+            btn.addEventListener("click", () =>
+              btn.closest(".filter-group").classList.toggle("open"),
+            ),
+          );
+
+        document.querySelectorAll(".swatch-item").forEach((el) => {
+          el.addEventListener("click", () => {
+            el.classList.toggle("active");
+            const c = el.dataset.color;
+            if (el.classList.contains("active")) pending.colors.add(c);
+            else pending.colors.delete(c);
+            updateApplyBtn();
+          });
+        });
+
+        document.querySelectorAll(".texture-thumb").forEach((el) => {
+          el.addEventListener("click", () => {
+            el.classList.toggle("active");
+            const x = el.dataset.texture;
+            if (el.classList.contains("active")) pending.textures.add(x);
+            else pending.textures.delete(x);
+            updateApplyBtn();
+          });
+        });
+
+        document.querySelectorAll("[data-finish]").forEach((cb) => {
+          cb.addEventListener("change", () => {
+            if (cb.checked) pending.finishes.add(cb.dataset.finish);
+            else pending.finishes.delete(cb.dataset.finish);
+            updateApplyBtn();
+          });
+        });
+
+        document.querySelectorAll(".size-tag").forEach((el) => {
+          el.addEventListener("click", () => {
+            el.classList.toggle("active");
+            const s = el.dataset.size;
+            if (el.classList.contains("active")) pending.sizes.add(s);
+            else pending.sizes.delete(s);
+            updateApplyBtn();
+          });
+        });
+
+        document.querySelectorAll("[data-surface]").forEach((cb) => {
+          cb.addEventListener("change", () => {
+            if (cb.checked) pending.surfaces.add(cb.dataset.surface);
+            else pending.surfaces.delete(cb.dataset.surface);
+            updateApplyBtn();
+          });
+        });
+
+        document
+          .getElementById("applyFiltersBtn")
+          .addEventListener("click", () => {
+            copyState(pending, applied);
+            renderGrid();
+            renderChips();
+            updateApplyBtn();
+            const sb = document.getElementById("sidebar");
+            if (sb.classList.contains("mobile-open")) {
+              sb.classList.remove("mobile-open");
+              document.getElementById("mobileFilterToggle").innerHTML =
+                '<i class="fa-solid fa-sliders"></i> Filters';
+            }
+          });
+
+        document
+          .getElementById("clearAllBtn")
+          .addEventListener("click", clearAll);
+        document
+          .getElementById("sort-sel")
+          .addEventListener("change", renderGrid);
+
+        const grid = document.getElementById("productsGrid");
+        document
+          .getElementById("btn3col")
+          .addEventListener("click", function () {
+            grid.classList.remove("two-col");
+            this.classList.add("active");
+            document.getElementById("btn2col").classList.remove("active");
+          });
+        document
+          .getElementById("btn2col")
+          .addEventListener("click", function () {
+            grid.classList.add("two-col");
+            this.classList.add("active");
+            document.getElementById("btn3col").classList.remove("active");
+          });
+
+        document
+          .getElementById("productsGrid")
+          .addEventListener("click", (e) => {
+            const btn = e.target.closest(".prod-btn-view");
+            if (btn) openDetail(parseInt(btn.dataset.id));
+          });
+
+        document
+          .getElementById("detailClose")
+          .addEventListener("click", closeDetail);
+        document
+          .getElementById("detailOverlay")
+          .addEventListener("click", (e) => {
+            if (e.target === document.getElementById("detailOverlay"))
+              closeDetail();
+          });
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeDetail();
+        });
+
+        document.querySelectorAll(".detail-tab-btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            document
+              .querySelectorAll(".detail-tab-btn")
+              .forEach((b) => b.classList.remove("active"));
+            document
+              .querySelectorAll(".detail-tab-panel")
+              .forEach((p) => p.classList.remove("active"));
+            btn.classList.add("active");
+            document
+              .getElementById("tab-" + btn.dataset.tab)
+              .classList.add("active");
+          });
+        });
+
+        document
+          .getElementById("mobileFilterToggle")
+          .addEventListener("click", function () {
+            const sb = document.getElementById("sidebar");
+            sb.classList.toggle("mobile-open");
+            this.innerHTML = sb.classList.contains("mobile-open")
+              ? '<i class="fa-solid fa-xmark"></i> Close Filters'
+              : '<i class="fa-solid fa-sliders"></i> Filters';
+          });
+
+        const stb = document.getElementById("scrollTopBtn");
+        window.addEventListener("scroll", () => {
+          stb.style.display = window.scrollY > 300 ? "flex" : "none";
+        });
+        stb.addEventListener("click", () =>
+          window.scrollTo({ top: 0, behavior: "smooth" }),
+        );
+
+        document.querySelectorAll('a[href^="#"]').forEach((a) => {
+          a.addEventListener("click", function (e) {
+            const t = document.querySelector(this.getAttribute("href"));
+            if (t) {
+              e.preventDefault();
+              t.scrollIntoView({ behavior: "smooth" });
+            }
+          });
+        });
+
+        // Hamburger nav
+        const hamburger = document.querySelector(".hamburger");
+        const nav = document.querySelector("nav");
+        const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+        if (hamburger) {
+          hamburger.addEventListener("click", function () {
+            this.classList.toggle("active");
+            nav.classList.toggle("active");
+            document.body.style.overflow = nav.classList.contains("active")
+              ? "hidden"
+              : "";
+          });
         }
-      });
-
-      scrollTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
+        dropdownToggles.forEach((toggle) => {
+          toggle.addEventListener("click", function (e) {
+            if (window.innerWidth <= 992) {
+              e.preventDefault();
+              e.stopPropagation();
+              const dropdown = this.parentElement;
+              document.querySelectorAll(".dropdown").forEach((d) => {
+                if (d !== dropdown) d.classList.remove("active");
+              });
+              dropdown.classList.toggle("active");
+            }
+          });
+        });
+        document.querySelectorAll(".dropdown-column a").forEach((link) => {
+          link.addEventListener("click", function () {
+            if (window.innerWidth <= 992) {
+              hamburger.classList.remove("active");
+              nav.classList.remove("active");
+              document.body.style.overflow = "";
+              document
+                .querySelectorAll(".dropdown")
+                .forEach((d) => d.classList.remove("active"));
+            }
+          });
+        });
+        window.addEventListener("resize", function () {
+          if (window.innerWidth > 992) {
+            hamburger.classList.remove("active");
+            nav.classList.remove("active");
+            document.body.style.overflow = "";
+            document
+              .querySelectorAll(".dropdown")
+              .forEach((d) => d.classList.remove("active"));
+          }
         });
       });
+    </script>
+
+    <script src="./js/navbar.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
     </script>
   </body>
 </html>
