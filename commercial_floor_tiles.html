@@ -580,32 +580,7 @@
         text-transform: uppercase;
         padding: 3px 8px;
       }
-      .prod-wish {
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        width: 30px;
-        height: 30px;
-        background: rgba(255, 255, 255, 0.92);
-        border: none;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        opacity: 0;
-        transition: opacity 0.2s;
-      }
-      .prod-card:hover .prod-wish {
-        opacity: 1;
-      }
-      .prod-wish i {
-        font-size: 13px;
-        color: var(--text-muted);
-      }
-      .prod-wish:hover i {
-        color: #c0392b;
-      }
+
       .prod-body {
         padding: 0.9rem 1rem 0;
         flex: 1;
@@ -1665,41 +1640,44 @@
           <div class="filter-group-body">
             <div class="filter-group-inner">
               <div class="texture-grid">
-                <div class="texture-thumb" data-texture="Wood">
-                  <img src="./images/commercial_img2.jpg" alt="Wood" /><span
+                <div class="texture-thumb" data-texture="Imperial Marble">
+                  <img src="./images/commercial/Imperial Marble/img1.jpg" alt="Imperial Marble" /><span
                     class="texture-name"
-                    >Wood</span
+                    >Imperial Marble</span
                   >
                 </div>
-                <div class="texture-thumb" data-texture="Plank">
-                  <img src="./images/commercial_img3.jpg" alt="Plank" /><span
-                    class="texture-name"
-                    >Plank</span
-                  >
-                </div>
-                <div class="texture-thumb" data-texture="Rustic">
-                  <img src="./images/commercial_img4.jpg" alt="Rustic" /><span
-                    class="texture-name"
-                    >Rustic</span
-                  >
-                </div>
-                <div class="texture-thumb" data-texture="Stone">
-                  <img src="./images/commercial_img5.jpg" alt="Stone" /><span
-                    class="texture-name"
-                    >Stone</span
-                  >
-                </div>
-                <div class="texture-thumb" data-texture="Grain">
-                  <img src="./images/commercial_img8.jpg" alt="Grain" /><span
-                    class="texture-name"
-                    >Grain</span
-                  >
-                </div>
-                <div class="texture-thumb" data-texture="Concrete">
+                <div
+                  class="texture-thumb"
+                  data-texture="Golden Onyx"
+                >
                   <img
-                    src="./images/commercial_img10.jpg"
-                    alt="Concrete"
-                  /><span class="texture-name">Concrete</span>
+                    src="./images/commercial/Golden Onyx/img1.jpg"
+                    alt="Golden Onyx"
+                  /><span class="texture-name">Golden Onyx </span>
+                </div>
+                <div class="texture-thumb" data-texture="Regal Sandstone">
+                  <img src="./images/commercial/Regal Sandstone/img1.jpg" alt="Regal Sandstone" /><span
+                    class="texture-name"
+                    >Regal Sandstone</span
+                  >
+                </div>
+                <div class="texture-thumb" data-texture="Titanium Stone">
+                  <img src="./images/commercial/Titanium Stone/img1.jpg" alt="Titanium Stone" /><span
+                    class="texture-name"
+                    >Titanium Stone</span
+                  >
+                </div>
+                <div class="texture-thumb" data-texture="Signature Quartz">
+                  <img src="./images/commercial/Signature Quartz/img1.jpg" alt="Signature Quartz" /><span
+                    class="texture-name"
+                    >Signature Quartz</span
+                  >
+                </div>
+                <div class="texture-thumb" data-texture="Majestic Terrazzo">
+                  <img
+                    src="./images/commercial/Majestic Terrazzo/img1.jpg"
+                    alt="Majestic Terrazzo"
+                  /><span class="texture-name">Majestic Terrazzo</span>
                 </div>
               </div>
             </div>
@@ -2089,9 +2067,7 @@
     >
       <img src="./images/WhatsApp.svg" alt="WhatsApp" />
     </a>
-    <button id="scrollTopBtn" aria-label="Scroll to top">
-      <i class="fa-solid fa-chevron-up"></i>
-    </button>
+    <button id="scrollTopBtn" aria-label="Scroll to top">↑</button>
 
     <!-- FOOTER -->
     <footer id="footer">
@@ -2248,7 +2224,6 @@
                 <div class="prod-img-wrap">
                   <img src="${tile.image}" alt="${tile.title}" loading="lazy"/>
                   <span class="prod-badge">${tile.badge}</span>
-                  <button class="prod-wish" aria-label="Save"><i class="fa-regular fa-heart"></i></button>
                 </div>
                 <div class="prod-body">
                   <p class="prod-tag">${tile.tag}</p>
