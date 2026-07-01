@@ -14,31 +14,36 @@ const TILES = [
     title: "Carrara Elegance",
     tag: "CARRARA ELEGANCE",
     description:
-      "Premium cream marble with warm golden veining laid in large-format slabs. A timeless foundation that elevates any living room with natural luxury.",
-    colours: 3,
+      "Premium white and grey marble with natural veining patterns. A timeless foundation that elevates any living room with natural luxury.",
+    colours: 4,
     finishes: 2,
-    image: "./images/OAK HAVEN/Oak-Wood.webp",
+    image: "./images/living_room_img1.avif",
     badge: "Carrara",
     thumbImages: [
-      "./images/OAK HAVEN/Brown Oak.webp",
-      "./images/carrara_thumb1.jpg",
-      "./images/carrara_thumb2.jpg",
-      "./images/carrara_thumb3.jpg",
+      "./images/living-room/carara/carrara-grey.webp",
+      "./images/living-room/carara/carrarawhiteandnatural.webp",
+      "./images/living-room/carara/carrarawhitegray.webp",
+      "./images/living-room/carara/carrarawhitemarble.webp",
     ],
-    colors: ["Ivory", "Cream", "Gold"],
-    colorsHex: { Ivory: "#f5f0e8", Cream: "#e8dcc8", Gold: "#c9a84c" },
+    colors: ["Carrara Grey", "Natural White", "Cloudy White", "Classic White"],
+    colorsHex: {
+      "Carrara Grey": "#b8bcbe",
+      "Natural White": "#f2f0eb",
+      "Cloudy White": "#e8e9eb",
+      "Classic White": "#ffffff",
+    },
     colorImages: {
-      Ivory: "./images/living_room_img1.avif",
-      Cream: "./images/living_room_img8.jpg",
-      Gold: "./images/living_room_img6.avif",
+      "Carrara Grey": "./images/living-room/carara/carrara-grey.webp",
+      "Natural White":
+        "./images/living-room/carara/carrarawhiteandnatural.webp",
+      "Cloudy White": "./images/living-room/carara/carrarawhitegray.webp",
+      "Classic White": "./images/living-room/carara/carrarawhitemarble.webp",
     },
     finishImages: {
-      Polished: "./images/living_room_img1.avif",
-      Satin: "./images/living_room_img4.avif",
-    },
-    sizeImages: {
-      "800×800": "./images/living_room_img1.avif",
-      "600×1200": "./images/living_room_img1.avif",
+      // Typically, Polished is used for high-contrast white marble
+      Polished: "./images/living-room/carara/carrarawhitemarble.webp",
+      // Satin works best for the softer grey tones
+      Satin: "./images/living-room/carara/carrara-grey.webp",
     },
     texture: "Marble",
     finish: ["Polished", "Satin"],
@@ -79,16 +84,16 @@ const TILES = [
       "Warm oak wood-look porcelain planks with realistic grain texture. Brings the charm of hardwood floors with tile's superior durability.",
     colours: 5,
     finishes: 4,
-    image: "./images/OAK HAVEN/Oak-Wood.webp",
+    image: "./images/living-room/OAK HAVEN/Oak-Wood.webp",
     badge: "Wood Look",
     thumbImages: [
-      "./images/OAK HAVEN/Brown Oak.webp",
-      "./images/OAK HAVEN/Dark Oak.webp",
-      "./images/OAK HAVEN/Light Oak.webp",
-      "./images/OAK HAVEN/Natural Oak.webp",
-      "./images/OAK HAVEN/Beige Oak.webp",
+      "./images/living-room/OAK HAVEN/Brown Oak.webp",
+      "./images/living-room/OAK HAVEN/Dark Oak.webp",
+      "./images/living-room/OAK HAVEN/Light Oak.webp",
+      "./images/living-room/OAK HAVEN/Natural Oak.webp",
+      "./images/living-room/OAK HAVEN/Beige Oak.webp",
     ],
-    colors: ["Brown", "Beige","LightOak","NaturalOak","DarkOak"],
+    colors: ["Brown", "Beige", "LightOak", "NaturalOak", "DarkOak"],
     colorsHex: {
       Brown: "#9A6B4A",
       Beige: "#D8BC9A",
@@ -97,21 +102,21 @@ const TILES = [
       DarkOak: "#3D312C",
     },
     colorImages: {
-      Brown: "./images/OAK HAVEN/Brown Oak.webp",
-      Beige: " ./images/OAK HAVEN/Beige Oak.webp",
-      LightOak: "./images/OAK HAVEN/Light Oak.webp",
-      NaturalOak: "./images/OAK HAVEN/Natural Oak.webp",
-      DarkOak: "./images/OAK HAVEN/Dark Oak.webp",
+      Brown: "./images/living-room/OAK HAVEN/Brown Oak.webp",
+      Beige: " ./images/living-room/OAK HAVEN/Beige Oak.webp",
+      LightOak: "./images/living-room/OAK HAVEN/Light Oak.webp",
+      NaturalOak: "./images/living-room/OAK HAVEN/Natural Oak.webp",
+      DarkOak: "./images/living-room/OAK HAVEN/Dark Oak.webp",
     },
     finishImages: {
-      Rustic: "./images/OAK HAVEN/Brown Oak.webp",
-      Smooth: "./images/OAK HAVEN/Beige Oak.webp",
-      FineGrain: "./images/OAK HAVEN/Light Oak.webp",
-      RusticBrushed: "./images/OAK HAVEN/Dark Oak.webp",
+      Rustic: "./images/living-room/OAK HAVEN/Brown Oak.webp",
+      Smooth: "./images/living-room/OAK HAVEN/Beige Oak.webp",
+      FineGrain: "./images/living-room/OAK HAVEN/Light Oak.webp",
+      RusticBrushed: "./images/living-room/OAK HAVEN/Dark Oak.webp",
     },
     // sizeImages: { "200×1200": "./images/living_room_img2.avif", "800×800": "./images/living_room_img3.jpg" },
     texture: "Wood",
-    finish: ["Rustic","Smooth","FineGrain"," RusticBrushed"],
+    finish: ["Rustic", "Smooth", "FineGrain", " RusticBrushed"],
     sizes: ["200×1200", "800×800"],
     surface: ["Anti-Skid", "Scratch Resistant"],
     features: [
@@ -142,93 +147,127 @@ const TILES = [
     },
   },
   {
-    id: 2,
-    title: "GeoChic Hex",
-    tag: "GEOCHIC HEX",
-    description:
-      "Contemporary hexagonal tiles with a modern geometric design. Makes a bold artistic statement for eclectic and design-forward living rooms.",
-    colours: 3,
-    finishes: 2,
-    image: "./images/living_room_img3.jpg",
-    badge: "Geometric",
-    thumbImages: [
-      "./images/living_room_img3.jpg",
-      "./images/geochic_thumb1.jpg",
-      "./images/geochic_thumb2.jpg",
-      "./images/geochic_thumb3.jpg",
-    ],
-    colors: ["Brown", "Grey", "Beige"],
-    colorsHex: { Brown: "#7a5c3c", Grey: "#a0a0a0", Beige: "#c8a87a" },
-    colorImages: {
-      Brown: "./images/living_room_img3.jpg",
-      Grey: "./images/living_room_img10.avif",
-      Beige: "./images/living_room_img12.jpg",
-    },
-    finishImages: {
-      Matt: "./images/living_room_img3.jpg",
-      Rustic: "./images/living_room_img3.jpg",
-    },
-    sizeImages: {
-      "600×600": "./images/living_room_img3.jpg",
-      "800×800": "./images/living_room_img3.jpg",
-    },
-    texture: "Geometric",
-    finish: ["Matt", "Rustic"],
-    sizes: ["600×600", "800×800"],
-    surface: ["Anti-Skid"],
-    features: [
-      {
-        icon: "fa-solid fa-shapes",
-        title: "Hex Pattern",
-        desc: "Bold hexagonal geometry adds architectural depth and visual movement.",
-      },
-      {
-        icon: "fa-solid fa-ban",
-        title: "Anti-Skid",
-        desc: "Matte surface ensures excellent grip for family living spaces.",
-      },
-      {
-        icon: "fa-solid fa-leaf",
-        title: "Versatile Style",
-        desc: "Pairs beautifully with both Scandinavian and industrial interiors.",
-      },
-    ],
-    tech: {
-      Material: "Ceramic",
-      Origin: "India",
-      MOHs: "6",
-      WaterAbsorption: "<3%",
-      SurfaceFinish: "Matt / Rustic",
-      Thickness: "10 mm",
-      Rectified: "No",
-    },
+  "id": 2,
+  "title": "Corsica Marble",
+  "tag": "CORSICA MARBLE",
+  "description": "Elegant porcelain tiles featuring classic marble veining and natural stone textures. Brings a sophisticated, timeless grandeur to high-end living spaces.",
+  "colours": 5,
+  "finishes": 2,
+  "image": "./images/living-room/corsica/Corsica.webp",
+  "badge": "Marble",
+  "thumbImages": [
+    "./images/living-room/corsica/Corsica beige.webp",
+    "./images/living-room/corsica/Corsica gray.webp",
+    "./images/living-room/corsica/Corsica White.webp",
+    "./images/living-room/corsica/Corsica charcoal.webp",
+    "./images/living-room/corsica/Corsica sand.webp"
+  ],
+  "colors": ["Beige", "Gray", "White", "Charcoal", "Sand"],
+  "colorsHex": { 
+    "Beige": "#f3e1cd", 
+    "Gray": "#dcdcdc", 
+    "White": "#fdfdfd", 
+    "Charcoal": "#3a3b40", 
+    "Sand": "#decbb3" 
   },
+  "colorImages": {
+    "Beige": "./images/living-room/corsica/Corsica beige.jpg",
+    "Gray": "./images/living-room/corsica/Corsica gray.webp",
+    "White": "./images/living-room/corsica/Corsica White.webp",
+    "Charcoal": "./images/living-room/corsica/Corsica charcoal.webp",
+    "Sand": "./images/living-room/corsica/Corsica sand.webp"
+  },
+  "finishImages": {
+    "Matt": "./images/living-room/corsica/Corsica gray.webp",
+    "Rustic": "./images/living-room/corsica/Corsica sand.webp"
+  },
+  "sizeImages": {
+    "600×600": "./images/living-room/corsica/Corsica White.webp",
+    "800×800": "./images/living-room/corsica/Corsica White.webp"
+  },
+  "texture": "Marble",
+  "finish": ["Matt", "Rustic"],
+  "sizes": ["600×600", "800×800"],
+  "surface": ["Anti-Skid", "Stain Resistant"],
+  "features": [
+    {
+      "icon": "fa-solid fa-gem",
+      "title": "Marble Veining",
+      "desc": "Authentic, realistic organic veins that mimic the natural depth of fine quarried stone."
+    },
+    {
+      "icon": "fa-solid fa-ban",
+      "title": "Anti-Skid Surface",
+      "desc": "Matte finish properties engineered to provide excellent grip underfoot for high-traffic rooms."
+    },
+    {
+      "icon": "fa-solid fa-leaf",
+      "title": "Versatile Elegance",
+      "desc": "Complements both traditional upscale layouts and minimalist modern concepts seamlessly."
+    }
+  ],
+  "tech": {
+    "Material": "Porcelain",
+    "Origin": "India",
+    "MOHs": "6",
+    "WaterAbsorption": "<0.5%",
+    "SurfaceFinish": "Matt / Rustic",
+    "Thickness": "10 mm",
+    "Rectified": "Yes"
+  }
+},
+
   {
     id: 3,
     title: "Slate Horizon",
     tag: "SLATE HORIZON",
     description:
       "Natural slate texture tiles with rich colour variations and earthy warmth. Each tile carries the organic character of natural stone.",
-    colours: 2,
+    colours: 5,
     finishes: 1,
-    image: "./images/living_room_img4.avif",
+    image: "./images/living-room/Slate Horizon/slate.webp",
     badge: "Slate",
     thumbImages: [
-      "./images/living_room_img4.avif",
-      "./images/slate_thumb1.jpg",
-      "./images/slate_thumb2.jpg",
-      "./images/slate_thumb3.jpg",
+      "./images/living-room/Slate Horizon/Dark Grey Matte Floor.webp",
+      "./images/living-room/Slate Horizon/Horizon Dacite Ash Texture.webp",
+      "./images/living-room/Slate Horizon/Horizon Dacite Slate grey.webp",
+      "./images/living-room/Slate Horizon/Horizon Dacite Slate.webp",
+      "./images/living-room/Slate Horizon/Textured dark grey.webp",
     ],
-    colors: ["Grey", "Brown"],
-    colorsHex: { Grey: "#a0a0a0", Brown: "#7a5c3c" },
-    colorImages: {
-      Grey: "./images/living_room_img4.avif",
-      Brown: "./images/living_room_img3.jpg",
+    colors: [
+      "Dark Grey",
+      "Ash Grey",
+      "Slate White",
+      "Linear Grey",
+      "Textured Grey",
+    ],
+    colorsHex: {
+      "Dark Grey": "#3a3c3e",
+      "Ash Grey": "#949699",
+      "Slate White": "#eceeed",
+      "Linear Grey": "#a8a9ab",
+      "Textured Grey": "#7e858a",
     },
-    finishImages: { Matt: "./images/living_room_img4.avif" },
+    colorImages: {
+      "Dark Grey":
+        "./images/living-room/Slate Horizon/Dark Grey Matte Floor.webp",
+      "Ash Grey":
+        "./images/living-room/Slate Horizon/Horizon Dacite Ash Texture.webp",
+      "Slate White":
+        "./images/living-room/Slate Horizon/Horizon Dacite Slate grey.webp",
+      "Linear Grey":
+        "./images/living-room/Slate Horizon/Horizon Dacite Slate.webp",
+      "Textured Grey":
+        "./images/living-room/Slate Horizon/Textured dark grey.webp",
+    },
+    finishImages: {
+      Matt: "./images/living-room/Slate Horizon/Dark Grey Matte Floor.webp",
+    },
     sizeImages: {
-      "600×600": "./images/living_room_img4.avif",
-      "600×1200": "./images/living_room_img4.avif",
+      "600×600":
+        "./images/living-room/Slate Horizon/Dark Grey Matte Floor.webp",
+      "600×1200":
+        "./images/living-room/Slate Horizon/Horizon Dacite Ash Texture.webp",
     },
     texture: "Stone",
     finish: ["Matt"],
@@ -262,155 +301,195 @@ const TILES = [
     },
   },
   {
-    id: 4,
-    title: "Modern Terrazzo",
-    tag: "MODERN TERRAZZO",
-    description:
-      "Chic composite tiles with decorative stone chips in a white-grey matrix. A contemporary classic that brings artistic flair to any living space.",
-    colours: 2,
-    finishes: 1,
-    image: "./images/living_room_img5.jpg",
-    badge: "Terrazzo",
-    thumbImages: [
-      "./images/living_room_img5.jpg",
-      "./images/terrazzo_thumb1.jpg",
-      "./images/terrazzo_thumb2.jpg",
-      "./images/terrazzo_thumb3.jpg",
-    ],
-    colors: ["White", "Grey"],
-    colorsHex: { White: "#f8f8f8", Grey: "#a0a0a0" },
-    colorImages: {
-      White: "./images/living_room_img5.jpg",
-      Grey: "./images/living_room_img10.avif",
-    },
-    finishImages: { Polished: "./images/living_room_img5.jpg" },
-    sizeImages: {
-      "600×600": "./images/living_room_img5.jpg",
-      "800×800": "./images/living_room_img5.jpg",
-    },
-    texture: "Geometric",
-    finish: ["Polished"],
-    sizes: ["600×600", "800×800"],
-    surface: ["POSH+", "Stain Resistant"],
-    features: [
-      {
-        icon: "fa-solid fa-circle-dot",
-        title: "Terrazzo Pattern",
-        desc: "Classic mid-century design enjoying a major contemporary revival.",
-      },
-      {
-        icon: "fa-solid fa-star",
-        title: "POSH+ Finish",
-        desc: "High-gloss surface treatment for maximum light reflection.",
-      },
-      {
-        icon: "fa-solid fa-shield-halved",
-        title: "Stain Resistant",
-        desc: "Sealed surface resists everyday staining for easy maintenance.",
-      },
-    ],
-    tech: {
-      Material: "Porcelain",
-      Origin: "Italy",
-      MOHs: "7",
-      WaterAbsorption: "<0.1%",
-      SurfaceFinish: "Polished",
-      Thickness: "9 mm",
-      Rectified: "Yes",
-    },
+  "id": 4,
+  "title": "Modern Terrazzo",
+  "tag": "MODERN TERRAZZO",
+  "description": "Chic composite tiles with decorative stone chips ranging from fine grains to large marble fragments. A contemporary classic that brings artistic flair to any living space.",
+  "colours": 5,
+  "finishes": 2,
+  "image": "./images/living-room/terrazzo/terrazzo.webp",
+  "badge": "Terrazzo",
+  "thumbImages": [
+    "./images/living-room/terrazzo/Terrazzo Grey.webp",
+    "./images/living-room/terrazzo/White Polished -Terrazzo.webp",
+    "./images/living-room/terrazzo/Beige Mix Terrazzo.webp",
+    "./images/living-room/terrazzo/large stone chips terrazzo.webp",
+    "./images/living-room/terrazzo/Latte Terrazzo Carving.webp"
+  ],
+  "colors": ["Grey", "White", "Beige Mix", "Large Chips", "Latte"],
+  "colorsHex": { 
+    "Grey": "#a0a0a0", 
+    "White": "#f8f8f8", 
+    "Beige Mix": "#f1e5d7", 
+    "Large Chips": "#dcdcdc", 
+    "Latte": "#d1bfa7" 
   },
-  {
-    id: 5,
-    title: "Herringbone Classic",
-    tag: "HERRINGBONE CLASSIC",
-    description:
-      "Traditional herringbone pattern in warm wood tones. The iconic zigzag layout adds movement and timeless elegance to living room floors.",
-    colours: 2,
-    finishes: 2,
-    image: "./images/living_room_img6.avif",
-    badge: "Herringbone",
-    thumbImages: [
-      "./images/living_room_img6.avif",
-      "./images/herringbone_thumb1.jpg",
-      "./images/herringbone_thumb2.jpg",
-      "./images/herringbone_thumb3.jpg",
-    ],
-    colors: ["Beige", "Cream"],
-    colorsHex: { Beige: "#c8a87a", Cream: "#e8dcc8" },
-    colorImages: {
-      Beige: "./images/living_room_img6.avif",
-      Cream: "./images/living_room_img2.avif",
-    },
-    finishImages: {
-      Rustic: "./images/living_room_img6.avif",
-      Matt: "./images/living_room_img3.jpg",
-    },
-    sizeImages: {
-      "200×1200": "./images/living_room_img6.avif",
-      "600×600": "./images/living_room_img6.avif",
-    },
-    texture: "Wood",
-    finish: ["Rustic", "Matt"],
-    sizes: ["200×1200", "600×600"],
-    surface: ["Anti-Skid"],
-    features: [
-      {
-        icon: "fa-solid fa-arrow-right-arrow-left",
-        title: "Herringbone Layout",
-        desc: "Classic diagonal pattern adds architectural depth and sophisticated energy.",
-      },
-      {
-        icon: "fa-solid fa-fire-flame-simple",
-        title: "Kiln Fired",
-        desc: "High-temperature firing locks in colour for lifetime vibrancy.",
-      },
-      {
-        icon: "fa-solid fa-ban",
-        title: "Anti-Skid",
-        desc: "Textured surface provides reliable traction throughout the home.",
-      },
-    ],
-    tech: {
-      Material: "Ceramic",
-      Origin: "Spain",
-      MOHs: "5",
-      WaterAbsorption: "<4%",
-      SurfaceFinish: "Rustic / Matt",
-      Thickness: "9 mm",
-      Rectified: "Yes",
-    },
+  "colorImages": {
+    "Grey": "./images/living-room/terrazzo/Terrazzo Grey.webp",
+    "White": "./images/living-room/terrazzo/White Polished -Terrazzo.webp",
+    "Beige Mix": "./images/living-room/terrazzo/Beige Mix Terrazzo.webp",
+    "Large Chips": "./images/living-room/terrazzo/large stone chips terrazzo.webp",
+    "Latte": "./images/living-room/terrazzo/Latte Terrazzo Carving.webp"
   },
+  "finishImages": { 
+    "Polished": "./images/living-room/terrazzo/White Polished -Terrazzo.webp",
+    "Carving": "./images/living-room/terrazzo/Latte Terrazzo Carving.webp"
+  },
+  "sizeImages": {
+    "600×600": "./images/living-room/terrazzo/terrazzo.webp",
+    "800×800": "./images/living-room/terrazzo/terrazzo.webp"
+  },
+  "texture": "Terrazzo",
+  "finish": ["Polished", "Carving"],
+  "sizes": ["600×600", "800×800"],
+  "surface": ["POSH+", "Carving Effect", "Stain Resistant"],
+  "features": [
+    {
+      "icon": "fa-solid fa-circle-dot",
+      "title": "Terrazzo Pattern",
+      "desc": "Classic mid-century design enjoying a major contemporary revival with varied chip sizes."
+    },
+    {
+      "icon": "fa-solid fa-star",
+      "title": "POSH+ Finish",
+      "desc": "High-gloss surface treatment for maximum light reflection."
+    },
+    {
+      "icon": "fa-solid fa-gem",
+      "title": "Carving Texture",
+      "desc": "Subtle surface micro-engravings that follow the natural stone veining."
+    },
+    {
+      "icon": "fa-solid fa-shield-halved",
+      "title": "Stain Resistant",
+      "desc": "Sealed surface resists everyday staining for easy maintenance."
+    }
+  ],
+  "tech": {
+    "Material": "Porcelain",
+    "Origin": "Italy",
+    "MOHs": "7",
+    "WaterAbsorption": "<0.1%",
+    "SurfaceFinish": "Polished / Carving",
+    "Thickness": "9 mm",
+    "Rectified": "Yes"
+  }
+},
+ {
+  "id": 5,
+  "title": "Porcelain Luxury",
+  "tag": "MARBLE & ONYX LOOK",
+  "description": "Exquisite large-format porcelain tiles featuring breathtaking marble veining and translucent onyx patterns. A premium polished surface that floods living spaces with light and high-end sophistication.",
+  "colours": 4,
+  "finishes": 1,
+  "image": "./images/living-room/porcelain/porcelain.webp",
+  "badge": "Polished Slabs",
+  "thumbImages": [
+    "./images/living-room/porcelain/white marble look porcelain.webp",
+    "./images/living-room/porcelain/Onyx-Look Porcelain white.webp",
+    "./images/living-room/porcelain/onyx porelain perl.webp",
+    "./images/living-room/porcelain/porcelain beige.webp"
+  ],
+  "colors": ["White Marble", "Onyx White", "Onyx Pearl", "Beige Marble"],
+  "colorsHex": { 
+    "White Marble": "#fafafa", 
+    "Onyx White": "#fdfbf7", 
+    "Onyx Pearl": "#eae8e4", 
+    "Beige Marble": "#e3caa5" 
+  },
+  "colorImages": {
+    "White Marble": "./images/living-room/porcelain/white marble look porcelain.webp",
+    "Onyx White": "./images/living-room/porcelain/Onyx-Look Porcelain white.webp",
+    "Onyx Pearl": "./images/living-room/porcelain/onyx porelain perl.webp",
+    "Beige Marble": "./images/living-room/porcelain/porcelain beige.webp"
+  },
+  "finishImages": {
+    "Polished": "./images/living-room/porcelain/white marble look porcelain.webp"
+  },
+  "sizeImages": {
+    "600×1200": "./images/living-room/porcelain/porcelain.webp",
+    "800×1600": "./images/living-room/porcelain/porcelain.webp"
+  },
+  "texture": "Marble",
+  "finish": ["Polished"],
+  "sizes": ["600×1200", "800×1600"],
+  "surface": ["High-Gloss Polished", "Stain Resistant"],
+  "features": [
+    {
+      "icon": "fa-solid fa-gem",
+      "title": "Onyx & Marble Grain",
+      "desc": "High-definition digital printing accurately captures the depth and translucent layers of fine natural stone."
+    },
+    {
+      "icon": "fa-solid fa-wand-magic-sparkles",
+      "title": "Mirror Polished",
+      "desc": "Super-glossy coating maximizes natural light reflection, opening up smaller rooms visually."
+    },
+    {
+      "icon": "fa-solid fa-shield-halved",
+      "title": "Stain & Scratch Resistant",
+      "desc": "Impervious porcelain body stands up to heavy foot traffic and spills with easy cleanup."
+    }
+  ],
+  "tech": {
+    "Material": "Porcelain",
+    "Origin": "Spain",
+    "MOHs": "6",
+    "WaterAbsorption": "<0.5%",
+    "SurfaceFinish": "Polished",
+    "Thickness": "9 mm",
+    "Rectified": "Yes"
+  }
+},
   {
     id: 6,
     title: "Urban Concrete",
     tag: "URBAN CONCRETE",
     description:
-      "Industrial-chic concrete effect porcelain with smooth matte finish. Makes a bold contemporary statement in open-plan living spaces.",
-    colours: 2,
+      "Industrial-chic concrete effect porcelain with a smooth matte finish. Makes a bold contemporary statement in open-plan living spaces.",
+    colours: 5,
     finishes: 2,
-    image: "./images/living_room_img7.jpg",
+    image: "./images/living-room/urban Concrete/ConcreteTiles.webp",
     badge: "Concrete",
     thumbImages: [
-      "./images/living_room_img7.jpg",
-      "./images/concrete_thumb1.jpg",
-      "./images/concrete_thumb2.jpg",
-      "./images/concrete_thumb3.jpg",
+      "./images/living-room/urban Concrete/Light Grey Concrete.webp",
+      "./images/living-room/urban Concrete/Medium Grey Concrete Tile.webp",
+      "./images/living-room/urban Concrete/Urban Concrete – Graphite.webp",
+      "./images/living-room/urban Concrete/Urban Concrete – Pearl Grey.webp",
+      "./images/living-room/urban Concrete/Urban Concrete – Terracotta.webp",
     ],
-    colors: ["Grey", "White"],
-    colorsHex: { Grey: "#a0a0a0", White: "#f8f8f8" },
+    colors: [
+      "Light Grey",
+      "Medium Grey",
+      "Graphite",
+      "Pearl Grey",
+      "Terracotta",
+    ],
+    colorsHex: {
+      "Light Grey": "#b3b5b6",
+      "Medium Grey": "#8e8e90",
+      Graphite: "#4b4d4f",
+      "Pearl Grey": "#aba79c",
+      Terracotta: "#5c5451",
+    },
     colorImages: {
-      Grey: "./images/living_room_img7.jpg",
-      White: "./images/living_room_img10.avif",
+      "Light Grey":
+        "./images/living-room/urban Concrete/Light Grey Concrete.webp",
+      "Medium Grey":
+        "./images/living-room/urban Concrete/Medium Grey Concrete Tile.webp",
+      Graphite:
+        "./images/living-room/urban Concrete/Urban Concrete – Graphite.webp",
+      "Pearl Grey":
+        "./images/living-room/urban Concrete/Urban Concrete – Pearl Grey.webp",
+      Terracotta:
+        "./images/living-room/urban Concrete/Urban Concrete – Terracotta.webp",
     },
     finishImages: {
-      Matt: "./images/living_room_img7.jpg",
-      Satin: "./images/living_room_img10.avif",
+      Matt: "./images/living-room/urban Concrete/Medium Grey Concrete Tile.webp",
+      Satin:
+        "./images/living-room/urban Concrete/Urban Concrete – Pearl Grey.webp",
     },
-    sizeImages: {
-      "600×1200": "./images/living_room_img7.jpg",
-      "1200×1200": "./images/living_room_img7.jpg",
-    },
-    texture: "Stone",
+    texture: "Concrete",
     finish: ["Matt", "Satin"],
     sizes: ["600×1200", "1200×1200"],
     surface: ["Anti-Skid", "Scratch Resistant"],
@@ -433,311 +512,356 @@ const TILES = [
     ],
     tech: {
       Material: "Porcelain",
-      Origin: "Italy",
+      Origin: "India",
       MOHs: "7",
       WaterAbsorption: "<0.1%",
       SurfaceFinish: "Matt / Satin",
-      Thickness: "9 mm",
-      Rectified: "Yes",
-    },
-  },
-  {
-    id: 7,
-    title: "Chevron Luxe",
-    tag: "CHEVRON LUXE",
-    description:
-      "Elegant chevron pattern in premium walnut tones. The sharp V-shaped layout creates a dynamic, high-energy floor with contemporary sophistication.",
-    colours: 2,
-    finishes: 1,
-    image: "./images/living_room_img8.jpg",
-    badge: "Chevron",
-    thumbImages: [
-      "./images/living_room_img8.jpg",
-      "./images/chevron_thumb1.jpg",
-      "./images/chevron_thumb2.jpg",
-      "./images/chevron_thumb3.jpg",
-    ],
-    colors: ["Brown", "Beige"],
-    colorsHex: { Brown: "#7a5c3c", Beige: "#c8a87a" },
-    colorImages: {
-      Brown: "./images/living_room_img8.jpg",
-      Beige: "./images/living_room_img6.avif",
-    },
-    finishImages: { Rustic: "./images/living_room_img8.jpg" },
-    sizeImages: {
-      "200×1200": "./images/living_room_img8.jpg",
-      "600×600": "./images/living_room_img8.jpg",
-    },
-    texture: "Wood",
-    finish: ["Rustic"],
-    sizes: ["200×1200", "600×600"],
-    surface: ["Anti-Skid", "Scratch Resistant"],
-    features: [
-      {
-        icon: "fa-solid fa-chevron-up",
-        title: "Chevron Pattern",
-        desc: "Precise V-shaped chevron creates bold directional movement on the floor.",
-      },
-      {
-        icon: "fa-solid fa-tree",
-        title: "Walnut Tone",
-        desc: "Rich warm brown palette evokes the luxury of real walnut hardwood.",
-      },
-      {
-        icon: "fa-solid fa-shield-halved",
-        title: "Scratch Resistant",
-        desc: "Hard-wearing surface stands up to furniture legs and daily traffic.",
-      },
-    ],
-    tech: {
-      Material: "Porcelain",
-      Origin: "Spain",
-      MOHs: "6",
-      WaterAbsorption: "<0.5%",
-      SurfaceFinish: "Rustic",
       Thickness: "10 mm",
       Rectified: "Yes",
     },
   },
   {
-    id: 8,
-    title: "Tuscan Travertine",
-    tag: "TUSCAN TRAVERTINE",
-    description:
-      "Natural stone-look tiles with warm beige tones and characteristic travertine pitting. Brings the romance of Italian architecture into your living room.",
-    colours: 2,
-    finishes: 2,
-    image: "./images/living_room_img9.jpg",
-    badge: "Travertine",
-    thumbImages: [
-      "./images/living_room_img9.jpg",
-      "./images/travertine_thumb1.jpg",
-      "./images/travertine_thumb2.jpg",
-      "./images/travertine_thumb3.jpg",
-    ],
-    colors: ["Beige", "Gold"],
-    colorsHex: { Beige: "#c8a87a", Gold: "#c9a84c" },
-    colorImages: {
-      Beige: "./images/living_room_img9.jpg",
-      Gold: "./images/living_room_img8.jpg",
-    },
-    finishImages: {
-      Polished: "./images/living_room_img9.jpg",
-      Matt: "./images/living_room_img4.avif",
-    },
-    sizeImages: {
-      "600×600": "./images/living_room_img9.jpg",
-      "800×800": "./images/living_room_img9.jpg",
-    },
-    texture: "Marble",
-    finish: ["Polished", "Matt"],
-    sizes: ["600×600", "800×800"],
-    surface: ["Stain Resistant", "POSH+"],
-    features: [
-      {
-        icon: "fa-solid fa-mountain",
-        title: "Travertine Texture",
-        desc: "Unique natural pitting and veining replicated with high fidelity.",
-      },
-      {
-        icon: "fa-solid fa-sun",
-        title: "Warm Palette",
-        desc: "Golden-beige tones create a welcoming Mediterranean atmosphere.",
-      },
-      {
-        icon: "fa-solid fa-shield-halved",
-        title: "Stain Resistant",
-        desc: "Sealed surface keeps the warm tones pristine for years.",
-      },
-    ],
-    tech: {
-      Material: "Porcelain",
-      Origin: "Turkey",
-      MOHs: "6",
-      WaterAbsorption: "<0.5%",
-      SurfaceFinish: "Polished / Matt",
-      Thickness: "10 mm",
-      Rectified: "Yes",
-    },
+  "id": 7,
+  "title": "Botticino Elegance",
+  "tag": "BOTTICINO MARBLE LOOK",
+  "description": "Luxurious porcelain slabs capturing the soft, timeless appeal of classic Botticino marble. The delicate veining and warm beige tones combined with a mirror-like polished finish flood living areas with spacious, high-end warmth.",
+  "colours": 5,
+  "finishes": 1,
+  "image": "./images/living-room/Botticino/Botticino.webp",
+  "badge": "Polished Marble",
+  "thumbImages": [
+    "./images/living-room/Botticino/Cream bottocino.webp",
+    "./images/living-room/Botticino/Golden Beige bottocino.webp",
+    "./images/living-room/Botticino/Ivory Beige bottocino.webp",
+    "./images/living-room/Botticino/Light Beige bottocino.webp",
+    "./images/living-room/Botticino/Warm Sand Beige bottocino.webp"
+  ],
+  "colors": ["Cream", "Golden Beige", "Ivory Beige", "Light Beige", "Warm Sand Beige"],
+  "colorsHex": {
+    "Cream": "#fcf5e8",
+    "Golden Beige": "#ebdcb9",
+    "Ivory Beige": "#faf5eb",
+    "Light Beige": "#f2e7d3",
+    "Warm Sand Beige": "#e2d3be"
   },
-  {
-    id: 9,
-    title: "French Parquet",
-    tag: "FRENCH PARQUET",
-    description:
-      "Traditional parquet design with rich mahogany tones. The intricate interlocking pattern of classic French parquet, now in easy-care porcelain.",
-    colours: 2,
-    finishes: 1,
-    image: "./images/living_room_img10.avif",
-    badge: "Parquet",
-    thumbImages: [
-      "./images/living_room_img10.avif",
-      "./images/parquet_thumb1.jpg",
-      "./images/parquet_thumb2.jpg",
-      "./images/parquet_thumb3.jpg",
-    ],
-    colors: ["Brown", "Beige"],
-    colorsHex: { Brown: "#7a5c3c", Beige: "#c8a87a" },
-    colorImages: {
-      Brown: "./images/living_room_img10.avif",
-      Beige: "./images/living_room_img6.avif",
+  "colorImages": {
+    "Cream": "./images/living-room/Botticino/Light Beige bottocino.webp",
+    "Golden Beige": "./images/living-room/Botticino/Ivory Beige bottocino.webp",
+    "Ivory Beige": "./images/living-room/Botticino/Golden Beige bottocino.webp",
+    "Light Beige": "./images/living-room/Botticino/Cream bottocino.webp",
+    "Warm Sand Beige":   "./images/living-room/Botticino/Warm Sand Beige bottocino.webp"
+  },
+  "finishImages": {
+    "Polished": "./images/living-room/Botticino/Botticino.webp"
+  },
+  "sizeImages": {
+    "600×1200": "./images/living-room/Botticino/Botticino.webp",
+    "800×1600": "./images/living-room/Botticino/Botticino.webp"
+  },
+  "texture": "Marble",
+  "finish": ["Polished"],
+  "sizes": ["600×1200", "800×1600"],
+  "surface": ["High-Gloss Polished", "Scratch Resistant"],
+  "features": [
+    {
+      "icon": "fa-solid fa-gem",
+      "title": "Classic Botticino Texture",
+      "desc": "Intricate, fine-veined details replicate the classic Italian stone with exceptional visual depth."
     },
-    finishImages: { Rustic: "./images/living_room_img10.avif" },
-    sizeImages: {
-      "600×600": "./images/living_room_img10.avif",
-      "800×800": "./images/living_room_img10.avif",
+    {
+      "icon": "fa-solid fa-wand-magic-sparkles",
+      "title": "Mirror Polished Gloss",
+      "desc": "A gleaming, reflective finish that enhances interior lighting and lends an air of spacious luxury."
     },
-    texture: "Wood",
-    finish: ["Rustic"],
-    sizes: ["600×600", "800×800"],
-    surface: ["Anti-Skid", "Scratch Resistant"],
-    features: [
-      {
-        icon: "fa-solid fa-table-cells",
-        title: "Parquet Pattern",
-        desc: "Classic French basketweave layout in rich mahogany tones.",
-      },
-      {
-        icon: "fa-solid fa-shield-halved",
-        title: "Scratch Resistant",
-        desc: "Dense porcelain surface withstands furniture and daily foot traffic.",
-      },
-      {
-        icon: "fa-solid fa-droplet-slash",
-        title: "Waterproof",
-        desc: "Porcelain won't warp or swell — perfect for all climates.",
-      },
-    ],
-    tech: {
-      Material: "Porcelain",
-      Origin: "France",
-      MOHs: "7",
-      WaterAbsorption: "<0.1%",
-      SurfaceFinish: "Rustic",
-      Thickness: "10 mm",
-      Rectified: "Yes",
+    {
+      "icon": "fa-solid fa-shield-halved",
+      "title": "Scratch Resistant",
+      "desc": "Hard-wearing polished surface robustly defends against furniture markings and everyday foot traffic."
+    }
+  ],
+  "tech": {
+    "Material": "Porcelain",
+    "Origin": "Spain",
+    "MOHs": "6",
+    "WaterAbsorption": "<0.5%",
+    "SurfaceFinish": "Polished",
+    "Thickness": "10 mm",
+    "Rectified": "Yes"
+  }
+},
+ {
+  "id": 8,
+  "title": "Tuscan Travertine",
+  "tag": "TUSCAN TRAVERTINE",
+  "description": "Natural stone-look tiles with warm beige tones and characteristic travertine pitting. Brings the romance of Italian architecture into your living room.",
+  "colours": 5,
+  "finishes": 2,
+  "image": "./images/living-room/travertine/Travertine.webp",
+  "badge": "Travertine",
+  "thumbImages": [
+    "./images/living-room/travertine/Classic Travertine.webp",
+    "./images/living-room/travertine/Crema Travertine.webp",
+    "./images/living-room/travertine/Ivory Travertine.webp",
+    "./images/living-room/travertine/Pearl Travertine.webp",
+    "./images/living-room/travertine/Tuscany Beige.webp"
+  ],
+  "colors": ["Classic Travertine", "Crema Travertine", "Ivory Travertine", "Pearl Travertine", "Tuscany Beige"],
+  "colorsHex": { 
+    "Classic Travertine": "#e5d1b5", 
+    "Crema Travertine": "#ebd9c3", 
+    "Ivory Travertine": "#f3ebd9", 
+    "Pearl Travertine": "#dfdad2", 
+    "Tuscany Beige": "#d9c3a3" 
+  },
+  "colorImages": {
+    "Classic Travertine": "./images/living-room/travertine/Classic Travertine.webp",
+    "Crema Travertine": "./images/living-room/travertine/Crema Travertine.webp",
+    "Ivory Travertine": "./images/living-room/travertine/Ivory Travertine.webp",
+    "Pearl Travertine": "./images/living-room/travertine/Pearl Travertine.webp",
+    "Tuscany Beige": "./images/living-room/travertine/Tuscany Beige.webp"
+  },
+  "finishImages": {
+    "Polished": "./images/living-room/travertine/Travertine.webp",
+    "Matt": "./images/living-room/travertine/Classic Travertine.webp"
+  },
+  "sizeImages": {
+    "600×600": "./images/living-room/travertine/Travertine.webp",
+    "800×800": "./images/living-room/travertine/Travertine.webp"
+  },
+  "texture": "Travertine",
+  "finish": ["Polished", "Matt"],
+  "sizes": ["600×600", "800×800"],
+  "surface": ["Stain Resistant", "POSH+"],
+  "features": [
+    {
+      "icon": "fa-solid fa-mountain",
+      "title": "Travertine Texture",
+      "desc": "Unique natural pitting and veining replicated with high fidelity."
     },
+    {
+      "icon": "fa-solid fa-sun",
+      "title": "Warm Palette",
+      "desc": "Golden-beige tones create a welcoming Mediterranean atmosphere."
+    },
+    {
+      "icon": "fa-solid fa-shield-halved",
+      "title": "Stain Resistant",
+      "desc": "Sealed surface keeps the warm tones pristine for years."
+    }
+  ],
+  "tech": {
+    "Material": "Porcelain",
+    "Origin": "Turkey",
+    "MOHs": "6",
+    "WaterAbsorption": "<0.5%",
+    "SurfaceFinish": "Polished / Matt",
+    "Thickness": "10 mm",
+    "Rectified": "Yes"
+  }
+},
+ {
+  id: 9,
+  title: "Catania Marble",
+  tag: "CATANIA MARBLE",
+  description:
+    "An exquisite marble-effect porcelain collection featuring dramatic, luxurious veining and a high-gloss finish that elevates any contemporary living space.",
+  colours: 5,
+  finishes: 1,
+  image: "./images/living-room/Catania/catania.webp",
+  badge: "Marble",
+  thumbImages: [
+    "./images/living-room/Catania/Catania white.webp",
+    "./images/living-room/Catania/Catania Beige.webp",
+    "./images/living-room/Catania/Smoky Grey Catania.webp",
+    "./images/living-room/Catania/Silver Grey Catania.webp",
+    "./images/living-room/Catania/Light Grey Catania.webp",
+  ],
+  colors: ["White", "Beige", "Smoky Grey", "Silver Grey", "Light Grey"],
+  colorsHex: { 
+    White: "#f5f5f5", 
+    Beige: "#eadecc", 
+    "Smoky Grey": "#dcdad5", 
+    "Silver Grey": "#cecac3", 
+    "Light Grey": "#d3d3d3" 
+  },
+  colorImages: {
+    White: "./images/living-room/Catania/Catania white.webp",
+    Beige: "./images/living-room/Catania/Catania Beige.webp",
+    "Smoky Grey": "./images/living-room/Catania/Smoky Grey Catania.webp",
+    "Silver Grey": "./images/living-room/Catania/Silver Grey Catania.webp",
+    "Light Grey": "./images/living-room/Catania/Light Grey Catania.webp",
+  },
+  finishImages: { Glossy: "./images/living-room/Catania/catania.webp" },
+  sizeImages: {
+    "600×1200": "./images/living-room/Catania/catania.webp",
+    "800×1600": "./images/living-room/Catania/catania.webp",
+  },
+  texture: "Marble",
+  finish: ["Glossy"],
+  sizes: ["600×1200", "800×1600"], // Rectangular sizes typically suit large-format marble veining better
+  surface: ["High-Gloss", "Scratch Resistant", "Easy Clean"],
+  features: [
+    {
+      icon: "fa-solid fa-gem",
+      title: "Luxurious Veining",
+      desc: "Distinctive, high-fidelity marble veining for a seamless, opulent look.",
+    },
+    {
+      icon: "fa-solid fa-sparkles",
+      title: "High-Gloss Finish",
+      desc: "A beautifully polished surface that reflects light to make spaces feel larger.",
+    },
+    {
+      icon: "fa-solid fa-shield-halved",
+      title: "Durable Porcelain",
+      desc: "The timeless beauty of natural marble without the hassle of sealing or staining.",
+    },
+  ],
+  tech: {
+    Material: "Porcelain",
+    Origin: "Italy",
+    MOHs: "6", // Typical for polished porcelain
+    WaterAbsorption: "<0.05%",
+    SurfaceFinish: "Glossy/Polished",
+    Thickness: "9 mm",
+    Rectified: "Yes",
+  }
   },
   {
     id: 10,
-    title: "Artisan Mosaic",
-    tag: "ARTISAN MOSAIC",
+    title: "Caspian Marble Series",
+    tag: "CASPIAN SERIES",
     description:
-      "Handcrafted mosaic tiles with intricate geometric patterns. Each sheet is a work of art, adding a unique focal point and storytelling element to living room floors.",
-    colours: 3,
+      "A luxurious collection of large-format porcelain tiles inspired by natural stone and marble. Featuring deep veining and soft granular textures, this series brings timeless elegance and sophisticated scale to modern living room floors.",
+    colours: 5,
     finishes: 1,
-    image: "./images/living_room_img11.jpg",
-    badge: "Mosaic",
+    image: "./images/living-room/caspian/Caspian.webp",
+    badge: "Premium Stone",
     thumbImages: [
-      "./images/living_room_img11.jpg",
-      "./images/mosaic_thumb1.jpg",
-      "./images/mosaic_thumb2.jpg",
-      "./images/mosaic_thumb3.jpg",
+      "./images/living-room/caspian/CASPIAN BEIGE.webp", // Converted from .jpg to .webp
+      "./images/living-room/caspian/caspian-black.webp",
+      "./images/living-room/caspian/CASPIAN CREMA.webp",
+      "./images/living-room/caspian/caspian-sea.webp",
+      "./images/living-room/caspian/caspian-desert.webp",
     ],
-    colors: ["Ivory", "Beige", "Gold"],
-    colorsHex: { Ivory: "#f5f0e8", Beige: "#c8a87a", Gold: "#c9a84c" },
+    colors: ["Beige", "Black", "Crema", "Sea", "Desert"],
+    colorsHex: { 
+      Beige: "#9c8e7f", 
+      Black: "#212123", 
+      Crema: "#dcd1be", 
+      Sea: "#dedddc", 
+      Desert: "#e6dac4" 
+    },
     colorImages: {
-      Ivory: "./images/living_room_img11.jpg",
-      Beige: "./images/living_room_img12.jpg",
-      Gold: "./images/living_room_img9.jpg",
+      Beige: "./images/living-room/caspian/CASPIAN BEIGE.webp", // Converted to .webp
+      Black: "./images/living-room/caspian/caspian-black.webp",
+      Crema: "./images/living-room/caspian/CASPIAN CREMA.webp",
+      Sea: "./images/living-room/caspian/caspian-sea.webp",
+      Desert: "./images/living-room/caspian/caspian-desert.webp",
     },
-    finishImages: { Glazed: "./images/living_room_img11.jpg" },
+    finishImages: { "POSH+": "./images/living-room/caspian/Caspian.webp" },
     sizeImages: {
-      "600×600": "./images/living_room_img11.jpg",
-      "800×800": "./images/living_room_img11.jpg",
+      "600×1200": "./images/living-room/caspian/Caspian.webp",
+      "800×1600": "./images/living-room/caspian/Caspian.webp",
     },
-    texture: "Mosaic",
-    finish: ["Glazed"],
-    sizes: ["600×600", "800×800"],
+    texture: "Marble / Granular Stone",
+    finish: ["Polished"],
+    sizes: ["600×1200", "800×1600"],
     surface: ["POSH+"],
     features: [
       {
-        icon: "fa-solid fa-compass-drafting",
-        title: "Intricate Pattern",
-        desc: "Hand-set mosaic pieces create stunning geometric medallion designs.",
+        icon: "fa-solid fa-gem",
+        title: "Natural Veining",
+        desc: "High-definition digital printing captures the authentic, organic veining of rare marble.",
       },
       {
-        icon: "fa-solid fa-palette",
-        title: "Gold Accents",
-        desc: "Metallic gold detailing adds warmth and opulence to the design.",
-      },
-      {
-        icon: "fa-solid fa-layer-group",
-        title: "Mesh Backed",
-        desc: "Pre-mounted sheets ensure precise alignment and easy installation.",
-      },
-    ],
-    tech: {
-      Material: "Ceramic / Glass",
-      Origin: "Morocco",
-      MOHs: "5",
-      WaterAbsorption: "<3%",
-      SurfaceFinish: "Glazed",
-      Thickness: "8 mm",
-      Rectified: "No",
-    },
-  },
-  {
-    id: 11,
-    title: "Limestone Harmony",
-    tag: "LIMESTONE HARMONY",
-    description:
-      "Natural limestone-look tiles with soft texture and subtle tonal variation. A calm, refined choice that suits both traditional and contemporary living rooms.",
-    colours: 2,
-    finishes: 2,
-    image: "./images/living_room_img12.jpg",
-    badge: "Limestone",
-    thumbImages: [
-      "./images/living_room_img12.jpg",
-      "./images/limestone_thumb1.jpg",
-      "./images/limestone_thumb2.jpg",
-      "./images/limestone_thumb3.jpg",
-    ],
-    colors: ["Ivory", "Cream"],
-    colorsHex: { Ivory: "#f5f0e8", Cream: "#e8dcc8" },
-    colorImages: {
-      Ivory: "./images/living_room_img12.jpg",
-      Cream: "./images/living_room_img1.avif",
-    },
-    finishImages: {
-      Matt: "./images/living_room_img12.jpg",
-      Satin: "./images/living_room_img4.avif",
-    },
-    sizeImages: {
-      "600×600": "./images/living_room_img12.jpg",
-      "600×1200": "./images/living_room_img12.jpg",
-    },
-    texture: "Stone",
-    finish: ["Matt", "Satin"],
-    sizes: ["600×600", "600×1200"],
-    surface: ["Stain Resistant", "Scratch Resistant"],
-    features: [
-      {
-        icon: "fa-solid fa-mountain",
-        title: "Limestone Texture",
-        desc: "Subtle natural surface variation delivers calm organic sophistication.",
-      },
-      {
-        icon: "fa-solid fa-temperature-half",
-        title: "Thermal Stable",
-        desc: "Maintains structural integrity across all temperature conditions.",
+        icon: "fa-solid fa-expand",
+        title: "Seamless Grandeur",
+        desc: "Large-format dimensions minimize grout lines for a continuous, spacious stone look.",
       },
       {
         icon: "fa-solid fa-shield-halved",
-        title: "Scratch Resistant",
-        desc: "Hard-fired surface resists everyday wear and furniture movement.",
+        title: "Stain & Scratch Resistant",
+        desc: "Advanced vitrified surface protection keeps your polished floor pristine over time.",
       },
     ],
     tech: {
-      Material: "Porcelain",
-      Origin: "Portugal",
-      MOHs: "6",
+      Material: "Glazed Vitrified / Porcelain",
+      Origin: "India",
+      MOHs: "6 - 7",
       WaterAbsorption: "<0.5%",
-      SurfaceFinish: "Matt / Satin",
+      SurfaceFinish: "Polished High-Gloss (POSH+)",
       Thickness: "9 mm",
       Rectified: "Yes",
     },
   },
+ {
+  "id": 11,
+  "title": "Limestone Harmony",
+  "tag": "LIMESTONE HARMONY",
+  "description": "Natural limestone-look tiles with soft texture and subtle tonal variation. A calm, refined choice that suits both traditional and contemporary living rooms.",
+  "colours": 4,
+  "finishes": 2,
+  "image": "./images/living-room/Harmony/Limestone Harmony.webp",
+  "badge": "Limestone",
+  "thumbImages": [
+    "./images/living-room/Harmony/Cream Harmony.webp",
+    "./images/living-room/Harmony/Tuscany Beige.webp",
+    "./images/living-room/Harmony/Sand Harmony.webp",
+    "./images/living-room/Harmony/Light Grey Harmony.webp"
+  ],
+  "colors": ["Cream Harmony", "Tuscany Beige", "Sand Harmony", "Light Grey Harmony"],
+  "colorsHex": { 
+    "Cream Harmony": "#f4f1ea", 
+    "Tuscany Beige": "#ebd9be", 
+    "Sand Harmony": "#cca585", 
+    "Light Grey Harmony": "#8b8d8e" 
+  },
+  "colorImages": {
+    "Cream Harmony": "./images/living-room/Harmony/Cream Harmony.webp",
+    "Tuscany Beige": "./images/living-room/Harmony/Tuscany Beige.webp",
+    "Sand Harmony": "./images/living-room/Harmony/Sand Harmony.webp",
+    "Light Grey Harmony": "./images/living-room/Harmony/Light Grey Harmony.webp"
+  },
+  "finishImages": {
+    "Matt": "./images/living-room/Harmony/Cream Harmony.webp",
+    "Satin": "./images/living-room/Harmony/Tuscany Beige_2.webp"
+  },
+  "sizeImages": {
+    "600×600": "./images/living-room/Harmony/Cream Harmony.webp",
+    "600×1200": "./images/living-room/Harmony/Cream Harmony.webp"
+  },
+  "texture": "Limestone",
+  "finish": ["Matt", "Satin"],
+  "sizes": ["600×600", "600×1200"],
+  "surface": ["Stain Resistant", "Scratch Resistant"],
+  "features": [
+    {
+      "icon": "fa-solid fa-mountain",
+      "title": "Limestone Texture",
+      "desc": "Subtle natural surface variation delivers calm organic sophistication."
+    },
+    {
+      "icon": "fa-solid fa-temperature-half",
+      "title": "Thermal Stable",
+      "desc": "Maintains structural integrity across all temperature conditions."
+    },
+    {
+      "icon": "fa-solid fa-shield-halved",
+      "title": "Scratch Resistant",
+      "desc": "Hard-fired surface resists everyday wear and furniture movement."
+    }
+  ],
+  "tech": {
+    "Material": "Porcelain",
+    "Origin": "Portugal",
+    "MOHs": "6",
+    "WaterAbsorption": "<0.5%",
+    "SurfaceFinish": "Matt / Satin",
+    "Thickness": "9 mm",
+    "Rectified": "Yes"
+  }
+}
 ];
 
 const FEATURED_IDS = [0, 5, 8, 6];

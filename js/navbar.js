@@ -22,7 +22,7 @@ let navbar = (document.getElementById("navbar").innerHTML =
                                 <li><a href="bathroom_floor_tiles.html"><i class="fas fa-check-circle"></i> Bathroom Tiles</a></li>
                                 <li><a href="kitchen_floor_tiles.html"><i class="fas fa-check-circle"></i> Kitchen Tiles</a></li>
                                 <li><a href="outdoor_floor_tiles.html"><i class="fas fa-check-circle"></i> Outdoor Tiles</a></li>
-                                <li><a href="livingroom_floor_tiles.html"><i class="fas fa-check-circle"></i> Living Room Tiles</a></li>
+                                <li><a href="livingroom_wall_tiles.html"><i class="fas fa-check-circle"></i> Living Room Tiles</a></li>
                             <li><a href="bedroom_wall_tiles.html"><i class="fas fa-check-circle"></i> Bedroom Tiles</a></li>
                                 <li><a href="commercial_floor_tiles.html"><i class="fas fa-check-circle"></i> Commercial Tiles</a></li>
                             </ul>
@@ -31,7 +31,7 @@ let navbar = (document.getElementById("navbar").innerHTML =
                         <div class="dropdown-column">
                             <h4>Special Tiles</h4>
                             <ul>
-                                <li><a href="special_tiles.html"><i class="fas fa-check-circle"></i> Germ Free Tiles</a></li>
+                                <li><a href="germfree.html"><i class="fas fa-check-circle"></i> Germ Free Tiles</a></li>
                                 <li><a href="#tactile"><i class="fas fa-check-circle"></i> Tactile Floor Tiles</a></li>
                             <li><a href="anti_static.html"><i class="fas fa-check-circle"></i> Anti Static Tiles</a></li>
                                 <li><a href="#cool-roof"><i class="fas fa-check-circle"></i> Cool Roof Tiles</a></li>

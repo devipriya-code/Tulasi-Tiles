@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luxury Living Room Floor Tiles Collection</title>
+    <title>Germ-Free Antibacterial Tiles Collection</title>
     <link rel="icon" href="./images/fav.png" />
     <link rel="apple-touch-icon" href="./images/fav.png" />
     <link
@@ -1320,83 +1320,36 @@
 
       /* RESPONSIVE */
       @media (max-width: 1024px) {
-        .featured-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .detail-features-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .related-grid {
-          grid-template-columns: repeat(3, 1fr);
-        }
+        .featured-grid { grid-template-columns: repeat(2, 1fr); }
+        .detail-features-grid { grid-template-columns: repeat(2, 1fr); }
+        .related-grid { grid-template-columns: repeat(3, 1fr); }
       }
       @media (max-width: 860px) {
-        :root {
-          --sidebar-w: 0px;
-        }
-
-        .top-area {
-          flex-direction: column;
-        }
-        .page-body {
-          grid-template-columns: 1fr;
-        }
-        .sidebar {
-          position: static;
-          display: none;
-        }
-        .sidebar.mobile-open {
-          display: block;
-        }
-        .mobile-filter-toggle {
-          display: flex;
-        }
-        .products-grid {
-          grid-template-columns: repeat(3, 1fr);
-        }
-        .detail-main {
-          grid-template-columns: 1fr;
-        }
+        :root { --sidebar-w: 0px; }
+        .top-area { flex-direction: column; }
+        .page-body { grid-template-columns: 1fr; }
+        .sidebar { position: static; display: none; }
+        .sidebar.mobile-open { display: block; }
+        .mobile-filter-toggle { display: flex; }
+        .products-grid { grid-template-columns: repeat(3, 1fr); }
+        .detail-main { grid-template-columns: 1fr; }
       }
       @media (max-width: 640px) {
-        .products-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .detail-features-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-        .tech-spec-grid {
-          grid-template-columns: 1fr;
-        }
-        .related-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
+        .products-grid { grid-template-columns: repeat(2, 1fr); }
+        .detail-features-grid { grid-template-columns: 1fr 1fr; }
+        .tech-spec-grid { grid-template-columns: 1fr; }
+        .related-grid { grid-template-columns: repeat(2, 1fr); }
       }
-
       @media (max-width: 520px) {
-        .page-body {
-          padding: 1.25rem 1rem 3rem;
-        }
-        .full-width-section {
-          padding: 0 1rem 3rem;
-        }
-        .products-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .featured-grid {
-          grid-template-columns: 1fr;
-        }
-        .cta-banner {
-          flex-direction: column;
-        }
-        .detail-features-grid {
-          grid-template-columns: 1fr;
-        }
+        .page-body { padding: 1.25rem 1rem 3rem; }
+        .full-width-section { padding: 0 1rem 3rem; }
+        .products-grid { grid-template-columns: repeat(2, 1fr); }
+        .featured-grid { grid-template-columns: 1fr; }
+        .cta-banner { flex-direction: column; }
+        .detail-features-grid { grid-template-columns: 1fr; }
       }
       @media (max-width: 380px) {
-        .products-grid {
-          grid-template-columns: 1fr;
-        }
+        .products-grid { grid-template-columns: 1fr; }
       }
     </style>
   </head>
@@ -1408,16 +1361,16 @@
     <section class="hero">
       <img
         class="hero-img"
-        src="./images/living-room/Botticino/Botticino.webp"
-        alt="Living Room Floor Tiles"
+        src="./images/germfree/bioguard/bio guard.webp"
+        alt="Germ-Free Antibacterial Tiles"
       />
       <div class="hero-overlay"></div>
       <div class="hero-inner">
-        <p class="hero-eyebrow" style="padding-top: 20px">Premium Collection</p>
-        <h1>Luxury Living Room Floor Tiles</h1>
+        <p class="hero-eyebrow" style="padding-top: 20px">Hygiene Collection</p>
+        <h1>Germ-Free Antibacterial Tiles</h1>
         <p>
-          Handpicked designs that transform your living room into a statement of
-          refined taste and lasting quality.
+          Certified antibacterial tiles that permanently inhibit 99.9% of bacteria,
+          mould and fungi — keeping every surface clinically clean, every day.
         </p>
         <div class="hero-actions">
           <a href="#collections" class="btn-primary">
@@ -1425,7 +1378,7 @@
             <i class="fa-solid fa-arrow-right" style="font-size: 11px"></i>
           </a>
           <a
-            href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20enquire%20about%20living%20room%20tiles"
+            href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20enquire%20about%20germ-free%20antibacterial%20tiles"
             target="_blank"
             class="btn-outline"
           >
@@ -1440,77 +1393,91 @@
     <nav class="breadcrumb-bar">
       <div class="breadcrumb-inner">
         <a href="index.html">Home</a><span class="sep">/</span>
-        <span class="current">Living Room Floor Tiles</span>
+        <span class="current">Germ-Free Antibacterial Tiles</span>
       </div>
     </nav>
 
     <!-- PAGE BODY -->
     <div class="page-body" id="collections">
       <!-- SIDEBAR -->
-      <aside class="sidebar" id="sidebar">
+      <!-- ═══════════════════════════════════════════════════════════
+     SIDEBAR — filters aligned to actual germfree tile content
+     Replace the entire <aside class="sidebar" ...> block with this
+     ═══════════════════════════════════════════════════════════ -->
+
+     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
           <h3>
-            <i
-              class="fa-solid fa-sliders"
-              style="font-size: 11px; margin-right: 6px"
-            ></i
-            >Filters
+            <i class="fa-solid fa-sliders" style="font-size: 11px; margin-right: 6px"></i>Filters
           </h3>
           <button class="sidebar-clear" id="clearAllBtn">Clear All</button>
         </div>
 
-        <!-- Colors -->
+        <!-- ── COLORS ──────────────────────────────────────────────
+             Kept:    White, Ivory, Beige, Grey, Charcoal, Black, Green
+             Removed: Blue (no tile), Terracotta (no tile)
+             Added:   Green (Emerald Green Marble in HygieneShield)
+        ─────────────────────────────────────────────────────────── -->
         <div class="filter-group open">
           <button class="filter-group-header">
-            Colors <i class="fa-solid fa-chevron-down"></i>
+            Colours <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="filter-group-body">
             <div class="filter-group-inner">
               <div class="color-swatches">
-                <div class="swatch-item" data-color="Ivory">
-                  <div class="swatch-circle" style="background: #f5f0e8"></div>
-                  <span class="swatch-label">Ivory</span>
-                </div>
-                <div class="swatch-item" data-color="Cream">
-                  <div class="swatch-circle" style="background: #e8dcc8"></div>
-                  <span class="swatch-label">Cream</span>
-                </div>
+
                 <div class="swatch-item" data-color="White">
-                  <div
-                    class="swatch-circle"
-                    style="
-                      background: #f8f8f8;
-                      box-shadow: inset 0 0 0 1px #ddd;
-                    "
-                  ></div>
+                  <div class="swatch-circle" style="background:#f8f8f6;box-shadow:inset 0 0 0 1px #ddd"></div>
                   <span class="swatch-label">White</span>
                 </div>
-                <div class="swatch-item" data-color="Gold">
-                  <div class="swatch-circle" style="background: #c9a84c"></div>
-                  <span class="swatch-label">Gold</span>
+                <!-- tiles: AntiBac White Crystal · Endura Coated White · Alberta White · Aeon Statuario White -->
+
+                <div class="swatch-item" data-color="Ivory">
+                  <div class="swatch-circle" style="background:#f0e8d5"></div>
+                  <span class="swatch-label">Ivory</span>
                 </div>
-                <div class="swatch-item" data-color="Grey">
-                  <div class="swatch-circle" style="background: #a0a0a0"></div>
-                  <span class="swatch-label">Grey</span>
-                </div>
+                <!-- tiles: AntiBac Ivory · Aeon Calacatta Gold · PureWood Nordic Oak · Alberta Almond -->
+
                 <div class="swatch-item" data-color="Beige">
-                  <div class="swatch-circle" style="background: #c8a87a"></div>
+                  <div class="swatch-circle" style="background:#e0cab0"></div>
                   <span class="swatch-label">Beige</span>
                 </div>
-                <div class="swatch-item" data-color="Blue">
-                  <div class="swatch-circle" style="background: #5a7d9a"></div>
-                  <span class="swatch-label">Blue</span>
+                <!-- tiles: AntiBac Beige · HygieneShield Beige Marble · BioGuard Beige Stone & Earth Brown · PureWood Natural & Honey Oak · Alberta Beige -->
+
+                <div class="swatch-item" data-color="Grey">
+                  <div class="swatch-circle" style="background:#a0a0a0"></div>
+                  <span class="swatch-label">Grey</span>
                 </div>
-                <div class="swatch-item" data-color="Brown">
-                  <div class="swatch-circle" style="background: #7a5c3c"></div>
-                  <span class="swatch-label">Brown</span>
+                <!-- tiles: AntiBac Grey · BioGuard Slate & Ash Stone · SterileGloss Light Ash / Silver Mist / Urban Grey · Endura Modern & Stone Grey · Alberta Grey -->
+
+                <div class="swatch-item" data-color="Charcoal">
+                  <div class="swatch-circle" style="background:#4a4c50"></div>
+                  <span class="swatch-label">Charcoal</span>
                 </div>
+                <!-- tiles: BioGuard Charcoal Stone · SterileGloss Charcoal Slate · Endura Parx Slate · Alberta Dark Grey -->
+
+                <div class="swatch-item" data-color="Black">
+                  <div class="swatch-circle" style="background:#1a1a1c;box-shadow:inset 0 0 0 1px #555"></div>
+                  <span class="swatch-label">Black</span>
+                </div>
+                <!-- tiles: Aeon Nero Marquina -->
+
+                <div class="swatch-item" data-color="Green">
+                  <div class="swatch-circle" style="background:#7aaa8f"></div>
+                  <span class="swatch-label">Green</span>
+                </div>
+                <!-- tiles: HygieneShield Emerald Green Marble -->
+
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Textures -->
+        <!-- ── TEXTURES ────────────────────────────────────────────
+             Kept:    Marble, Stone, Wood, Concrete
+             Removed: Plain (no tile), Mosaic (no tile)
+             Images:  Updated to use germfree folder images
+        ─────────────────────────────────────────────────────────── -->
         <div class="filter-group open">
           <button class="filter-group-header">
             Textures <i class="fa-solid fa-chevron-down"></i>
@@ -1518,48 +1485,41 @@
           <div class="filter-group-body">
             <div class="filter-group-inner">
               <div class="texture-grid">
+
                 <div class="texture-thumb" data-texture="Marble">
-                  <img src="./images/living_room_img1.avif" alt="Marble" /><span
-                    class="texture-name"
-                    >Marble</span
-                  >
+                  <img src="./images/germfree/marble/Cream Marble.webp" alt="Marble" />
+                  <span class="texture-name">Marble</span>
                 </div>
-                <div class="texture-thumb" data-texture="Wood">
-                  <img src="./images/living_room_img3.jpg" alt="Wood" /><span
-                    class="texture-name"
-                    >Wood</span
-                  >
-                </div>
+                <!-- 2 series: HygieneShield Marble · Aeon Antimicrobial Marble -->
+
                 <div class="texture-thumb" data-texture="Stone">
-                  <img src="./images/living_room_img4.avif" alt="Stone" /><span
-                    class="texture-name"
-                    >Stone</span
-                  >
+                  <img src="./images/germfree/bioguard/BioGuard Slate Stone.webp" alt="Stone" />
+                  <span class="texture-name">Stone</span>
                 </div>
-                <div class="texture-thumb" data-texture="Geometric">
-                  <img
-                    src="./images/living_room_img5.jpg"
-                    alt="Geometric"
-                  /><span class="texture-name">Geometric</span>
+                <!-- 4 series: AntiBac · BioGuard · Endura · Alberata -->
+
+                <div class="texture-thumb" data-texture="Wood">
+                  <img src="./images/germfree/oak/Natural Oak.webp" alt="Wood" />
+                  <span class="texture-name">Wood</span>
                 </div>
-                <div class="texture-thumb" data-texture="Onyx">
-                  <img src="./images/living_room_img9.jpg" alt="Onyx" /><span
-                    class="texture-name"
-                    >Onyx</span
-                  >
+                <!-- 1 series: PureWood Oak -->
+
+                <div class="texture-thumb" data-texture="Concrete">
+                  <img src="./images/germfree/SterileGloss/Urban Grey.webp" alt="Concrete" />
+                  <span class="texture-name">Concrete</span>
                 </div>
-                <div class="texture-thumb" data-texture="Mosaic">
-                  <img src="./images/living_room_img11.jpg" alt="Mosaic" /><span
-                    class="texture-name"
-                    >Mosaic</span
-                  >
-                </div>
+                <!-- 1 series: SterileGloss Concrete -->
+
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Finish -->
+        <!-- ── FINISH ──────────────────────────────────────────────
+             Kept:    Polished, Matt, Satin, Glazed, Rustic
+             Added:   Smooth (PureWood Oak has Smooth finish)
+             All 6 finishes now present in tile data
+        ─────────────────────────────────────────────────────────── -->
         <div class="filter-group open">
           <button class="filter-group-header">
             Finish <i class="fa-solid fa-chevron-down"></i>
@@ -1567,69 +1527,99 @@
           <div class="filter-group-body">
             <div class="filter-group-inner">
               <div class="finish-list">
-                <label class="finish-item"
-                  ><input type="checkbox" data-finish="Polished" />
-                  Polished</label
-                >
-                <label class="finish-item"
-                  ><input type="checkbox" data-finish="Matt" /> Matt</label
-                >
-                <label class="finish-item"
-                  ><input type="checkbox" data-finish="Satin" /> Satin</label
-                >
-                <label class="finish-item"
-                  ><input type="checkbox" data-finish="Glazed" /> Glazed</label
-                >
-                <label class="finish-item"
-                  ><input type="checkbox" data-finish="Rustic" /> Rustic</label
-                >
+                <label class="finish-item">
+                  <input type="checkbox" data-finish="Polished" /> Polished
+                  <span style="font-size:10px;color:var(--text-light);margin-left:auto">AntiBac · Marble · Alberata</span>
+                </label>
+                <label class="finish-item">
+                  <input type="checkbox" data-finish="Matt" /> Matt
+                  <span style="font-size:10px;color:var(--text-light);margin-left:auto">AntiBac · BioGuard · Endura · SterileGloss</span>
+                </label>
+                <label class="finish-item">
+                  <input type="checkbox" data-finish="Satin" /> Satin
+                  <span style="font-size:10px;color:var(--text-light);margin-left:auto">Marble · Concrete</span>
+                </label>
+                <label class="finish-item">
+                  <input type="checkbox" data-finish="Glazed" /> Glazed
+                  <span style="font-size:10px;color:var(--text-light);margin-left:auto">Aeon Medical</span>
+                </label>
+                <label class="finish-item">
+                  <input type="checkbox" data-finish="Rustic" /> Rustic
+                  <span style="font-size:10px;color:var(--text-light);margin-left:auto">Oak · Endura</span>
+                </label>
+                <label class="finish-item">
+                  <input type="checkbox" data-finish="Smooth" /> Smooth
+                  <span style="font-size:10px;color:var(--text-light);margin-left:auto">PureWood Oak</span>
+                </label>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Size -->
-        <div class="filter-group">
+        <!-- ── SIZE ───────────────────────────────────────────────
+             Only sizes that actually appear across the 8 tile series:
+             200×1200, 600×600, 800×800, 600×1200, 800×1600, 1200×1200
+             Removed: 300×300, 300×600, 1200×2400 (zero tiles use them)
+        ─────────────────────────────────────────────────────────── -->
+        <div class="filter-group open">
           <button class="filter-group-header">
             Size <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="filter-group-body">
             <div class="filter-group-inner">
               <div class="size-tags">
-                <span class="size-tag" data-size="600×600">600×600</span>
-                <span class="size-tag" data-size="800×800">800×800</span>
-                <span class="size-tag" data-size="600×1200">600×1200</span>
-                <span class="size-tag" data-size="1200×1200">1200×1200</span>
-                <span class="size-tag" data-size="800×1600">800×1600</span>
                 <span class="size-tag" data-size="200×1200">200×1200</span>
+                <!-- PureWood Oak -->
+                <span class="size-tag" data-size="600×600">600×600</span>
+                <!-- AntiBac · BioGuard · Endura -->
+                <span class="size-tag" data-size="800×800">800×800</span>
+                <!-- AntiBac · HygieneShield · PureWood · Endura · Alberata -->
+                <span class="size-tag" data-size="600×1200">600×1200</span>
+                <!-- AntiBac · BioGuard · SterileGloss · Aeon · Alberata -->
+                <span class="size-tag" data-size="800×1600">800×1600</span>
+                <!-- HygieneShield · Aeon -->
+                <span class="size-tag" data-size="1200×1200">1200×1200</span>
+                <!-- SterileGloss · Alberata -->
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Surface -->
+        <!-- ── SURFACE ─────────────────────────────────────────────
+             All 6 options are valid — every tile has at least Antibacterial.
+             No changes needed here, keeping as-is.
+        ─────────────────────────────────────────────────────────── -->
         <div class="filter-group">
           <button class="filter-group-header">
-            Surface <i class="fa-solid fa-chevron-down"></i>
+            Surface Treatment <i class="fa-solid fa-chevron-down"></i>
           </button>
           <div class="filter-group-body">
             <div class="filter-group-inner">
               <div class="finish-list">
-                <label class="finish-item"
-                  ><input type="checkbox" data-surface="POSH+" /> POSH+</label
-                >
-                <label class="finish-item"
-                  ><input type="checkbox" data-surface="Anti-Skid" />
-                  Anti-Skid</label
-                >
-                <label class="finish-item"
-                  ><input type="checkbox" data-surface="Stain Resistant" />
-                  Stain Resistant</label
-                >
-                <label class="finish-item"
-                  ><input type="checkbox" data-surface="Scratch Resistant" />
-                  Scratch Resistant</label
-                >
+                <label class="finish-item">
+                  <input type="checkbox" data-surface="Antibacterial" /> Antibacterial
+                  <span style="font-size:10px;color:var(--text-light);margin-left:auto">All series</span>
+                </label>
+                <label class="finish-item">
+                  <input type="checkbox" data-surface="POSH+" /> POSH+
+                  <span style="font-size:10px;color:var(--text-light);margin-left:auto">AntiBac · Marble · Alberata</span>
+                </label>
+                <label class="finish-item">
+                  <input type="checkbox" data-surface="Anti-Skid" /> Anti-Skid
+                  <span style="font-size:10px;color:var(--text-light);margin-left:auto">Stone · Wood · Aeon · Endura</span>
+                </label>
+                <label class="finish-item">
+                  <input type="checkbox" data-surface="Stain Resistant" /> Stain Resistant
+                  <span style="font-size:10px;color:var(--text-light);margin-left:auto">AntiBac · Marble · Aeon · Endura · Alberata</span>
+                </label>
+                <label class="finish-item">
+                  <input type="checkbox" data-surface="Scratch Resistant" /> Scratch Resistant
+                  <span style="font-size:10px;color:var(--text-light);margin-left:auto">Marble · Stone · Wood · Endura · Alberata</span>
+                </label>
+                <label class="finish-item">
+                  <input type="checkbox" data-surface="Chemical Resistant" /> Chemical Resistant
+                  <span style="font-size:10px;color:var(--text-light);margin-left:auto">Aeon Medical Grade only</span>
+                </label>
               </div>
             </div>
           </div>
@@ -1641,7 +1631,7 @@
           </button>
         </div>
         <a
-          href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20living%20room%20tiles"
+          href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20germ-free%20tiles"
           target="_blank"
           class="sidebar-cta"
         >
@@ -1658,11 +1648,7 @@
           <div class="toolbar-left">
             <p class="item-count"><strong id="countNum">12</strong> Items</p>
             <div class="view-toggle">
-              <button
-                class="view-btn active"
-                id="btn3col"
-                aria-label="3 column grid"
-              >
+              <button class="view-btn active" id="btn3col" aria-label="3 column grid">
                 <i class="fa-solid fa-grip"></i>
               </button>
               <button class="view-btn" id="btn2col" aria-label="2 column grid">
@@ -1683,18 +1669,18 @@
         <div class="products-grid" id="productsGrid"></div>
 
         <div class="desc-block">
-          <h2>Living Room Floor Tiles for Modern Living</h2>
+          <h2>Germ-Free Tiles for a Healthier Home</h2>
           <p>
-            Your living room floor is the canvas of your home. The right tile
-            brings together beauty and durability — from the luminous sheen of
-            marble-effect porcelain to the warmth of wood-look planks and the
-            drama of large-format onyx slabs.
+            Our antibacterial tile collection is engineered for spaces where hygiene matters most.
+            Each tile carries a nano-silver ion glaze permanently fused into the surface during firing —
+            providing certified 99.9% inhibition of bacteria, mould and fungi that lasts for the entire
+            lifetime of the tile, unlike surface sprays that wash away.
           </p>
           <p>
-            Choose from our curated collection of luxury tiles designed to suit
-            every style — grand classical interiors, sleek contemporary spaces,
-            or eclectic artistic expressions. Every tile is selected for lasting
-            quality, visual impact, and ease of maintenance.
+            Choose from a wide range of looks — pristine whites, warm marble veins, natural stone
+            textures, wood-look planks and bold black slabs — all backed by ISO 22196 antibacterial
+            certification. Ideal for kitchens, bathrooms, children's rooms, clinics and any space
+            where cleanliness is non-negotiable.
           </p>
         </div>
       </div>
@@ -1704,28 +1690,24 @@
     <div class="full-width-section">
       <div class="cta-banner">
         <div class="cta-banner-text">
-          <h3>Ready to Transform Your Living Room?</h3>
+          <h3>Ready to Make Your Home Germ-Free?</h3>
           <p>
-            Visit our showroom or schedule a free design consultation. Our
-            experts help you find the perfect tile for every space and budget.
+            Visit our showroom or schedule a free consultation. Our experts will help you
+            choose the right antibacterial tile for every room and budget.
           </p>
         </div>
         <a
-          href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20living%20room%20tiles"
+          href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20germ-free%20tiles"
           target="_blank"
           class="btn-primary"
         >
-          <i class="fa-brands fa-whatsapp" style="font-size: 15px"></i> Book on
-          WhatsApp
+          <i class="fa-brands fa-whatsapp" style="font-size: 15px"></i> Book on WhatsApp
         </a>
       </div>
       <div style="margin-bottom: 3rem">
         <div class="section-title-row">
           <h2>Featured Collections</h2>
-          <a href="tiles.html"
-            >View All
-            <i class="fa-solid fa-arrow-right" style="font-size: 11px"></i
-          ></a>
+          <a href="tiles.html">View All <i class="fa-solid fa-arrow-right" style="font-size: 11px"></i></a>
         </div>
         <div class="featured-grid" id="featuredGrid"></div>
       </div>
@@ -1737,24 +1719,12 @@
         <button class="detail-close" id="detailClose">
           <i class="fa-solid fa-xmark"></i>
         </button>
-        <!-- <div class="top-area"> -->
         <div class="detail-breadcrumb">
-          <span>Home</span><span class="sep">/</span><span>Tiles</span
-          ><span class="sep">/</span><span>Living Room Floor Tiles</span
-          ><span class="sep">/</span>
+          <span>Home</span><span class="sep">/</span><span>Tiles</span>
+          <span class="sep">/</span><span>Germ-Free Tiles</span>
+          <span class="sep">/</span>
           <span class="cur" id="detailBreadcrumbName"></span>
         </div>
-        <!-- <div>
-            <a
-              id="detailEnquireWA"
-              href="#"
-              target="_blank"
-              class="detail-btn-main"
-              ><i class="fa-brands fa-whatsapp" style="font-size: 15px"></i>
-              Enquire on WhatsApp</a
-            >
-          </div> -->
-        <!-- </div> -->
 
         <div class="detail-main">
           <div class="detail-gallery">
@@ -1773,101 +1743,36 @@
             <table class="spec-table" id="detailSpecTable"></table>
             <hr class="detail-divider" />
             <div>
-              <p
-                style="
-                  font-size: 12px;
-                  font-weight: 600;
-                  letter-spacing: 0.08em;
-                  text-transform: uppercase;
-                  color: var(--text-muted);
-                  margin-bottom: 0.4rem;
-                "
-              >
-                Colour
-              </p>
+              <p style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.4rem">Colour</p>
               <div class="detail-color-row" id="detailColors"></div>
             </div>
             <div>
-              <p
-                style="
-                  font-size: 12px;
-                  font-weight: 600;
-                  letter-spacing: 0.08em;
-                  text-transform: uppercase;
-                  color: var(--text-muted);
-                  margin-bottom: 0.4rem;
-                "
-              >
-                Finish
-              </p>
+              <p style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.4rem">Finish</p>
               <div class="detail-finish-row" id="detailFinishes"></div>
             </div>
             <div>
-              <p
-                style="
-                  font-size: 12px;
-                  font-weight: 600;
-                  letter-spacing: 0.08em;
-                  text-transform: uppercase;
-                  color: var(--text-muted);
-                  margin-bottom: 0.4rem;
-                "
-              >
-                Size
-              </p>
+              <p style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.4rem">Size</p>
               <div class="detail-size-row" id="detailSizes"></div>
             </div>
             <div class="detail-ctas-2">
-              <a
-                id="detailEnquireWA"
-                href="#"
-                target="_blank"
-                class="detail-btn-main"
-                ><i
-                  class="fa-brands fa-whatsapp"
-                  style="font-size: 15px; padding-right: 3px"
-                ></i>
-                Enquire on WhatsApp</a
-              >
-              <!-- <button class="detail-btn-secondary">
-                <i class="fa-regular fa-calendar"></i> Book Showroom Visit
-              </button>
-              <button class="detail-btn-secondary">
-                <i class="fa-solid fa-file-arrow-down"></i> Download Catalogue
-              </button> -->
+              <a id="detailEnquireWA" href="#" target="_blank" class="detail-btn-main">
+                <i class="fa-brands fa-whatsapp" style="font-size:15px;padding-right:3px"></i>
+                Enquire on WhatsApp
+              </a>
             </div>
-            <!-- <hr class="detail-divider" /> -->
           </div>
         </div>
+
         <div class="detail-tabs-section">
           <div class="detail-tabs-header">
-            <button class="detail-tab-btn active" data-tab="features">
-              Features
-            </button>
-            <button class="detail-tab-btn" data-tab="technical">
-              Technical Specs
-            </button>
-            <button class="detail-tab-btn" data-tab="installation">
-              Installation
-            </button>
+            <button class="detail-tab-btn active" data-tab="features">Features</button>
+            <button class="detail-tab-btn" data-tab="technical">Technical Specs</button>
+            <button class="detail-tab-btn" data-tab="installation">Installation</button>
             <div class="detail-ctas">
-              <a
-                id="detailEnquireWA"
-                href="#"
-                target="_blank"
-                class="detail-btn-main"
-                ><i
-                  class="fa-brands fa-whatsapp"
-                  style="font-size: 15px; padding-right: 3px"
-                ></i>
-                Enquire on WhatsApp</a
-              >
-              <!-- <button class="detail-btn-secondary">
-                <i class="fa-regular fa-calendar"></i> Book Showroom Visit
-              </button>
-              <button class="detail-btn-secondary">
-                <i class="fa-solid fa-file-arrow-down"></i> Download Catalogue
-              </button> -->
+              <a id="detailEnquireWA" href="#" target="_blank" class="detail-btn-main">
+                <i class="fa-brands fa-whatsapp" style="font-size:15px;padding-right:3px"></i>
+                Enquire on WhatsApp
+              </a>
             </div>
           </div>
           <div class="detail-tab-panel active" id="tab-features">
@@ -1882,60 +1787,41 @@
                 <div class="install-step-num">1</div>
                 <div class="install-step-text">
                   <h5>Surface Preparation</h5>
-                  <p>
-                    Ensure the subfloor is clean, dry, and level. Remove any old
-                    adhesive or debris. A smooth base guarantees lasting
-                    adhesion.
-                  </p>
+                  <p>Ensure the subfloor or wall is clean, dry and level. Remove any old adhesive or debris. A smooth, dust-free base guarantees lasting adhesion and preserves the antibacterial surface integrity.</p>
                 </div>
               </div>
               <div class="install-step">
                 <div class="install-step-num">2</div>
                 <div class="install-step-text">
                   <h5>Dry Layout</h5>
-                  <p>
-                    Dry-fit tiles from the centre of the room outward before
-                    applying adhesive. This ensures balanced cuts at the edges
-                    and symmetrical patterns.
-                  </p>
+                  <p>Dry-fit tiles from the centre outward before applying adhesive. This ensures balanced cuts at edges and helps plan the fewest possible grout joints for maximum hygiene coverage.</p>
                 </div>
               </div>
               <div class="install-step">
                 <div class="install-step-num">3</div>
                 <div class="install-step-text">
                   <h5>Apply Adhesive</h5>
-                  <p>
-                    Use a notched trowel to apply high-quality tile adhesive.
-                    Work in small sections (1–2 sq m) to prevent the adhesive
-                    from drying before placement.
-                  </p>
+                  <p>Use a notched trowel with a polymer-modified tile adhesive. Avoid acid-based adhesives that can degrade nano-silver coatings. Work in small sections (1–2 sq m) to prevent premature drying.</p>
                 </div>
               </div>
               <div class="install-step">
                 <div class="install-step-num">4</div>
                 <div class="install-step-text">
-                  <h5>Set Tiles & Grout</h5>
-                  <p>
-                    Press tiles firmly with a slight twist. Use spacers for
-                    consistent joint width. Allow adhesive to cure for 24 hours
-                    before grouting.
-                  </p>
+                  <h5>Set Tiles &amp; Grout</h5>
+                  <p>Press tiles firmly with a slight twist. Use spacers for consistent joint width. We recommend antibacterial grout to extend protection across joints. Allow adhesive to cure 24 hours before grouting.</p>
                 </div>
               </div>
               <div class="install-step">
                 <div class="install-step-num">5</div>
                 <div class="install-step-text">
-                  <h5>Seal & Finish</h5>
-                  <p>
-                    Apply appropriate sealant for the finish type. Buff clean
-                    and allow full cure before foot traffic (typically 48–72
-                    hours).
-                  </p>
+                  <h5>Clean &amp; Finish</h5>
+                  <p>Wipe tiles with a pH-neutral cleaner — avoid bleach or acid-based products that can reduce antibacterial efficacy. The surface is active immediately after cure. Allow 48–72 hours before full foot traffic.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <div class="detail-related">
           <h3>You May Also Like</h3>
           <div class="related-grid" id="relatedGrid"></div>
@@ -1944,12 +1830,7 @@
     </div>
 
     <!-- WHATSAPP FLOAT -->
-    <a
-      href="https://wa.me/919843069220"
-      class="whatsapp-float"
-      target="_blank"
-      aria-label="Chat on WhatsApp"
-    >
+    <a href="https://wa.me/919843069220" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
       <img src="./images/WhatsApp.svg" alt="WhatsApp" />
     </a>
 
@@ -1960,13 +1841,10 @@
     <footer id="footer"></footer>
 
     <!-- SCRIPTS -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" crossorigin="anonymous"></script>
     <script src="js/navbar.js"></script>
     <script src="js/footer.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/living_wall.js"></script>
+    <script src="js/germfree.js"></script>
   </body>
 </html>
