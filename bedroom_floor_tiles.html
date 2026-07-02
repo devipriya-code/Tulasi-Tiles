@@ -247,15 +247,30 @@
         display: none;
       }
       @media (max-width: 962px) {
-        .detail-ctas { display: none !important; }
-        .detail-ctas-2 { display: flex !important; justify-content: center; width: 100%; padding: 15px; margin: 0; }
-        .detail-btn-main { width: 100%; max-width: 320px; }
+        .detail-ctas {
+          display: none !important;
+        }
+        .detail-ctas-2 {
+          display: flex !important;
+          justify-content: center;
+          width: 100%;
+          padding: 15px;
+          margin: 0;
+        }
+        .detail-btn-main {
+          width: 100%;
+          max-width: 320px;
+        }
       }
-      .sidebar-clear:hover { text-decoration: underline; }
+      .sidebar-clear:hover {
+        text-decoration: underline;
+      }
       .filter-group {
         border-bottom: 1px solid var(--border);
       }
-      .filter-group:last-of-type { border-bottom: none; }
+      .filter-group:last-of-type {
+        border-bottom: none;
+      }
       .filter-group-header {
         width: 100%;
         display: flex;
@@ -276,14 +291,20 @@
         color: var(--text-light);
         transition: transform 0.22s;
       }
-      .filter-group.open .filter-group-header i { transform: rotate(180deg); }
+      .filter-group.open .filter-group-header i {
+        transform: rotate(180deg);
+      }
       .filter-group-body {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
       }
-      .filter-group.open .filter-group-body { max-height: 500px; }
-      .filter-group-inner { padding: 0.4rem 1.1rem 1rem; }
+      .filter-group.open .filter-group-body {
+        max-height: 500px;
+      }
+      .filter-group-inner {
+        padding: 0.4rem 1.1rem 1rem;
+      }
       .color-swatches {
         display: flex;
         flex-wrap: wrap;
@@ -305,7 +326,9 @@
         box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
       }
       .swatch-item:hover .swatch-circle,
-      .swatch-item.active .swatch-circle { border-color: var(--accent); }
+      .swatch-item.active .swatch-circle {
+        border-color: var(--accent);
+      }
       .swatch-label {
         font-size: 9.5px;
         color: var(--text-muted);
@@ -327,7 +350,9 @@
         transition: border-color 0.15s;
       }
       .texture-thumb:hover,
-      .texture-thumb.active { border-color: var(--accent); }
+      .texture-thumb.active {
+        border-color: var(--accent);
+      }
       .texture-thumb img {
         width: 100%;
         height: 100%;
@@ -335,7 +360,9 @@
         display: block;
         transition: transform 0.3s;
       }
-      .texture-thumb:hover img { transform: scale(1.06); }
+      .texture-thumb:hover img {
+        transform: scale(1.06);
+      }
       .texture-name {
         position: absolute;
         bottom: 0;
@@ -371,7 +398,9 @@
         cursor: pointer;
         flex-shrink: 0;
       }
-      .finish-item:hover { color: var(--text); }
+      .finish-item:hover {
+        color: var(--text);
+      }
       .size-tags {
         display: flex;
         flex-wrap: wrap;
@@ -415,7 +444,9 @@
         justify-content: center;
         gap: 8px;
       }
-      .btn-apply:hover { background: var(--accent-dark); }
+      .btn-apply:hover {
+        background: var(--accent-dark);
+      }
       .sidebar-cta {
         margin: 0;
         padding: 1.1rem;
@@ -435,7 +466,9 @@
         font-family: var(--ff-body);
         transition: background 0.2s;
       }
-      .sidebar-cta:hover { background: #3a3530; }
+      .sidebar-cta:hover {
+        background: #3a3530;
+      }
       .toolbar {
         display: flex;
         align-items: center;
@@ -453,7 +486,10 @@
         font-size: 13.5px;
         color: var(--text-muted);
       }
-      .item-count strong { color: var(--text); font-weight: 600; }
+      .item-count strong {
+        color: var(--text);
+        font-weight: 600;
+      }
       .view-toggle {
         display: flex;
         gap: 4px;
@@ -519,7 +555,9 @@
         background: var(--border);
         border: 1.5px solid var(--border);
       }
-      .products-grid.two-col { grid-template-columns: repeat(2, 1fr); }
+      .products-grid.two-col {
+        grid-template-columns: repeat(2, 1fr);
+      }
       .prod-card {
         background: var(--surface);
         display: flex;
@@ -539,7 +577,9 @@
         display: block;
         transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       }
-      .prod-card:hover .prod-img-wrap img { transform: scale(1.05); }
+      .prod-card:hover .prod-img-wrap img {
+        transform: scale(1.05);
+      }
       .prod-badge {
         position: absolute;
         top: 10px;
@@ -590,7 +630,10 @@
         font-size: 11px;
         color: var(--text-muted);
       }
-      .prod-meta strong { color: var(--text); font-weight: 600; }
+      .prod-meta strong {
+        color: var(--text);
+        font-weight: 600;
+      }
       .prod-actions {
         display: flex;
         border-top: 1px solid var(--border);
@@ -609,15 +652,25 @@
         align-items: center;
         justify-content: center;
         gap: 4px;
-        transition: background 0.15s, color 0.15s;
+        transition:
+          background 0.15s,
+          color 0.15s;
         letter-spacing: 0.02em;
         text-decoration: none;
         color: var(--text);
       }
-      .prod-btn-view { border-right: 1px solid var(--border); }
-      .prod-btn-view:hover { background: #f5f5f3; }
-      .prod-btn-enquire { color: var(--accent-dark); }
-      .prod-btn-enquire:hover { background: var(--accent-light); }
+      .prod-btn-view {
+        border-right: 1px solid var(--border);
+      }
+      .prod-btn-view:hover {
+        background: #f5f5f3;
+      }
+      .prod-btn-enquire {
+        color: var(--accent-dark);
+      }
+      .prod-btn-enquire:hover {
+        background: var(--accent-light);
+      }
       .no-results {
         grid-column: 1/-1;
         padding: 3rem 1.5rem;
@@ -691,8 +744,12 @@
         object-fit: cover;
         transition: transform 0.5s;
       }
-      .feat-card:hover .feat-img img { transform: scale(1.05); }
-      .feat-body { padding: 0.75rem 0.85rem; }
+      .feat-card:hover .feat-img img {
+        transform: scale(1.05);
+      }
+      .feat-body {
+        padding: 0.75rem 0.85rem;
+      }
       .detail-overlay {
         position: fixed;
         inset: 0;
@@ -701,7 +758,9 @@
         display: none;
         overflow-y: auto;
       }
-      .detail-overlay.open { display: block; }
+      .detail-overlay.open {
+        display: block;
+      }
       .detail-modal {
         background: var(--bg);
         max-width: 1200px;
@@ -740,13 +799,20 @@
         gap: 0;
         background: var(--border);
       }
-      .detail-gallery { background: var(--surface); padding: 0; }
+      .detail-gallery {
+        background: var(--surface);
+        padding: 0;
+      }
       .detail-gallery-main {
         aspect-ratio: 4/3;
         overflow: hidden;
         background: #f0ece6;
       }
-      .detail-gallery-main img { width: 100%; height: 100%; object-fit: cover; }
+      .detail-gallery-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
       .detail-thumbs {
         display: flex;
         gap: 2px;
@@ -761,7 +827,9 @@
         border: 2px solid transparent;
       }
       .detail-thumb.active,
-      .detail-thumb:hover { border-color: var(--accent); }
+      .detail-thumb:hover {
+        border-color: var(--accent);
+      }
       .detail-info {
         background: var(--surface);
         padding: 2rem 1.75rem;
@@ -786,10 +854,20 @@
         width: 100%;
         border-collapse: collapse;
       }
-      .spec-table tr { border-bottom: 1px solid var(--border); }
-      .spec-table td { padding: 0.6rem 0; font-size: 13px; }
-      .spec-table td:first-child { color: var(--text-muted); width: 50%; }
-      .detail-color-row, .detail-finish-row, .detail-size-row {
+      .spec-table tr {
+        border-bottom: 1px solid var(--border);
+      }
+      .spec-table td {
+        padding: 0.6rem 0;
+        font-size: 13px;
+      }
+      .spec-table td:first-child {
+        color: var(--text-muted);
+        width: 50%;
+      }
+      .detail-color-row,
+      .detail-finish-row,
+      .detail-size-row {
         display: flex;
         gap: 8px;
         flex-wrap: wrap;
@@ -802,15 +880,20 @@
         border: 2px solid var(--border);
         cursor: pointer;
       }
-      .detail-swatch.active, .detail-swatch:hover { border-color: var(--accent); }
-      .detail-finish-tag, .detail-size-btn {
+      .detail-swatch.active,
+      .detail-swatch:hover {
+        border-color: var(--accent);
+      }
+      .detail-finish-tag,
+      .detail-size-btn {
         padding: 5px 12px;
         border: 1px solid var(--border);
         font-size: 12px;
         cursor: pointer;
         background: var(--surface);
       }
-      .detail-finish-tag.active, .detail-size-btn.active {
+      .detail-finish-tag.active,
+      .detail-size-btn.active {
         border-color: var(--accent);
         color: var(--accent);
         background: var(--accent-light);
@@ -852,8 +935,13 @@
         color: var(--accent);
         border-bottom-color: var(--accent);
       }
-      .detail-tab-panel { display: none; padding: 1.75rem 2rem; }
-      .detail-tab-panel.active { display: block; }
+      .detail-tab-panel {
+        display: none;
+        padding: 1.75rem 2rem;
+      }
+      .detail-tab-panel.active {
+        display: block;
+      }
       .detail-features-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -921,18 +1009,38 @@
         cursor: pointer;
       }
       @media (max-width: 860px) {
-        .page-body { grid-template-columns: 1fr; }
-        .sidebar { display: none; }
-        .sidebar.mobile-open { display: block; }
-        .mobile-filter-toggle { display: flex; }
-        .products-grid { grid-template-columns: repeat(2, 1fr); }
-        .detail-main { grid-template-columns: 1fr; }
-        .featured-grid { grid-template-columns: repeat(2, 1fr); }
+        .page-body {
+          grid-template-columns: 1fr;
+        }
+        .sidebar {
+          display: none;
+        }
+        .sidebar.mobile-open {
+          display: block;
+        }
+        .mobile-filter-toggle {
+          display: flex;
+        }
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .detail-main {
+          grid-template-columns: 1fr;
+        }
+        .featured-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
       @media (max-width: 640px) {
-        .products-grid { grid-template-columns: repeat(2, 1fr); }
-        .detail-features-grid { grid-template-columns: 1fr; }
-        .related-grid { grid-template-columns: repeat(2, 1fr); }
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .detail-features-grid {
+          grid-template-columns: 1fr;
+        }
+        .related-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
       .whatsapp-float {
         position: fixed;
@@ -947,70 +1055,362 @@
         justify-content: center;
         z-index: 200;
       }
-      #scrollTopBtn {
-        position: fixed;
-        bottom: 84px;
-        right: 24px;
-        width: 40px;
-        height: 40px;
-        background: var(--text);
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        display: none;
-        z-index: 200;
-      }
     </style>
   </head>
   <body>
     <header id="navbar"></header>
 
     <section class="hero">
-      <img class="hero-img" src="./images/bedroom_hero.jpg" alt="Bedroom Floor Tiles" onerror="this.src='https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1920&h=1080&fit=crop'">
+      <img
+        class="hero-img"
+        src="./images/bedroom_hero.jpg"
+        alt="Bedroom Floor Tiles"
+        onerror="
+          this.src =
+            'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1920&h=1080&fit=crop'
+        "
+      />
       <div class="hero-overlay"></div>
       <div class="hero-inner">
         <p class="hero-eyebrow" style="padding-top: 20px">Premium Collection</p>
         <h1>Luxury Bedroom Floor Tiles</h1>
-        <p>Handpicked designs that transform your bedroom into a sanctuary of refined taste and lasting quality.</p>
+        <p>
+          Handpicked designs that transform your bedroom into a sanctuary of
+          refined taste and lasting quality.
+        </p>
         <div class="hero-actions">
-          <a href="#collections" class="btn-primary">Explore Collection <i class="fa-solid fa-arrow-right"></i></a>
-          <a href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20enquire%20about%20bedroom%20tiles" target="_blank" class="btn-outline"><i class="fa-brands fa-whatsapp"></i> Enquire Now</a>
+          <a href="#collections" class="btn-primary"
+            >Explore Collection <i class="fa-solid fa-arrow-right"></i
+          ></a>
+          <a
+            href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20enquire%20about%20bedroom%20tiles"
+            target="_blank"
+            class="btn-outline"
+            ><i class="fa-brands fa-whatsapp"></i> Enquire Now</a
+          >
         </div>
       </div>
     </section>
 
     <nav class="breadcrumb-bar">
-      <div class="breadcrumb-inner"><a href="index.html">Home</a><span class="sep">/</span><span class="current">Bedroom Floor Tiles</span></div>
+      <div class="breadcrumb-inner">
+        <a href="index.html">Home</a><span class="sep">/</span
+        ><span class="current">Bedroom Floor Tiles</span>
+      </div>
     </nav>
 
     <div class="page-body" id="collections">
       <aside class="sidebar" id="sidebar">
-        <div class="sidebar-header"><h3><i class="fa-solid fa-sliders"></i> Filters</h3><button class="sidebar-clear" id="clearAllBtn">Clear All</button></div>
-        <div class="filter-group open"><button class="filter-group-header">Colors <i class="fa-solid fa-chevron-down"></i></button><div class="filter-group-body"><div class="filter-group-inner"><div class="color-swatches" id="colorSwatches"></div></div></div></div>
-        <div class="filter-group open"><button class="filter-group-header">Textures <i class="fa-solid fa-chevron-down"></i></button><div class="filter-group-body"><div class="filter-group-inner"><div class="texture-grid" id="textureGrid"></div></div></div></div>
-        <div class="filter-group open"><button class="filter-group-header">Finish <i class="fa-solid fa-chevron-down"></i></button><div class="filter-group-body"><div class="filter-group-inner"><div class="finish-list" id="finishList"></div></div></div></div>
-        <div class="filter-group"><button class="filter-group-header">Size <i class="fa-solid fa-chevron-down"></i></button><div class="filter-group-body"><div class="filter-group-inner"><div class="size-tags" id="sizeTags"></div></div></div></div>
-        <div class="filter-group"><button class="filter-group-header">Surface <i class="fa-solid fa-chevron-down"></i></button><div class="filter-group-body"><div class="filter-group-inner"><div class="finish-list"><label class="finish-item"><input type="checkbox" data-surface="POSH+"> POSH+</label><label class="finish-item"><input type="checkbox" data-surface="Anti-Skid"> Anti-Skid</label><label class="finish-item"><input type="checkbox" data-surface="Stain Resistant"> Stain Resistant</label></div></div></div></div>
-        <div class="apply-filters-wrap"><button class="btn-apply" id="applyFiltersBtn"><i class="fa-solid fa-check"></i> Apply Filters</button></div>
-        <a href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20bedroom%20tiles" target="_blank" class="sidebar-cta"><i class="fa-brands fa-whatsapp"></i> Book on WhatsApp</a>
+        <div class="sidebar-header">
+          <h3><i class="fa-solid fa-sliders"></i> Filters</h3>
+          <button class="sidebar-clear" id="clearAllBtn">Clear All</button>
+        </div>
+        <div class="filter-group open">
+          <button class="filter-group-header">
+            Colors <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="color-swatches" id="colorSwatches"></div>
+            </div>
+          </div>
+        </div>
+        <div class="filter-group open">
+          <button class="filter-group-header">
+            Textures <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="texture-grid" id="textureGrid"></div>
+            </div>
+          </div>
+        </div>
+        <div class="filter-group open">
+          <button class="filter-group-header">
+            Finish <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="finish-list" id="finishList"></div>
+            </div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <button class="filter-group-header">
+            Size <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="size-tags" id="sizeTags"></div>
+            </div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <button class="filter-group-header">
+            Surface <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="filter-group-body">
+            <div class="filter-group-inner">
+              <div class="finish-list">
+                <label class="finish-item"
+                  ><input type="checkbox" data-surface="POSH+" /> POSH+</label
+                ><label class="finish-item"
+                  ><input type="checkbox" data-surface="Anti-Skid" />
+                  Anti-Skid</label
+                ><label class="finish-item"
+                  ><input type="checkbox" data-surface="Stain Resistant" />
+                  Stain Resistant</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="apply-filters-wrap">
+          <button class="btn-apply" id="applyFiltersBtn">
+            <i class="fa-solid fa-check"></i> Apply Filters
+          </button>
+        </div>
+        <a
+          href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20bedroom%20tiles"
+          target="_blank"
+          class="sidebar-cta"
+          ><i class="fa-brands fa-whatsapp"></i> Book on WhatsApp</a
+        >
       </aside>
 
       <div class="content-area">
-        <button class="mobile-filter-toggle" id="mobileFilterToggle"><i class="fa-solid fa-sliders"></i> Filters</button>
-        <div class="toolbar"><div class="toolbar-left"><p class="item-count"><strong id="countNum">12</strong> Items</p><div class="view-toggle"><button class="view-btn active" id="btn3col"><i class="fa-solid fa-grip"></i></button><button class="view-btn" id="btn2col"><i class="fa-solid fa-table-columns"></i></button></div></div><div class="sort-group"><label>Order by</label><select id="sort-sel"><option>Latest</option><option>Name A–Z</option><option>Name Z–A</option></select></div></div>
+        <button class="mobile-filter-toggle" id="mobileFilterToggle">
+          <i class="fa-solid fa-sliders"></i> Filters
+        </button>
+        <div class="toolbar">
+          <div class="toolbar-left">
+            <p class="item-count"><strong id="countNum">12</strong> Items</p>
+            <div class="view-toggle">
+              <button class="view-btn active" id="btn3col">
+                <i class="fa-solid fa-grip"></i></button
+              ><button class="view-btn" id="btn2col">
+                <i class="fa-solid fa-table-columns"></i>
+              </button>
+            </div>
+          </div>
+          <div class="sort-group">
+            <label>Order by</label
+            ><select id="sort-sel">
+              <option>Latest</option>
+              <option>Name A–Z</option>
+              <option>Name Z–A</option>
+            </select>
+          </div>
+        </div>
         <div id="active-filter-chips"></div>
         <div class="products-grid" id="productsGrid"></div>
-        <div class="desc-block"><h2>Bedroom Floor Tiles for Serene Living</h2><p>Your bedroom floor sets the foundation for rest and relaxation. The right tile brings together warmth underfoot and lasting beauty — from the natural charm of wood-look porcelain to the soft elegance of stone-finish ceramics and calming neutral palettes.</p><p>Choose from our curated collection of luxury tiles designed for peaceful interiors — cozy rustic styles, serene contemporary spaces, or sophisticated classic designs. Every tile is selected for comfort, durability, and visual harmony.</p></div>
+        <div class="desc-block">
+          <h2>Bedroom Floor Tiles for Serene Living</h2>
+          <p>
+            Your bedroom floor sets the foundation for rest and relaxation. The
+            right tile brings together warmth underfoot and lasting beauty —
+            from the natural charm of wood-look porcelain to the soft elegance
+            of stone-finish ceramics and calming neutral palettes.
+          </p>
+          <p>
+            Choose from our curated collection of luxury tiles designed for
+            peaceful interiors — cozy rustic styles, serene contemporary spaces,
+            or sophisticated classic designs. Every tile is selected for
+            comfort, durability, and visual harmony.
+          </p>
+        </div>
       </div>
     </div>
 
-    <div class="full-width-section"><div class="cta-banner"><div class="cta-banner-text"><h3>Ready to Transform Your Bedroom?</h3><p>Visit our showroom or schedule a free design consultation. Our experts help you find the perfect tile for every space and budget.</p></div><a href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20bedroom%20tiles" target="_blank" class="btn-primary"><i class="fa-brands fa-whatsapp"></i> Book on WhatsApp</a></div>
-      <div style="margin-bottom: 3rem"><div class="section-title-row"><h2>Featured Collections</h2><a href="tiles.html">View All <i class="fa-solid fa-arrow-right"></i></a></div><div class="featured-grid" id="featuredGrid"></div></div>
+    <div class="full-width-section">
+      <div class="cta-banner">
+        <div class="cta-banner-text">
+          <h3>Ready to Transform Your Bedroom?</h3>
+          <p>
+            Visit our showroom or schedule a free design consultation. Our
+            experts help you find the perfect tile for every space and budget.
+          </p>
+        </div>
+        <a
+          href="https://wa.me/919843069220?text=Hello%20I%20would%20like%20to%20book%20an%20appointment%20for%20bedroom%20tiles"
+          target="_blank"
+          class="btn-primary"
+          ><i class="fa-brands fa-whatsapp"></i> Book on WhatsApp</a
+        >
+      </div>
+      <div style="margin-bottom: 3rem">
+        <div class="section-title-row">
+          <h2>Featured Collections</h2>
+          <a href="tiles.html"
+            >View All <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+        <div class="featured-grid" id="featuredGrid"></div>
+      </div>
     </div>
 
-    <div class="detail-overlay" id="detailOverlay"><div class="detail-modal"><button class="detail-close" id="detailClose"><i class="fa-solid fa-xmark"></i></button><div class="detail-breadcrumb"><span>Home</span><span class="sep">/</span><span>Bedroom Floor Tiles</span><span class="sep">/</span><span class="cur" id="detailBreadcrumbName"></span></div><div class="detail-main"><div class="detail-gallery"><div class="detail-gallery-main"><img id="detailMainImg" src=""></div><div class="detail-thumbs" id="detailThumbs"></div></div><div class="detail-info"><div><p class="detail-info-tag" id="detailTag"></p><h1 class="detail-info-name" id="detailName"></h1></div><p id="detailDesc" style="font-size:13.5px;color:#6b6460;line-height:1.8"></p><hr class="detail-divider"><table class="spec-table" id="detailSpecTable"></tr><hr class="detail-divider"><div><p style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6b6460;margin-bottom:0.4rem">Colour</p><div class="detail-color-row" id="detailColors"></div></div><div><p style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6b6460;margin-bottom:0.4rem">Finish</p><div class="detail-finish-row" id="detailFinishes"></div></div><div><p style="font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#6b6460;margin-bottom:0.4rem">Size</p><div class="detail-size-row" id="detailSizes"></div></div><div class="detail-ctas-2"><a id="detailEnquireWA" href="#" target="_blank" class="detail-btn-main"><i class="fa-brands fa-whatsapp"></i> Enquire on WhatsApp</a></div></div></div><div class="detail-tabs-section"><div class="detail-tabs-header"><button class="detail-tab-btn active" data-tab="features">Features</button><button class="detail-tab-btn" data-tab="technical">Technical Specs</button><button class="detail-tab-btn" data-tab="installation">Installation</button><div class="detail-ctas"><a id="detailEnquireWA2" href="#" target="_blank" class="detail-btn-main"><i class="fa-brands fa-whatsapp"></i> Enquire on WhatsApp</a></div></div><div class="detail-tab-panel active" id="tab-features"><div class="detail-features-grid" id="detailFeaturesGrid"></div></div><div class="detail-tab-panel" id="tab-technical"><div class="tech-spec-grid" id="detailTechGrid"></div></div><div class="detail-tab-panel" id="tab-installation"><div class="install-steps"><div class="install-step"><div class="install-step-num">1</div><div class="install-step-text"><h5>Surface Preparation</h5><p>Ensure subfloor is clean, dry, and level for perfect tile adhesion.</p></div></div><div class="install-step"><div class="install-step-num">2</div><div class="install-step-text"><h5>Plan Layout</h5><p>Dry-fit tiles from the center outward to create balanced patterns.</p></div></div><div class="install-step"><div class="install-step-num">3</div><div class="install-step-text"><h5>Apply Adhesive</h5><p>Use notched trowel for even coverage in small sections.</p></div></div><div class="install-step"><div class="install-step-num">4</div><div class="install-step-text"><h5>Set & Grout</h5><p>Press tiles firmly, use spacers, allow 24hr cure before grouting.</p></div></div></div></div></div><div class="detail-related"><h3>You May Also Like</h3><div class="related-grid" id="relatedGrid"></div></div></div></div>
+    <div class="detail-overlay" id="detailOverlay">
+      <div class="detail-modal">
+        <button class="detail-close" id="detailClose">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="detail-breadcrumb">
+          <span>Home</span><span class="sep">/</span
+          ><span>Bedroom Floor Tiles</span><span class="sep">/</span
+          ><span class="cur" id="detailBreadcrumbName"></span>
+        </div>
+        <div class="detail-main">
+          <div class="detail-gallery">
+            <div class="detail-gallery-main">
+              <img id="detailMainImg" src="" />
+            </div>
+            <div class="detail-thumbs" id="detailThumbs"></div>
+          </div>
+          <div class="detail-info">
+            <div>
+              <p class="detail-info-tag" id="detailTag"></p>
+              <h1 class="detail-info-name" id="detailName"></h1>
+            </div>
+            <p
+              id="detailDesc"
+              style="font-size: 13.5px; color: #6b6460; line-height: 1.8"
+            ></p>
+            <hr class="detail-divider" />
+            <table class="spec-table" id="detailSpecTable"></table>
+            <hr class="detail-divider" />
+            <div>
+              <p
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  color: #6b6460;
+                  margin-bottom: 0.4rem;
+                "
+              >
+                Colour
+              </p>
+              <div class="detail-color-row" id="detailColors"></div>
+            </div>
+            <div>
+              <p
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  color: #6b6460;
+                  margin-bottom: 0.4rem;
+                "
+              >
+                Finish
+              </p>
+              <div class="detail-finish-row" id="detailFinishes"></div>
+            </div>
+            <div>
+              <p
+                style="
+                  font-size: 12px;
+                  font-weight: 600;
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  color: #6b6460;
+                  margin-bottom: 0.4rem;
+                "
+              >
+                Size
+              </p>
+              <div class="detail-size-row" id="detailSizes"></div>
+            </div>
+            <div class="detail-ctas-2">
+              <a
+                id="detailEnquireWA"
+                href="#"
+                target="_blank"
+                class="detail-btn-main"
+                ><i class="fa-brands fa-whatsapp"></i> Enquire on WhatsApp</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="detail-tabs-section">
+          <div class="detail-tabs-header">
+            <button class="detail-tab-btn active" data-tab="features">
+              Features</button
+            ><button class="detail-tab-btn" data-tab="technical">
+              Technical Specs</button
+            ><button class="detail-tab-btn" data-tab="installation">
+              Installation
+            </button>
+            <div class="detail-ctas">
+              <a
+                id="detailEnquireWA2"
+                href="#"
+                target="_blank"
+                class="detail-btn-main"
+                ><i class="fa-brands fa-whatsapp"></i> Enquire on WhatsApp</a
+              >
+            </div>
+          </div>
+          <div class="detail-tab-panel active" id="tab-features">
+            <div class="detail-features-grid" id="detailFeaturesGrid"></div>
+          </div>
+          <div class="detail-tab-panel" id="tab-technical">
+            <div class="tech-spec-grid" id="detailTechGrid"></div>
+          </div>
+          <div class="detail-tab-panel" id="tab-installation">
+            <div class="install-steps">
+              <div class="install-step">
+                <div class="install-step-num">1</div>
+                <div class="install-step-text">
+                  <h5>Surface Preparation</h5>
+                  <p>
+                    Ensure subfloor is clean, dry, and level for perfect tile
+                    adhesion.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">2</div>
+                <div class="install-step-text">
+                  <h5>Plan Layout</h5>
+                  <p>
+                    Dry-fit tiles from the center outward to create balanced
+                    patterns.
+                  </p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">3</div>
+                <div class="install-step-text">
+                  <h5>Apply Adhesive</h5>
+                  <p>Use notched trowel for even coverage in small sections.</p>
+                </div>
+              </div>
+              <div class="install-step">
+                <div class="install-step-num">4</div>
+                <div class="install-step-text">
+                  <h5>Set & Grout</h5>
+                  <p>
+                    Press tiles firmly, use spacers, allow 24hr cure before
+                    grouting.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="detail-related">
+          <h3>You May Also Like</h3>
+          <div class="related-grid" id="relatedGrid"></div>
+        </div>
+      </div>
+    </div>
 
-    <a href="https://wa.me/919843069220" class="whatsapp-float" target="_blank"><img src="./images/WhatsApp.svg" alt="WhatsApp"></a>
+    <a href="https://wa.me/919843069220" class="whatsapp-float" target="_blank"
+      ><img src="./images/WhatsApp.svg" alt="WhatsApp"
+    /></a>
     <button id="scrollTopBtn">↑</button>
     <footer id="footer"></footer>
 
@@ -1019,29 +1419,709 @@
     <script src="js/footer.js"></script>
     <script>
       const BEDROOM_TILES = [
-        { id:0, title:"Modern Gray Wood", tag:"MODERN GRAY WOOD", description:"12x24 inch porcelain planks with realistic wood texture and matte finish, perfect for contemporary bedrooms.", colours:3, finishes:2, image:"https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop", badge:"Wood Look", colors:["Gray","White","Beige"], colorsHex:{Gray:"#8a8a8a",White:"#f5f0ea",Beige:"#c8a87a"}, colorImages:{Gray:"https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop",White:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop",Beige:"https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=450&fit=crop"}, finishImages:{Matt:"https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop",Satin:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop"}, sizeImages:{"600×600":"https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop","600×1200":"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop"}, texture:"Wood", finish:["Matt","Satin"], sizes:["600×600","600×1200"], surface:["POSH+","Stain Resistant"], features:[{icon:"fa-solid fa-tree",title:"Realistic Wood Grain",desc:"High-definition printing creates authentic wood texture."},{icon:"fa-solid fa-shield-halved",title:"Stain Resistant",desc:"Nano-coating protects against spills."},{icon:"fa-solid fa-bed",title:"Bedroom Optimized",desc:"Warmth and comfort underfoot."}], tech:{Material:"Porcelain",Origin:"Italy",MOHs:"7",WaterAbsorption:"<0.1%"} },
-        { id:1, title:"Whitewashed Oak", tag:"WHITEWASHED OAK", description:"Light distressed wood look tiles with matte finish, adding airy Scandinavian charm to your bedroom.", colours:2, finishes:1, image:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop", badge:"Oak", colors:["White","Beige"], colorsHex:{White:"#f5f0ea",Beige:"#c8a87a"}, colorImages:{White:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop",Beige:"https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=450&fit=crop"}, finishImages:{Matt:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop"}, sizeImages:{"600×600":"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop","800×800":"https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=450&fit=crop"}, texture:"Oak", finish:["Matt"], sizes:["600×600","800×800"], surface:["Stain Resistant"], features:[{icon:"fa-solid fa-snowflake",title:"Light Reflective",desc:"Brightens dark rooms and creates airy feel."},{icon:"fa-solid fa-leaf",title:"Eco Friendly",desc:"Sustainable manufacturing process."}], tech:{Material:"Ceramic",Origin:"Spain",MOHs:"5",WaterAbsorption:"<3%"} },
-        { id:2, title:"Rustic Hickory", tag:"RUSTIC HICKORY", description:"Textured ceramic tiles with deep wood grain patterns for a cozy, rustic bedroom feel.", colours:1, finishes:2, image:"https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=450&fit=crop", badge:"Hickory", colors:["Brown"], colorsHex:{Brown:"#8b6f47"}, colorImages:{Brown:"https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=450&fit=crop"}, finishImages:{Matt:"https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=450&fit=crop",Polished:"https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=450&fit=crop"}, sizeImages:{"600×600":"https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=450&fit=crop"}, texture:"Hickory", finish:["Matt","Polished"], sizes:["600×600"], surface:["Anti-Skid"], features:[{icon:"fa-solid fa-fire-flame-simple",title:"Distressed Texture",desc:"Authentic hand-scraped feel adds character."},{icon:"fa-solid fa-mug-hot",title:"Cozy Aesthetic",desc:"Warm, inviting farmhouse style."}], tech:{Material:"Ceramic",Origin:"Portugal",MOHs:"5",WaterAbsorption:"<5%"} },
-        { id:3, title:"Warm Cherry Wood", tag:"WARM CHERRY WOOD", description:"Rich red-brown wood effect tiles with glossy finish, bringing warmth and elegance to master bedrooms.", colours:1, finishes:1, image:"https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=450&fit=crop", badge:"Cherry", colors:["Walnut"], colorsHex:{Walnut:"#5e3a1c"}, colorImages:{Walnut:"https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=450&fit=crop"}, finishImages:{Polished:"https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=450&fit=crop"}, sizeImages:{"600×1200":"https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=450&fit=crop"}, texture:"Cherry", finish:["Polished"], sizes:["600×1200"], surface:["POSH+"], features:[{icon:"fa-solid fa-gem",title:"Luxury Finish",desc:"High-gloss polished surface for elegant bedrooms."},{icon:"fa-solid fa-crown",title:"Premium Quality",desc:"Superior durability for master suites."}], tech:{Material:"Porcelain",Origin:"Italy",MOHs:"7",WaterAbsorption:"<0.5%"} },
-        { id:4, title:"Driftwood Gray", tag:"DRIFTWOOD GRAY", description:"Weathered wood look tiles with soft gray tones, ideal for coastal or minimalist bedroom designs.", colours:2, finishes:2, image:"https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&h=450&fit=crop", badge:"Driftwood", colors:["Gray","White"], colorsHex:{Gray:"#8a8a8a",White:"#f5f0ea"}, colorImages:{Gray:"https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&h=450&fit=crop",White:"https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop"}, finishImages:{Matt:"https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&h=450&fit=crop",Satin:"https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop"}, sizeImages:{"800×800":"https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&h=450&fit=crop"}, texture:"Wood", finish:["Matt","Satin"], sizes:["800×800"], surface:["Stain Resistant"], features:[{icon:"fa-solid fa-water",title:"Coastal Aesthetic",desc:"Weathered finish for relaxed vibes."},{icon:"fa-solid fa-wind",title:"Breathable",desc:"Natural look that complements any decor."}], tech:{Material:"Porcelain",Origin:"Italy",MOHs:"6",WaterAbsorption:"<0.2%"} },
-        { id:5, title:"Herringbone White Oak", tag:"HERRINGBONE OAK", description:"Patterned wood-look tiles in classic herringbone design for a timeless, elegant bedroom floor.", colours:2, finishes:1, image:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=450&fit=crop", badge:"Herringbone", colors:["White","Beige"], colorsHex:{White:"#f5f0ea",Beige:"#c8a87a"}, colorImages:{White:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=450&fit=crop",Beige:"https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=450&fit=crop"}, finishImages:{Matt:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=450&fit=crop"}, sizeImages:{"300×600":"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=450&fit=crop"}, texture:"Oak", finish:["Matt"], sizes:["300×600"], surface:["POSH+"], features:[{icon:"fa-solid fa-arrow-right-arrow-left",title:"Herringbone Pattern",desc:"Classic zigzag layout adds visual interest."},{icon:"fa-solid fa-chart-line",title:"Dynamic Design",desc:"Creates movement and elegance."}], tech:{Material:"Ceramic",Origin:"Spain",MOHs:"5",WaterAbsorption:"<4%"} }
+        {
+          id: 0,
+          title: "Modern Gray Wood",
+          tag: "MODERN GRAY WOOD",
+          description:
+            "12x24 inch porcelain planks with realistic wood texture and matte finish, perfect for contemporary bedrooms.",
+          colours: 3,
+          finishes: 2,
+          image:
+            "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop",
+          badge: "Wood Look",
+          colors: ["Gray", "White", "Beige"],
+          colorsHex: { Gray: "#8a8a8a", White: "#f5f0ea", Beige: "#c8a87a" },
+          colorImages: {
+            Gray: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop",
+            White:
+              "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop",
+            Beige:
+              "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=450&fit=crop",
+          },
+          finishImages: {
+            Matt: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop",
+            Satin:
+              "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop",
+          },
+          sizeImages: {
+            "600×600":
+              "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop",
+            "600×1200":
+              "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop",
+          },
+          texture: "Wood",
+          finish: ["Matt", "Satin"],
+          sizes: ["600×600", "600×1200"],
+          surface: ["POSH+", "Stain Resistant"],
+          features: [
+            {
+              icon: "fa-solid fa-tree",
+              title: "Realistic Wood Grain",
+              desc: "High-definition printing creates authentic wood texture.",
+            },
+            {
+              icon: "fa-solid fa-shield-halved",
+              title: "Stain Resistant",
+              desc: "Nano-coating protects against spills.",
+            },
+            {
+              icon: "fa-solid fa-bed",
+              title: "Bedroom Optimized",
+              desc: "Warmth and comfort underfoot.",
+            },
+          ],
+          tech: {
+            Material: "Porcelain",
+            Origin: "Italy",
+            MOHs: "7",
+            WaterAbsorption: "<0.1%",
+          },
+        },
+        {
+          id: 1,
+          title: "Whitewashed Oak",
+          tag: "WHITEWASHED OAK",
+          description:
+            "Light distressed wood look tiles with matte finish, adding airy Scandinavian charm to your bedroom.",
+          colours: 2,
+          finishes: 1,
+          image:
+            "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop",
+          badge: "Oak",
+          colors: ["White", "Beige"],
+          colorsHex: { White: "#f5f0ea", Beige: "#c8a87a" },
+          colorImages: {
+            White:
+              "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop",
+            Beige:
+              "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=450&fit=crop",
+          },
+          finishImages: {
+            Matt: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop",
+          },
+          sizeImages: {
+            "600×600":
+              "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=450&fit=crop",
+            "800×800":
+              "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=450&fit=crop",
+          },
+          texture: "Oak",
+          finish: ["Matt"],
+          sizes: ["600×600", "800×800"],
+          surface: ["Stain Resistant"],
+          features: [
+            {
+              icon: "fa-solid fa-snowflake",
+              title: "Light Reflective",
+              desc: "Brightens dark rooms and creates airy feel.",
+            },
+            {
+              icon: "fa-solid fa-leaf",
+              title: "Eco Friendly",
+              desc: "Sustainable manufacturing process.",
+            },
+          ],
+          tech: {
+            Material: "Ceramic",
+            Origin: "Spain",
+            MOHs: "5",
+            WaterAbsorption: "<3%",
+          },
+        },
+        {
+          id: 2,
+          title: "Rustic Hickory",
+          tag: "RUSTIC HICKORY",
+          description:
+            "Textured ceramic tiles with deep wood grain patterns for a cozy, rustic bedroom feel.",
+          colours: 1,
+          finishes: 2,
+          image:
+            "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=450&fit=crop",
+          badge: "Hickory",
+          colors: ["Brown"],
+          colorsHex: { Brown: "#8b6f47" },
+          colorImages: {
+            Brown:
+              "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=450&fit=crop",
+          },
+          finishImages: {
+            Matt: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=450&fit=crop",
+            Polished:
+              "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=450&fit=crop",
+          },
+          sizeImages: {
+            "600×600":
+              "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=450&fit=crop",
+          },
+          texture: "Hickory",
+          finish: ["Matt", "Polished"],
+          sizes: ["600×600"],
+          surface: ["Anti-Skid"],
+          features: [
+            {
+              icon: "fa-solid fa-fire-flame-simple",
+              title: "Distressed Texture",
+              desc: "Authentic hand-scraped feel adds character.",
+            },
+            {
+              icon: "fa-solid fa-mug-hot",
+              title: "Cozy Aesthetic",
+              desc: "Warm, inviting farmhouse style.",
+            },
+          ],
+          tech: {
+            Material: "Ceramic",
+            Origin: "Portugal",
+            MOHs: "5",
+            WaterAbsorption: "<5%",
+          },
+        },
+        {
+          id: 3,
+          title: "Warm Cherry Wood",
+          tag: "WARM CHERRY WOOD",
+          description:
+            "Rich red-brown wood effect tiles with glossy finish, bringing warmth and elegance to master bedrooms.",
+          colours: 1,
+          finishes: 1,
+          image:
+            "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=450&fit=crop",
+          badge: "Cherry",
+          colors: ["Walnut"],
+          colorsHex: { Walnut: "#5e3a1c" },
+          colorImages: {
+            Walnut:
+              "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=450&fit=crop",
+          },
+          finishImages: {
+            Polished:
+              "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=450&fit=crop",
+          },
+          sizeImages: {
+            "600×1200":
+              "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&h=450&fit=crop",
+          },
+          texture: "Cherry",
+          finish: ["Polished"],
+          sizes: ["600×1200"],
+          surface: ["POSH+"],
+          features: [
+            {
+              icon: "fa-solid fa-gem",
+              title: "Luxury Finish",
+              desc: "High-gloss polished surface for elegant bedrooms.",
+            },
+            {
+              icon: "fa-solid fa-crown",
+              title: "Premium Quality",
+              desc: "Superior durability for master suites.",
+            },
+          ],
+          tech: {
+            Material: "Porcelain",
+            Origin: "Italy",
+            MOHs: "7",
+            WaterAbsorption: "<0.5%",
+          },
+        },
+        {
+          id: 4,
+          title: "Driftwood Gray",
+          tag: "DRIFTWOOD GRAY",
+          description:
+            "Weathered wood look tiles with soft gray tones, ideal for coastal or minimalist bedroom designs.",
+          colours: 2,
+          finishes: 2,
+          image:
+            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&h=450&fit=crop",
+          badge: "Driftwood",
+          colors: ["Gray", "White"],
+          colorsHex: { Gray: "#8a8a8a", White: "#f5f0ea" },
+          colorImages: {
+            Gray: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&h=450&fit=crop",
+            White:
+              "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop",
+          },
+          finishImages: {
+            Matt: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&h=450&fit=crop",
+            Satin:
+              "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=450&fit=crop",
+          },
+          sizeImages: {
+            "800×800":
+              "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&h=450&fit=crop",
+          },
+          texture: "Wood",
+          finish: ["Matt", "Satin"],
+          sizes: ["800×800"],
+          surface: ["Stain Resistant"],
+          features: [
+            {
+              icon: "fa-solid fa-water",
+              title: "Coastal Aesthetic",
+              desc: "Weathered finish for relaxed vibes.",
+            },
+            {
+              icon: "fa-solid fa-wind",
+              title: "Breathable",
+              desc: "Natural look that complements any decor.",
+            },
+          ],
+          tech: {
+            Material: "Porcelain",
+            Origin: "Italy",
+            MOHs: "6",
+            WaterAbsorption: "<0.2%",
+          },
+        },
+        {
+          id: 5,
+          title: "Herringbone White Oak",
+          tag: "HERRINGBONE OAK",
+          description:
+            "Patterned wood-look tiles in classic herringbone design for a timeless, elegant bedroom floor.",
+          colours: 2,
+          finishes: 1,
+          image:
+            "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=450&fit=crop",
+          badge: "Herringbone",
+          colors: ["White", "Beige"],
+          colorsHex: { White: "#f5f0ea", Beige: "#c8a87a" },
+          colorImages: {
+            White:
+              "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=450&fit=crop",
+            Beige:
+              "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=450&fit=crop",
+          },
+          finishImages: {
+            Matt: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=450&fit=crop",
+          },
+          sizeImages: {
+            "300×600":
+              "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=450&fit=crop",
+          },
+          texture: "Oak",
+          finish: ["Matt"],
+          sizes: ["300×600"],
+          surface: ["POSH+"],
+          features: [
+            {
+              icon: "fa-solid fa-arrow-right-arrow-left",
+              title: "Herringbone Pattern",
+              desc: "Classic zigzag layout adds visual interest.",
+            },
+            {
+              icon: "fa-solid fa-chart-line",
+              title: "Dynamic Design",
+              desc: "Creates movement and elegance.",
+            },
+          ],
+          tech: {
+            Material: "Ceramic",
+            Origin: "Spain",
+            MOHs: "5",
+            WaterAbsorption: "<4%",
+          },
+        },
       ];
-      const FEATURED_IDS = [0,2,4,5];
-      let pendingFilters = { colors:new Set(), textures:new Set(), finishes:new Set(), sizes:new Set(), surfaces:new Set() };
-      let appliedFilters = { colors:new Set(), textures:new Set(), finishes:new Set(), sizes:new Set(), surfaces:new Set() };
-      function getFilteredTiles(){ let total=appliedFilters.colors.size+appliedFilters.textures.size+appliedFilters.finishes.size+appliedFilters.sizes.size; if(total===0) return BEDROOM_TILES; return BEDROOM_TILES.filter(t=>(appliedFilters.colors.size>0 && t.colors.some(c=>appliedFilters.colors.has(c))) || (appliedFilters.textures.size>0 && appliedFilters.textures.has(t.texture)) || (appliedFilters.finishes.size>0 && t.finish.some(f=>appliedFilters.finishes.has(f))) || (appliedFilters.sizes.size>0 && t.sizes.some(s=>appliedFilters.sizes.has(s)))); }
-      function getSortedTiles(tiles){ let sortVal=document.getElementById("sort-sel").value; let sorted=[...tiles]; if(sortVal==="Name A–Z") sorted.sort((a,b)=>a.title.localeCompare(b.title)); if(sortVal==="Name Z–A") sorted.sort((a,b)=>b.title.localeCompare(a.title)); return sorted; }
-      function renderGrid(){ let filtered=getFilteredTiles(); let sorted=getSortedTiles(filtered); document.getElementById("countNum").innerText=sorted.length; let container=document.getElementById("productsGrid"); if(sorted.length===0){ container.innerHTML=`<div class="no-results"><i class="fa-solid fa-filter-circle-xmark"></i><p>No tiles match your filters.</p><button class="btn-primary" onclick="clearAllFilters()">Clear Filters</button></div>`; return; }
-      container.innerHTML=sorted.map(t=>`<div class="prod-card"><div class="prod-img-wrap"><img src="${t.image}" alt="${t.title}" loading="lazy"><span class="prod-badge">${t.badge}</span></div><div class="prod-body"><p class="prod-tag">${t.tag}</p><h3 class="prod-name">${t.title}</h3><p class="prod-desc">${t.description.substring(0,100)}...</p><div class="prod-meta"><span><strong>${t.colours}</strong> Colour</span><span><strong>${t.finishes}</strong> Finish</span></div></div><div class="prod-actions"><button class="prod-btn prod-btn-view" onclick='openDetail(${t.id})'>View More <i class="fa-solid fa-plus"></i></button><a href="https://wa.me/919843069220?text=Enquiry:%20${encodeURIComponent(t.title)}" target="_blank" class="prod-btn prod-btn-enquire">Enquire Now</a></div></div>`).join(""); }
-      function renderChips(){ let container=document.getElementById("active-filter-chips"); container.innerHTML=""; let all=[]; appliedFilters.colors.forEach(v=>all.push({v,type:"colors"})); appliedFilters.textures.forEach(v=>all.push({v,type:"textures"})); appliedFilters.finishes.forEach(v=>all.push({v,type:"finishes"})); appliedFilters.sizes.forEach(v=>all.push({v,type:"sizes"})); all.forEach(({v,type})=>{ let chip=document.createElement("span"); chip.className="filter-chip"; chip.innerHTML=`${v} <i class="fa-solid fa-xmark"></i>`; chip.onclick=()=>{ appliedFilters[type].delete(v); pendingFilters[type].delete(v); updateFilterUI(); renderGrid(); renderChips(); }; container.appendChild(chip); }); }
-      function updateFilterUI(){ document.querySelectorAll(".swatch-item").forEach(el=>{ let color=el.dataset.color; if(pendingFilters.colors.has(color)) el.classList.add("active"); else el.classList.remove("active"); }); document.querySelectorAll(".texture-thumb").forEach(el=>{ let tex=el.dataset.texture; if(pendingFilters.textures.has(tex)) el.classList.add("active"); else el.classList.remove("active"); }); document.querySelectorAll("[data-finish]").forEach(cb=>{ cb.checked=pendingFilters.finishes.has(cb.dataset.finish); }); document.querySelectorAll(".size-tag").forEach(el=>{ let sz=el.dataset.size; if(pendingFilters.sizes.has(sz)) el.classList.add("active"); else el.classList.remove("active"); }); }
-      function applyFilters(){ appliedFilters.colors=new Set(pendingFilters.colors); appliedFilters.textures=new Set(pendingFilters.textures); appliedFilters.finishes=new Set(pendingFilters.finishes); appliedFilters.sizes=new Set(pendingFilters.sizes); renderGrid(); renderChips(); }
-      window.clearAllFilters=function(){ pendingFilters.colors.clear(); pendingFilters.textures.clear(); pendingFilters.finishes.clear(); pendingFilters.sizes.clear(); appliedFilters.colors.clear(); appliedFilters.textures.clear(); appliedFilters.finishes.clear(); appliedFilters.sizes.clear(); updateFilterUI(); renderGrid(); renderChips(); };
-      window.openDetail=function(id){ let tile=BEDROOM_TILES[id]; if(!tile)return; document.getElementById("detailBreadcrumbName").textContent=tile.title; document.getElementById("detailTag").textContent=tile.tag; document.getElementById("detailName").textContent=tile.title; document.getElementById("detailDesc").textContent=tile.description; document.getElementById("detailMainImg").src=tile.image; let waLink=`https://wa.me/919843069220?text=Enquiry:%20${encodeURIComponent(tile.title)}`; ["detailEnquireWA","detailEnquireWA2"].forEach(el=>{ let e=document.getElementById(el); if(e)e.href=waLink; }); let thumbsDiv=document.getElementById("detailThumbs"); thumbsDiv.innerHTML=""; [tile.image, ...BEDROOM_TILES.filter(x=>x.id!==tile.id).slice(0,3).map(x=>x.image)].forEach((src,i)=>{ let thumb=document.createElement("div"); thumb.className="detail-thumb"+(i===0?" active":""); thumb.innerHTML=`<img src="${src}" alt="view">`; thumb.onclick=()=>{ document.getElementById("detailMainImg").src=src; thumbsDiv.querySelectorAll(".detail-thumb").forEach(th=>th.classList.remove("active")); thumb.classList.add("active"); }; thumbsDiv.appendChild(thumb); }); document.getElementById("detailSpecTable").innerHTML=`<tr><td>Texture</td><td>${tile.texture}</td></tr><tr><td>Colours Available</td><td>${tile.colours}</td></tr><td>Finishes</td><td>${tile.finish.join(", ")}</td></tr><tr><td>Sizes</td><td>${tile.sizes.join(", ")}</td></tr>`; document.getElementById("detailColors").innerHTML=tile.colors.map((c,i)=>`<span class="detail-swatch${i===0?" active":""}" style="background:${tile.colorsHex[c]}" data-color="${c}"></span>`).join(""); document.querySelectorAll(".detail-swatch").forEach(sw=>{ sw.onclick=function(){ document.querySelectorAll(".detail-swatch").forEach(s=>s.classList.remove("active")); this.classList.add("active"); let newSrc=tile.colorImages[this.dataset.color]||tile.image; document.getElementById("detailMainImg").src=newSrc; }; }); document.getElementById("detailFinishes").innerHTML=tile.finish.map((f,i)=>`<span class="detail-finish-tag${i===0?" active":""}">${f}</span>`).join(""); document.querySelectorAll(".detail-finish-tag").forEach(ft=>{ ft.onclick=function(){ document.querySelectorAll(".detail-finish-tag").forEach(s=>s.classList.remove("active")); this.classList.add("active"); let newSrc=tile.finishImages[this.textContent.trim()]||tile.image; document.getElementById("detailMainImg").src=newSrc; }; }); document.getElementById("detailSizes").innerHTML=tile.sizes.map((s,i)=>`<button class="detail-size-btn${i===0?" active":""}">${s}</button>`).join(""); document.querySelectorAll(".detail-size-btn").forEach(sb=>{ sb.onclick=function(){ document.querySelectorAll(".detail-size-btn").forEach(s=>s.classList.remove("active")); this.classList.add("active"); let newSrc=tile.sizeImages[this.textContent.trim()]||tile.image; document.getElementById("detailMainImg").src=newSrc; }; }); document.getElementById("detailFeaturesGrid").innerHTML=tile.features.map(f=>`<div class="feature-item"><i class="${f.icon}"></i><h5>${f.title}</h5><p>${f.desc}</p></div>`).join(""); document.getElementById("detailTechGrid").innerHTML=Object.entries(tile.tech).map(([k,v])=>`<div class="tech-spec-cell"><dt>${k}</dt><dd>${v}</dd></div>`).join(""); let related=BEDROOM_TILES.filter(x=>x.id!==tile.id && (x.texture===tile.texture || x.colors.some(c=>tile.colors.includes(c)))).slice(0,4); document.getElementById("relatedGrid").innerHTML=related.map(rt=>`<div class="related-card" onclick="openDetail(${rt.id})"><div class="related-card-img"><img src="${rt.image}" alt="${rt.title}"></div><div class="related-card-body"><p class="detail-info-tag" style="font-size:8px">${rt.tag}</p><p style="font-size:12px">${rt.title}</p></div></div>`).join(""); document.querySelectorAll(".detail-tab-btn").forEach(b=>b.classList.remove("active")); document.querySelectorAll(".detail-tab-panel").forEach(p=>p.classList.remove("active")); document.querySelector('.detail-tab-btn[data-tab="features"]').classList.add("active"); document.getElementById("tab-features").classList.add("active"); document.getElementById("detailOverlay").classList.add("open"); document.body.style.overflow="hidden"; };
-      window.closeDetail=function(){ document.getElementById("detailOverlay").classList.remove("open"); document.body.style.overflow=""; };
-      function renderFeatured(){ let container=document.getElementById("featuredGrid"); container.innerHTML=FEATURED_IDS.map(id=>{ let t=BEDROOM_TILES[id]; return `<div class="feat-card" onclick="openDetail(${id})"><div class="feat-img"><img src="${t.image}" alt="${t.title}"></div><div class="feat-body"><p class="prod-tag">${t.tag}</p><h4>${t.title}</h4><p class="feat-desc">${t.description.substring(0,60)}...</p></div></div>`; }).join(""); }
-      function buildFilters(){ let colorSet=new Set(); BEDROOM_TILES.forEach(t=>t.colors.forEach(c=>colorSet.add(c))); document.getElementById("colorSwatches").innerHTML=Array.from(colorSet).map(c=>`<div class="swatch-item" data-color="${c}"><div class="swatch-circle" style="background:${c==="Gray"?"#8a8a8a":c==="White"?"#f5f0ea":c==="Beige"?"#c8a87a":"#8b6f47"}"></div><span class="swatch-label">${c}</span></div>`).join(""); let textureSet=new Set(BEDROOM_TILES.map(t=>t.texture)); document.getElementById("textureGrid").innerHTML=Array.from(textureSet).map(tex=>`<div class="texture-thumb" data-texture="${tex}"><img src="${BEDROOM_TILES.find(t=>t.texture===tex).image}" alt="${tex}"><span class="texture-name">${tex}</span></div>`).join(""); let finishSet=new Set(); BEDROOM_TILES.forEach(t=>t.finish.forEach(f=>finishSet.add(f))); document.getElementById("finishList").innerHTML=Array.from(finishSet).map(f=>`<label class="finish-item"><input type="checkbox" data-finish="${f}"> ${f}</label>`).join(""); let sizeSet=new Set(); BEDROOM_TILES.forEach(t=>t.sizes.forEach(s=>sizeSet.add(s))); document.getElementById("sizeTags").innerHTML=Array.from(sizeSet).map(s=>`<span class="size-tag" data-size="${s}">${s}</span>`).join(""); document.querySelectorAll(".swatch-item").forEach(el=>el.addEventListener("click",()=>{ let c=el.dataset.color; if(pendingFilters.colors.has(c)) pendingFilters.colors.delete(c); else pendingFilters.colors.add(c); updateFilterUI(); })); document.querySelectorAll(".texture-thumb").forEach(el=>el.addEventListener("click",()=>{ let tex=el.dataset.texture; if(pendingFilters.textures.has(tex)) pendingFilters.textures.delete(tex); else pendingFilters.textures.add(tex); updateFilterUI(); })); document.querySelectorAll("[data-finish]").forEach(cb=>cb.addEventListener("change",()=>{ let f=cb.dataset.finish; if(cb.checked) pendingFilters.finishes.add(f); else pendingFilters.finishes.delete(f); })); document.querySelectorAll(".size-tag").forEach(el=>el.addEventListener("click",()=>{ let sz=el.dataset.size; if(pendingFilters.sizes.has(sz)) pendingFilters.sizes.delete(sz); else pendingFilters.sizes.add(sz); updateFilterUI(); })); }
-      document.addEventListener("DOMContentLoaded",function(){ renderFeatured(); renderGrid(); buildFilters(); document.querySelectorAll(".filter-group-header").forEach(btn=>btn.addEventListener("click",()=>btn.closest(".filter-group").classList.toggle("open"))); document.getElementById("applyFiltersBtn").addEventListener("click",applyFilters); document.getElementById("clearAllBtn").addEventListener("click",clearAllFilters); document.getElementById("sort-sel").addEventListener("change",renderGrid); document.getElementById("detailClose").addEventListener("click",closeDetail); document.getElementById("detailOverlay").addEventListener("click",(e)=>{ if(e.target===document.getElementById("detailOverlay")) closeDetail(); }); document.addEventListener("keydown",(e)=>{ if(e.key==="Escape") closeDetail(); }); document.getElementById("btn3col").addEventListener("click",()=>{ document.getElementById("productsGrid").classList.remove("two-col"); document.getElementById("btn3col").classList.add("active"); document.getElementById("btn2col").classList.remove("active"); }); document.getElementById("btn2col").addEventListener("click",()=>{ document.getElementById("productsGrid").classList.add("two-col"); document.getElementById("btn2col").classList.add("active"); document.getElementById("btn3col").classList.remove("active"); }); document.querySelectorAll(".detail-tab-btn").forEach(btn=>{ btn.addEventListener("click",()=>{ document.querySelectorAll(".detail-tab-btn").forEach(b=>b.classList.remove("active")); document.querySelectorAll(".detail-tab-panel").forEach(p=>p.classList.remove("active")); btn.classList.add("active"); document.getElementById("tab-"+btn.dataset.tab).classList.add("active"); }); }); document.getElementById("mobileFilterToggle").addEventListener("click",()=>{ document.getElementById("sidebar").classList.toggle("mobile-open"); }); let scrollBtn=document.getElementById("scrollTopBtn"); window.addEventListener("scroll",()=>{ scrollBtn.style.display=window.scrollY>300?"flex":"none"; }); scrollBtn.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"})); });
+      const FEATURED_IDS = [0, 2, 4, 5];
+      let pendingFilters = {
+        colors: new Set(),
+        textures: new Set(),
+        finishes: new Set(),
+        sizes: new Set(),
+        surfaces: new Set(),
+      };
+      let appliedFilters = {
+        colors: new Set(),
+        textures: new Set(),
+        finishes: new Set(),
+        sizes: new Set(),
+        surfaces: new Set(),
+      };
+      function getFilteredTiles() {
+        let total =
+          appliedFilters.colors.size +
+          appliedFilters.textures.size +
+          appliedFilters.finishes.size +
+          appliedFilters.sizes.size;
+        if (total === 0) return BEDROOM_TILES;
+        return BEDROOM_TILES.filter(
+          (t) =>
+            (appliedFilters.colors.size > 0 &&
+              t.colors.some((c) => appliedFilters.colors.has(c))) ||
+            (appliedFilters.textures.size > 0 &&
+              appliedFilters.textures.has(t.texture)) ||
+            (appliedFilters.finishes.size > 0 &&
+              t.finish.some((f) => appliedFilters.finishes.has(f))) ||
+            (appliedFilters.sizes.size > 0 &&
+              t.sizes.some((s) => appliedFilters.sizes.has(s))),
+        );
+      }
+      function getSortedTiles(tiles) {
+        let sortVal = document.getElementById("sort-sel").value;
+        let sorted = [...tiles];
+        if (sortVal === "Name A–Z")
+          sorted.sort((a, b) => a.title.localeCompare(b.title));
+        if (sortVal === "Name Z–A")
+          sorted.sort((a, b) => b.title.localeCompare(a.title));
+        return sorted;
+      }
+      function renderGrid() {
+        let filtered = getFilteredTiles();
+        let sorted = getSortedTiles(filtered);
+        document.getElementById("countNum").innerText = sorted.length;
+        let container = document.getElementById("productsGrid");
+        if (sorted.length === 0) {
+          container.innerHTML = `<div class="no-results"><i class="fa-solid fa-filter-circle-xmark"></i><p>No tiles match your filters.</p><button class="btn-primary" onclick="clearAllFilters()">Clear Filters</button></div>`;
+          return;
+        }
+        container.innerHTML = sorted
+          .map(
+            (t) =>
+              `<div class="prod-card"><div class="prod-img-wrap"><img src="${t.image}" alt="${t.title}" loading="lazy"><span class="prod-badge">${t.badge}</span></div><div class="prod-body"><p class="prod-tag">${t.tag}</p><h3 class="prod-name">${t.title}</h3><p class="prod-desc">${t.description.substring(0, 100)}...</p><div class="prod-meta"><span><strong>${t.colours}</strong> Colour</span><span><strong>${t.finishes}</strong> Finish</span></div></div><div class="prod-actions"><button class="prod-btn prod-btn-view" onclick='openDetail(${t.id})'>View More <i class="fa-solid fa-plus"></i></button><a href="https://wa.me/919843069220?text=Enquiry:%20${encodeURIComponent(t.title)}" target="_blank" class="prod-btn prod-btn-enquire">Enquire Now</a></div></div>`,
+          )
+          .join("");
+      }
+      function renderChips() {
+        let container = document.getElementById("active-filter-chips");
+        container.innerHTML = "";
+        let all = [];
+        appliedFilters.colors.forEach((v) => all.push({ v, type: "colors" }));
+        appliedFilters.textures.forEach((v) =>
+          all.push({ v, type: "textures" }),
+        );
+        appliedFilters.finishes.forEach((v) =>
+          all.push({ v, type: "finishes" }),
+        );
+        appliedFilters.sizes.forEach((v) => all.push({ v, type: "sizes" }));
+        all.forEach(({ v, type }) => {
+          let chip = document.createElement("span");
+          chip.className = "filter-chip";
+          chip.innerHTML = `${v} <i class="fa-solid fa-xmark"></i>`;
+          chip.onclick = () => {
+            appliedFilters[type].delete(v);
+            pendingFilters[type].delete(v);
+            updateFilterUI();
+            renderGrid();
+            renderChips();
+          };
+          container.appendChild(chip);
+        });
+      }
+      function updateFilterUI() {
+        document.querySelectorAll(".swatch-item").forEach((el) => {
+          let color = el.dataset.color;
+          if (pendingFilters.colors.has(color)) el.classList.add("active");
+          else el.classList.remove("active");
+        });
+        document.querySelectorAll(".texture-thumb").forEach((el) => {
+          let tex = el.dataset.texture;
+          if (pendingFilters.textures.has(tex)) el.classList.add("active");
+          else el.classList.remove("active");
+        });
+        document.querySelectorAll("[data-finish]").forEach((cb) => {
+          cb.checked = pendingFilters.finishes.has(cb.dataset.finish);
+        });
+        document.querySelectorAll(".size-tag").forEach((el) => {
+          let sz = el.dataset.size;
+          if (pendingFilters.sizes.has(sz)) el.classList.add("active");
+          else el.classList.remove("active");
+        });
+      }
+      function applyFilters() {
+        appliedFilters.colors = new Set(pendingFilters.colors);
+        appliedFilters.textures = new Set(pendingFilters.textures);
+        appliedFilters.finishes = new Set(pendingFilters.finishes);
+        appliedFilters.sizes = new Set(pendingFilters.sizes);
+        renderGrid();
+        renderChips();
+      }
+      window.clearAllFilters = function () {
+        pendingFilters.colors.clear();
+        pendingFilters.textures.clear();
+        pendingFilters.finishes.clear();
+        pendingFilters.sizes.clear();
+        appliedFilters.colors.clear();
+        appliedFilters.textures.clear();
+        appliedFilters.finishes.clear();
+        appliedFilters.sizes.clear();
+        updateFilterUI();
+        renderGrid();
+        renderChips();
+      };
+      window.openDetail = function (id) {
+        let tile = BEDROOM_TILES[id];
+        if (!tile) return;
+        document.getElementById("detailBreadcrumbName").textContent =
+          tile.title;
+        document.getElementById("detailTag").textContent = tile.tag;
+        document.getElementById("detailName").textContent = tile.title;
+        document.getElementById("detailDesc").textContent = tile.description;
+        document.getElementById("detailMainImg").src = tile.image;
+        let waLink = `https://wa.me/919843069220?text=Enquiry:%20${encodeURIComponent(tile.title)}`;
+        ["detailEnquireWA", "detailEnquireWA2"].forEach((el) => {
+          let e = document.getElementById(el);
+          if (e) e.href = waLink;
+        });
+        let thumbsDiv = document.getElementById("detailThumbs");
+        thumbsDiv.innerHTML = "";
+        [
+          tile.image,
+          ...BEDROOM_TILES.filter((x) => x.id !== tile.id)
+            .slice(0, 3)
+            .map((x) => x.image),
+        ].forEach((src, i) => {
+          let thumb = document.createElement("div");
+          thumb.className = "detail-thumb" + (i === 0 ? " active" : "");
+          thumb.innerHTML = `<img src="${src}" alt="view">`;
+          thumb.onclick = () => {
+            document.getElementById("detailMainImg").src = src;
+            thumbsDiv
+              .querySelectorAll(".detail-thumb")
+              .forEach((th) => th.classList.remove("active"));
+            thumb.classList.add("active");
+          };
+          thumbsDiv.appendChild(thumb);
+        });
+        document.getElementById("detailSpecTable").innerHTML =
+          `<tr><td>Texture</td><td>${tile.texture}</td></tr><tr><td>Colours Available</td><td>${tile.colours}</td></tr><td>Finishes</td><td>${tile.finish.join(", ")}</td></tr><tr><td>Sizes</td><td>${tile.sizes.join(", ")}</td></tr>`;
+        document.getElementById("detailColors").innerHTML = tile.colors
+          .map(
+            (c, i) =>
+              `<span class="detail-swatch${i === 0 ? " active" : ""}" style="background:${tile.colorsHex[c]}" data-color="${c}"></span>`,
+          )
+          .join("");
+        document.querySelectorAll(".detail-swatch").forEach((sw) => {
+          sw.onclick = function () {
+            document
+              .querySelectorAll(".detail-swatch")
+              .forEach((s) => s.classList.remove("active"));
+            this.classList.add("active");
+            let newSrc = tile.colorImages[this.dataset.color] || tile.image;
+            document.getElementById("detailMainImg").src = newSrc;
+          };
+        });
+        document.getElementById("detailFinishes").innerHTML = tile.finish
+          .map(
+            (f, i) =>
+              `<span class="detail-finish-tag${i === 0 ? " active" : ""}">${f}</span>`,
+          )
+          .join("");
+        document.querySelectorAll(".detail-finish-tag").forEach((ft) => {
+          ft.onclick = function () {
+            document
+              .querySelectorAll(".detail-finish-tag")
+              .forEach((s) => s.classList.remove("active"));
+            this.classList.add("active");
+            let newSrc =
+              tile.finishImages[this.textContent.trim()] || tile.image;
+            document.getElementById("detailMainImg").src = newSrc;
+          };
+        });
+        document.getElementById("detailSizes").innerHTML = tile.sizes
+          .map(
+            (s, i) =>
+              `<button class="detail-size-btn${i === 0 ? " active" : ""}">${s}</button>`,
+          )
+          .join("");
+        document.querySelectorAll(".detail-size-btn").forEach((sb) => {
+          sb.onclick = function () {
+            document
+              .querySelectorAll(".detail-size-btn")
+              .forEach((s) => s.classList.remove("active"));
+            this.classList.add("active");
+            let newSrc = tile.sizeImages[this.textContent.trim()] || tile.image;
+            document.getElementById("detailMainImg").src = newSrc;
+          };
+        });
+        document.getElementById("detailFeaturesGrid").innerHTML = tile.features
+          .map(
+            (f) =>
+              `<div class="feature-item"><i class="${f.icon}"></i><h5>${f.title}</h5><p>${f.desc}</p></div>`,
+          )
+          .join("");
+        document.getElementById("detailTechGrid").innerHTML = Object.entries(
+          tile.tech,
+        )
+          .map(
+            ([k, v]) =>
+              `<div class="tech-spec-cell"><dt>${k}</dt><dd>${v}</dd></div>`,
+          )
+          .join("");
+        let related = BEDROOM_TILES.filter(
+          (x) =>
+            x.id !== tile.id &&
+            (x.texture === tile.texture ||
+              x.colors.some((c) => tile.colors.includes(c))),
+        ).slice(0, 4);
+        document.getElementById("relatedGrid").innerHTML = related
+          .map(
+            (rt) =>
+              `<div class="related-card" onclick="openDetail(${rt.id})"><div class="related-card-img"><img src="${rt.image}" alt="${rt.title}"></div><div class="related-card-body"><p class="detail-info-tag" style="font-size:8px">${rt.tag}</p><p style="font-size:12px">${rt.title}</p></div></div>`,
+          )
+          .join("");
+        document
+          .querySelectorAll(".detail-tab-btn")
+          .forEach((b) => b.classList.remove("active"));
+        document
+          .querySelectorAll(".detail-tab-panel")
+          .forEach((p) => p.classList.remove("active"));
+        document
+          .querySelector('.detail-tab-btn[data-tab="features"]')
+          .classList.add("active");
+        document.getElementById("tab-features").classList.add("active");
+        document.getElementById("detailOverlay").classList.add("open");
+        document.body.style.overflow = "hidden";
+      };
+      window.closeDetail = function () {
+        document.getElementById("detailOverlay").classList.remove("open");
+        document.body.style.overflow = "";
+      };
+      function renderFeatured() {
+        let container = document.getElementById("featuredGrid");
+        container.innerHTML = FEATURED_IDS.map((id) => {
+          let t = BEDROOM_TILES[id];
+          return `<div class="feat-card" onclick="openDetail(${id})"><div class="feat-img"><img src="${t.image}" alt="${t.title}"></div><div class="feat-body"><p class="prod-tag">${t.tag}</p><h4>${t.title}</h4><p class="feat-desc">${t.description.substring(0, 60)}...</p></div></div>`;
+        }).join("");
+      }
+      function buildFilters() {
+        let colorSet = new Set();
+        BEDROOM_TILES.forEach((t) => t.colors.forEach((c) => colorSet.add(c)));
+        document.getElementById("colorSwatches").innerHTML = Array.from(
+          colorSet,
+        )
+          .map(
+            (c) =>
+              `<div class="swatch-item" data-color="${c}"><div class="swatch-circle" style="background:${c === "Gray" ? "#8a8a8a" : c === "White" ? "#f5f0ea" : c === "Beige" ? "#c8a87a" : "#8b6f47"}"></div><span class="swatch-label">${c}</span></div>`,
+          )
+          .join("");
+        let textureSet = new Set(BEDROOM_TILES.map((t) => t.texture));
+        document.getElementById("textureGrid").innerHTML = Array.from(
+          textureSet,
+        )
+          .map(
+            (tex) =>
+              `<div class="texture-thumb" data-texture="${tex}"><img src="${BEDROOM_TILES.find((t) => t.texture === tex).image}" alt="${tex}"><span class="texture-name">${tex}</span></div>`,
+          )
+          .join("");
+        let finishSet = new Set();
+        BEDROOM_TILES.forEach((t) => t.finish.forEach((f) => finishSet.add(f)));
+        document.getElementById("finishList").innerHTML = Array.from(finishSet)
+          .map(
+            (f) =>
+              `<label class="finish-item"><input type="checkbox" data-finish="${f}"> ${f}</label>`,
+          )
+          .join("");
+        let sizeSet = new Set();
+        BEDROOM_TILES.forEach((t) => t.sizes.forEach((s) => sizeSet.add(s)));
+        document.getElementById("sizeTags").innerHTML = Array.from(sizeSet)
+          .map((s) => `<span class="size-tag" data-size="${s}">${s}</span>`)
+          .join("");
+        document.querySelectorAll(".swatch-item").forEach((el) =>
+          el.addEventListener("click", () => {
+            let c = el.dataset.color;
+            if (pendingFilters.colors.has(c)) pendingFilters.colors.delete(c);
+            else pendingFilters.colors.add(c);
+            updateFilterUI();
+          }),
+        );
+        document.querySelectorAll(".texture-thumb").forEach((el) =>
+          el.addEventListener("click", () => {
+            let tex = el.dataset.texture;
+            if (pendingFilters.textures.has(tex))
+              pendingFilters.textures.delete(tex);
+            else pendingFilters.textures.add(tex);
+            updateFilterUI();
+          }),
+        );
+        document.querySelectorAll("[data-finish]").forEach((cb) =>
+          cb.addEventListener("change", () => {
+            let f = cb.dataset.finish;
+            if (cb.checked) pendingFilters.finishes.add(f);
+            else pendingFilters.finishes.delete(f);
+          }),
+        );
+        document.querySelectorAll(".size-tag").forEach((el) =>
+          el.addEventListener("click", () => {
+            let sz = el.dataset.size;
+            if (pendingFilters.sizes.has(sz)) pendingFilters.sizes.delete(sz);
+            else pendingFilters.sizes.add(sz);
+            updateFilterUI();
+          }),
+        );
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        renderFeatured();
+        renderGrid();
+        buildFilters();
+        document
+          .querySelectorAll(".filter-group-header")
+          .forEach((btn) =>
+            btn.addEventListener("click", () =>
+              btn.closest(".filter-group").classList.toggle("open"),
+            ),
+          );
+        document
+          .getElementById("applyFiltersBtn")
+          .addEventListener("click", applyFilters);
+        document
+          .getElementById("clearAllBtn")
+          .addEventListener("click", clearAllFilters);
+        document
+          .getElementById("sort-sel")
+          .addEventListener("change", renderGrid);
+        document
+          .getElementById("detailClose")
+          .addEventListener("click", closeDetail);
+        document
+          .getElementById("detailOverlay")
+          .addEventListener("click", (e) => {
+            if (e.target === document.getElementById("detailOverlay"))
+              closeDetail();
+          });
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeDetail();
+        });
+        document.getElementById("btn3col").addEventListener("click", () => {
+          document.getElementById("productsGrid").classList.remove("two-col");
+          document.getElementById("btn3col").classList.add("active");
+          document.getElementById("btn2col").classList.remove("active");
+        });
+        document.getElementById("btn2col").addEventListener("click", () => {
+          document.getElementById("productsGrid").classList.add("two-col");
+          document.getElementById("btn2col").classList.add("active");
+          document.getElementById("btn3col").classList.remove("active");
+        });
+        document.querySelectorAll(".detail-tab-btn").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            document
+              .querySelectorAll(".detail-tab-btn")
+              .forEach((b) => b.classList.remove("active"));
+            document
+              .querySelectorAll(".detail-tab-panel")
+              .forEach((p) => p.classList.remove("active"));
+            btn.classList.add("active");
+            document
+              .getElementById("tab-" + btn.dataset.tab)
+              .classList.add("active");
+          });
+        });
+        document
+          .getElementById("mobileFilterToggle")
+          .addEventListener("click", () => {
+            document.getElementById("sidebar").classList.toggle("mobile-open");
+          });
+        let scrollBtn = document.getElementById("scrollTopBtn");
+        window.addEventListener("scroll", () => {
+          scrollBtn.style.display = window.scrollY > 300 ? "flex" : "none";
+        });
+        scrollBtn.addEventListener("click", () =>
+          window.scrollTo({ top: 0, behavior: "smooth" }),
+        );
+      });
     </script>
   </body>
 </html>
