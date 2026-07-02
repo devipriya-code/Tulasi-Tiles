@@ -502,7 +502,7 @@ const TILES = [
     ],
     badge: "Majestic Terrazzo",
     colors: ["Ivory", "Sand", "Ash"],
-    colorsHex: { Ivory: "E7E5E0", Sand: "#9b9ea0", Ash: "#4f4d4b" },
+    colorsHex: { Ivory: "#E7E5E0", Sand: "#9b9ea0", Ash: "#4f4d4b" },
     colorImages: {
       Ivory: "./images/commercial/Majestic Terrazzo/img2.jpg",
       Sand: "./images/commercial/Majestic Terrazzo/img3.jpg",
